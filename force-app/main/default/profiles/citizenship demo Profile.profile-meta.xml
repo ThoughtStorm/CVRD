@@ -149,6 +149,10 @@
         <recordType>clariti__Document_Template__c.clariti__Project_Document</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Application_Journey</flow>
+    </flowAccesses>
     <userLicense>Guest User License</userLicense>
     <userPermissions>
         <enabled>true</enabled>
