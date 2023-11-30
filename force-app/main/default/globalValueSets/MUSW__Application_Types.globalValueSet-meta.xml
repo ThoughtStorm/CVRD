@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Development Permit (DP)</fullName>
+        <default>false</default>
+        <label>Development Permit (DP)</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Variance Permit (DVP)</fullName>
+        <default>false</default>
+        <label>Development Variance Permit (DVP)</label>
+    </customValue>
+    <customValue>
+        <fullName>OCP, Zoning or Land Use Bylaw Amendment</fullName>
+        <default>false</default>
+        <label>OCP, Zoning or Land Use Bylaw Amendment</label>
+    </customValue>
+    <customValue>
+        <fullName>Covenant Amendment or Discharge</fullName>
+        <default>false</default>
+        <label>Covenant Amendment or Discharge</label>
+    </customValue>
+    <customValue>
+        <fullName>Temporary Use Permit (TUP)</fullName>
+        <default>false</default>
+        <label>Temporary Use Permit (TUP)</label>
+    </customValue>
+    <customValue>
+        <fullName>Flood Management Bylaw Exemption</fullName>
+        <default>false</default>
+        <label>Flood Management Bylaw Exemption</label>
+    </customValue>
+    <customValue>
+        <fullName>Minimum Frontage Exemption</fullName>
+        <default>false</default>
+        <label>Minimum Frontage Exemption</label>
+    </customValue>
+    <customValue>
+        <fullName>Phased Development Agreement</fullName>
+        <default>false</default>
+        <label>Phased Development Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Land Use Contract Amendment or Discharge</fullName>
+        <default>false</default>
+        <label>Land Use Contract Amendment or Discharge</label>
+    </customValue>
+    <customValue>
+        <fullName>Board of Variance</fullName>
+        <default>false</default>
+        <label>Board of Variance</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecommunication Antanna Structure</fullName>
+        <default>false</default>
+        <label>Telecommunication Antanna Structure</label>
+    </customValue>
+    <customValue>
+        <fullName>Business</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Contractor</label>
+    </customValue>
+    <customValue>
+        <fullName>Animal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Animal</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Liquor</label>
+    </customValue>
+    <customValue>
+        <fullName>Restaurant</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Restaurant</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Heater Replacement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Water Heater Replacement</label>
+    </customValue>
+    <customValue>
+        <fullName>Electrical</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Electrical</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Review</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Development Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Building</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Building</label>
+    </customValue>
+    <customValue>
+        <fullName>Variance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Variance</label>
+    </customValue>
+    <masterLabel>Application Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
