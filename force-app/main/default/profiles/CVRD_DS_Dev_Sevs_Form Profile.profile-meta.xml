@@ -6,6 +6,38 @@
         <visible>false</visible>
     </applicationVisibilities>
     <custom>true</custom>
+    <!--Application_contact-->
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__First_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Last_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Application__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Mailing_Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Phone__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+<!--Application_contact-->   
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.Agent_Authorization__c</field>
@@ -206,6 +238,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>MUSW__Application2__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Application_Contact__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
