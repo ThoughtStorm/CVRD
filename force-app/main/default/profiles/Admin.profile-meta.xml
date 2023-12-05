@@ -5,30 +5,6 @@
         <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
-    <classAccesses>
-        <apexClass>LightningForgotPasswordController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningForgotPasswordControllerTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningLoginFormController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningLoginFormControllerTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningSelfRegisterController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningSelfRegisterControllerTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
@@ -245,17 +221,6 @@
         <field>MUSW__Application_Contact__c.CVRD_DS_Primary_Owner__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application_Contact__c.Primary_Owner__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application_Contact__c-MUSW__Application Contact Layout</layout>
-    </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
