@@ -4,8 +4,8 @@
     <assignments>
         <name>Add_New_Contact_in_the_Application_contact_list</name>
         <label>Add New Contact in the Application contact list</label>
-        <locationX>50</locationX>
-        <locationY>890</locationY>
+        <locationX>182</locationX>
+        <locationY>1490</locationY>
         <assignmentItems>
             <assignToReference>ApplicationContactList</assignToReference>
             <operator>Add</operator>
@@ -18,10 +18,70 @@
         </connector>
     </assignments>
     <assignments>
+        <name>assign_application_Id_on_application_contact</name>
+        <label>assign application Id on application contact</label>
+        <locationX>666</locationX>
+        <locationY>1838</locationY>
+        <assignmentItems>
+            <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Application_record</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Application_Contact_record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Primary_owner_mailing_address_to_new_owner</name>
+        <label>Assign Primary owner mailing address to new owner</label>
+        <locationX>50</locationX>
+        <locationY>1298</locationY>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__Street__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__Street__s</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__City__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__City__s</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__StateCode__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__StateCode__s</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__PostalCode__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__PostalCode__s</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__CountryCode__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__CountryCode__s</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Clear_Add_new_Application_Contact_record</name>
         <label>Clear Add new Application Contact record</label>
-        <locationX>50</locationX>
-        <locationY>998</locationY>
+        <locationX>182</locationX>
+        <locationY>1598</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
             <operator>Assign</operator>
@@ -50,7 +110,7 @@
     <assignments>
         <name>Stages_assignment</name>
         <label>Stages assignment</label>
-        <locationX>248</locationX>
+        <locationX>578</locationX>
         <locationY>134</locationY>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
@@ -91,6 +151,13 @@
             <assignToReference>Stage</assignToReference>
             <operator>Add</operator>
             <value>
+                <stringValue>Environmental Management Act</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Stage</assignToReference>
+            <operator>Add</operator>
+            <value>
                 <stringValue>Riparian Areas Protection Regulation Declaration</stringValue>
             </value>
         </assignmentItems>
@@ -112,13 +179,125 @@
             <targetReference>Application_Type_Screen</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Update_Primary_Owner_check_on_Application_Contact_Record</name>
+        <label>Update Primary Owner check on Application Contact Record</label>
+        <locationX>974</locationX>
+        <locationY>1082</locationY>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactList</assignToReference>
+            <operator>AddAtStart</operator>
+            <value>
+                <elementReference>Application_Contact_Record</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Environment_Management_Act</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>EnvironmentalActSchedule1False</name>
+        <choiceText>No</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>EnvironmentalActSchedule1True</name>
+        <choiceText>Yes</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>EnvironmentalActSchedule2False</name>
+        <choiceText>No</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>EnvironmentalActSchedule2True</name>
+        <choiceText>Yes</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>RiparianAreasSchedule1False</name>
+        <choiceText>No</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>RiparianAreasSchedule1True</name>
+        <choiceText>Yes</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>RiparianAreasSchedule2False</name>
+        <choiceText>No</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>RiparianAreasSchedule2True</name>
+        <choiceText>Yes</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Check_for_mailing_address_is_same_or_not</name>
+        <label>Check for mailing address is same or not</label>
+        <locationX>182</locationX>
+        <locationY>1190</locationY>
+        <defaultConnector>
+            <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Mailing Address is not Same</defaultConnectorLabel>
+        <rules>
+            <name>Mailing_Address_is_Same</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Mailing_address_is_not_same</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Primary_owner_mailing_address_to_new_owner</targetReference>
+            </connector>
+            <label>Mailing Address is Same</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
-        <locationX>248</locationX>
-        <locationY>674</locationY>
+        <locationX>578</locationX>
+        <locationY>974</locationY>
         <defaultConnector>
-            <targetReference>Rec_check</targetReference>
+            <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -138,10 +317,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Evaluate_Application_Type</name>
+        <label>Evaluate Application Type</label>
+        <locationX>578</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Owner_Details_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Application_Type_is_Development_permit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Application_type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Development Permit (DP)</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DPA_Screen</targetReference>
+            </connector>
+            <label>Application Type is Development permit</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Rec_check</name>
         <label>Rec check</label>
-        <locationX>446</locationX>
-        <locationY>782</locationY>
+        <locationX>974</locationX>
+        <locationY>1514</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Do_not_save_record</name>
@@ -171,6 +375,20 @@
     <interviewLabel>CVRD_DS_Application_Journey {!$Flow.CurrentDateTime}</interviewLabel>
     <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD DS Application Journey</label>
+    <loops>
+        <name>Create_Application_Contact_record</name>
+        <label>Create Application Contact record</label>
+        <locationX>578</locationX>
+        <locationY>1730</locationY>
+        <collectionReference>ApplicationContactList</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>assign_application_Id_on_application_contact</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Create_Application_Contact_records</targetReference>
+        </noMoreValuesConnector>
+    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -191,10 +409,27 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordCreates>
+        <name>Create_Application_Contact_records</name>
+        <label>Create Application Contact records</label>
+        <locationX>578</locationX>
+        <locationY>2030</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Fault_Screen</targetReference>
+        </faultConnector>
+        <inputReference>ApplicationContactList</inputReference>
+    </recordCreates>
+    <recordCreates>
         <name>Create_Application_record</name>
         <label>Create Application record</label>
-        <locationX>314</locationX>
-        <locationY>890</locationY>
+        <locationX>578</locationX>
+        <locationY>1622</locationY>
+        <connector>
+            <targetReference>Create_Application_Contact_record</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Fault_Screen</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>MUSW__Description__c</field>
             <value>
@@ -213,13 +448,13 @@
     <screens>
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
-        <locationX>50</locationX>
-        <locationY>782</locationY>
+        <locationX>182</locationX>
+        <locationY>1082</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
+            <targetReference>Check_for_mailing_address_is_same_or_not</targetReference>
         </connector>
         <fields>
             <name>header_6</name>
@@ -248,6 +483,10 @@
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>SpaceSectionV2</name>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Add_New_Owner</name>
@@ -351,7 +590,7 @@
     <screens>
         <name>Application_Type_Screen</name>
         <label>Application_Type_Screen</label>
-        <locationX>248</locationX>
+        <locationX>578</locationX>
         <locationY>242</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -417,7 +656,7 @@
                     <fieldText>Application Type</fieldText>
                     <fieldType>RadioButtons</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
+                    <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -436,13 +675,13 @@
     <screens>
         <name>Description_Screen</name>
         <label>Description Screen</label>
-        <locationX>248</locationX>
+        <locationX>578</locationX>
         <locationY>350</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>DPA_Screen</targetReference>
+            <targetReference>Property_Information</targetReference>
         </connector>
         <fields>
             <name>Description_Screen_Section1</name>
@@ -501,7 +740,7 @@
                     <fieldType>LargeTextArea</fieldType>
                     <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgba(9, 30, 66, 0.06); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Provide a rationale documents in the submission tab.&lt;/span&gt;&lt;/p&gt;</helpText>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
+                    <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -520,8 +759,8 @@
     <screens>
         <name>DPA_Screen</name>
         <label>DPA Screen</label>
-        <locationX>248</locationX>
-        <locationY>458</locationY>
+        <locationX>446</locationX>
+        <locationY>674</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -557,12 +796,203 @@
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <fields>
-            <name>DPAShow</name>
-            <extensionName>c:cVRD_DS_DPAShowScreen</extensionName>
+            <name>DPA_Screen_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>DPA_Screen_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>DPA</name>
+            <fieldText>DPA Information</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>DPA_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>DPAShow</name>
+                    <extensionName>c:cVRD_DS_DPAShowScreen</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Environment_Management_Act</name>
+        <label>Environment Management Act</label>
+        <locationX>974</locationX>
+        <locationY>1190</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Riparian_Areas_Protection_Regulation_Declaration</targetReference>
+        </connector>
+        <fields>
+            <name>Cvrd_LogoV1</name>
+            <extensionName>c:cVRD_DS_Dev_App_header</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>EnvironmentalStage</name>
+            <extensionName>clariti:FlowStages</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>currentStage</name>
+                <value>
+                    <stringValue>Environmental Management Act</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>stages</name>
+                <value>
+                    <elementReference>Stage</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Environment_Management_Act_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Environment_Management_Act_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Environment_Management_ActSection</name>
+            <fieldText>Environment Management Act</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Environment_Management_ActSection_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Environment_ActDisplayTextV1</name>
+                    <fieldText>&lt;p&gt;Pursuant to the &lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03053_00&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Environmental Management Act,&lt;/a&gt; an applicant is required to submit a completed &lt;a href=&quot;https://submit.digital.gov.bc.ca/app/form/submit?f=32a95812-f9db-4fd2-99eb-7e362b0253b1&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Schedule 1 – Site Disclosure Statement&lt;/a&gt; on properties that are/were used for specified commercial or industrial purposes indicated on &lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/375_96_04&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Schedule 2 of the Contaminated Sites Regulations.&lt;/a&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Environment_ActDisplayTextV2</name>
+                    <fieldText>&lt;p&gt;To determine if a Schedule 1 – Site Disclosure Statement is required, please indicate if:&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>EnvironmentalActConditionV1</name>
+                    <choiceReferences>EnvironmentalActSchedule1True</choiceReferences>
+                    <choiceReferences>EnvironmentalActSchedule1False</choiceReferences>
+                    <dataType>Boolean</dataType>
+                    <fieldText>The site is or has been used for commercial or industrial purposes.</fieldText>
+                    <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Environment_ActDisplayTextV3</name>
+                    <fieldText>&lt;p&gt;If Yes, refer to Schedule 2 to determine if a Schedule 1 – Site Disclosure Statement is required. &lt;/p&gt;&lt;p&gt;Refer to the &lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/375_96_01#section4&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Contaminated Sites Regulations,&lt;/a&gt; Division 3, Part 2 for a list of exemptions.&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>EnvironmentalActConditionV1</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>EnvironmentalActConditionV2</name>
+                    <choiceReferences>EnvironmentalActSchedule2True</choiceReferences>
+                    <choiceReferences>EnvironmentalActSchedule2False</choiceReferences>
+                    <dataType>Boolean</dataType>
+                    <fieldText>A Site Disclosure Statement is required.</fieldText>
+                    <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>EnvironmentalActConditionV1</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Fault_Screen</name>
+        <label>Fault Screen</label>
+        <locationX>1106</locationX>
+        <locationY>1730</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>header_fault</name>
+            <extensionName>c:cVRD_DS_Dev_App_header</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Fault_Message</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(247, 3, 3);&quot;&gt;{!$Flow.FaultMessage}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -570,8 +1000,8 @@
     <screens>
         <name>Owner_Details_Screen</name>
         <label>Owner Details Screen</label>
-        <locationX>248</locationX>
-        <locationY>566</locationY>
+        <locationX>578</locationX>
+        <locationY>866</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -605,6 +1035,23 @@
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Owner_Details_Screen_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Owner_Details_Screen_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Owner_Information</name>
@@ -718,8 +1165,522 @@
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
+    <screens>
+        <name>Property_Information</name>
+        <label>Property Information</label>
+        <locationX>578</locationX>
+        <locationY>458</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Evaluate_Application_Type</targetReference>
+        </connector>
+        <fields>
+            <name>Header_01</name>
+            <extensionName>c:cVRD_DS_Dev_App_header</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>PropertyStage</name>
+            <extensionName>clariti:FlowStages</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>currentStage</name>
+                <value>
+                    <stringValue>Property Information</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>stages</name>
+                <value>
+                    <elementReference>Stage</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Property_Information_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Property_Information_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Property_InformationSection</name>
+            <fieldText>Property Information</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Property_InformationSection_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>Application_Record.MUSW__Parcel__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>Application_Record.MUSW__Address__c</objectFieldReference>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>10</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Property_InformationSection_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>2</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Review_Application_Screen</name>
+        <label>Review Application Screen</label>
+        <locationX>974</locationX>
+        <locationY>1406</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Rec_check</targetReference>
+        </connector>
+        <fields>
+            <name>Header_final</name>
+            <extensionName>c:cVRD_DS_Dev_App_header</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Application_Details</name>
+            <fieldText>Application Details</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Application_Details_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Application_type_review</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Application Type  &lt;/span&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Application_type}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Application_Details_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Description_review</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Description&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Description_long_text}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Property_Information_review</name>
+            <fieldText>Property Information</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Property_Information_review_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Address_Review</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;Address&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Application_Record.MUSW__Address__r.Name}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Property_Information_review_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Parcel_review</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;Parcel&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Application_Record.MUSW__Parcel__r.Name}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>DPA_Review</name>
+            <fieldText>DPA</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>DPA_Review_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>DPA_Exemption_Review</name>
+                    <extensionName>c:cVRD_DS_DPAShowScreen</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Application_type</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Development Permit (DP)</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Owner_Information_Review_section</name>
+            <fieldText>Owner Information</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Owner_Information_Review_section_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Owner_information_Review</name>
+                    <dataTypeMappings>
+                        <typeName>T</typeName>
+                        <typeValue>MUSW__Application_Contact__c</typeValue>
+                    </dataTypeMappings>
+                    <extensionName>flowruntime:datatable</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Owner Information</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>selectionMode</name>
+                        <value>
+                            <stringValue>NO_SELECTION</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>minRowSelection</name>
+                        <value>
+                            <numberValue>0.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>tableData</name>
+                        <value>
+                            <elementReference>ApplicationContactList</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>columns</name>
+                        <value>
+                            <stringValue>[{&quot;apiName&quot;:&quot;MUSW__First_Name__c&quot;,&quot;guid&quot;:&quot;column-e049&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Last_Name__c&quot;,&quot;guid&quot;:&quot;column-22bb&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Primary_Owner__c&quot;,&quot;guid&quot;:&quot;column-f5d6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Primary Owner&quot;,&quot;type&quot;:&quot;boolean&quot;},{&quot;apiName&quot;:&quot;MUSW__Email__c&quot;,&quot;guid&quot;:&quot;column-0a7b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;MUSW__Phone__c&quot;,&quot;guid&quot;:&quot;column-54c4&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Phone&quot;,&quot;type&quot;:&quot;phone&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__Street__s&quot;,&quot;guid&quot;:&quot;column-1dad&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Street&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Mailing Address (Street)&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__City__s&quot;,&quot;guid&quot;:&quot;column-4d79&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;City&quot;,&quot;wrapText&quot;:false,&quot;order&quot;:6,&quot;label&quot;:&quot;Mailing Address (City)&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__StateCode__s&quot;,&quot;guid&quot;:&quot;column-eba3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;State/Province&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:7,&quot;label&quot;:&quot;Mailing Address (State/Province)&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__CountryCode__s&quot;,&quot;guid&quot;:&quot;column-c524&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Country&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:8,&quot;label&quot;:&quot;Mailing Address (Country/Territory)&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__PostalCode__s&quot;,&quot;guid&quot;:&quot;column-33f6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Zip/Postal Code&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:9,&quot;label&quot;:&quot;Mailing Address (ZIP/Postal Code)&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>maxRowSelection</name>
+                        <value>
+                            <numberValue>0.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Environment_Management_Act_Review</name>
+            <fieldText>Environment Management Act</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Environment_Management_Act_Review_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Schedule_1_review</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(116, 116, 116);&quot;&gt;The site is or has been used for commercial or industrial purposes&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!EnvironmentalActConditionV1}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Schedule_2_review</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116); font-size: 12px; background-color: rgb(255, 255, 255);&quot;&gt;A Site Disclosure Statement is required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!EnvironmentalActConditionV2}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                    <visibilityRule>
+                        <conditionLogic>or</conditionLogic>
+                        <conditions>
+                            <leftValueReference>EnvironmentalActConditionV2</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>EnvironmentalActConditionV2</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>false</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Riparian_Areas_Declaration_review</name>
+            <fieldText>Riparian Areas Protection Regulation Declaration</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Riparian_Areas_Declaration_review_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Riparian_Area_Message_1_review</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;30 metres of the high water mark of any water features&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!RiparianAreasConditionV1}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Riparian_Area_Message_2_review</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;A ravine or within 30 metres of the top of a ravine bank&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!RiparianAreasConditionV2}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                    <visibilityRule>
+                        <conditionLogic>or</conditionLogic>
+                        <conditions>
+                            <leftValueReference>RiparianAreasConditionV2</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>RiparianAreasConditionV2</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>false</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Riparian_Areas_Protection_Regulation_Declaration</name>
+        <label>Riparian Areas Protection Regulation Declaration</label>
+        <locationX>974</locationX>
+        <locationY>1298</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Review_Application_Screen</targetReference>
+        </connector>
+        <fields>
+            <name>Cvrd_LogoV2</name>
+            <extensionName>c:cVRD_DS_Dev_App_header</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>RiparianAreasStage</name>
+            <extensionName>clariti:FlowStages</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>currentStage</name>
+                <value>
+                    <stringValue>Riparian Areas Protection Regulation Declaration</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>stages</name>
+                <value>
+                    <elementReference>Stage</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Riparian_Areas_Protection_Regulation_Declaration_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Riparian_Areas_Protection_Regulation_Declaration_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Riparian_Areas_Section</name>
+            <fieldText>Riparian Areas Protection Regulation Declaration</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Riparian_Areas_Section_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>RipariaAreasDisplayTextV1</name>
+                    <fieldText>&lt;p&gt;Please indicate whether the development proposal involves residential, commercial, industrial uses, or includes the removal or alteration of any vegetation; soil disturbance; construction of buildings and structures; creation of impervious or semi-impervious surfaces; trails, roads, docks, wharves, bridges and, infrastructure and works of any kind within:&amp;nbsp;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>RiparianAreasConditionV1</name>
+                    <choiceReferences>RiparianAreasSchedule1True</choiceReferences>
+                    <choiceReferences>RiparianAreasSchedule1False</choiceReferences>
+                    <dataType>Boolean</dataType>
+                    <fieldText>30 metres of the high water mark of any water features</fieldText>
+                    <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>RiparianAreasConditionV2</name>
+                    <choiceReferences>RiparianAreasSchedule2True</choiceReferences>
+                    <choiceReferences>RiparianAreasSchedule2False</choiceReferences>
+                    <dataType>Boolean</dataType>
+                    <fieldText>A ravine or within 30 metres of the top of a ravine bank</fieldText>
+                    <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>RiparianAreasConditionV1</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Riparian_AreasDisplayTextV2</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;“Water features” includes; 1) a watercourse, whether it usually contains water or not; 2) a pond, lake, river, creek, or brook; 3) a ditch, spring, or wetland that is connected by surface flow to 1 or 2 above.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Riparian_AreasDisplayTextV3</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Under the &lt;/strong&gt;&lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00_97021_01&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Riparian Areas Protection Act,&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt; a riparian area assessment report may be required before this application can be processed (see &lt;/strong&gt;&lt;a href=&quot;https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/fish-fish-habitat/riparian-areas-regulations/rar-brochure-2016_final_web.pdf&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Riparian Areas Regulation Brochure&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;).&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
     <start>
-        <locationX>122</locationX>
+        <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Stages_assignment</targetReference>
