@@ -6,4 +6,9 @@
 		<target>lightning__FlowScreen</target>
 		<target>lightning__HomePage</target>
 	</targets>
+	<!--targetConfigs>
+   <targetConfig targets="lightning__FlowScreen">
+       <property name="number" label="Annual Revenue" type="boolean" role="outputOnly"/>
+   </targetConfig>
+</targetConfigs-->
 </LightningComponentBundle>
