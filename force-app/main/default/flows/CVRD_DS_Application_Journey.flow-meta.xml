@@ -117,7 +117,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>1194</locationX>
-        <locationY>1946</locationY>
+        <locationY>2054</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -567,7 +567,7 @@
         <name>Rec_check</name>
         <label>Rec check</label>
         <locationX>1502</locationX>
-        <locationY>1622</locationY>
+        <locationY>1730</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -624,7 +624,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>1106</locationX>
-        <locationY>1838</locationY>
+        <locationY>1946</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -657,7 +657,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>1106</locationX>
-        <locationY>2138</locationY>
+        <locationY>2246</locationY>
         <faultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>Fault_Screen</targetReference>
@@ -668,7 +668,7 @@
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>1106</locationX>
-        <locationY>1730</locationY>
+        <locationY>1838</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -1302,7 +1302,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1634</locationX>
-        <locationY>1838</locationY>
+        <locationY>1946</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1613,6 +1613,12 @@
                             <stringValue>MUSW__Application2__c</stringValue>
                         </value>
                     </inputParameters>
+                    <inputParameters>
+                        <name>recordId</name>
+                        <value>
+                            <elementReference>PIDLookup.recordId</elementReference>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -1657,7 +1663,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Rec_check</targetReference>
+            <targetReference>Success_Screen</targetReference>
         </connector>
         <fields>
             <name>Header_final</name>
@@ -2095,6 +2101,38 @@
             </fields>
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Success_Screen</name>
+        <label>Success Screen</label>
+        <locationX>1502</locationX>
+        <locationY>1622</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Rec_check</targetReference>
+        </connector>
+        <fields>
+            <name>Header_Success_Screen</name>
+            <extensionName>c:cVRD_DS_Dev_App_header</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Success_Header</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 26px;&quot;&gt;New {!Application_type} Application&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(28, 163, 20); font-size: 26px;&quot;&gt;Success&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Body_Success</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;Your {!Application_type} Application has been submitted.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
