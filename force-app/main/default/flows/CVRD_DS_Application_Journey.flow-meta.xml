@@ -1,79 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <actionCalls>
-        <name>Mailing_address_Error_toast</name>
-        <label>Mailing address Error toast</label>
-        <locationX>50</locationX>
-        <locationY>1082</locationY>
-        <actionName>c:CVRD_DS_ShowToast</actionName>
-        <actionType>component</actionType>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Owner_Details_Screen</targetReference>
-        </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>type</name>
-            <value>
-                <stringValue>error</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <stringValue>Address Required!</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>message</name>
-            <value>
-                <stringValue>Please add the complete Mailing Address</stringValue>
-            </value>
-        </inputParameters>
-        <nameSegment>c:CVRD_DS_ShowToast</nameSegment>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-        <versionSegment>1</versionSegment>
-    </actionCalls>
-    <actionCalls>
-        <name>Secondary_Mailing_Address_Null_Error</name>
-        <label>Secondary Mailing Address Error</label>
-        <locationX>314</locationX>
-        <locationY>1406</locationY>
-        <actionName>c:CVRD_DS_ShowToast</actionName>
-        <actionType>component</actionType>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Add_Owner_Screen</targetReference>
-        </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>type</name>
-            <value>
-                <stringValue>error</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <stringValue>Address Required!</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>message</name>
-            <value>
-                <stringValue>Please add complete Mailing Address</stringValue>
-            </value>
-        </inputParameters>
-        <nameSegment>c:CVRD_DS_ShowToast</nameSegment>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-        <versionSegment>1</versionSegment>
-    </actionCalls>
     <apiVersion>59.0</apiVersion>
     <assignments>
         <name>Add_New_Contact_in_the_Application_contact_list</name>
         <label>Add New Contact in the Application contact list</label>
-        <locationX>710</locationX>
-        <locationY>1706</locationY>
+        <locationX>182</locationX>
+        <locationY>1490</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
             <operator>Assign</operator>
@@ -110,13 +42,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Clear_Add_new_Application_Contact_record</targetReference>
+            <isGoTo>true</isGoTo>
+            <targetReference>Owner_Details_Screen</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
-        <locationX>1194</locationX>
+        <locationX>754</locationX>
         <locationY>2054</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
@@ -137,43 +70,43 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_Primary_owner_mailing_address_to_new_owner</name>
-        <label>Assign Primary owner mailing address to new owner</label>
-        <locationX>578</locationX>
-        <locationY>1514</locationY>
+        <name>Assign_New_owner_Mailing_Address</name>
+        <label>Assign New owner Mailing Address</label>
+        <locationX>314</locationX>
+        <locationY>1298</locationY>
         <assignmentItems>
-            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__Street__s</assignToReference>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__CountryCode__s</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__Street__s</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__City__s</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__City__s</elementReference>
+                <elementReference>CountryStateAddOwner.topValue</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__StateCode__s</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__StateCode__s</elementReference>
+                <elementReference>CountryStateAddOwner.middleValue</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__Street__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>StrretAddOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__City__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CityAddOwner</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__PostalCode__s</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__PostalCode__s</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__CountryCode__s</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Application_Contact_Record.MUSW__Mailing_Address__CountryCode__s</elementReference>
+                <elementReference>PostalCodeAddOwner</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -181,47 +114,53 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Clear_Add_new_Application_Contact_record</name>
-        <label>Clear Add new Application Contact record</label>
-        <locationX>710</locationX>
-        <locationY>1814</locationY>
-        <assignmentItems>
-            <assignToReference>EmailAddOwner.value</assignToReference>
-            <operator>Assign</operator>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>PhoneAddOwner.value</assignToReference>
-            <operator>Assign</operator>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__CountryCode__s</assignToReference>
-            <operator>Assign</operator>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__PostalCode__s</assignToReference>
-            <operator>Assign</operator>
-        </assignmentItems>
+        <name>Assign_Primary_owner_mailing_address_to_new_owner</name>
+        <label>Assign Primary owner mailing address to new owner</label>
+        <locationX>50</locationX>
+        <locationY>1298</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__Street__s</assignToReference>
             <operator>Assign</operator>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__StateCode__s</assignToReference>
-            <operator>Assign</operator>
+            <value>
+                <elementReference>StrretAddOwnerSame</elementReference>
+            </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__City__s</assignToReference>
             <operator>Assign</operator>
+            <value>
+                <elementReference>CityAddOwnerSame</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__StateCode__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CountryStateAddOwnerSame.middleValue</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__PostalCode__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PostalCodeAddOwnerSame</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__CountryCode__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CountryStateAddOwnerSame.topValue</elementReference>
+            </value>
         </assignmentItems>
         <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Owner_Details_Screen</targetReference>
+            <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Stages_assignment</name>
         <label>Stages assignment</label>
-        <locationX>528</locationX>
+        <locationX>622</locationX>
         <locationY>134</locationY>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
@@ -293,8 +232,8 @@
     <assignments>
         <name>Update_Primary_Owner_check_on_Application_Contact_Record</name>
         <label>Update Primary Owner check on Application Contact Record</label>
-        <locationX>1502</locationX>
-        <locationY>1190</locationY>
+        <locationX>1062</locationX>
+        <locationY>1082</locationY>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
             <operator>Assign</operator>
@@ -331,8 +270,43 @@
             </value>
         </assignmentItems>
         <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Mailing_Address__CountryCode__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CountryState.topValue</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Mailing_Address__StateCode__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CountryState.middleValue</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Mailing_Address__Street__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Mailing_Address_Street</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Mailing_Address__City__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Mailing_Address_City</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Mailing_Address__PostalCode__s</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Mailing_Address_ZIP_Postal_Code</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
             <assignToReference>ApplicationContactList</assignToReference>
-            <operator>AddAtStart</operator>
+            <operator>Add</operator>
             <value>
                 <elementReference>Application_Contact_Record</elementReference>
             </value>
@@ -408,10 +382,10 @@
     <decisions>
         <name>Check_for_mailing_address_is_same_or_not</name>
         <label>Check for mailing address is same or not</label>
-        <locationX>710</locationX>
-        <locationY>1406</locationY>
+        <locationX>182</locationX>
+        <locationY>1190</locationY>
         <defaultConnector>
-            <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
+            <targetReference>Assign_New_owner_Mailing_Address</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Mailing Address is not Same</defaultConnectorLabel>
         <rules>
@@ -431,93 +405,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Check_Primary_mailing_address</name>
-        <label>Check Primary mailing address</label>
-        <locationX>528</locationX>
-        <locationY>974</locationY>
-        <defaultConnector>
-            <targetReference>Evaluate_Add_Owner</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Primary Mailing address is not null</defaultConnectorLabel>
-        <rules>
-            <name>Primary_Mailing_address_is_null</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>Application_Contact_Record.MUSW__Mailing_Address__Street__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <conditions>
-                <leftValueReference>Application_Contact_Record.MUSW__Mailing_Address__City__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <conditions>
-                <leftValueReference>Application_Contact_Record.MUSW__Mailing_Address__CountryCode__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <conditions>
-                <leftValueReference>Application_Contact_Record.MUSW__Mailing_Address__PostalCode__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <conditions>
-                <leftValueReference>Application_Contact_Record.MUSW__Mailing_Address__StateCode__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <connector>
-                <targetReference>Mailing_address_Error_toast</targetReference>
-            </connector>
-            <label>Primary Mailing address is null</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Check_Secondary_Mailing_Address</name>
-        <label>Check Secondary Mailing Address</label>
-        <locationX>512</locationX>
-        <locationY>1298</locationY>
-        <defaultConnector>
-            <targetReference>Check_for_mailing_address_is_same_or_not</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Secondary Mailing Address is not null</defaultConnectorLabel>
-        <rules>
-            <name>Secondary_Mailing_Address_is_null</name>
-            <conditionLogic>(1 OR 2 OR 3 OR 4 OR 5) AND 6</conditionLogic>
-            <conditions>
-                <leftValueReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__Street__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <conditions>
-                <leftValueReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__CountryCode__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <conditions>
-                <leftValueReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__StateCode__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <conditions>
-                <leftValueReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__City__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <conditions>
-                <leftValueReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__PostalCode__s</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <conditions>
-                <leftValueReference>Mailing_Address_is_Same</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Secondary_Mailing_Address_Null_Error</targetReference>
-            </connector>
-            <label>Secondary Mailing Address is null</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
-        <locationX>1007</locationX>
-        <locationY>1082</locationY>
+        <locationX>622</locationX>
+        <locationY>974</locationY>
         <defaultConnector>
             <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
         </defaultConnector>
@@ -541,7 +432,7 @@
     <decisions>
         <name>Evaluate_Application_Type</name>
         <label>Evaluate Application Type</label>
-        <locationX>528</locationX>
+        <locationX>622</locationX>
         <locationY>566</locationY>
         <defaultConnector>
             <targetReference>Owner_Details_Screen</targetReference>
@@ -566,8 +457,8 @@
     <decisions>
         <name>Rec_check</name>
         <label>Rec check</label>
-        <locationX>1502</locationX>
-        <locationY>1730</locationY>
+        <locationX>1062</locationX>
+        <locationY>1622</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -580,7 +471,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Application_record</targetReference>
+                <targetReference>Get_Preliminary_Review_Queue</targetReference>
             </connector>
             <label>save record</label>
         </rules>
@@ -623,7 +514,7 @@
     <loops>
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
-        <locationX>1106</locationX>
+        <locationX>666</locationX>
         <locationY>1946</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -656,7 +547,7 @@
     <recordCreates>
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
-        <locationX>1106</locationX>
+        <locationX>666</locationX>
         <locationY>2246</locationY>
         <faultConnector>
             <isGoTo>true</isGoTo>
@@ -667,7 +558,7 @@
     <recordCreates>
         <name>Create_Application_record</name>
         <label>Create Application record</label>
-        <locationX>1106</locationX>
+        <locationX>666</locationX>
         <locationY>1838</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
@@ -729,19 +620,53 @@
                 <elementReference>Application_Name</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_Preliminary_Review_Queue.Id</elementReference>
+            </value>
+        </inputAssignments>
         <object>MUSW__Application2__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordLookups>
+        <name>Get_Preliminary_Review_Queue</name>
+        <label>Get Preliminary Review Queue</label>
+        <locationX>666</locationX>
+        <locationY>1730</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Application_record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CVRD_DS_Preliminary_Review</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <screens>
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
-        <locationX>512</locationX>
-        <locationY>1190</locationY>
+        <locationX>182</locationX>
+        <locationY>1082</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Check_Secondary_Mailing_Address</targetReference>
+            <targetReference>Check_for_mailing_address_is_same_or_not</targetReference>
         </connector>
         <fields>
             <name>header_6</name>
@@ -785,23 +710,17 @@
                 <fields>
                     <name>First_NameAddOwner</name>
                     <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>First_NameAddOwner</elementReference>
-                    </defaultValue>
                     <fieldText>First Name</fieldText>
                     <fieldType>InputField</fieldType>
-                    <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
                     <name>Last_NameAddOwner</name>
                     <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Last_NameAddOwner</elementReference>
-                    </defaultValue>
                     <fieldText>Last Name</fieldText>
                     <fieldType>InputField</fieldType>
-                    <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
@@ -812,12 +731,6 @@
                         <name>required</name>
                         <value>
                             <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>value</name>
-                        <value>
-                            <elementReference>EmailAddOwner.value</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
@@ -832,12 +745,6 @@
                         <name>required</name>
                         <value>
                             <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>value</name>
-                        <value>
-                            <elementReference>PhoneAddOwner.value</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
@@ -867,10 +774,54 @@
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <fieldType>ObjectProvided</fieldType>
+                    <name>CountryStateAddOwner</name>
+                    <extensionName>flowruntime:dependentPicklists</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>dependencyWrapperApiName</name>
+                        <value>
+                            <stringValue>MUSW__Application_Contact__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topPicklistApiName</name>
+                        <value>
+                            <stringValue>CVRD_DS_Owner_Country__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middlePicklistApiName</name>
+                        <value>
+                            <stringValue>CVRD_DS_Owner_State__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topLabel</name>
+                        <value>
+                            <stringValue>Mailing Address (Country/Territory)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topRequired</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleLabel</name>
+                        <value>
+                            <stringValue>Mailing Address (State/Province)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleRequired</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>AddNewApplicationContactRecord.MUSW__Mailing_Address__c</objectFieldReference>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
@@ -883,10 +834,183 @@
                     </visibilityRule>
                 </fields>
                 <fields>
-                    <fieldType>ObjectProvided</fieldType>
+                    <name>StrretAddOwner</name>
+                    <dataType>String</dataType>
+                    <fieldText>Mailing Address (Street)</fieldText>
+                    <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.MUSW__Mailing_Address__c</objectFieldReference>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>CityAddOwner</name>
+                    <dataType>String</dataType>
+                    <fieldText>Mailing Address (City)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>PostalCodeAddOwner</name>
+                    <dataType>String</dataType>
+                    <fieldText>Mailing Address (ZIP/Postal Code)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>CountryStateAddOwnerSame</name>
+                    <extensionName>flowruntime:dependentPicklists</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>dependencyWrapperApiName</name>
+                        <value>
+                            <stringValue>MUSW__Application_Contact__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topPicklistApiName</name>
+                        <value>
+                            <stringValue>CVRD_DS_Owner_Country__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middlePicklistApiName</name>
+                        <value>
+                            <stringValue>CVRD_DS_Owner_State__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topLabel</name>
+                        <value>
+                            <stringValue>Mailing Address (Country/Territory)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topRequired</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topValue</name>
+                        <value>
+                            <elementReference>CountryState.topValue</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleLabel</name>
+                        <value>
+                            <stringValue>Mailing Address (State/Province)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleRequired</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleValue</name>
+                        <value>
+                            <elementReference>CountryState.middleValue</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>false</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>StrretAddOwnerSame</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Mailing_Address_Street</elementReference>
+                    </defaultValue>
+                    <fieldText>Mailing Address (Street)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>false</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>CityAddOwnerSame</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Mailing_Address_City</elementReference>
+                    </defaultValue>
+                    <fieldText>Mailing Address (City)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>false</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>PostalCodeAddOwnerSame</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Mailing_Address_ZIP_Postal_Code</elementReference>
+                    </defaultValue>
+                    <fieldText>Mailing Address (ZIP/Postal Code)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
@@ -915,7 +1039,7 @@
     <screens>
         <name>Application_Type_Screen</name>
         <label>Application_Type_Screen</label>
-        <locationX>528</locationX>
+        <locationX>622</locationX>
         <locationY>242</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -1000,7 +1124,7 @@
     <screens>
         <name>Description_Screen</name>
         <label>Description Screen</label>
-        <locationX>528</locationX>
+        <locationX>622</locationX>
         <locationY>350</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -1084,7 +1208,7 @@
     <screens>
         <name>DPA_Screen</name>
         <label>DPA Screen</label>
-        <locationX>396</locationX>
+        <locationX>490</locationX>
         <locationY>674</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -1169,8 +1293,8 @@
     <screens>
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
-        <locationX>1502</locationX>
-        <locationY>1298</locationY>
+        <locationX>1062</locationX>
+        <locationY>1190</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1301,7 +1425,7 @@
     <screens>
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
-        <locationX>1634</locationX>
+        <locationX>1194</locationX>
         <locationY>1946</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -1325,13 +1449,13 @@
     <screens>
         <name>Owner_Details_Screen</name>
         <label>Owner Details Screen</label>
-        <locationX>528</locationX>
+        <locationX>622</locationX>
         <locationY>866</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Check_Primary_mailing_address</targetReference>
+            <targetReference>Evaluate_Add_Owner</targetReference>
         </connector>
         <fields>
             <name>header_5</name>
@@ -1459,10 +1583,111 @@
                 <name>Owner_Information_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
+                    <name>CountryState</name>
+                    <extensionName>flowruntime:dependentPicklists</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>dependencyWrapperApiName</name>
+                        <value>
+                            <stringValue>MUSW__Application_Contact__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topPicklistApiName</name>
+                        <value>
+                            <stringValue>CVRD_DS_Owner_Country__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middlePicklistApiName</name>
+                        <value>
+                            <stringValue>CVRD_DS_Owner_State__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topLabel</name>
+                        <value>
+                            <stringValue>Mailing Address (Country/Territory)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topRequired</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleLabel</name>
+                        <value>
+                            <stringValue>Mailing Address (State/Province)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleRequired</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topValue</name>
+                        <value>
+                            <elementReference>CountryState.topValue</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleValue</name>
+                        <value>
+                            <elementReference>CountryState.middleValue</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.MUSW__Mailing_Address__c</objectFieldReference>
+                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Country__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_State__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <name>Mailing_Address_Street</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Mailing_Address_Street</elementReference>
+                    </defaultValue>
+                    <fieldText>Mailing Address (Street)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Mailing_Address_City</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Mailing_Address_City</elementReference>
+                    </defaultValue>
+                    <fieldText>Mailing Address (City)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Mailing_Address_ZIP_Postal_Code</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Mailing_Address_ZIP_Postal_Code</elementReference>
+                    </defaultValue>
+                    <fieldText>Mailing Address (ZIP/Postal Code)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -1521,7 +1746,7 @@
                     <stringValue>[{&quot;label&quot;:&quot;Add Another Owner&quot;,&quot;value&quot;:&quot;Add Another Owner&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:adduser&quot;,&quot;index&quot;:0}]</stringValue>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1531,7 +1756,7 @@
     <screens>
         <name>Property_Information</name>
         <label>Property Information</label>
-        <locationX>528</locationX>
+        <locationX>622</locationX>
         <locationY>458</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -1657,8 +1882,8 @@
     <screens>
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
-        <locationX>1502</locationX>
-        <locationY>1514</locationY>
+        <locationX>1062</locationX>
+        <locationY>1406</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1986,8 +2211,8 @@
     <screens>
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
-        <locationX>1502</locationX>
-        <locationY>1406</locationY>
+        <locationX>1062</locationX>
+        <locationY>1298</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2108,8 +2333,8 @@
     <screens>
         <name>Success_Screen</name>
         <label>Success Screen</label>
-        <locationX>1502</locationX>
-        <locationY>1622</locationY>
+        <locationX>1062</locationX>
+        <locationY>1514</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2138,13 +2363,13 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>402</locationX>
+        <locationX>496</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Stages_assignment</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>AddNewApplicationContactRecord</name>
         <dataType>SObject</dataType>
