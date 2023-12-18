@@ -257,7 +257,7 @@
         <fields>
             <name>Acknowledgement_Checkbox</name>
             <dataType>Boolean</dataType>
-            <fieldText>I, {!ApplicationContactRecord.MUSW__First_Name__c} {!ApplicationContactRecord.MUSW__Last_Name__c}, hereby do attest that I completed the {!ApplicationType}. My email is: {!ApplicationContactRecord.MUSW__Email__c}</fieldText>
+            <fieldText>I, {!ApplicationContactRecord.MUSW__First_Name__c} {!ApplicationContactRecord.MUSW__Last_Name__c}, hereby do attest that I completed the {!ApplicationType}.</fieldText>
             <fieldType>InputField</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>

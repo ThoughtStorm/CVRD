@@ -49,7 +49,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>666</locationX>
-        <locationY>2054</locationY>
+        <locationY>2162</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -421,7 +421,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Application_record</targetReference>
+                <targetReference>Get_PreliminaryReview_Id</targetReference>
             </connector>
             <label>save record</label>
         </rules>
@@ -465,7 +465,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>578</locationX>
-        <locationY>1946</locationY>
+        <locationY>2054</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -498,7 +498,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>578</locationX>
-        <locationY>2246</locationY>
+        <locationY>2354</locationY>
         <faultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>Fault_Screen</targetReference>
@@ -509,7 +509,7 @@
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>578</locationX>
-        <locationY>1838</locationY>
+        <locationY>1946</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -570,9 +570,44 @@
                 <elementReference>Application_Name</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_PreliminaryReview_Id.Id</elementReference>
+            </value>
+        </inputAssignments>
         <object>MUSW__Application2__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordLookups>
+        <name>Get_PreliminaryReview_Id</name>
+        <label>Get PreliminaryReview Id</label>
+        <locationX>578</locationX>
+        <locationY>1838</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Application_record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CVRD_DS_Preliminary_Review</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <screens>
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
@@ -1188,7 +1223,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1106</locationX>
-        <locationY>1946</locationY>
+        <locationY>2054</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1844,7 +1879,7 @@
         </fields>
         <fields>
             <name>Environment_Management_Act_Review</name>
-            <fieldText>Environment Management Act</fieldText>
+            <fieldText>Environmental Management Act</fieldText>
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>Environment_Management_Act_Review_Column1</name>
