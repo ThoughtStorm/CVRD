@@ -10,31 +10,7 @@
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
-    <classAccesses>
-        <apexClass>LightningForgotPasswordController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningForgotPasswordControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningLoginFormController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningLoginFormControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningSelfRegisterController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LightningSelfRegisterControllerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <custom>true</custom>
+      <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.Agent_Authorization__c</field>
@@ -55,12 +31,7 @@
         <field>MUSW__Application2__c.CVRD_DS_Is_Top_of_a_Ravine_Bank__c</field>
         <readable>false</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Application2__c.CVRD_DS_Selected_DPAs__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+        <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_DS_Site_Disclosure_Statement__c</field>
         <readable>false</readable>
@@ -257,26 +228,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>MUSW__Comment__c.CVRD_DS_Applicant_Comment__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Comment__c.CVRD_DS_Application__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Comment__c.CVRD_DS_DPA_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Comment__c.CVRD_DS_Reviewer_Comment__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>MUSW__Comment__c.MUSW__Author__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -325,71 +276,8 @@
         <field>MUSW__Comment__c.MUSW__Milestone__c</field>
         <readable>false</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Master_Submission_List__c.CVRD_DS_DPA_Types__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Parcel__c.CVRD_DS_DPA__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
-    </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application_Contact__c-MUSW__Application Contact Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Comment__c-MUSW__Comment Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Parcel__c-MUSW__Parcel Layout</layout>
     </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -400,65 +288,19 @@
         <object>MUSW__Application2__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Attestation__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
     <pageAccesses>
         <apexPage>CVRD_DS_AppSitePage</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>MUSW__Application_Template__c.MUSW__Land_Use_Application</recordType>
@@ -603,6 +445,18 @@
         <tab>MUSW__Application2__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Application_Journey</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Attestation_Development_Service_application</flow>
+    </flowAccesses>
+	<flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Email_Notification_Preliminary_Review</flow>
+    </flowAccesses>
     <userLicense>Guest User License</userLicense>
     <userPermissions>
         <enabled>true</enabled>
