@@ -1824,48 +1824,6 @@
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
-                <fields>
-                    <name>Owner_details</name>
-                    <dataTypeMappings>
-                        <typeName>T</typeName>
-                        <typeValue>MUSW__Application_Contact__c</typeValue>
-                    </dataTypeMappings>
-                    <extensionName>clariti:customDatatable</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>objectName</name>
-                        <value>
-                            <stringValue>MUSW__Application_Contact__c</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>tableData</name>
-                        <value>
-                            <elementReference>ApplicationContactList</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>columnFields</name>
-                        <value>
-                            <stringValue>MUSW__First_Name__c,CVRD_DS_Primary_owner__c,MUSW__Last_Name__c,MUSW__Email__c,MUSW__Phone__c,CVRD_DS_Owner_Country__c,CVRD_DS_Owner_State__c,CVRD_DS_Owner_Street__c,CVRD_DS_Owner_City__c,CVRD_DS_Owner_Postal_Code__c</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>cb_matchCaseOnFilters</name>
-                        <value>
-                            <stringValue>CB_FALSE</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>columnEdits</name>
-                        <value>
-                            <stringValue>MUSW__First_Name__c,MUSW__Last_Name__c,MUSW__Email__c,MUSW__Phone__c,CVRD_DS_Owner_Country__c,CVRD_DS_Owner_State__c,CVRD_DS_Owner_Street__c,CVRD_DS_Owner_City__c,CVRD_DS_Owner_Postal_Code__c</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
