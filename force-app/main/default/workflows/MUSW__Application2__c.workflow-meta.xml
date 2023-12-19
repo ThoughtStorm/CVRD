@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CVRD_DS_Email_Alert_for_Preliminary_Review</fullName>
+        <description>Email Alert for Preliminary Review</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>noreply@claritisoftware.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Tesyt_1702978649141</template>
+    </alerts>
+</Workflow>
