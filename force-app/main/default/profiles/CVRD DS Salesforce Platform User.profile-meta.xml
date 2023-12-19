@@ -276,6 +276,7 @@
         <field>MUSW__Comment__c.MUSW__Milestone__c</field>
         <readable>true</readable>
     </fieldPermissions>
+	<layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
