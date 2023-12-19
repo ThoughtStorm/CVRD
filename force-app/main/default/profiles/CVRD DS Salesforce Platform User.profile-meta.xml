@@ -459,6 +459,15 @@
         <enabled>true</enabled>
         <flow>CVRD_DS_Email_Notification_Preliminary_Review</flow>
     </flowAccesses>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Attestation__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
     <userLicense>Salesforce Platform</userLicense>
     <userPermissions>
         <enabled>true</enabled>
