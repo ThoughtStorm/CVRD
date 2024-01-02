@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>DPA 1: Riparian Protection</fullName>
+        <default>false</default>
+        <label>DPA 1: Riparian Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 2: Sensitive Ecosystems</fullName>
+        <default>false</default>
+        <label>DPA 2: Sensitive Ecosystems</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 3: Marine Uplands &amp; Foreshore Protection</fullName>
+        <default>false</default>
+        <label>DPA 3: Marine Uplands &amp; Foreshore Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 4: Aquifer Protection</fullName>
+        <default>false</default>
+        <label>DPA 4: Aquifer Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 5: Wildfire Protection</fullName>
+        <default>false</default>
+        <label>DPA 5: Wildfire Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 6: Floodplain Hazard</fullName>
+        <default>false</default>
+        <label>DPA 6: Floodplain Hazard</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 7: Landslide Hazard</fullName>
+        <default>false</default>
+        <label>DPA 7: Landslide Hazard</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 8: Protection of Farming</fullName>
+        <default>false</default>
+        <label>DPA 8: Protection of Farming</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 9: Intensive Residential</fullName>
+        <default>false</default>
+        <label>DPA 9: Intensive Residential</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 10: Multi-family Residential Development</fullName>
+        <default>false</default>
+        <label>DPA 10: Multi-family Residential Development</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 11: Commercial and Mixed Use Development</fullName>
+        <default>false</default>
+        <label>DPA 11: Commercial and Mixed Use Development</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 12: Industrial Development</fullName>
+        <default>false</default>
+        <label>DPA 12: Industrial Development</label>
+    </customValue>
+    <customValue>
+        <fullName>DPA 13: Energy &amp; Water Conservation, GHG Emissions Reduction</fullName>
+        <default>false</default>
+        <label>DPA 13: Energy &amp; Water Conservation, GHG Emissions Reduction</label>
+    </customValue>
+    <masterLabel>CVRD_DS_DPAs</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
