@@ -6,9 +6,12 @@
 		<target>lightning__FlowScreen</target>
 		<target>lightning__HomePage</target>
 	</targets>
-	<!--targetConfigs>
+	<targetConfigs>
    <targetConfig targets="lightning__FlowScreen">
-       <property name="number" label="Annual Revenue" type="boolean" role="outputOnly"/>
+       <property name="DPA_Data" type="String" label="Selected DPA" description="DPA based on property information" role="inputOnly"/>
+	   <property name="commentDataArray" type="@salesforce/schema/MUSW__Comment__c[]" label="Comment Record" />
+	   <property name="disabledShow" type="boolean" label="Read only" description="Fields are not editable" role="inputOnly"/>
+	   <property name="nonExemptData" type="String" label="Non Exempt" description="Fields are not editable" role="outputOnly"/>
    </targetConfig>
-</targetConfigs-->
+</targetConfigs>
 </LightningComponentBundle>
