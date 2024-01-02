@@ -40,7 +40,7 @@
         <default>false</default>
         <label>Phased Development Agreement</label>
     </customValue>
-    <customValue>
+    <customValue> 
         <fullName>Board_of_Variance</fullName>
         <default>false</default>
         <label>Board of Variance</label>
