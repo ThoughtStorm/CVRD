@@ -16,10 +16,6 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>CVRD_DS_Temp_Electoral_Area__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
                 <field>MUSW__Parcel_Number2__c</field>
             </layoutItems>
             <layoutItems>
@@ -257,7 +253,6 @@
         <fields>Name</fields>
         <fields>MUSW__Parcel_Number2__c</fields>
         <fields>MUSW__Primary_Zoning__c</fields>
-        <fields>CVRD_DS_Temp_Electoral_Area__c</fields>
         <relatedLists>
             <relatedList>MUSW__Parcel_Contact2__c.MUSW__Parcel__c</relatedList>
         </relatedLists>
