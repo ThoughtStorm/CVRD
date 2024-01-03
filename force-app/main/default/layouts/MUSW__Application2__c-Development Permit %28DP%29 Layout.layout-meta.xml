@@ -30,10 +30,6 @@
                 <behavior>Edit</behavior>
                 <field>MUSW__Issued_Number__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Test__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
