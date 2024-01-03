@@ -5,7 +5,7 @@
         <name>Add_New_Contact_in_the_Application_contact_list</name>
         <label>Add New Contact in the Application contact list</label>
         <locationX>182</locationX>
-        <locationY>1490</locationY>
+        <locationY>1706</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
             <operator>Assign</operator>
@@ -48,8 +48,8 @@
     <assignments>
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
-        <locationX>666</locationX>
-        <locationY>2162</locationY>
+        <locationX>930</locationX>
+        <locationY>2378</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -69,10 +69,49 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Assign_Application_Record_Id_to_Comment_Record</name>
+        <label>Assign Application Record Id to Comment Record</label>
+        <locationX>666</locationX>
+        <locationY>2894</locationY>
+        <assignmentItems>
+            <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Application_record</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>CollationCommentRecords</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_for_Comment_Records</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_for_Comment_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_parcel_DPAs_to_Application_Selected_DPA</name>
+        <label>Assign parcel DPAs to Application Selected DPA</label>
+        <locationX>622</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>Application_Record.CVRD_DS_Selected_DPAs__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_PID_Record.CVRD_DS_DPA__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>DPA_Screen</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assign_Primary_owner_mailing_address_to_new_owner</name>
         <label>Assign Primary owner mailing address to new owner</label>
         <locationX>50</locationX>
-        <locationY>1298</locationY>
+        <locationY>1514</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</assignToReference>
             <operator>Assign</operator>
@@ -116,7 +155,7 @@
         <name>Clearing_address_details_from_add_owner</name>
         <label>Clearing address details from add owner</label>
         <locationX>182</locationX>
-        <locationY>1598</locationY>
+        <locationY>1814</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_City__c</assignToReference>
             <operator>Assign</operator>
@@ -145,7 +184,7 @@
     <assignments>
         <name>Stages_assignment</name>
         <label>Stages assignment</label>
-        <locationX>578</locationX>
+        <locationX>754</locationX>
         <locationY>134</locationY>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
@@ -217,8 +256,8 @@
     <assignments>
         <name>Update_Primary_Owner_check_on_Application_Contact_Record</name>
         <label>Update Primary Owner check on Application Contact Record</label>
-        <locationX>974</locationX>
-        <locationY>1082</locationY>
+        <locationX>1326</locationX>
+        <locationY>1298</locationY>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
             <operator>Assign</operator>
@@ -333,7 +372,7 @@
         <name>Check_for_mailing_address_is_same_or_not</name>
         <label>Check for mailing address is same or not</label>
         <locationX>182</locationX>
-        <locationY>1190</locationY>
+        <locationY>1406</locationY>
         <defaultConnector>
             <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
         </defaultConnector>
@@ -355,10 +394,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Check_if_Comment_is_empty_or_not</name>
+        <label>Check if Comment is empty or not</label>
+        <locationX>842</locationX>
+        <locationY>2678</locationY>
+        <defaultConnector>
+            <targetReference>Success_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Comment_is_not_empty</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>CommentRecords</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_for_Comment_Records</targetReference>
+            </connector>
+            <label>Comment is not empty</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
-        <locationX>578</locationX>
-        <locationY>974</locationY>
+        <locationX>754</locationX>
+        <locationY>1190</locationY>
         <defaultConnector>
             <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
         </defaultConnector>
@@ -382,7 +446,7 @@
     <decisions>
         <name>Evaluate_Application_Type</name>
         <label>Evaluate Application Type</label>
-        <locationX>578</locationX>
+        <locationX>754</locationX>
         <locationY>566</locationY>
         <defaultConnector>
             <targetReference>Owner_Details_Screen</targetReference>
@@ -395,11 +459,11 @@
                 <leftValueReference>Application_type</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Development Permit (DP)</stringValue>
+                    <stringValue>Development_Permit</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>DPA_Screen</targetReference>
+                <targetReference>Get_PID_Record</targetReference>
             </connector>
             <label>Application Type is Development permit</label>
         </rules>
@@ -407,8 +471,8 @@
     <decisions>
         <name>Rec_check</name>
         <label>Rec check</label>
-        <locationX>974</locationX>
-        <locationY>1730</locationY>
+        <locationX>1326</locationX>
+        <locationY>1838</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -464,8 +528,8 @@
     <loops>
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
-        <locationX>578</locationX>
-        <locationY>2054</locationY>
+        <locationX>842</locationX>
+        <locationY>2270</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -473,6 +537,20 @@
         </nextValueConnector>
         <noMoreValuesConnector>
             <targetReference>Create_Application_Contact_records</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Loop_for_Comment_Records</name>
+        <label>Loop for Comment Records</label>
+        <locationX>578</locationX>
+        <locationY>2786</locationY>
+        <collectionReference>CommentRecords</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_Application_Record_Id_to_Comment_Record</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Create_Comment_Record</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -497,8 +575,11 @@
     <recordCreates>
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
-        <locationX>578</locationX>
-        <locationY>2354</locationY>
+        <locationX>842</locationX>
+        <locationY>2570</locationY>
+        <connector>
+            <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
+        </connector>
         <faultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>Fault_Screen</targetReference>
@@ -508,8 +589,8 @@
     <recordCreates>
         <name>Create_Application_record</name>
         <label>Create Application record</label>
-        <locationX>578</locationX>
-        <locationY>1946</locationY>
+        <locationX>842</locationX>
+        <locationY>2162</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -532,6 +613,18 @@
             <field>CVRD_DS_Is_Top_of_a_Ravine_Bank__c</field>
             <value>
                 <elementReference>FormulaforRiparianV2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Non_Exempted_DPAs__c</field>
+            <value>
+                <elementReference>NonExemptedDPA</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Selected_DPAs__c</field>
+            <value>
+                <elementReference>Application_Record.CVRD_DS_Selected_DPAs__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -559,6 +652,18 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>MUSW__Phase__c</field>
+            <value>
+                <stringValue>Application</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>MUSW__Type2__c</field>
             <value>
                 <elementReference>Application_type</elementReference>
@@ -567,7 +672,7 @@
         <inputAssignments>
             <field>Name</field>
             <value>
-                <elementReference>Application_Name</elementReference>
+                <stringValue>system number</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -576,17 +681,58 @@
                 <elementReference>Get_PreliminaryReview_Id.Id</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Get_Record_type_Name.Id</elementReference>
+            </value>
+        </inputAssignments>
         <object>MUSW__Application2__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordCreates>
+        <name>Create_Comment_Record</name>
+        <label>Create Comment Record</label>
+        <locationX>578</locationX>
+        <locationY>3086</locationY>
+        <connector>
+            <targetReference>Success_Screen</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Fault_Screen</targetReference>
+        </faultConnector>
+        <inputReference>CollationCommentRecords</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_PID_Record</name>
+        <label>Get PID Record</label>
+        <locationX>622</locationX>
+        <locationY>674</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_parcel_DPAs_to_Application_Selected_DPA</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>PIDLookup.recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>MUSW__Parcel__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordLookups>
         <name>Get_PreliminaryReview_Id</name>
         <label>Get PreliminaryReview Id</label>
-        <locationX>578</locationX>
-        <locationY>1838</locationY>
+        <locationX>842</locationX>
+        <locationY>1946</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Create_Application_record</targetReference>
+            <targetReference>Get_Record_type_Name</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -608,11 +754,39 @@
         <queriedFields>Id</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Get_Record_type_Name</name>
+        <label>Get Record type Name</label>
+        <locationX>842</locationX>
+        <locationY>2054</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Application_record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MUSW__Application2__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>Contains</operator>
+            <value>
+                <elementReference>Application_type</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <screens>
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
         <locationX>182</locationX>
-        <locationY>1082</locationY>
+        <locationY>1298</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -836,7 +1010,7 @@
     <screens>
         <name>Application_Type_Screen</name>
         <label>Application_Type_Screen</label>
-        <locationX>578</locationX>
+        <locationX>754</locationX>
         <locationY>242</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -921,7 +1095,7 @@
     <screens>
         <name>Description_Screen</name>
         <label>Description Screen</label>
-        <locationX>578</locationX>
+        <locationX>754</locationX>
         <locationY>350</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -1005,8 +1179,8 @@
     <screens>
         <name>DPA_Screen</name>
         <label>DPA Screen</label>
-        <locationX>446</locationX>
-        <locationY>674</locationY>
+        <locationX>622</locationX>
+        <locationY>890</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1069,9 +1243,28 @@
                     <name>DPAShow</name>
                     <extensionName>c:cVRD_DS_DPAShowScreen</extensionName>
                     <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>DPA_Data</name>
+                        <value>
+                            <elementReference>Application_Record.CVRD_DS_Selected_DPAs__c</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>commentDataArray</name>
+                        <value>
+                            <elementReference>CommentRecords</elementReference>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <outputParameters>
+                        <assignToReference>CommentRecords</assignToReference>
+                        <name>commentDataArray</name>
+                    </outputParameters>
+                    <outputParameters>
+                        <assignToReference>NonExemptedDPA</assignToReference>
+                        <name>nonExemptData</name>
+                    </outputParameters>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -1090,8 +1283,8 @@
     <screens>
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
-        <locationX>974</locationX>
-        <locationY>1190</locationY>
+        <locationX>1326</locationX>
+        <locationY>1406</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1222,8 +1415,8 @@
     <screens>
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
-        <locationX>1106</locationX>
-        <locationY>2054</locationY>
+        <locationX>1546</locationX>
+        <locationY>2270</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1246,8 +1439,8 @@
     <screens>
         <name>Owner_Details_Screen</name>
         <label>Owner Details Screen</label>
-        <locationX>578</locationX>
-        <locationY>866</locationY>
+        <locationX>754</locationX>
+        <locationY>1082</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1476,7 +1669,7 @@
     <screens>
         <name>Property_Information</name>
         <label>Property Information</label>
-        <locationX>578</locationX>
+        <locationX>754</locationX>
         <locationY>458</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -1602,8 +1795,8 @@
     <screens>
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
-        <locationX>974</locationX>
-        <locationY>1406</locationY>
+        <locationX>1326</locationX>
+        <locationY>1622</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1744,6 +1937,24 @@
                     <name>DPA_Exemption_Review</name>
                     <extensionName>c:cVRD_DS_DPAShowScreen</extensionName>
                     <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>commentDataArray</name>
+                        <value>
+                            <elementReference>CommentRecords</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>disabledShow</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>DPA_Data</name>
+                        <value>
+                            <elementReference>Application_Record.CVRD_DS_Selected_DPAs__c</elementReference>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -1764,7 +1975,7 @@
                     <leftValueReference>Application_type</leftValueReference>
                     <operator>EqualTo</operator>
                     <rightValue>
-                        <stringValue>Development Permit (DP)</stringValue>
+                        <stringValue>Development_Permit</stringValue>
                     </rightValue>
                 </conditions>
             </visibilityRule>
@@ -1931,8 +2142,8 @@
     <screens>
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
-        <locationX>974</locationX>
-        <locationY>1298</locationY>
+        <locationX>1326</locationX>
+        <locationY>1514</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2053,13 +2264,13 @@
     <screens>
         <name>Success_Screen</name>
         <label>Success Screen</label>
-        <locationX>974</locationX>
-        <locationY>1622</locationY>
+        <locationX>842</locationX>
+        <locationY>3326</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Rec_check</targetReference>
+            <targetReference>Upload_Documents_Flow</targetReference>
         </connector>
         <fields>
             <name>Header_Success_Screen</name>
@@ -2079,11 +2290,12 @@
             <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;Your {!Application_type} Application has been submitted.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
+        <nextOrFinishButtonLabel>Continue to Submissions</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>452</locationX>
+        <locationX>628</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Stages_assignment</targetReference>
@@ -2093,10 +2305,10 @@
     <subflows>
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
-        <locationX>974</locationX>
-        <locationY>1514</locationY>
+        <locationX>1326</locationX>
+        <locationY>1730</locationY>
         <connector>
-            <targetReference>Success_Screen</targetReference>
+            <targetReference>Rec_check</targetReference>
         </connector>
         <flowName>CVRD_DS_Attestation_Development_Service_application</flowName>
         <inputAssignments>
@@ -2119,6 +2331,24 @@
         </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
+    <subflows>
+        <name>Upload_Documents_Flow</name>
+        <label>Upload Documents Flow</label>
+        <locationX>842</locationX>
+        <locationY>3434</locationY>
+        <flowName>Upload_Submission_Requests</flowName>
+        <inputAssignments>
+            <name>Application_Id</name>
+            <value>
+                <elementReference>Create_Application_record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <name>OTPEmailTemp</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi {!First_Name} {!Last_Name},&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Verification code:&lt;/span&gt;&lt;span style=&quot;font-family: Aptos, sans-serif; font-size: 12pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;{!OTP_Value}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Thanks,&lt;/p&gt;&lt;p&gt;The CVRD team&lt;/p&gt;</text>
+    </textTemplates>
     <variables>
         <name>AddNewApplicationContactRecord</name>
         <dataType>SObject</dataType>
@@ -2158,6 +2388,43 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>MUSW__Application_Contact__c</objectType>
+    </variables>
+    <variables>
+        <name>CollationCommentRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Comment__c</objectType>
+    </variables>
+    <variables>
+        <name>CommentRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Comment__c</objectType>
+    </variables>
+    <variables>
+        <name>NonExemptedDPA</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OTP_Value</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OTPValue</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>SaveRec</name>
