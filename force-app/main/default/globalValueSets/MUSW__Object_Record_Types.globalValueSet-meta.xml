@@ -16,12 +16,12 @@
         <label>Quick Permit</label>
     </customValue>
     <customValue>
-        <fullName>Board of Variance</fullName>
+        <fullName>CVRD_DS_Board_of_Variance</fullName>
         <default>false</default>
         <label>Board of Variance</label>
     </customValue>
     <customValue>
-        <fullName>Covenant Amendment or Discharge</fullName>
+        <fullName>CVRD_DS_Covenant_Amendment_or_Discharge</fullName>
         <default>false</default>
         <label>Covenant Amendment or Discharge</label>
     </customValue>
@@ -31,42 +31,42 @@
         <label>Development Permit</label>
     </customValue>
     <customValue>
-        <fullName>Development Variance Permit</fullName>
+        <fullName>CVRD_DS_Development_Variance_Permit</fullName>
         <default>false</default>
         <label>Development Variance Permit</label>
     </customValue>
     <customValue>
-        <fullName>Flood Management Bylaw Exemption</fullName>
+        <fullName>CVRD_DS_Flood_Management_Bylaw_Exemption</fullName>
         <default>false</default>
         <label>Flood Management Bylaw Exemption</label>
     </customValue>
     <customValue>
-        <fullName>Land Use Contract Amendment or Discharge</fullName>
+        <fullName>CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</fullName>
         <default>false</default>
         <label>Land Use Contract Amendment or Discharge</label>
     </customValue>
     <customValue>
-        <fullName>Minimum Frontage Exemption</fullName>
+        <fullName>CVRD_DS_Minimum_Frontage_Exemption</fullName>
         <default>false</default>
         <label>Minimum Frontage Exemption</label>
     </customValue>
     <customValue>
-        <fullName>OCP, Zoning or Land Use Bylaw Amendment</fullName>
+        <fullName>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</fullName>
         <default>false</default>
         <label>OCP, Zoning or Land Use Bylaw Amendment</label>
     </customValue>
     <customValue>
-        <fullName>Phased Development Agreement</fullName>
+        <fullName>CVRD_DS_Phased_Development_Agreement</fullName>
         <default>false</default>
         <label>Phased Development Agreement</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication Antanna Structure</fullName>
+        <fullName>CVRD_DS_Telecommunication_Antanna_Structure</fullName>
         <default>false</default>
         <label>Telecommunication Antanna Structure</label>
     </customValue>
     <customValue>
-        <fullName>Temporary Use Permit</fullName>
+        <fullName>CVRD_DS_Temporary_Use_Permit</fullName>
         <default>false</default>
         <label>Temporary Use Permit</label>
     </customValue>
