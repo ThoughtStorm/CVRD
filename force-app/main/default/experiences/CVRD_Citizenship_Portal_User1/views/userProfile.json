@@ -1,0 +1,48 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "c6c20507-6863-4ee7-8c80-4d7d2f767bc2",
+  "label" : "User Profile",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1>My Login Settings</h1><p>The information found on this page allows you to change your login information and settings. To access your account information, click \"<a href=\"\" rel=\"noopener noreferrer\" target=\"_blank\">My Account Information</a>\"</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "fc2458d8-55e1-4f8e-b7e3-1844567c9ff7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "18c7f900-178e-45a0-a616-3708556b8116",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "id" : "{!recordId}",
+        "profileTabLabel" : "Login Profile",
+        "richTextValue" : "<img alt='Banner image at the top of the page' class='sfdcCbImage' src='/sfsites/c/img/community/cpt/cpt-profile-banner.png'/>",
+        "settingsTabLabel" : "Login Settings",
+        "showBannerImage" : false,
+        "showSettingsTab" : true
+      },
+      "componentName" : "forceCommunity:userProfileWithBanner",
+      "id" : "5a8c74d1-de7f-450d-98e1-fff82e97d813",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9e2e62ea-b1ac-4c45-8f1f-f2bf46999fb3",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "7fdc9ae5-7ee4-4ad5-915b-ae64b54b4ba3",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-005"
+}
