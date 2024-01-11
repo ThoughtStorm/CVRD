@@ -678,6 +678,10 @@
         <tab>MUSW__Application2__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Application_Journey</flow>
+    </flowAccesses>
     <userLicense>Customer Community Login</userLicense>
     <userPermissions>
         <enabled>true</enabled>
