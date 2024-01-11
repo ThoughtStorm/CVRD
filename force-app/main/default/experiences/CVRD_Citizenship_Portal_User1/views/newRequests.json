@@ -1,0 +1,80 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "57d02b4d-0f10-4b07-af4a-ab6290c71f54",
+  "label" : "New Requests",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "463d8c4b-2b8f-444b-ab76-0ca735c2dde2",
+          "columns" : [ {
+            "UUID" : "4ec1b211-b09e-4d0c-a11f-79a4ba16ba98",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "463d8c4b-2b8f-444b-ab76-0ca735c2dde2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>New Requests</h1><p>You can start a new request by clicking the \"Next\" button below.</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d5727ecc-8144-454a-96e3-dd426cfd26db",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "flowArguments" : "",
+            "flowName" : "{!flowName}"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "bdb434bf-acba-417a-b7a0-db368f0ab151",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4ec1b211-b09e-4d0c-a11f-79a4ba16ba98",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1b82b568-8719-4974-a87f-999b07342d60",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "New Requests"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "78d39bd6-762d-4682-88df-69d72bda5f68",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "784bc318-0749-4921-8d37-416d0c6465ea",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-New Requests"
+}

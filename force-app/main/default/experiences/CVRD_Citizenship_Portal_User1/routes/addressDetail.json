@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "4439235c-729c-405d-aa40-a3e529be6807",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Address_Detail",
+  "id" : "54f18be3-198e-4833-9d51-d73a113e6ac8",
+  "label" : "Address Detail",
+  "objectApiName" : "MUSW__Address__c",
+  "routeType" : "detail-a04",
+  "type" : "route",
+  "urlPrefix" : "address"
+}
