@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Preliminary Review</name>
+    <queueMembers>
+        <users>
+            <user>sahana.ky+cvrd@thoughtstorm.ca</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>MUSW__Application2__c</sobjectType>
+    </queueSobject>
+</Queue>

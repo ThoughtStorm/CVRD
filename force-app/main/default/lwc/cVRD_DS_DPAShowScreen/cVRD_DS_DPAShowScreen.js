@@ -1,24 +1,153 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api,track } from 'lwc';
 export default class CVRD_DS_DPAShowScreen extends LightningElement {
 
-    showComment1=false;
-    showComment2=false;
-    showComment3=false;
-    showError1=false;
-    showError2=false;
-    showError3=false;
-    showReq=true;
-    @api dpaComment1='';
-    @api dpaComment2='';
-    @api dpaComment3='';
-    @api exemptDPA1=false;
-    @api exemptDPA2=false;
-    @api exemptDPA3=false;
+    @api DPA_Data='';
+    DPAList=[];
+    resetCommentData=[];
+    @track CommentData=[];
+    hasEmptyComment=false;
+    showSave=true;
+    @api commentDataArray=[];
+    @api disabledShow=false;
+    @api nonExemptData='';
 
+    connectedCallback() {
 
-    handleChange(event){
+        this.DPAList = this.DPA_Data.toString().split(';');
+        for (var i = 0; i < this.DPAList.length; i++) {
+            this.CommentData[i] = {};
+
+            this.CommentData[i].id = i;
+            this.CommentData[i].Name = this.DPAList[i];
+            this.CommentData[i].Exempt = false;
+            this.CommentData[i].commentEnabled = true;
+            this.CommentData[i].Comment = '';
+        }
+        if (this.commentDataArray) {
+            this.CommentData.forEach(commentObj=>{
+                this.commentDataArray.forEach(dataObj=>{
+                    if(commentObj.Name===dataObj.CVRD_DS_DPA_Name__c){
+                        commentObj.Comment=dataObj.CVRD_DS_Applicant_Comment__c;
+                        commentObj.Exempt=true;
+                        commentObj.commentEnabled=false;
+                    }
+                });
+            });
+        }
+        else {
+
+        }
+    }
+
+    handleExemptionChange(event) {
+        const id = event.target.dataset.id;
+        const ischecked = event.target.checked;
+
+        this.CommentData = this.CommentData.map(item => {
+            if (item.id == id) {
+                console.log('inside if con++' + ischecked);
+                return { ...item, commentEnabled: !ischecked, Exempt:ischecked };
+            }
+            return item;
+        });
+
+        if(!ischecked){
+            this.CommentData = this.CommentData.map(item => {
+            if (item.id == id) {
+                console.log('inside if con++' + ischecked);
+                return { ...item, Comment:'' };
+            }
+            return item;
+        });
+        }
+
+        /*for (var i = 0; i < this.CommentData.length; i++) {
+            if (this.CommentData[i].Exempt == true) {
+                this.showSave = false;
+                break;
+            }
+            else {
+                this.showSave = true;
+            }
+        }*/
+    }
+
+    handleCommentValueChange(event){
+        const id = event.target.dataset.id;
+
+        this.CommentData=this.CommentData.map(item=>{
+            if(item.id==id){
+                console.log('this.hasEmptyComment=>'+item.Comment);
+                return {...item,Comment:event.target.value };
+            }
+            return item;
+        });
+
+    }
+
+    /*handleSave(){
+        this.commentDataArray = this.CommentData.filter(data => data.Exempt == true).map(data => {
+                return {
+                    Name: data.Name,
+                    CVRD_DS_Applicant_Comment__c: data.Comment
+                };
+            });
+            //console.log('commentDataArray=>'+commentDataArray);
+           // const event = new CustomEvent('commentDataCollation', {
+            //    detail: { commentDataArray }
+           // });
+            //console.log('event details=>'+event);
+            //this.dispatchEvent(event);
+    }*/
+
+    /*handleClear(){
+        this.CommentData= this.resetCommentData.map(x=>x);
+    }*/
+
+    @api validate() {
+        
+        this.hasEmptyComment = this.CommentData.some(item => item.Exempt && (!item.Comment || item.Comment.trim() === ''));
+        if (this.hasEmptyComment) {
+            this.commentDataArray = this.CommentData.filter(data => data.Exempt == true).map(data => {
+                return {
+                    CVRD_DS_DPA_Name__c: data.Name,
+                    CVRD_DS_Applicant_Comment__c: data.Comment
+                };
+            });
+            /*for(var i=0;i<this.CommentData.length;i++){
+                if(!this.CommentData.Exempt){
+                    this.nonExemptData=this.CommentData.Name+';';
+                }
+            }
+            this.nonExemptData=this.nonExemptData.slice(0, this.nonExemptData.length-1);
+            console.log('Non Exemption'+this.nonExemptData);*/
+            return {
+                isValid: false,
+                errorMessage: 'Please add comment'
+            };
+        } else {
+            this.commentDataArray = this.CommentData.filter(data => data.Exempt == true).map(data => {
+                return {
+                    CVRD_DS_DPA_Name__c: data.Name,
+                    CVRD_DS_Applicant_Comment__c: data.Comment
+                };
+            });
+            for(var i=0;i<this.CommentData.length;i++){
+                console.log('this.CommentData.Exempt'+this.CommentData[i].Exempt);
+                if(this.CommentData[i].Exempt==false){
+                    console.log('inside');
+                    this.nonExemptData=this.nonExemptData+this.CommentData[i].Name+';';
+                }
+            }
+            this.nonExemptData=this.nonExemptData.slice(0, this.nonExemptData.length-1);
+            console.log('Non Exemption'+this.nonExemptData);
+            return { isValid: true };
+        }
+    }
+
+    /*handleChange(event){
         console.log('Input1=>'+event.target.name);
-        console.log('Input1=>'+event.target.checked);
+        
         if(event.target.name==='input1'){
 
             this.exemptDPA1=event.target.checked;
@@ -101,7 +230,7 @@ export default class CVRD_DS_DPAShowScreen extends LightningElement {
         else {
             return { isValid: true };
         }
-    }
+    }*/
     /*handleBlur1(event){
             if(event.target.value==='' || event.target.value===undefined){
                 this.showError1=true;

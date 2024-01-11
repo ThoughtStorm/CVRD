@@ -1,103 +1,82 @@
 <template>
-	<table class="slds-table slds-table_cell-buffer slds-table_header-hidden"
-		aria-label=" Example headless table of Opportunities with no borders ">
-		<tbody>
-			<tr class="slds-hint-parent">
-				<td data-label="DPA Name">
-					<div class="slds-truncate" title="">DPA 1: Riparian Protection</div>
-				</td>
-				<td data-label="Exemption">
-					<div class="slds-truncate" title=""><!--lightning-input type="checkbox" onchange={handleChange} name="input1"></lightning-input-->
-					<label class="slds-checkbox_toggle slds-grid">
-					<span class="slds-form-element__label slds-m-bottom_none">Exemption</span>
-					<input type="checkbox" name="input1" onchange={handleChange} value="input1" aria-describedby="checkbox-toggle-16" />
-					<span id="input1" class="slds-checkbox_faux_container">
-						<span class="slds-checkbox_faux"></span>
-						<span class="slds-checkbox_on">Enabled</span>
-						<span class="slds-checkbox_off">Disabled</span>
-					</span>
-					</label>
-					</div>
-				</td>
-				<td data-label="Prospecting">
-					<template if:true={showComment1}>
-						<div class="slds-truncate" title="Prospecting">
-							<div class="slds-form-element">
-								<label class="slds-form-element__label" for="text-input-id-48">
-									    <template if:true={showReq}><abbr class="slds-required" title="required">* </abbr></template>Comment</label>
-								<div class="slds-form-element__control">
-									<input type="text" name="DPA1" id="text-input-id-48" maxlength="50" placeholder="Comment Needed" onblur={handleBlur} onchange={handlecommentchange} required="" aria-describedby="error-message-id-49" class="slds-input" aria-invalid="true" />
-									  </div>
-									<template if:true={showError1}><div class="slds-form-element__help" id="error-message-id-49">Enter a value.</div></template>
-								</div>
-							</div>
+	<template if:false={disabledShow}>
+	<article class="slds-card">
+		<div class="slds-card__body slds-card__body_inner">
+			<table class="slds-table slds-table_cell-buffer"
+				aria-label=" Example headless table of Opportunities with no borders ">
+				<thead>
+					<tr class="slds-line-height_reset">
+						<th class="" scope="col">
+							<div class="slds-truncate" title="Opportunity Name">DPA Name</div>
+						</th>
+						<th class="" scope="col">
+							<div class="slds-truncate" title="Account Name">Exempt</div>
+						</th>
+						<th class="" scope="col">
+							<div class="slds-truncate" title="Close Date">Comment</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<template for:each={CommentData} for:item="item">
+						<tr key={item.id} class="slds-hint-parent">
+							<td data-label={item.Name}>
+								<div class="slds-truncate" title={item.Name}>{item.Name}</div>
+							</td>
+							<td data-label="Exempt">
+								<lightning-input type="checkbox" onchange={handleExemptionChange} value={item.Exempt}
+									checked={item.Exempt} data-id={item.id}></lightning-input>
+							</td>
+							<td data-label="Comment">
+								<lightning-input type="text" onchange={handleCommentValueChange} name={item.name}
+									value={item.Comment} label="Comment" required={item.Exempt} data-id={item.id}
+									disabled={item.commentEnabled}></lightning-input>
+							</td>
+						</tr>
 					</template>
-				</td>
-			</tr>
-			<tr class="slds-hint-parent">
-				<td data-label="DPA Name">
-					<div class="slds-truncate" title="Cloudhub">DPA 2: Sensitive Ecosystems</div>
-				</td>
-				<td data-label="Close Date">
-					<div class="slds-truncate" title="">
-						<!--lightning-input type="checkbox" onchange={handleChange} name="input2"></lightning-input-->
-						<label class="slds-checkbox_toggle slds-grid">
-										<span class="slds-form-element__label slds-m-bottom_none">Exemption</span>
-										<input type="checkbox" name="input2" onchange={handleChange} value="input2" aria-describedby="checkbox-toggle-16" />
-										<span id="input2" class="slds-checkbox_faux_container">
-											<span class="slds-checkbox_faux"></span>
-											<span class="slds-checkbox_on">Enabled</span>
-											<span class="slds-checkbox_off">Disabled</span>
-										</span>
-										</label>
-					</div>
-				</td>
-				<td data-label="Prospecting">
-					<template if:true={showComment2}>
-						<div class="slds-truncate" title="Prospecting">
-							<div class="slds-form-element">
-								<label class="slds-form-element__label" for="text-input-id-49">
-									    <template if:true={showReq}><abbr class="slds-required" title="required">* </abbr></template>Comment</label>
-								<div class="slds-form-element__control">
-									<input type="text" name="DPA2" id="text-input-id-49" placeholder="Comment Needed" required="" maxlength="50" onblur={handleBlur} onchange={handlecommentchange} aria-describedby="error-message-id-48" class="slds-input" aria-invalid="true" />
-									  </div>
-									<template if:true={showError2}><div class="slds-form-element__help" id="error-message-id-48">Enter a value.</div></template>
-								</div>
-							</div>
-					</template>
-				</td>
-			</tr>
-			<tr class="slds-hint-parent">
-				<td data-label="DPA Name">
-					<div class="slds-truncate" title="Cloudhub">DPA 3: Marine Uplands & Foreshore Protection</div>
-				</td>
-				<td data-label="Close Date">
-					<!--lightning-input type="checkbox" onchange={handleChange} name="input3"></lightning-input-->
-					<label class="slds-checkbox_toggle slds-grid">
-									<span class="slds-form-element__label slds-m-bottom_none">Exemption</span>
-									<input type="checkbox" name="input3" onchange={handleChange} value="input3" aria-describedby="checkbox-toggle-16" />
-									<span id="input3" class="slds-checkbox_faux_container">
-										<span class="slds-checkbox_faux"></span>
-										<span class="slds-checkbox_on">Enabled</span>
-										<span class="slds-checkbox_off">Disabled</span>
-									</span>
-									</label>
-				</td>
-				<td data-label="Prospecting">
-					<template if:true={showComment3}>
-						<div class="slds-truncate" title="Prospecting">
-							<div class="slds-form-element">
-								<label class="slds-form-element__label" for="text-input-id-50">
-									    <template if:true={showReq}><abbr class="slds-required" title="required">* </abbr></template> Comment</label>
-								<div class="slds-form-element__control">
-									<input type="text" name="DPA3" id="text-input-id-50" placeholder="Comment Needed" onblur={handleBlur} onchange={handlecommentchange} maxlength="50" required="" aria-describedby="error-message-id-50" class="slds-input" aria-invalid="false" />
-									  </div>
-									<template if:true={showError3}><div class="slds-form-element__help" id="error-message-id-50">Enter a value.</div></template>
-								</div>
-							</div>
-					</template>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+				</tbody>
+			</table>
+		</div>
+	</article>
+	</template>
+	<template if:true={disabledShow}>
+		<article class="slds-card">
+			<div class="slds-card__body slds-card__body_inner">
+				<table class="slds-table slds-table_cell-buffer"
+					aria-label=" Example headless table of Opportunities with no borders ">
+					<thead>
+						<tr class="slds-line-height_reset">
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Opportunity Name">DPA Name</div>
+							</th>
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Account Name">Exempt</div>
+							</th>
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Close Date">Comment</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<template for:each={CommentData} for:item="item">
+							<tr key={item.id} class="slds-hint-parent">
+								<td data-label={item.Name}>
+									<div class="slds-truncate" title={item.Name}>{item.Name}</div>
+								</td>
+								<td data-label="Exempt">
+									<lightning-input disabled type="checkbox" onchange={handleExemptionChange}
+										value={item.Exempt} checked={item.Exempt} data-id={item.id}></lightning-input>
+								</td>
+								<td data-label="Comment">
+									<lightning-input type="text" onchange={handleCommentValueChange} name={item.name}
+										value={item.Comment} label="Comment" required={item.Exempt} data-id={item.id}
+										disabled></lightning-input>
+								</td>
+							</tr>
+						</template>
+					</tbody>
+				</table>
+			</div>
+		</article>
+	</template>
 </template>
