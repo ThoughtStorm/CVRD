@@ -4,6 +4,61 @@
     <active>true</active>
     <label>Application Submission</label>
     <picklistValues>
+        <picklist>CVRD_DS_DPA_Types__c</picklist>
+        <values>
+            <fullName>DPA 1%3A Riparian Protection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 10%3A Multi-family Residential Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 11%3A Commercial and Mixed Use Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 12%3A Industrial Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 13%3A Energy %26 Water Conservation%2C GHG Emissions Reduction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 2%3A Sensitive Ecosystems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 3%3A Marine Uplands %26 Foreshore Protection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 4%3A Aquifer Protection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 5%3A Wildfire Protection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 6%3A Floodplain Hazard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 7%3A Landslide Hazard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 8%3A Protection of Farming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPA 9%3A Intensive Residential</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>MUSW__Application_Phases__c</picklist>
         <values>
             <fullName>Application</fullName>
@@ -40,7 +95,7 @@
     <picklistValues>
         <picklist>MUSW__Application_Types__c</picklist>
         <values>
-            <fullName>Development Permit %28DP%29</fullName>
+            <fullName>Development_Permit</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -68,7 +123,47 @@
     <picklistValues>
         <picklist>MUSW__Object_Record_Types__c</picklist>
         <values>
-            <fullName>Building_Permit</fullName>
+            <fullName>Board of Variance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Development_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covenant Amendment or Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Variance Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flood Management Bylaw Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Land Use Contract Amendment or Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minimum Frontage Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCP%2C Zoning or Land Use Bylaw Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phased Development Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunication Antanna Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary Use Permit</fullName>
             <default>false</default>
         </values>
     </picklistValues>
