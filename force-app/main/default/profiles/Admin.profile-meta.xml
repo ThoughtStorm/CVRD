@@ -14,10 +14,6 @@
         <apexClass>CVRD_DS_CreateSubmissions</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_DS_CreateSubmissionsTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
