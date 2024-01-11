@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <apiVersion>59.0</apiVersion>
+    <apiVersion>52.0</apiVersion>
     <assignments>
         <name>Add_New_Contact_in_the_Application_contact_list</name>
         <label>Add New Contact in the Application contact list</label>
         <locationX>182</locationX>
-        <locationY>1706</locationY>
+        <locationY>2006</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
             <operator>Assign</operator>
@@ -49,7 +49,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>930</locationX>
-        <locationY>2378</locationY>
+        <locationY>2570</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -72,7 +72,7 @@
         <name>Assign_Application_Record_Id_to_Comment_Record</name>
         <label>Assign Application Record Id to Comment Record</label>
         <locationX>666</locationX>
-        <locationY>2894</locationY>
+        <locationY>3086</locationY>
         <assignmentItems>
             <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
             <operator>Assign</operator>
@@ -95,7 +95,7 @@
         <name>Assign_parcel_DPAs_to_Application_Selected_DPA</name>
         <label>Assign parcel DPAs to Application Selected DPA</label>
         <locationX>622</locationX>
-        <locationY>782</locationY>
+        <locationY>1082</locationY>
         <assignmentItems>
             <assignToReference>Application_Record.CVRD_DS_Selected_DPAs__c</assignToReference>
             <operator>Assign</operator>
@@ -111,7 +111,7 @@
         <name>Assign_Primary_owner_mailing_address_to_new_owner</name>
         <label>Assign Primary owner mailing address to new owner</label>
         <locationX>50</locationX>
-        <locationY>1514</locationY>
+        <locationY>1814</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</assignToReference>
             <operator>Assign</operator>
@@ -155,7 +155,7 @@
         <name>Clearing_address_details_from_add_owner</name>
         <label>Clearing address details from add owner</label>
         <locationX>182</locationX>
-        <locationY>1814</locationY>
+        <locationY>2114</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_City__c</assignToReference>
             <operator>Assign</operator>
@@ -182,10 +182,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Stages_assignment</name>
-        <label>Stages assignment</label>
-        <locationX>754</locationX>
-        <locationY>134</locationY>
+        <name>DPA_Stages_assignment</name>
+        <label>DPA Stages assignment</label>
+        <locationX>622</locationX>
+        <locationY>458</locationY>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
             <operator>Add</operator>
@@ -205,6 +205,13 @@
             <operator>Add</operator>
             <value>
                 <stringValue>Property Information</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Stage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Development Permit Areas</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -239,11 +246,103 @@
             <assignToReference>Stage</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>Review and Submit</stringValue>
+                <stringValue>Review</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Owner/Agent Declaration</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Description_Screen</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Equate_stages</name>
+        <label>Equate stages</label>
+        <locationX>886</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>Stage</assignToReference>
+            <operator>RemoveAll</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Stage</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>InitialStage</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Description_Screen</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Stages_assignment</name>
+        <label>Stages assignment</label>
+        <locationX>754</locationX>
+        <locationY>134</locationY>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Application Type</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Description</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Property Information</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Owner Information</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Agent Authorization / Information</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Environmental Management Act</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Riparian Areas Protection Regulation Declaration</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Review</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
             <operator>Add</operator>
             <value>
                 <stringValue>Owner/Agent Declaration</stringValue>
@@ -257,7 +356,7 @@
         <name>Update_Primary_Owner_check_on_Application_Contact_Record</name>
         <label>Update Primary Owner check on Application Contact Record</label>
         <locationX>1326</locationX>
-        <locationY>1298</locationY>
+        <locationY>1598</locationY>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
             <operator>Assign</operator>
@@ -267,28 +366,28 @@
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.MUSW__First_Name__c</assignToReference>
-            <operator>Add</operator>
+            <operator>Assign</operator>
             <value>
                 <elementReference>First_Name</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.MUSW__Last_Name__c</assignToReference>
-            <operator>Add</operator>
+            <operator>Assign</operator>
             <value>
                 <elementReference>Last_Name</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.MUSW__Email__c</assignToReference>
-            <operator>Add</operator>
+            <operator>Assign</operator>
             <value>
                 <elementReference>Email.value</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.MUSW__Phone__c</assignToReference>
-            <operator>Add</operator>
+            <operator>Assign</operator>
             <value>
                 <elementReference>Phone.value</elementReference>
             </value>
@@ -369,10 +468,35 @@
         </value>
     </choices>
     <decisions>
+        <name>Check_Development_Permit_Stage</name>
+        <label>Check Development Permit Stage</label>
+        <locationX>754</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Equate_stages</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>DPA_Stage</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Application_type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Development_Permit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DPA_Stages_assignment</targetReference>
+            </connector>
+            <label>DPA Stage</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_for_mailing_address_is_same_or_not</name>
         <label>Check for mailing address is same or not</label>
         <locationX>182</locationX>
-        <locationY>1406</locationY>
+        <locationY>1706</locationY>
         <defaultConnector>
             <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
         </defaultConnector>
@@ -397,7 +521,7 @@
         <name>Check_if_Comment_is_empty_or_not</name>
         <label>Check if Comment is empty or not</label>
         <locationX>842</locationX>
-        <locationY>2678</locationY>
+        <locationY>2870</locationY>
         <defaultConnector>
             <targetReference>Success_Screen</targetReference>
         </defaultConnector>
@@ -422,7 +546,7 @@
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
         <locationX>754</locationX>
-        <locationY>1190</locationY>
+        <locationY>1490</locationY>
         <defaultConnector>
             <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
         </defaultConnector>
@@ -447,7 +571,7 @@
         <name>Evaluate_Application_Type</name>
         <label>Evaluate Application Type</label>
         <locationX>754</locationX>
-        <locationY>566</locationY>
+        <locationY>866</locationY>
         <defaultConnector>
             <targetReference>Owner_Details_Screen</targetReference>
         </defaultConnector>
@@ -472,7 +596,7 @@
         <name>Rec_check</name>
         <label>Rec check</label>
         <locationX>1326</locationX>
-        <locationY>1838</locationY>
+        <locationY>2138</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -485,7 +609,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_PreliminaryReview_Id</targetReference>
+                <targetReference>Get_Record_type_Name</targetReference>
             </connector>
             <label>save record</label>
         </rules>
@@ -529,7 +653,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>842</locationX>
-        <locationY>2270</locationY>
+        <locationY>2462</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -543,7 +667,7 @@
         <name>Loop_for_Comment_Records</name>
         <label>Loop for Comment Records</label>
         <locationX>578</locationX>
-        <locationY>2786</locationY>
+        <locationY>2978</locationY>
         <collectionReference>CommentRecords</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -576,7 +700,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>842</locationX>
-        <locationY>2570</locationY>
+        <locationY>2762</locationY>
         <connector>
             <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
         </connector>
@@ -590,7 +714,7 @@
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>842</locationX>
-        <locationY>2162</locationY>
+        <locationY>2354</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -676,12 +800,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <elementReference>Get_PreliminaryReview_Id.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>RecordTypeId</field>
             <value>
                 <elementReference>Get_Record_type_Name.Id</elementReference>
@@ -694,7 +812,7 @@
         <name>Create_Comment_Record</name>
         <label>Create Comment Record</label>
         <locationX>578</locationX>
-        <locationY>3086</locationY>
+        <locationY>3278</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -708,7 +826,7 @@
         <name>Get_PID_Record</name>
         <label>Get PID Record</label>
         <locationX>622</locationX>
-        <locationY>674</locationY>
+        <locationY>974</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Assign_parcel_DPAs_to_Application_Selected_DPA</targetReference>
@@ -726,39 +844,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <name>Get_PreliminaryReview_Id</name>
-        <label>Get PreliminaryReview Id</label>
-        <locationX>842</locationX>
-        <locationY>1946</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Get_Record_type_Name</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Type</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Queue</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>DeveloperName</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>CVRD_DS_Preliminary_Review</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Group</object>
-        <queriedFields>Id</queriedFields>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <name>Get_Record_type_Name</name>
         <label>Get Record type Name</label>
         <locationX>842</locationX>
-        <locationY>2054</locationY>
+        <locationY>2246</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Create_Application_record</targetReference>
@@ -786,7 +875,7 @@
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
         <locationX>182</locationX>
-        <locationY>1298</locationY>
+        <locationY>1598</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -817,7 +906,7 @@
                     <elementReference>Stage</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1016,7 +1105,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Description_Screen</targetReference>
+            <targetReference>Check_Development_Permit_Stage</targetReference>
         </connector>
         <fields>
             <name>Application_Type_Screen_Section1</name>
@@ -1039,7 +1128,7 @@
                     <inputParameters>
                         <name>stages</name>
                         <value>
-                            <elementReference>Stage</elementReference>
+                            <elementReference>InitialStage</elementReference>
                         </value>
                     </inputParameters>
                     <inputParameters>
@@ -1096,7 +1185,7 @@
         <name>Description_Screen</name>
         <label>Description Screen</label>
         <locationX>754</locationX>
-        <locationY>350</locationY>
+        <locationY>650</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1133,7 +1222,7 @@
                             <elementReference>Stage</elementReference>
                         </value>
                     </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
@@ -1180,7 +1269,7 @@
         <name>DPA_Screen</name>
         <label>DPA Screen</label>
         <locationX>622</locationX>
-        <locationY>890</locationY>
+        <locationY>1190</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1208,10 +1297,10 @@
             <inputParameters>
                 <name>currentStage</name>
                 <value>
-                    <stringValue>Property Information</stringValue>
+                    <stringValue>Development Permit Areas</stringValue>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1234,7 +1323,7 @@
         </fields>
         <fields>
             <name>DPA</name>
-            <fieldText>DPA Information</fieldText>
+            <fieldText>Development Permit Areas</fieldText>
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>DPA_Column1</name>
@@ -1284,7 +1373,7 @@
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
         <locationX>1326</locationX>
-        <locationY>1406</locationY>
+        <locationY>1706</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1315,7 +1404,7 @@
                     <elementReference>Stage</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1416,7 +1505,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1546</locationX>
-        <locationY>2270</locationY>
+        <locationY>2462</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1440,7 +1529,7 @@
         <name>Owner_Details_Screen</name>
         <label>Owner Details Screen</label>
         <locationX>754</locationX>
-        <locationY>1082</locationY>
+        <locationY>1382</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1471,7 +1560,7 @@
                     <elementReference>Stage</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1555,6 +1644,12 @@
                         <name>value</name>
                         <value>
                             <elementReference>Phone.value</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>pattern</name>
+                        <value>
+                            <stringValue>^(\+\d{1,2})?(\s)?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$</stringValue>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -1670,7 +1765,7 @@
         <name>Property_Information</name>
         <label>Property Information</label>
         <locationX>754</locationX>
-        <locationY>458</locationY>
+        <locationY>758</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1701,7 +1796,7 @@
                     <elementReference>Stage</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1757,6 +1852,12 @@
                             <elementReference>PIDLookup.recordId</elementReference>
                         </value>
                     </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -1796,7 +1897,7 @@
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
         <locationX>1326</locationX>
-        <locationY>1622</locationY>
+        <locationY>1922</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1818,7 +1919,7 @@
             <inputParameters>
                 <name>currentStage</name>
                 <value>
-                    <stringValue>Review and Submit</stringValue>
+                    <stringValue>Review</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1827,7 +1928,7 @@
                     <elementReference>Stage</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1928,7 +2029,7 @@
         </fields>
         <fields>
             <name>DPA_Review</name>
-            <fieldText>DPA</fieldText>
+            <fieldText>Development Permit Areas</fieldText>
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>DPA_Review_Column1</name>
@@ -2143,7 +2244,7 @@
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
         <locationX>1326</locationX>
-        <locationY>1514</locationY>
+        <locationY>1814</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2174,7 +2275,7 @@
                     <elementReference>Stage</elementReference>
                 </value>
             </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -2265,7 +2366,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>842</locationX>
-        <locationY>3326</locationY>
+        <locationY>3518</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2306,7 +2407,7 @@
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
         <locationX>1326</locationX>
-        <locationY>1730</locationY>
+        <locationY>2030</locationY>
         <connector>
             <targetReference>Rec_check</targetReference>
         </connector>
@@ -2335,7 +2436,7 @@
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
         <locationX>842</locationX>
-        <locationY>3434</locationY>
+        <locationY>3626</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
@@ -2404,6 +2505,13 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>MUSW__Comment__c</objectType>
+    </variables>
+    <variables>
+        <name>InitialStage</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>NonExemptedDPA</name>
