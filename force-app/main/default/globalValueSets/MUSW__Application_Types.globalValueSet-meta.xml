@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
-        <fullName>Development_Permit</fullName>
+        <fullName>Development Permit (DP)</fullName>
         <default>false</default>
-        <label>Development Permit</label>
+        <label>Development Permit (DP)</label>
     </customValue>
     <customValue>
-        <fullName>Development_Variance_Permit</fullName>
+        <fullName>Development Variance Permit (DVP)</fullName>
         <default>false</default>
-        <label>Development Variance Permit</label>
+        <label>Development Variance Permit (DVP)</label>
     </customValue>
     <customValue>
-        <fullName>OCP_Zoning_or_Land_Use_Bylaw_Amendment</fullName>
+        <fullName>OCP, Zoning or Land Use Bylaw Amendment</fullName>
         <default>false</default>
         <label>OCP, Zoning or Land Use Bylaw Amendment</label>
     </customValue>
     <customValue>
-        <fullName>Covenant_Amendment/Discharge</fullName>
+        <fullName>Covenant Amendment or Discharge</fullName>
         <default>false</default>
-        <label>Covenant Amendment/Discharge</label>
+        <label>Covenant Amendment or Discharge</label>
     </customValue>
     <customValue>
-        <fullName>Temporary_Use_Permit</fullName>
+        <fullName>Temporary Use Permit (TUP)</fullName>
         <default>false</default>
-        <label>Temporary Use Permit</label>
+        <label>Temporary Use Permit (TUP)</label>
     </customValue>
     <customValue>
-        <fullName>Flood_Management_Bylaw_Exemption</fullName>
+        <fullName>Flood Management Bylaw Exemption</fullName>
         <default>false</default>
         <label>Flood Management Bylaw Exemption</label>
     </customValue>
     <customValue>
-        <fullName>Minimum_Frontage_Exception</fullName>
+        <fullName>Minimum Frontage Exemption</fullName>
         <default>false</default>
-        <label>Minimum Frontage Exception</label>
+        <label>Minimum Frontage Exemption</label>
     </customValue>
     <customValue>
-        <fullName>Phased_Development_Agreement</fullName>
+        <fullName>Phased Development Agreement</fullName>
         <default>false</default>
         <label>Phased Development Agreement</label>
     </customValue>
     <customValue>
-        <fullName>Board_of_Variance</fullName>
+        <fullName>Land Use Contract Amendment or Discharge</fullName>
+        <default>false</default>
+        <label>Land Use Contract Amendment or Discharge</label>
+    </customValue>
+    <customValue>
+        <fullName>Board of Variance</fullName>
         <default>false</default>
         <label>Board of Variance</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication_Antenna_Structure</fullName>
+        <fullName>Telecommunication Antanna Structure</fullName>
         <default>false</default>
-        <label>Telecommunication Antenna Structure</label>
+        <label>Telecommunication Antanna Structure</label>
     </customValue>
     <customValue>
-        <fullName>Strata Conversion</fullName>
-        <default>false</default>
-        <label>Strata Conversion</label>
-    </customValue>
-    <customValue>
-        <fullName>Agricultural Land Reserve</fullName>
-        <default>false</default>
-        <label>Agricultural Land Reserve</label>
+        <fullName>Business</fullName>
+	@@ -62,10 +73,16 @@
+        <label>Business</label>
     </customValue>
     <customValue>
         <fullName>Other</fullName>
@@ -67,70 +67,10 @@
         <label>Other</label>
     </customValue>
     <customValue>
-        <fullName>Business</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Business</label>
-    </customValue>
-    <customValue>
-        <fullName>Land Use Contract Amendment or Discharge</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Land Use Contract Amendment or Discharge</label>
-    </customValue>
-    <customValue>
-        <fullName>Telecommunication_Antanna_Structure</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Telecommunication Antanna Structure</label>
-    </customValue>
-    <customValue>
         <fullName>Contractor</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Contractor</label>
-    </customValue>
-    <customValue>
-        <fullName>Animal</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Animal</label>
-    </customValue>
-    <customValue>
-        <fullName>Liquor</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Liquor</label>
-    </customValue>
-    <customValue>
-        <fullName>Restaurant</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Restaurant</label>
-    </customValue>
-    <customValue>
-        <fullName>Water Heater Replacement</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Water Heater Replacement</label>
-    </customValue>
-    <customValue>
-        <fullName>Electrical</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Electrical</label>
-    </customValue>
-    <customValue>
-        <fullName>Development Review</fullName>
-        <default>false</default>
+	@@ -109,17 +126,41 @@
         <isActive>false</isActive>
         <label>Development Review</label>
-    </customValue>
-    <customValue>
-        <fullName>Variance</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Variance</label>
     </customValue>
     <customValue>
         <fullName>Building</fullName>
@@ -139,29 +79,10 @@
         <label>Building</label>
     </customValue>
     <customValue>
-        <fullName>Crown Land Referrals</fullName>
+        <fullName>Variance</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Crown Land Referrals</label>
-    </customValue>
-    <customValue>
-        <fullName>Liquor/Cannabis Licence Referrals</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Liquor/Cannabis Licence Referrals</label>
-    </customValue>
-    <customValue>
-        <fullName>Subdivision (Referral)</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Subdivision (Referral)</label>
-    </customValue>
-    <customValue>
-        <fullName>Cannabis License</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Cannabis License</label>
+        <label>Variance</label>
     </customValue>
     <masterLabel>Application Types</masterLabel>
     <sorted>false</sorted>
-</GlobalValueSet>
