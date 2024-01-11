@@ -30,6 +30,14 @@
                 <behavior>Edit</behavior>
                 <field>MUSW__Issued_Number__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Preliminary_Auto_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CVRD_DS_Parcel_Electoral_Area__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
