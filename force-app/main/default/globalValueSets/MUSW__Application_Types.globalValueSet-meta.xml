@@ -57,7 +57,8 @@
     </customValue>
     <customValue>
         <fullName>Business</fullName>
-	@@ -62,10 +73,16 @@
+        <default>false</default>
+        <isActive>false</isActive>
         <label>Business</label>
     </customValue>
     <customValue>
@@ -68,7 +69,43 @@
     </customValue>
     <customValue>
         <fullName>Contractor</fullName>
-	@@ -109,17 +126,41 @@
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Contractor</label>
+    </customValue>
+    <customValue>
+        <fullName>Animal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Animal</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Liquor</label>
+    </customValue>
+    <customValue>
+        <fullName>Restaurant</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Restaurant</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Heater Replacement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Water Heater Replacement</label>
+    </customValue>
+    <customValue>
+        <fullName>Electrical</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Electrical</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Review</fullName>
+        <default>false</default>
         <isActive>false</isActive>
         <label>Development Review</label>
     </customValue>
@@ -86,3 +123,4 @@
     </customValue>
     <masterLabel>Application Types</masterLabel>
     <sorted>false</sorted>
+</GlobalValueSet>
