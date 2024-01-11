@@ -123,7 +123,7 @@
     <picklistValues>
         <picklist>MUSW__Object_Record_Types__c</picklist>
         <values>
-            <fullName>Board of Variance</fullName>
+            <fullName>CVRD_DS_Board_of_Variance</fullName>
             <default>false</default>
         </values>
         <values>
@@ -131,39 +131,39 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Covenant Amendment or Discharge</fullName>
+            <fullName>CVRD_DS_Covenant_Amendment_or_Discharge</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Development Variance Permit</fullName>
+            <fullName>CVRD_DS_Development_Variance_Permit</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Flood Management Bylaw Exemption</fullName>
+            <fullName>CVRD_DS_Flood_Management_Bylaw_Exemption</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Land Use Contract Amendment or Discharge</fullName>
+            <fullName>CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Minimum Frontage Exemption</fullName>
+            <fullName>CVRD_DS_Minimum_Frontage_Exemption</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>OCP%2C Zoning or Land Use Bylaw Amendment</fullName>
+            <fullName>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Phased Development Agreement</fullName>
+            <fullName>CVRD_DS_Phased_Development_Agreement</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Telecommunication Antanna Structure</fullName>
+            <fullName>CVRD_DS_Telecommunication_Antanna_Structure</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Temporary Use Permit</fullName>
+            <fullName>CVRD_DS_Temporary_Use_Permit</fullName>
             <default>false</default>
         </values>
     </picklistValues>
