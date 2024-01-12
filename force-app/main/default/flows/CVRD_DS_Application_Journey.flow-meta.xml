@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <apiVersion>52.0</apiVersion>
+    <apiVersion>54.0</apiVersion>
     <assignments>
         <name>Add_New_Contact_in_the_Application_contact_list</name>
         <label>Add New Contact in the Application contact list</label>
         <locationX>182</locationX>
-        <locationY>2006</locationY>
+        <locationY>2114</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
             <operator>Assign</operator>
@@ -49,7 +49,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>930</locationX>
-        <locationY>2570</locationY>
+        <locationY>2678</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -72,7 +72,7 @@
         <name>Assign_Application_Record_Id_to_Comment_Record</name>
         <label>Assign Application Record Id to Comment Record</label>
         <locationX>666</locationX>
-        <locationY>3086</locationY>
+        <locationY>3194</locationY>
         <assignmentItems>
             <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
             <operator>Assign</operator>
@@ -95,7 +95,7 @@
         <name>Assign_parcel_DPAs_to_Application_Selected_DPA</name>
         <label>Assign parcel DPAs to Application Selected DPA</label>
         <locationX>622</locationX>
-        <locationY>1082</locationY>
+        <locationY>1190</locationY>
         <assignmentItems>
             <assignToReference>Application_Record.CVRD_DS_Selected_DPAs__c</assignToReference>
             <operator>Assign</operator>
@@ -111,7 +111,7 @@
         <name>Assign_Primary_owner_mailing_address_to_new_owner</name>
         <label>Assign Primary owner mailing address to new owner</label>
         <locationX>50</locationX>
-        <locationY>1814</locationY>
+        <locationY>1922</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</assignToReference>
             <operator>Assign</operator>
@@ -155,7 +155,7 @@
         <name>Clearing_address_details_from_add_owner</name>
         <label>Clearing address details from add owner</label>
         <locationX>182</locationX>
-        <locationY>2114</locationY>
+        <locationY>2222</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_City__c</assignToReference>
             <operator>Assign</operator>
@@ -185,7 +185,14 @@
         <name>DPA_Stages_assignment</name>
         <label>DPA Stages assignment</label>
         <locationX>622</locationX>
-        <locationY>458</locationY>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>Stage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Agent Authorization / Information</stringValue>
+            </value>
+        </assignmentItems>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
             <operator>Add</operator>
@@ -225,13 +232,6 @@
             <assignToReference>Stage</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>Agent Authorization / Information</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
                 <stringValue>Environmental Management Act</stringValue>
             </value>
         </assignmentItems>
@@ -264,7 +264,7 @@
         <name>Equate_stages</name>
         <label>Equate stages</label>
         <locationX>886</locationX>
-        <locationY>458</locationY>
+        <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
             <operator>RemoveAll</operator>
@@ -285,6 +285,13 @@
         <label>Stages assignment</label>
         <locationX>754</locationX>
         <locationY>134</locationY>
+        <assignmentItems>
+            <assignToReference>InitialStage</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Agent Authorization / Information</stringValue>
+            </value>
+        </assignmentItems>
         <assignmentItems>
             <assignToReference>InitialStage</assignToReference>
             <operator>Add</operator>
@@ -317,13 +324,6 @@
             <assignToReference>InitialStage</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>Agent Authorization / Information</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
                 <stringValue>Environmental Management Act</stringValue>
             </value>
         </assignmentItems>
@@ -349,14 +349,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Application_Type_Screen</targetReference>
+            <targetReference>Agent_Authorization_Screen</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Update_Primary_Owner_check_on_Application_Contact_Record</name>
         <label>Update Primary Owner check on Application Contact Record</label>
         <locationX>1326</locationX>
-        <locationY>1598</locationY>
+        <locationY>1706</locationY>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
             <operator>Assign</operator>
@@ -403,6 +403,22 @@
             <targetReference>Environment_Management_Act</targetReference>
         </connector>
     </assignments>
+    <choices>
+        <name>AgentNo</name>
+        <choiceText>No</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>AgentYes</name>
+        <choiceText>Yes</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </choices>
     <choices>
         <name>EnvironmentalActSchedule1False</name>
         <choiceText>No</choiceText>
@@ -471,7 +487,7 @@
         <name>Check_Development_Permit_Stage</name>
         <label>Check Development Permit Stage</label>
         <locationX>754</locationX>
-        <locationY>350</locationY>
+        <locationY>458</locationY>
         <defaultConnector>
             <targetReference>Equate_stages</targetReference>
         </defaultConnector>
@@ -496,7 +512,7 @@
         <name>Check_for_mailing_address_is_same_or_not</name>
         <label>Check for mailing address is same or not</label>
         <locationX>182</locationX>
-        <locationY>1706</locationY>
+        <locationY>1814</locationY>
         <defaultConnector>
             <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
         </defaultConnector>
@@ -521,7 +537,7 @@
         <name>Check_if_Comment_is_empty_or_not</name>
         <label>Check if Comment is empty or not</label>
         <locationX>842</locationX>
-        <locationY>2870</locationY>
+        <locationY>2978</locationY>
         <defaultConnector>
             <targetReference>Success_Screen</targetReference>
         </defaultConnector>
@@ -546,7 +562,7 @@
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
         <locationX>754</locationX>
-        <locationY>1490</locationY>
+        <locationY>1598</locationY>
         <defaultConnector>
             <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
         </defaultConnector>
@@ -571,7 +587,7 @@
         <name>Evaluate_Application_Type</name>
         <label>Evaluate Application Type</label>
         <locationX>754</locationX>
-        <locationY>866</locationY>
+        <locationY>974</locationY>
         <defaultConnector>
             <targetReference>Owner_Details_Screen</targetReference>
         </defaultConnector>
@@ -596,7 +612,7 @@
         <name>Rec_check</name>
         <label>Rec check</label>
         <locationX>1326</locationX>
-        <locationY>2138</locationY>
+        <locationY>2246</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -653,7 +669,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>842</locationX>
-        <locationY>2462</locationY>
+        <locationY>2570</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -667,7 +683,7 @@
         <name>Loop_for_Comment_Records</name>
         <label>Loop for Comment Records</label>
         <locationX>578</locationX>
-        <locationY>2978</locationY>
+        <locationY>3086</locationY>
         <collectionReference>CommentRecords</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -700,7 +716,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>842</locationX>
-        <locationY>2762</locationY>
+        <locationY>2870</locationY>
         <connector>
             <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
         </connector>
@@ -714,13 +730,19 @@
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>842</locationX>
-        <locationY>2354</locationY>
+        <locationY>2462</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Fault_Screen</targetReference>
         </faultConnector>
+        <inputAssignments>
+            <field>Agent_Authorization__c</field>
+            <value>
+                <elementReference>I_am_an_agent</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <field>CVRD_DS_Commercial_Or_Industrial_Purpose__c</field>
             <value>
@@ -812,7 +834,7 @@
         <name>Create_Comment_Record</name>
         <label>Create Comment Record</label>
         <locationX>578</locationX>
-        <locationY>3278</locationY>
+        <locationY>3386</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -826,7 +848,7 @@
         <name>Get_PID_Record</name>
         <label>Get PID Record</label>
         <locationX>622</locationX>
-        <locationY>974</locationY>
+        <locationY>1082</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Assign_parcel_DPAs_to_Application_Selected_DPA</targetReference>
@@ -847,7 +869,7 @@
         <name>Get_Record_type_Name</name>
         <label>Get Record type Name</label>
         <locationX>842</locationX>
-        <locationY>2246</locationY>
+        <locationY>2354</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Create_Application_record</targetReference>
@@ -875,7 +897,7 @@
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
         <locationX>182</locationX>
-        <locationY>1598</locationY>
+        <locationY>1706</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1097,10 +1119,79 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
+        <name>Agent_Authorization_Screen</name>
+        <label>Agent Authorization Screen</label>
+        <locationX>754</locationX>
+        <locationY>242</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Application_Type_Screen</targetReference>
+        </connector>
+        <fields>
+            <name>AgentAuthHeader</name>
+            <extensionName>c:cVRD_DS_Dev_App_header</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>AgentAuthStage</name>
+            <extensionName>clariti:FlowStages</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>stages</name>
+                <value>
+                    <elementReference>InitialStage</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>currentStage</name>
+                <value>
+                    <stringValue>Agent Authorization / Information</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Agent_Authorization_Screen_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Agent_Authorization_Screen_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>I_am_an_agent</name>
+                    <choiceReferences>AgentYes</choiceReferences>
+                    <choiceReferences>AgentNo</choiceReferences>
+                    <dataType>Boolean</dataType>
+                    <fieldText>I am an Agent</fieldText>
+                    <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>Application_Type_Screen</name>
         <label>Application_Type_Screen</label>
         <locationX>754</locationX>
-        <locationY>242</locationY>
+        <locationY>350</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1185,7 +1276,7 @@
         <name>Description_Screen</name>
         <label>Description Screen</label>
         <locationX>754</locationX>
-        <locationY>650</locationY>
+        <locationY>758</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1269,7 +1360,7 @@
         <name>DPA_Screen</name>
         <label>DPA Screen</label>
         <locationX>622</locationX>
-        <locationY>1190</locationY>
+        <locationY>1298</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1373,7 +1464,7 @@
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
         <locationX>1326</locationX>
-        <locationY>1706</locationY>
+        <locationY>1814</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1434,7 +1525,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Environment_ActDisplayTextV1</name>
-                    <fieldText>&lt;p&gt;Pursuant to the &lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03053_00&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Environmental Management Act,&lt;/a&gt; an applicant is required to submit a completed &lt;a href=&quot;https://submit.digital.gov.bc.ca/app/form/submit?f=32a95812-f9db-4fd2-99eb-7e362b0253b1&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Schedule 1 – Site Disclosure Statement&lt;/a&gt; on properties that are/were used for specified commercial or industrial purposes indicated on &lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/375_96_04&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Schedule 2 of the Contaminated Sites Regulations.&lt;/a&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;Pursuant to the&lt;u&gt; &lt;/u&gt;&lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03053_00&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;u&gt;Environmental Management Act,&lt;/u&gt;&lt;/a&gt;&lt;u&gt; &lt;/u&gt;an applicant is required to submit a completed &lt;a href=&quot;https://submit.digital.gov.bc.ca/app/form/submit?f=32a95812-f9db-4fd2-99eb-7e362b0253b1&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;u&gt;Schedule 1 – Site Disclosure Statement&lt;/u&gt;&lt;/a&gt; on properties that are/were used for specified commercial or industrial purposes indicated on &lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/375_96_04&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;u&gt;Schedule 2 of the Contaminated Sites Regulations.&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
@@ -1454,7 +1545,7 @@
                 </fields>
                 <fields>
                     <name>Environment_ActDisplayTextV3</name>
-                    <fieldText>&lt;p&gt;If Yes, refer to Schedule 2 to determine if a Schedule 1 – Site Disclosure Statement is required. &lt;/p&gt;&lt;p&gt;Refer to the &lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/375_96_01#section4&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Contaminated Sites Regulations,&lt;/a&gt; Division 3, Part 2 for a list of exemptions.&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;If Yes, refer to Schedule 2 to determine if a Schedule 1 – Site Disclosure Statement is required.&lt;/p&gt;&lt;p&gt;Refer to the &lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/375_96_01#section4&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;u&gt;Contaminated Sites Regulations,&lt;/u&gt;&lt;/a&gt; Division 3, Part 2 for a list of exemptions.&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
@@ -1505,7 +1596,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1546</locationX>
-        <locationY>2462</locationY>
+        <locationY>2570</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1529,7 +1620,7 @@
         <name>Owner_Details_Screen</name>
         <label>Owner Details Screen</label>
         <locationX>754</locationX>
-        <locationY>1382</locationY>
+        <locationY>1490</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1765,7 +1856,7 @@
         <name>Property_Information</name>
         <label>Property Information</label>
         <locationX>754</locationX>
-        <locationY>758</locationY>
+        <locationY>866</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1897,7 +1988,7 @@
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
         <locationX>1326</locationX>
-        <locationY>1922</locationY>
+        <locationY>2030</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2123,13 +2214,109 @@
                     <inputParameters>
                         <name>columns</name>
                         <value>
-                            <stringValue>[{&quot;apiName&quot;:&quot;MUSW__First_Name__c&quot;,&quot;guid&quot;:&quot;column-e049&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Last_Name__c&quot;,&quot;guid&quot;:&quot;column-22bb&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Primary_Owner__c&quot;,&quot;guid&quot;:&quot;column-f5d6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Primary Owner&quot;,&quot;type&quot;:&quot;boolean&quot;},{&quot;apiName&quot;:&quot;MUSW__Email__c&quot;,&quot;guid&quot;:&quot;column-0a7b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;MUSW__Phone__c&quot;,&quot;guid&quot;:&quot;column-54c4&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Phone&quot;,&quot;type&quot;:&quot;phone&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__Street__s&quot;,&quot;guid&quot;:&quot;column-1dad&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Street&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Mailing Address (Street)&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__City__s&quot;,&quot;guid&quot;:&quot;column-4d79&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;City&quot;,&quot;wrapText&quot;:false,&quot;order&quot;:6,&quot;label&quot;:&quot;Mailing Address (City)&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__StateCode__s&quot;,&quot;guid&quot;:&quot;column-eba3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;State/Province&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:7,&quot;label&quot;:&quot;Mailing Address (State/Province)&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__CountryCode__s&quot;,&quot;guid&quot;:&quot;column-c524&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Country&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:8,&quot;label&quot;:&quot;Mailing Address (Country/Territory)&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Mailing_Address__PostalCode__s&quot;,&quot;guid&quot;:&quot;column-33f6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Zip/Postal Code&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:9,&quot;label&quot;:&quot;Mailing Address (ZIP/Postal Code)&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                            <stringValue>[{&quot;apiName&quot;:&quot;MUSW__First_Name__c&quot;,&quot;guid&quot;:&quot;column-e049&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Last_Name__c&quot;,&quot;guid&quot;:&quot;column-22bb&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Primary_Owner__c&quot;,&quot;guid&quot;:&quot;column-f5d6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Primary Owner&quot;,&quot;type&quot;:&quot;boolean&quot;},{&quot;apiName&quot;:&quot;MUSW__Email__c&quot;,&quot;guid&quot;:&quot;column-0a7b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;MUSW__Phone__c&quot;,&quot;guid&quot;:&quot;column-54c4&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Phone&quot;,&quot;type&quot;:&quot;phone&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_Street__c&quot;,&quot;guid&quot;:&quot;column-1dad&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Street&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Owner Street&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_City__c&quot;,&quot;guid&quot;:&quot;column-4d79&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;City&quot;,&quot;wrapText&quot;:false,&quot;order&quot;:6,&quot;label&quot;:&quot;Owner City&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_State__c&quot;,&quot;guid&quot;:&quot;column-eba3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;State/Province&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:7,&quot;label&quot;:&quot;Owner State&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_Country__c&quot;,&quot;guid&quot;:&quot;column-c524&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Country&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:8,&quot;label&quot;:&quot;Owner Country&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_Postal_Code__c&quot;,&quot;guid&quot;:&quot;column-33f6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Zip/Postal Code&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:9,&quot;label&quot;:&quot;Owner Postal Code&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
                         </value>
                     </inputParameters>
                     <inputParameters>
                         <name>maxRowSelection</name>
                         <value>
                             <numberValue>0.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>CustomOwnerTable</name>
+                    <dataTypeMappings>
+                        <typeName>T</typeName>
+                        <typeValue>MUSW__Application_Contact__c</typeValue>
+                    </dataTypeMappings>
+                    <extensionName>clariti:customDatatable</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>objectName</name>
+                        <value>
+                            <stringValue>MUSW__Application_Contact__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>tableData</name>
+                        <value>
+                            <elementReference>ApplicationContactList</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>columnFields</name>
+                        <value>
+                            <stringValue>MUSW__First_Name__c,MUSW__Last_Name__c,CVRD_DS_Primary_Owner__c,MUSW__Email__c,MUSW__Phone__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>cb_matchCaseOnFilters</name>
+                        <value>
+                            <stringValue>CB_FALSE</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>isDisplayHeader</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>cb_isDisplayHeader</name>
+                        <value>
+                            <stringValue>CB_TRUE</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>tableLabel</name>
+                        <value>
+                            <stringValue>Application Contacts</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>tableIcon</name>
+                        <value>
+                            <stringValue>standard:default</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>hideCheckboxColumn</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>cb_hideCheckboxColumn</name>
+                        <value>
+                            <stringValue>CB_TRUE</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>cb_isRequired</name>
+                        <value>
+                            <stringValue>CB_FALSE</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>cb_singleRowSelection</name>
+                        <value>
+                            <stringValue>CB_FALSE</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>hideHeaderActions</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>cb_hideHeaderActions</name>
+                        <value>
+                            <stringValue>CB_TRUE</stringValue>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -2244,7 +2431,7 @@
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
         <locationX>1326</locationX>
-        <locationY>1814</locationY>
+        <locationY>1922</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2345,7 +2532,7 @@
                 </fields>
                 <fields>
                     <name>Riparian_AreasDisplayTextV3</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Under the &lt;/strong&gt;&lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00_97021_01&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Riparian Areas Protection Act,&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt; a riparian area assessment report may be required before this application can be processed (see &lt;/strong&gt;&lt;a href=&quot;https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/fish-fish-habitat/riparian-areas-regulations/rar-brochure-2016_final_web.pdf&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;Riparian Areas Regulation Brochure&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;).&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Under the &lt;/strong&gt;&lt;a href=&quot;https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00_97021_01&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;&lt;u&gt;Riparian Areas Protection Act,&lt;/u&gt;&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt; a riparian area assessment report may be required before this application can be processed (see &lt;/strong&gt;&lt;a href=&quot;https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/fish-fish-habitat/riparian-areas-regulations/rar-brochure-2016_final_web.pdf&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;&lt;u&gt;Riparian Areas Regulation Brochure&lt;/u&gt;&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;).&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -2366,7 +2553,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>842</locationX>
-        <locationY>3518</locationY>
+        <locationY>3626</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2407,7 +2594,7 @@
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
         <locationX>1326</locationX>
-        <locationY>2030</locationY>
+        <locationY>2138</locationY>
         <connector>
             <targetReference>Rec_check</targetReference>
         </connector>
@@ -2436,7 +2623,7 @@
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
         <locationX>842</locationX>
-        <locationY>3626</locationY>
+        <locationY>3734</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
