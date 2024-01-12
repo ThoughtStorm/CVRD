@@ -510,6 +510,15 @@
     <object>MUSW__Application_Reference__c</object>
     <viewAllRecords>true</viewAllRecords>
 </objectPermissions>
+    <objectPermissions>
+    <allowCreate>true</allowCreate>
+    <allowDelete>true</allowDelete>
+    <allowEdit>true</allowEdit>
+    <allowRead>true</allowRead>
+    <modifyAllRecords>true</modifyAllRecords>
+    <object>MUSW__Reference__c</object>
+    <viewAllRecords>true</viewAllRecords>
+</objectPermissions>
 <objectPermissions>
     <allowCreate>true</allowCreate>
     <allowDelete>true</allowDelete>
