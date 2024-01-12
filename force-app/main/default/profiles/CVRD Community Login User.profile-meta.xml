@@ -429,53 +429,8 @@
         <enabled>false</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
         <default>true</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
