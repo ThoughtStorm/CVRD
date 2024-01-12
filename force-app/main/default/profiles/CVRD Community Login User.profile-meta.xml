@@ -276,31 +276,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__Application__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__Email__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__First_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__Last_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__Phone__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Comment__c.CVRD_DS_Applicant_Comment__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -389,9 +364,6 @@
         <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>MUSW__Application_Contact__c-MUSW__Application Contact Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -413,6 +385,24 @@
         <object>MUSW__Application2__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Attestation__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Attestation_Consent__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
@@ -421,33 +411,6 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>MUSW__Comment__c</object>
         <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>MUSW__Parcel__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>MUSW__Address__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>MUSW__Application_Contact__c</object>
-        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
         <apexPage>CVRD_DS_AppSitePage</apexPage>
@@ -610,6 +573,10 @@
         <tab>MUSW__Application2__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
+     <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Attestation_Development_Service_application</flow>
+    </flowAccesses>
     <userLicense>Customer Community Login</userLicense>
     <userPermissions>
         <enabled>true</enabled>
