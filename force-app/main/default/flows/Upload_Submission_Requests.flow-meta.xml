@@ -18,7 +18,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
         <versionSegment>1</versionSegment>
     </actionCalls>
-    <apiVersion>55.0</apiVersion>
+    <apiVersion>59.0</apiVersion>
     <assignments>
         <name>Assign_Application_ID_to_Record_ID</name>
         <label>Assign Application ID to Record ID</label>
@@ -432,10 +432,10 @@
         <name>Get_Fees</name>
         <label>Get Fees</label>
         <locationX>1502</locationX>
-        <locationY>974</locationY>
+        <locationY>866</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Evaluate_Submissions_Complete</targetReference>
+            <targetReference>Get_required_pending_submissions</targetReference>
         </connector>
         <filterLogic>(1 AND 4 AND 5) OR (2 AND 4 AND 6) OR (3 AND 4 AND 7)</filterLogic>
         <filters>
@@ -523,7 +523,7 @@
         <connector>
             <targetReference>Evaluate_Submissions_Pending</targetReference>
         </connector>
-        <filterLogic>(1 AND 4 AND 5) OR (2 AND 4 AND 6) OR (3 AND 4 AND 7)</filterLogic>
+        <filterLogic>(1 AND 4 ) OR (2 AND 4 ) OR (3 AND 4 )</filterLogic>
         <filters>
             <field>MUSW__Permit2__c</field>
             <operator>EqualTo</operator>
@@ -552,30 +552,11 @@
                 <elementReference>Status_Value</elementReference>
             </value>
         </filters>
-        <filters>
-            <field>MUSW__Permit2__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__License2__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Application2__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </filters>
         <object>MUSW__Submission__c</object>
         <outputReference>Pending_Submissions_Collection</outputReference>
         <queriedFields>Id</queriedFields>
+        <sortField>MUSW__Required__c</sortField>
+        <sortOrder>Desc</sortOrder>
     </recordLookups>
     <recordLookups>
         <name>Get_Permit_Name</name>
@@ -604,10 +585,10 @@
         <name>Get_required_pending_submissions</name>
         <label>Get required pending submissions</label>
         <locationX>1502</locationX>
-        <locationY>866</locationY>
+        <locationY>974</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Get_Fees</targetReference>
+            <targetReference>Evaluate_Submissions_Complete</targetReference>
         </connector>
         <filterLogic>(1 AND 4 AND 7 AND 8) OR (2 AND 4 AND 5 AND 8) OR (3 AND 4 AND 6 AND 8)</filterLogic>
         <filters>
@@ -791,7 +772,7 @@
         </connector>
         <fields>
             <name>Confirmation_Page_1</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Submission Requests&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have successfully uploaded documents to your pending submission request(s) for &lt;/span&gt;&lt;u style=&quot;font-size: 14px; color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 28px;&quot;&gt;Documents Successfully Uploaded&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;You have successfully uploaded documents in your pending application, Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-size: 14px; font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -864,7 +845,7 @@
         </connector>
         <fields>
             <name>Confirmation_Page_2</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;﻿Submission Requests&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have successfully uploaded documents to your pending submission request(s) for&amp;nbsp;&lt;/span&gt;&lt;u style=&quot;font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have outstanding fees for {!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}. To pay for fees, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Pay Outstanding Items&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; on your record.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have successfully uploaded documents to your pending submission request(s) for&amp;nbsp;&lt;/span&gt;&lt;u style=&quot;font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have outstanding fees for {!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}. To pay for fees, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Pay Outstanding Items&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; on your record.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1010,7 +991,7 @@
         </connector>
         <fields>
             <name>Confirmation_Page_3</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt; Submission Requests&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have successfully uploaded documents to your pending submission request(s) for&amp;nbsp;&lt;/span&gt;&lt;u style=&quot;font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You still have required submission request(s) to complete. To complete those submission request(s) click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Previous&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; button below; otherwise, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Finish&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; to submit documents at a later date.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;You have successfully uploaded documents to your pending application, &lt;/span&gt;&lt;u style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(23, 43, 77);&quot;&gt;Additional documents are required. To upload additional documents click the &lt;/span&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(23, 43, 77);&quot;&gt;Previous &lt;/strong&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(23, 43, 77);&quot;&gt;button. &lt;/span&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.8);&quot;&gt;otherwise, click&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.8);&quot;&gt;Finish&lt;/strong&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.8);&quot;&gt;&amp;nbsp;to submit documents at a later date.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1083,7 +1064,7 @@
         </connector>
         <fields>
             <name>Confirmation_Page_4</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Submission Requests&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You still have required submission request(s) to complete. To complete those submission request(s) click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Previous&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; below; otherwise, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Finish&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; to submit documents at a later date.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have outstanding fees for {!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}. To pay for fees, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Pay Outstanding Items&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; on your record.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You still have required submission request(s) to complete. To complete those submission request(s) click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Previous&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; below; otherwise, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Finish&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; to submit documents at a later date.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have outstanding fees for {!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}. To pay for fees, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Pay Outstanding Items&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; on your record.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1156,7 +1137,7 @@
         </connector>
         <fields>
             <name>Copy_1_of_Confirmation_Page_3</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt; Submission Requests&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You still have required submission request(s) to complete. To complete those submission request(s) click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Previous&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; button below.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 28px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;You have successfully uploaded documents to your pending application, assigned Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional documents are required. To upload additional documents click the Previous button.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1224,7 +1205,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Get_required_pending_submissions</targetReference>
+            <targetReference>Get_Fees</targetReference>
         </connector>
         <fields>
             <name>Pending_Submissions_Display_Text</name>
@@ -1281,7 +1262,7 @@
             <targetReference>Evaluate_Record_ID</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>Application_Id</name>
         <dataType>String</dataType>
