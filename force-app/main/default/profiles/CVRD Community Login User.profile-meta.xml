@@ -390,7 +390,7 @@
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
+        <modifyAllRecords>false</modifyAllRecords>
         <object>MUSW__Attestation__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -399,7 +399,7 @@
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
+        <modifyAllRecords>false</modifyAllRecords>
         <object>MUSW__Attestation_Consent__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
