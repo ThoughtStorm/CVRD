@@ -7,4 +7,11 @@
         <shortDescription>CVRD DS Application Journey flow record creation</shortDescription>
         <value>True</value>
     </labels>
+    <labels>
+        <fullName>CVRD_DS_DPA_Exemption_Applicable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CVRD_DS_DPA_Exemption_Applicable</shortDescription>
+        <value>http://cvrd.ca/documentcenter/view/108344</value>
+    </labels>
 </CustomLabels>
