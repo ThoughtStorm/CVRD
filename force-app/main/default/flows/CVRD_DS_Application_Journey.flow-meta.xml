@@ -1163,16 +1163,6 @@
             <fields>
                 <name>Agent_Authorization_Screen_Section1_Column1</name>
                 <fieldType>Region</fieldType>
-                <fields>
-                    <name>I_am_an_agent</name>
-                    <choiceReferences>AgentYes</choiceReferences>
-                    <choiceReferences>AgentNo</choiceReferences>
-                    <dataType>Boolean</dataType>
-                    <fieldText>I am an Agent</fieldText>
-                    <fieldType>RadioButtons</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -1183,6 +1173,16 @@
             </fields>
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>I_am_an_agent</name>
+            <choiceReferences>AgentYes</choiceReferences>
+            <choiceReferences>AgentNo</choiceReferences>
+            <dataType>Boolean</dataType>
+            <fieldText>I am an Agent</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -1740,7 +1740,7 @@
                     <inputParameters>
                         <name>pattern</name>
                         <value>
-                            <stringValue>^(\+\d{1,2})?(\s)?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$</stringValue>
+                            <stringValue>^[\d]{10,15}</stringValue>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -2227,102 +2227,6 @@
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
-                <fields>
-                    <name>CustomOwnerTable</name>
-                    <dataTypeMappings>
-                        <typeName>T</typeName>
-                        <typeValue>MUSW__Application_Contact__c</typeValue>
-                    </dataTypeMappings>
-                    <extensionName>clariti:customDatatable</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>objectName</name>
-                        <value>
-                            <stringValue>MUSW__Application_Contact__c</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>tableData</name>
-                        <value>
-                            <elementReference>ApplicationContactList</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>columnFields</name>
-                        <value>
-                            <stringValue>MUSW__First_Name__c,MUSW__Last_Name__c,CVRD_DS_Primary_Owner__c,MUSW__Email__c,MUSW__Phone__c</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>cb_matchCaseOnFilters</name>
-                        <value>
-                            <stringValue>CB_FALSE</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>isDisplayHeader</name>
-                        <value>
-                            <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>cb_isDisplayHeader</name>
-                        <value>
-                            <stringValue>CB_TRUE</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>tableLabel</name>
-                        <value>
-                            <stringValue>Application Contacts</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>tableIcon</name>
-                        <value>
-                            <stringValue>standard:default</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>hideCheckboxColumn</name>
-                        <value>
-                            <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>cb_hideCheckboxColumn</name>
-                        <value>
-                            <stringValue>CB_TRUE</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>cb_isRequired</name>
-                        <value>
-                            <stringValue>CB_FALSE</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>cb_singleRowSelection</name>
-                        <value>
-                            <stringValue>CB_FALSE</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>hideHeaderActions</name>
-                        <value>
-                            <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>cb_hideHeaderActions</name>
-                        <value>
-                            <stringValue>CB_TRUE</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -2654,6 +2558,14 @@
         <objectType>MUSW__Application_Contact__c</objectType>
     </variables>
     <variables>
+        <name>Application_Location_Record_Collation</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Application_Location__c</objectType>
+    </variables>
+    <variables>
         <name>Application_Record</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
@@ -2676,6 +2588,22 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>MUSW__Application_Contact__c</objectType>
+    </variables>
+    <variables>
+        <name>ApplicationLocationCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>ApplicationLocationRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Application_Location__c</objectType>
     </variables>
     <variables>
         <name>CollationCommentRecords</name>
