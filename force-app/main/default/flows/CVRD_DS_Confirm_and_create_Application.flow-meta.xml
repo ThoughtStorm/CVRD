@@ -135,7 +135,7 @@
         <allowPause>false</allowPause>
         <fields>
             <name>ApplicationphasechangeSuccessMessage</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(240, 5, 5);&quot;&gt;Application is Confirmed and Approved!&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(73, 140, 73);&quot;&gt;Application is Confirmed and Approved!&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>

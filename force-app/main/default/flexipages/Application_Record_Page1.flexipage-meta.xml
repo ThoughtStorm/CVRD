@@ -27,6 +27,9 @@
                         <valueListItems>
                             <value>Global.MUSW__LogACall</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_Confirm_and_Create_Application</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>

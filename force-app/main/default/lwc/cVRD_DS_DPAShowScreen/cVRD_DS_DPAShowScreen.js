@@ -1,7 +1,9 @@
 import { LightningElement, api,track } from 'lwc';
+import DPAExemptURL from '@salesforce/label/c.CVRD_DS_DPA_Exemption_Applicable';
 export default class CVRD_DS_DPAShowScreen extends LightningElement {
 
     @api DPA_Data='';
+    DPAExempturl=DPAExemptURL;
     DPAList=[];
     resetCommentData=[];
     @track CommentData=[];
