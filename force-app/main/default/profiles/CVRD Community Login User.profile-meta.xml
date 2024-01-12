@@ -465,13 +465,22 @@
         <object>MUSW__Address__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-    <objectPermissions>
+ <objectPermissions>
     <allowCreate>true</allowCreate>
     <allowDelete>true</allowDelete>
     <allowEdit>true</allowEdit>
     <allowRead>true</allowRead>
     <modifyAllRecords>true</modifyAllRecords>
     <object>MUSW__Application_Credential__c</object>
+    <viewAllRecords>true</viewAllRecords>
+</objectPermissions>
+    <objectPermissions>
+    <allowCreate>true</allowCreate>
+    <allowDelete>true</allowDelete>
+    <allowEdit>true</allowEdit>
+    <allowRead>true</allowRead>
+    <modifyAllRecords>true</modifyAllRecords>
+    <object>MUSW__Credential__c</object>
     <viewAllRecords>true</viewAllRecords>
 </objectPermissions>
 <objectPermissions>
