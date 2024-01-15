@@ -46,49 +46,39 @@
         <label>Board of Variance</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication_Antenna_Structure</fullName>
-        <default>false</default>
-        <label>Telecommunication Antenna Structure</label>
-    </customValue>
-    <customValue>
-        <fullName>Strata Conversion</fullName>
+        <fullName>Strata_Conversion</fullName>
         <default>false</default>
         <label>Strata Conversion</label>
     </customValue>
     <customValue>
-        <fullName>Agricultural Land Reserve</fullName>
+        <fullName>Agricultural_Land_Reserve</fullName>
         <default>false</default>
         <label>Agricultural Land Reserve</label>
     </customValue>
     <customValue>
-        <fullName>Other</fullName>
+        <fullName>Subdivision_Referral</fullName>
         <default>false</default>
-        <isActive>false</isActive>
-        <label>Other</label>
+        <label>Subdivision (Referral)</label>
     </customValue>
     <customValue>
-        <fullName>Business</fullName>
+        <fullName>Cannabis_License</fullName>
         <default>false</default>
-        <isActive>false</isActive>
-        <label>Business</label>
+        <label>Cannabis License</label>
     </customValue>
     <customValue>
-        <fullName>Land Use Contract Amendment or Discharge</fullName>
+        <fullName>Liquor_Cannabis_Licence_Referrals</fullName>
         <default>false</default>
-        <isActive>false</isActive>
-        <label>Land Use Contract Amendment or Discharge</label>
+        <label>Liquor/Cannabis Licence Referrals</label>
+    </customValue>
+    <customValue>
+        <fullName>Crown_Land_Referrals</fullName>
+        <default>false</default>
+        <label>Crown Land Referrals</label>
     </customValue>
     <customValue>
         <fullName>Telecommunication_Antanna_Structure</fullName>
         <default>false</default>
-        <isActive>false</isActive>
         <label>Telecommunication Antanna Structure</label>
-    </customValue>
-    <customValue>
-        <fullName>Contractor</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Contractor</label>
     </customValue>
     <customValue>
         <fullName>Animal</fullName>
@@ -97,10 +87,10 @@
         <label>Animal</label>
     </customValue>
     <customValue>
-        <fullName>Liquor</fullName>
+        <fullName>Land Use Contract Amendment or Discharge</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Liquor</label>
+        <label>Land Use Contract Amendment or Discharge</label>
     </customValue>
     <customValue>
         <fullName>Restaurant</fullName>
@@ -139,28 +129,34 @@
         <label>Building</label>
     </customValue>
     <customValue>
-        <fullName>Crown Land Referrals</fullName>
+        <fullName>Telecommunication_Antenna_Structure</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Crown Land Referrals</label>
+        <label>Telecommunication Antenna Structure</label>
     </customValue>
     <customValue>
-        <fullName>Liquor/Cannabis Licence Referrals</fullName>
+        <fullName>Contractor</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Liquor/Cannabis Licence Referrals</label>
+        <label>Contractor</label>
     </customValue>
     <customValue>
-        <fullName>Subdivision (Referral)</fullName>
+        <fullName>Other</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Subdivision (Referral)</label>
+        <label>Other</label>
     </customValue>
     <customValue>
-        <fullName>Cannabis License</fullName>
+        <fullName>Business</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Cannabis License</label>
+        <label>Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Liquor</label>
     </customValue>
     <masterLabel>Application Types</masterLabel>
     <sorted>false</sorted>
