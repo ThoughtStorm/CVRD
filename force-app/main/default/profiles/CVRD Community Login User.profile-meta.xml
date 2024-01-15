@@ -76,11 +76,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Application2__c.CVRD_DS_Preliminary_Auto_Number__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_Selected_DPAs__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -281,31 +276,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__Application__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__Email__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__First_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__Last_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application_Contact__c.MUSW__Phone__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Comment__c.CVRD_DS_Applicant_Comment__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -380,31 +350,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Attestation_Consent__c.MUSW__Attestation__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Attestation_Consent__c.MUSW__Attestation_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Attestation_Consent__c.MUSW__Attestor__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Attestation_Consent__c.MUSW__Consent__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Attestation__c.MUSW__Message__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Parcel__c.CVRD_DS_DPA__c</field>
         <readable>true</readable>
@@ -420,6 +365,66 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application_Contact__c-MUSW__Application Contact Layout</layout>
@@ -452,229 +457,88 @@
         <object>MUSW__Comment__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-        <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>MUSW__Parcel__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>MUSW__Address__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
- <objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Application_Credential__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-    <objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Credential__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Application_Exam__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-    <objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Exam__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Application_Experience__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-    <objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Experience__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Application_Location__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Application_Reference__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-    <objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Reference__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Application_Template__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>false</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>false</modifyAllRecords>
-    <object>MUSW__Approval__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Permit2__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__License2__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Sequence_Number__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>false</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>false</modifyAllRecords>
-    <object>MUSW__Sequence_Range__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>false</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>false</modifyAllRecords>
-    <object>MUSW__Master_Submission_List__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>false</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>false</modifyAllRecords>
-    <object>MUSW__Submission__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>true</allowCreate>
-    <allowDelete>false</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>false</modifyAllRecords>
-    <object>MUSW__Template_Object_Mapping__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-<objectPermissions>
-    <allowCreate>false</allowCreate>
-    <allowDelete>true</allowDelete>
-    <allowEdit>true</allowEdit>
-    <allowRead>true</allowRead>
-    <modifyAllRecords>true</modifyAllRecords>
-    <object>MUSW__Fee__c</object>
-    <viewAllRecords>true</viewAllRecords>
-</objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>MUSW__Alert__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Contact</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>MUSW__Application_Contact__c</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
     <pageAccesses>
         <apexPage>CVRD_DS_AppSitePage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <default>true</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
