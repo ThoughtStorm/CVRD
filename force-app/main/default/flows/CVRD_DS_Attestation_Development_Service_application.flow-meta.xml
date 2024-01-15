@@ -2,82 +2,10 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
     <assignments>
-        <name>Assignment_of_Stage</name>
-        <label>Assignment of Stage</label>
-        <locationX>380</locationX>
-        <locationY>134</locationY>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Application Type</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Description</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Property Information</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Owner Information</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Agent Authorization / Information</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Environmental Management Act</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Riparian Areas Protection Regulation Declaration</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Review</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>InitialStage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Owner/Agent Declaration</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Get_Attestation</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Attestation_Consent_Assignment</name>
         <label>Attestation Consent Assignment</label>
-        <locationX>182</locationX>
-        <locationY>866</locationY>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
         <assignmentItems>
             <assignToReference>Attestation_Consent.MUSW__Attestation__c</assignToReference>
             <operator>Assign</operator>
@@ -107,135 +35,11 @@
             </value>
         </assignmentItems>
     </assignments>
-    <assignments>
-        <name>DPA_Stages_assignment</name>
-        <label>DPA Stages assignment</label>
-        <locationX>50</locationX>
-        <locationY>566</locationY>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Application Type</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Description</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Property Information</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Development Permit Areas</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Owner Information</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Agent Authorization / Information</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Environmental Management Act</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Riparian Areas Protection Regulation Declaration</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Review</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>Owner/Agent Declaration</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Display_Attestation</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Equate_Stage</name>
-        <label>Equate Stage</label>
-        <locationX>314</locationX>
-        <locationY>566</locationY>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>RemoveAll</operator>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Stage</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>InitialStage</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Display_Attestation</targetReference>
-        </connector>
-    </assignments>
-    <decisions>
-        <name>Check_DPA_Stage</name>
-        <label>Check DPA Stage</label>
-        <locationX>182</locationX>
-        <locationY>458</locationY>
-        <defaultConnector>
-            <targetReference>Equate_Stage</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>DPA_Stage</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>ApplicationType</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Development_Permit</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>DPA_Stages_assignment</targetReference>
-            </connector>
-            <label>DPA Stage</label>
-        </rules>
-    </decisions>
     <decisions>
         <name>Evaluate_Attestation_Exists</name>
         <label>Evaluate Attestation Exists</label>
-        <locationX>380</locationX>
-        <locationY>350</locationY>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
         <defaultConnector>
             <targetReference>Attestation_Error</targetReference>
         </defaultConnector>
@@ -251,7 +55,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Check_DPA_Stage</targetReference>
+                <targetReference>Display_Attestation</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -282,8 +86,8 @@
     <recordLookups>
         <name>Get_Attestation</name>
         <label>Get Attestation</label>
-        <locationX>380</locationX>
-        <locationY>242</locationY>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Evaluate_Attestation_Exists</targetReference>
@@ -305,8 +109,8 @@
     <screens>
         <name>Attestation_Error</name>
         <label>Attestation Error</label>
-        <locationX>578</locationX>
-        <locationY>458</locationY>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -321,8 +125,8 @@
     <screens>
         <name>Display_Attestation</name>
         <label>Display Attestation</label>
-        <locationX>182</locationX>
-        <locationY>758</locationY>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -382,7 +186,7 @@
         <fields>
             <name>Acknowledgement_Checkbox</name>
             <dataType>Boolean</dataType>
-            <fieldText>I, {!ApplicationContactRecord.MUSW__First_Name__c} {!ApplicationContactRecord.MUSW__Last_Name__c}, hereby do attest that I completed the {!ApplicationType}.</fieldText>
+            <fieldText>I, {!ApplicationContactRecord.MUSW__First_Name__c} {!ApplicationContactRecord.MUSW__Last_Name__c}, hereby do attest that I completed the {!ApplicationType} Application.</fieldText>
             <fieldType>InputField</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
@@ -396,10 +200,10 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>254</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Assignment_of_Stage</targetReference>
+            <targetReference>Get_Attestation</targetReference>
         </connector>
     </start>
     <status>Active</status>
@@ -459,7 +263,7 @@
         <name>Stage</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
-        <isInput>false</isInput>
+        <isInput>true</isInput>
         <isOutput>false</isOutput>
     </variables>
 </Flow>

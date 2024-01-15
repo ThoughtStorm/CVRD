@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Redirect_To_Record_Detail_Page</name>
         <label>Redirect To Record Detail Page</label>
-        <locationX>1238</locationX>
+        <locationX>842</locationX>
         <locationY>2030</locationY>
         <actionName>clariti:flowNavigation</actionName>
         <actionType>component</actionType>
@@ -18,11 +18,11 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
         <versionSegment>1</versionSegment>
     </actionCalls>
-    <apiVersion>59.0</apiVersion>
+    <apiVersion>54.0</apiVersion>
     <assignments>
         <name>Assign_Application_ID_to_Record_ID</name>
         <label>Assign Application ID to Record ID</label>
-        <locationX>2492</locationX>
+        <locationX>1898</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -38,7 +38,7 @@
     <assignments>
         <name>Assign_License_ID_to_Record_ID</name>
         <label>Assign License ID to Record ID</label>
-        <locationX>2228</locationX>
+        <locationX>1634</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -54,7 +54,7 @@
     <assignments>
         <name>Assign_Permit_ID_to_Record_ID</name>
         <label>Assign Permit ID to Record ID</label>
-        <locationX>1964</locationX>
+        <locationX>1370</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -84,7 +84,7 @@
     <decisions>
         <name>Evaluate_Button_Bar_Value</name>
         <label>Evaluate Button Bar Value</label>
-        <locationX>1502</locationX>
+        <locationX>1106</locationX>
         <locationY>1922</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -122,7 +122,7 @@
     <decisions>
         <name>Evaluate_Record_ID</name>
         <label>Evaluate Record ID</label>
-        <locationX>2360</locationX>
+        <locationX>1766</locationX>
         <locationY>134</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -247,7 +247,7 @@
     <decisions>
         <name>Evaluate_Submissions_Complete</name>
         <label>Evaluate Submissions Complete</label>
-        <locationX>1502</locationX>
+        <locationX>1106</locationX>
         <locationY>1082</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
@@ -273,13 +273,6 @@
             <name>No_Pending_Submissions_And_No_Pending_Fees</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Pending_Submissions_Boolean</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
                 <leftValueReference>Pending_Fees</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
@@ -291,77 +284,11 @@
             </connector>
             <label>Pending Submission Requests Uploaded (all satisfied / no fees)</label>
         </rules>
-        <rules>
-            <name>No_Pending_Submissions_And_Pending_Fees</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Pending_Submissions_Boolean</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Pending_Fees</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>No_Pending_Submission_Requests_And_Pending_Fees_Confirmation</targetReference>
-            </connector>
-            <label>Pending Submission Requests Uploaded (all satisfied / fees)</label>
-        </rules>
-        <rules>
-            <name>Pending_Submissions_And_No_Pending_Fees</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Pending_Submissions_Boolean</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Pending_Fees</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</targetReference>
-            </connector>
-            <label>Pending Submission Requests Uploaded (some satisfied / no fees)</label>
-        </rules>
-        <rules>
-            <name>Pending_Submissions_And_Pending_Fees</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Pending_Submissions_Boolean</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Pending_Fees</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Pending_Submission_Requests_And_Pending_Fees_Confirmation</targetReference>
-            </connector>
-            <label>Pending Submission Requests Uploaded (some satisfied / fees)</label>
-        </rules>
     </decisions>
     <decisions>
         <name>Evaluate_Submissions_Pending</name>
         <label>Evaluate Submissions Pending</label>
-        <locationX>2360</locationX>
+        <locationX>1766</locationX>
         <locationY>650</locationY>
         <defaultConnector>
             <targetReference>No_Pending_Submissions</targetReference>
@@ -408,7 +335,7 @@
     <recordLookups>
         <name>Get_Application_Name</name>
         <label>Get Application Name</label>
-        <locationX>2492</locationX>
+        <locationX>1898</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -431,7 +358,7 @@
     <recordLookups>
         <name>Get_Fees</name>
         <label>Get Fees</label>
-        <locationX>1502</locationX>
+        <locationX>1106</locationX>
         <locationY>866</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -494,7 +421,7 @@
     <recordLookups>
         <name>Get_License_Name</name>
         <label>Get License Name</label>
-        <locationX>2228</locationX>
+        <locationX>1634</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -517,7 +444,7 @@
     <recordLookups>
         <name>Get_Pending_Submissions</name>
         <label>Get Pending Submissions</label>
-        <locationX>2360</locationX>
+        <locationX>1766</locationX>
         <locationY>542</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -561,7 +488,7 @@
     <recordLookups>
         <name>Get_Permit_Name</name>
         <label>Get Permit Name</label>
-        <locationX>1964</locationX>
+        <locationX>1370</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -584,7 +511,7 @@
     <recordLookups>
         <name>Get_required_pending_submissions</name>
         <label>Get required pending submissions</label>
-        <locationX>1502</locationX>
+        <locationX>1106</locationX>
         <locationY>974</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -772,7 +699,7 @@
         </connector>
         <fields>
             <name>Confirmation_Page_1</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 28px;&quot;&gt;Documents Successfully Uploaded&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;You have successfully uploaded documents in your pending application, Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-size: 14px; font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Documents Successfully Uploaded&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;You have successfully uploaded documents in your pending application &lt;/span&gt;&lt;u style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -832,82 +759,9 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
-        <description>(all satisfied / fees)</description>
-        <name>No_Pending_Submission_Requests_And_Pending_Fees_Confirmation</name>
-        <label>Pending Submission Requests Uploaded (all satisfied / fees)</label>
-        <locationX>2162</locationX>
-        <locationY>1190</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <connector>
-            <targetReference>Evaluate_Button_Bar_Value</targetReference>
-        </connector>
-        <fields>
-            <name>Confirmation_Page_2</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have successfully uploaded documents to your pending submission request(s) for&amp;nbsp;&lt;/span&gt;&lt;u style=&quot;font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have outstanding fees for {!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}. To pay for fees, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Pay Outstanding Items&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; on your record.&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
-            <name>Button_Bar_2</name>
-            <extensionName>clariti:flowButtonBar</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>alignment</name>
-                <value>
-                    <stringValue>right</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>orientation</name>
-                <value>
-                    <stringValue>horizontal</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>showLines</name>
-                <value>
-                    <stringValue>neither</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>actionMode</name>
-                <value>
-                    <stringValue>navigation</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>required</name>
-                <value>
-                    <stringValue>no</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>multiselect</name>
-                <value>
-                    <stringValue>no</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>buttons</name>
-                <value>
-                    <stringValue>[{&quot;label&quot;:&quot;Finish&quot;,&quot;value&quot;:&quot;Finish&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;index&quot;:0}]</stringValue>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <outputParameters>
-                <assignToReference>Button_Bar_Value</assignToReference>
-                <name>value</name>
-            </outputParameters>
-        </fields>
-        <showFooter>false</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
-    <screens>
         <name>No_Pending_Submissions</name>
         <label>No Pending Submissions</label>
-        <locationX>3218</locationX>
+        <locationX>2426</locationX>
         <locationY>758</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -979,152 +833,6 @@
     </screens>
     <screens>
         <description>(some satisfied / no fees)</description>
-        <name>Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</name>
-        <label>Pending Submission Requests Uploaded (some satisfied / no fees)</label>
-        <locationX>2426</locationX>
-        <locationY>1190</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <connector>
-            <targetReference>Evaluate_Button_Bar_Value</targetReference>
-        </connector>
-        <fields>
-            <name>Confirmation_Page_3</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;You have successfully uploaded documents to your pending application, &lt;/span&gt;&lt;u style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(23, 43, 77);&quot;&gt;Additional documents are required. To upload additional documents click the &lt;/span&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(23, 43, 77);&quot;&gt;Previous &lt;/strong&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(23, 43, 77);&quot;&gt;button. &lt;/span&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.8);&quot;&gt;otherwise, click&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.8);&quot;&gt;Finish&lt;/strong&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.8);&quot;&gt;&amp;nbsp;to submit documents at a later date.&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
-            <name>Button_Bar_3</name>
-            <extensionName>clariti:flowButtonBar</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>alignment</name>
-                <value>
-                    <stringValue>right</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>orientation</name>
-                <value>
-                    <stringValue>horizontal</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>showLines</name>
-                <value>
-                    <stringValue>neither</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>actionMode</name>
-                <value>
-                    <stringValue>navigation</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>required</name>
-                <value>
-                    <stringValue>no</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>multiselect</name>
-                <value>
-                    <stringValue>no</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>buttons</name>
-                <value>
-                    <stringValue>[{&quot;label&quot;:&quot;Previous&quot;,&quot;value&quot;:&quot;Previous&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;index&quot;:0},{&quot;label&quot;:&quot;Finish&quot;,&quot;value&quot;:&quot;Finish&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;index&quot;:1}]</stringValue>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <outputParameters>
-                <assignToReference>Button_Bar_Value</assignToReference>
-                <name>value</name>
-            </outputParameters>
-        </fields>
-        <showFooter>false</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
-    <screens>
-        <description>(some satisfied / fees)</description>
-        <name>Pending_Submission_Requests_And_Pending_Fees_Confirmation</name>
-        <label>Pending Submission Requests Uploaded (some satisfied / fees)</label>
-        <locationX>2690</locationX>
-        <locationY>1190</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <connector>
-            <targetReference>Evaluate_Button_Bar_Value</targetReference>
-        </connector>
-        <fields>
-            <name>Confirmation_Page_4</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You still have required submission request(s) to complete. To complete those submission request(s) click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Previous&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; below; otherwise, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Finish&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; to submit documents at a later date.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;You have outstanding fees for {!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}. To pay for fees, click &lt;/span&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Pay Outstanding Items&lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; on your record.&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
-            <name>Button_Bar_4</name>
-            <extensionName>clariti:flowButtonBar</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>alignment</name>
-                <value>
-                    <stringValue>right</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>orientation</name>
-                <value>
-                    <stringValue>horizontal</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>showLines</name>
-                <value>
-                    <stringValue>neither</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>actionMode</name>
-                <value>
-                    <stringValue>navigation</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>required</name>
-                <value>
-                    <stringValue>no</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>multiselect</name>
-                <value>
-                    <stringValue>no</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>buttons</name>
-                <value>
-                    <stringValue>[{&quot;label&quot;:&quot;Previous&quot;,&quot;value&quot;:&quot;Previous&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;index&quot;:0},{&quot;label&quot;:&quot;Finish&quot;,&quot;value&quot;:&quot;Finish&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;index&quot;:1}]</stringValue>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <outputParameters>
-                <assignToReference>Button_Bar_Value</assignToReference>
-                <name>value</name>
-            </outputParameters>
-        </fields>
-        <showFooter>false</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
-    <screens>
-        <description>(some satisfied / no fees)</description>
         <name>Pending_Submission_Required_Requests_Uploaded_some_satisfied_no_fees</name>
         <label>Pending Submission Requests Uploaded (some satisfied / no fees)</label>
         <locationX>50</locationX>
@@ -1137,7 +845,7 @@
         </connector>
         <fields>
             <name>Copy_1_of_Confirmation_Page_3</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 28px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;You have successfully uploaded documents to your pending application, assigned Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Additional documents are required. To upload additional documents click the Previous button.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;You have successfully uploaded documents to your pending application, &lt;/span&gt;&lt;u style=&quot;font-size: 14px; color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); background-color: rgb(255, 255, 255);&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Additional documents are required. To upload additional documents click the &lt;/span&gt;&lt;strong style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Previous &lt;/strong&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;button.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1199,7 +907,7 @@
     <screens>
         <name>Pending_Submissions_Screen</name>
         <label>Pending Submissions Screen</label>
-        <locationX>1502</locationX>
+        <locationX>1106</locationX>
         <locationY>758</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -1256,13 +964,13 @@
     </screens>
     <sourceTemplate>clariti__Upload_Submission_Requests</sourceTemplate>
     <start>
-        <locationX>2234</locationX>
+        <locationX>1640</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Evaluate_Record_ID</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>Application_Id</name>
         <dataType>String</dataType>
