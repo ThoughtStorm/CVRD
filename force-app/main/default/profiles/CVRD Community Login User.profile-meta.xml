@@ -15,22 +15,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CVRD_DS_CreateSubmissionsTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_DS_RecordTypeDefine</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_OTPController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_OTPGenerator</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>LightningForgotPasswordController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -88,11 +72,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_DS_Parcel_Electoral_Area__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application2__c.CVRD_DS_Preliminary_Auto_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -417,10 +396,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -494,12 +469,12 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
@@ -509,7 +484,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
@@ -528,13 +503,8 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
