@@ -7,13 +7,13 @@
 				<thead>
 					<tr class="slds-line-height_reset">
 						<th class="" scope="col">
-							<div class="slds-truncate" title="Opportunity Name">Development Permit Area</div>
+							<div class="slds-truncate" title="Development Permit Area">Development Permit Area</div>
 						</th>
 						<th class="" scope="col">
-							<div class="slds-truncate" title="Account Name"><a href="https://www.w3schools.com" target="_blank"> DPA Exemption Applicable</a></div>
+							<div class="slds-truncate" title="DPA Exemption Applicable">DPA Exemption Applicable <a href="http://www.google.com" target="_blank"><lightning-icon size="xx-small" icon-name="utility:info" alternative-text="Help Text" title="Help Text"></lightning-icon></a></div>
 						</th>
 						<th class="" scope="col">
-							<div class="slds-truncate" title="Close Date">Comment</div>
+							<div class="slds-truncate" title="Explanation">Explanation</div>
 						</th>
 					</tr>
 				</thead>
@@ -27,9 +27,9 @@
 								<lightning-input type="checkbox" onchange={handleExemptionChange} value={item.Exempt}
 									checked={item.Exempt} data-id={item.id}></lightning-input>
 							</td>
-							<td data-label="Comment">
+							<td data-label="Explaination">
 								<lightning-input type="text" onchange={handleCommentValueChange} name={item.name}
-									value={item.Comment} label="Comment" required={item.Exempt} data-id={item.id}
+									value={item.Explaination} label="Explaination" required={item.Exempt} data-id={item.id}
 									disabled={item.commentEnabled}></lightning-input>
 							</td>
 						</tr>
@@ -47,13 +47,13 @@
 					<thead>
 						<tr class="slds-line-height_reset">
 							<th class="" scope="col">
-								<div class="slds-truncate" title="Opportunity Name">Development Permit Area</div>
+								<div class="slds-truncate" title="Development Permit Area">Development Permit Area</div>
 							</th>
 							<th class="" scope="col">
-								<div class="slds-truncate" title="Account Name"><a href={DPAExempturl} target="_blank"> DPA Exemption Applicable</a></div>
+								<div class="slds-truncate" title="DPA Exemption Applicable">DPA Exemption Applicable <a href="http://www.google.com" target="_blank"><lightning-icon size="xx-small" icon-name="utility:info" alternative-text="Help Text" title="Help Text"></lightning-icon></a></div>
 							</th>
 							<th class="" scope="col">
-								<div class="slds-truncate" title="Close Date">Comment</div>
+								<div class="slds-truncate" title="Explanation">Explanation</div>
 							</th>
 						</tr>
 					</thead>
@@ -67,9 +67,9 @@
 									<lightning-input disabled type="checkbox" onchange={handleExemptionChange}
 										value={item.Exempt} checked={item.Exempt} data-id={item.id}></lightning-input>
 								</td>
-								<td data-label="Comment">
+								<td data-label="Explaination">
 									<lightning-input type="text" onchange={handleCommentValueChange} name={item.name}
-										value={item.Comment} label="Comment" required={item.Exempt} data-id={item.id}
+										value={item.Explaination} label="Explaination" required={item.Exempt} data-id={item.id}
 										disabled></lightning-input>
 								</td>
 							</tr>
