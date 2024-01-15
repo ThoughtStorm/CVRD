@@ -2,7 +2,6 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_DS_Development_Permit</fullName>
     <active>true</active>
-    <description>Development permit Application</description>
     <label>Development Permit</label>
     <picklistValues>
         <picklist>CVRD_DS_Non_Exempted_DPAs__c</picklist>
