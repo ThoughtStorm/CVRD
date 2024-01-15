@@ -41,11 +41,6 @@
         <label>Flood Management Bylaw Exemption</label>
     </customValue>
     <customValue>
-        <fullName>CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</fullName>
-        <default>false</default>
-        <label>Land Use Contract Amendment or Discharge</label>
-    </customValue>
-    <customValue>
         <fullName>CVRD_DS_Minimum_Frontage_Exemption</fullName>
         <default>false</default>
         <label>Minimum Frontage Exemption</label>
@@ -69,6 +64,27 @@
         <fullName>CVRD_DS_Temporary_Use_Permit</fullName>
         <default>false</default>
         <label>Temporary Use Permit</label>
+    </customValue>
+    <customValue>
+        <fullName>CVRD_DS_Agricultural_Land_Reserve</fullName>
+        <default>false</default>
+        <label>Agricultural Land Reserve</label>
+    </customValue>
+    <customValue>
+        <fullName>CVRD_DS_Cannabis_License</fullName>
+        <default>false</default>
+        <label>Cannabis License</label>
+    </customValue>
+    <customValue>
+        <fullName>CVRD_DS_Crown_Land_Referrals</fullName>
+        <default>false</default>
+        <label>Crown Land Referrals</label>
+    </customValue>
+    <customValue>
+        <fullName>CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</label>
     </customValue>
     <masterLabel>Object Record Types</masterLabel>
     <sorted>false</sorted>
