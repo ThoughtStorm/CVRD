@@ -658,6 +658,13 @@
                 <stringValue>MUSW__Application2__c</stringValue>
             </value>
         </filters>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
         <object>RecordType</object>
         <outputAssignments>
             <assignToReference>RecordTypeId</assignToReference>
@@ -883,6 +890,7 @@
         <object>MUSW__Parcel__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <runInMode>DefaultMode</runInMode>
     <screens>
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
