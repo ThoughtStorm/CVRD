@@ -24,11 +24,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MUSW__Description__c</field>
+                <field>MUSW__Applicant__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MUSW__Applicant__c</field>
+                <field>CVRD_DS_Description__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -154,11 +154,6 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>MUSW__Application2__c.MUSW__Add_Alert</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>MUSW__Application2__c.MUSW__Request_Override</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
@@ -202,6 +197,11 @@
             <actionName>MUSW__SendEmail</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>9</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>MUSW__Application2__c.MUSW__Add_Alert</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>

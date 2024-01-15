@@ -49,7 +49,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>930</locationX>
-        <locationY>2678</locationY>
+        <locationY>2570</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -72,7 +72,7 @@
         <name>Assign_Application_Record_Id_to_Comment_Record</name>
         <label>Assign Application Record Id to Comment Record</label>
         <locationX>666</locationX>
-        <locationY>3194</locationY>
+        <locationY>3086</locationY>
         <assignmentItems>
             <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
             <operator>Assign</operator>
@@ -496,10 +496,10 @@
             <name>DPA_Stage</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Application_type</leftValueReference>
+                <leftValueReference>RecordTypeValue</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Development_Permit</stringValue>
+                    <stringValue>Development Permit</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -537,7 +537,7 @@
         <name>Check_if_Comment_is_empty_or_not</name>
         <label>Check if Comment is empty or not</label>
         <locationX>842</locationX>
-        <locationY>2978</locationY>
+        <locationY>2870</locationY>
         <defaultConnector>
             <targetReference>Success_Screen</targetReference>
         </defaultConnector>
@@ -596,10 +596,10 @@
             <name>Application_Type_is_Development_permit</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Application_type</leftValueReference>
+                <leftValueReference>RecordTypeValue</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Development_Permit</stringValue>
+                    <stringValue>Development Permit</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -625,7 +625,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_Record_type_Name</targetReference>
+                <targetReference>Create_Application_record</targetReference>
             </connector>
             <label>save record</label>
         </rules>
@@ -646,11 +646,35 @@
         <picklistField>MUSW__Mailing_Address__CountryCode__s</picklistField>
         <picklistObject>MUSW__Application_Contact__c</picklistObject>
     </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>RecordTypesList</name>
+        <dataType>String</dataType>
+        <displayField>Name</displayField>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MUSW__Application2__c</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>RecordTypeId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RecordTypeValue</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+        <valueField>DeveloperName</valueField>
+    </dynamicChoiceSets>
     <environments>Default</environments>
     <formulas>
-        <name>Application_Name</name>
-        <dataType>String</dataType>
-        <expression>{!Application_type}&amp;&apos;_&apos;&amp;{!Application_Record.MUSW__Address__r.Name}</expression>
+        <name>DescriptionCharCount</name>
+        <dataType>Number</dataType>
+        <expression>LEN({!Description})</expression>
+        <scale>0</scale>
     </formulas>
     <formulas>
         <name>FormulaforEnvironmentalV2</name>
@@ -669,7 +693,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>842</locationX>
-        <locationY>2570</locationY>
+        <locationY>2462</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -683,7 +707,7 @@
         <name>Loop_for_Comment_Records</name>
         <label>Loop for Comment Records</label>
         <locationX>578</locationX>
-        <locationY>3086</locationY>
+        <locationY>2978</locationY>
         <collectionReference>CommentRecords</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -716,7 +740,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>842</locationX>
-        <locationY>2870</locationY>
+        <locationY>2762</locationY>
         <connector>
             <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
         </connector>
@@ -730,7 +754,7 @@
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>842</locationX>
-        <locationY>2462</locationY>
+        <locationY>2354</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -747,6 +771,12 @@
             <field>CVRD_DS_Commercial_Or_Industrial_Purpose__c</field>
             <value>
                 <elementReference>EnvironmentalActConditionV1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Description__c</field>
+            <value>
+                <elementReference>Description</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -786,12 +816,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>MUSW__Description__c</field>
-            <value>
-                <elementReference>Description_long_text</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>MUSW__Parcel__c</field>
             <value>
                 <elementReference>PIDLookup.recordId</elementReference>
@@ -810,12 +834,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>MUSW__Type2__c</field>
-            <value>
-                <elementReference>Application_type</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Name</field>
             <value>
                 <stringValue>system number</stringValue>
@@ -824,7 +842,7 @@
         <inputAssignments>
             <field>RecordTypeId</field>
             <value>
-                <elementReference>Get_Record_type_Name.Id</elementReference>
+                <elementReference>RecordTypeId</elementReference>
             </value>
         </inputAssignments>
         <object>MUSW__Application2__c</object>
@@ -834,7 +852,7 @@
         <name>Create_Comment_Record</name>
         <label>Create Comment Record</label>
         <locationX>578</locationX>
-        <locationY>3386</locationY>
+        <locationY>3278</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -863,34 +881,6 @@
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>MUSW__Parcel__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_Record_type_Name</name>
-        <label>Get Record type Name</label>
-        <locationX>842</locationX>
-        <locationY>2354</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Create_Application_record</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>SobjectType</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>MUSW__Application2__c</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>DeveloperName</field>
-            <operator>Contains</operator>
-            <value>
-                <elementReference>Application_type</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>RecordType</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
@@ -1011,7 +1001,7 @@
                 </fields>
                 <fields>
                     <name>Display_Owner_Address</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Owner Country:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_Country__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Owner State: &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_State__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Owner Street:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_Street__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68);&quot;&gt;Owner City:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_City__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68);&quot;&gt;Owner Postal Code:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Owner Postal Code:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Owner State: &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_State__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Owner Country:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_Country__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Owner Street:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_Street__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68);&quot;&gt;Owner City:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_City__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
@@ -1028,7 +1018,7 @@
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
-                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</objectFieldReference>
+                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Postal_Code__c</objectFieldReference>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
@@ -1045,6 +1035,22 @@
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_State__c</objectFieldReference>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</objectFieldReference>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
@@ -1077,22 +1083,6 @@
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_City__c</objectFieldReference>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Postal_Code__c</objectFieldReference>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
@@ -1175,14 +1165,57 @@
             <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>I_am_an_agent</name>
-            <choiceReferences>AgentYes</choiceReferences>
-            <choiceReferences>AgentNo</choiceReferences>
-            <dataType>Boolean</dataType>
-            <fieldText>I am an Agent</fieldText>
-            <fieldType>RadioButtons</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
+            <name>Agent_Authorization_Screen_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Agent_Authorization_Screen_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>I_am_an_agent</name>
+                    <choiceReferences>AgentYes</choiceReferences>
+                    <choiceReferences>AgentNo</choiceReferences>
+                    <dataType>Boolean</dataType>
+                    <fieldText>I am an Agent</fieldText>
+                    <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Agent_Authorization_Screen_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>AgentAuthorizationDescription</name>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 12px; font-family: Arial; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;&lt;u&gt;Agent Authorization File Request Form&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>I_am_an_agent</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -1250,8 +1283,8 @@
                 <name>Application_Type_Screen_Section2_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Application_type</name>
-                    <choiceReferences>Application_Type_Choice</choiceReferences>
+                    <name>Record_Types</name>
+                    <choiceReferences>RecordTypesList</choiceReferences>
                     <dataType>String</dataType>
                     <fieldText>Application Type</fieldText>
                     <fieldType>RadioButtons</fieldType>
@@ -1335,12 +1368,16 @@
                 <name>Description_Screen_Section2_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Description_long_text</name>
+                    <name>Description</name>
                     <fieldText>Description</fieldText>
                     <fieldType>LargeTextArea</fieldType>
-                    <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgba(9, 30, 66, 0.06); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Provide a rationale documents in the submission tab.&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-size: 14px; background-color: rgba(9, 30, 66, 0.06);&quot;&gt;Provide a rationale documents in the document upload tab.&lt;/span&gt;&lt;/p&gt;</helpText>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;color: rgb(253, 4, 4);&quot;&gt;Description count should not be more that 500 words.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>{!DescriptionCharCount}&lt;=500</formulaExpression>
+                    </validationRule>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -1558,6 +1595,23 @@
                         </conditions>
                     </visibilityRule>
                 </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Environment_Management_Act_Section3</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Environment_Management_Act_Section3_Column1</name>
+                <fieldType>Region</fieldType>
                 <fields>
                     <name>EnvironmentalActConditionV2</name>
                     <choiceReferences>EnvironmentalActSchedule2True</choiceReferences>
@@ -1581,13 +1635,48 @@
                 <inputParameters>
                     <name>width</name>
                     <value>
-                        <stringValue>12</stringValue>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Environment_Management_Act_Section3_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>File_UploadSiteDisclosureStatement</name>
+                    <extensionName>forceContent:fileUpload</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Upload Site Disclosure Statement </stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>EnvironmentalActConditionV2</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
                     </value>
                 </inputParameters>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithHeader</regionContainerType>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -1596,7 +1685,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1546</locationX>
-        <locationY>2570</locationY>
+        <locationY>2462</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1762,13 +1851,19 @@
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Country__c</objectFieldReference>
+                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_State__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Country__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
@@ -1781,12 +1876,6 @@
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_City__c</objectFieldReference>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</objectFieldReference>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -2049,7 +2138,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Application_type_review</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Application Type  &lt;/span&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Application_type}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Application Type  &lt;/span&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!RecordTypeValue}&lt;/strong&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -2065,7 +2154,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Description_review</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Description&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Description_long_text}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Description&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Description}&lt;/strong&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -2164,10 +2253,10 @@
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
-                    <leftValueReference>Application_type</leftValueReference>
+                    <leftValueReference>RecordTypeValue</leftValueReference>
                     <operator>EqualTo</operator>
                     <rightValue>
-                        <stringValue>Development_Permit</stringValue>
+                        <stringValue>Development Permit</stringValue>
                     </rightValue>
                 </conditions>
             </visibilityRule>
@@ -2396,7 +2485,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>RipariaAreasDisplayTextV1</name>
-                    <fieldText>&lt;p&gt;Please indicate whether the development proposal involves residential, commercial, industrial uses, or includes the removal or alteration of any vegetation; soil disturbance; construction of buildings and structures; creation of impervious or semi-impervious surfaces; trails, roads, docks, wharves, bridges and, infrastructure and works of any kind within:&amp;nbsp;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;Please indicate whether the development proposal involves the removal or alteration of any vegetation; soil disturbance; construction of buildings and structures; creation of impervious or semi-impervious surfaces; trails, roads, docks, wharves, bridges and, infrastructure and works of any kind within:&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
@@ -2431,7 +2520,7 @@
                 </fields>
                 <fields>
                     <name>Riparian_AreasDisplayTextV2</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;“Water features” includes; 1) a watercourse, whether it usually contains water or not; 2) a pond, lake, river, creek, or brook; 3) a ditch, spring, or wetland that is connected by surface flow to 1 or 2 above.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;“Water features” includes; 1) a watercourse, whether it usually contains water or not; 2) a pond, lake, river, creek, or brook; 3) a ditch, spring, or wetland that is connected by surface flow to 1 or 2 above.&amp;nbsp;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
@@ -2457,7 +2546,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>842</locationX>
-        <locationY>3626</locationY>
+        <locationY>3518</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2474,12 +2563,12 @@
         </fields>
         <fields>
             <name>Success_Header</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 26px;&quot;&gt;New {!Application_type} Application&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(28, 163, 20); font-size: 26px;&quot;&gt;Success&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 26px;&quot;&gt;New &lt;/strong&gt;&lt;strong style=&quot;font-size: 26px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!RecordTypeValue}&lt;/strong&gt;&lt;strong style=&quot;font-size: 26px;&quot;&gt; Application&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 26px; color: rgb(28, 163, 20);&quot;&gt;Success&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Body_Success</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;Your {!Application_type} Application has been submitted.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-size: 14px;&quot;&gt;Your {!RecordTypeValue} Application has been submitted.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Continue to Submissions</nextOrFinishButtonLabel>
@@ -2512,7 +2601,7 @@
         <inputAssignments>
             <name>ApplicationType</name>
             <value>
-                <elementReference>Application_type</elementReference>
+                <elementReference>RecordTypeValue</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2521,13 +2610,19 @@
                 <stringValue>MUSW__Application2__c</stringValue>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <name>Stage</name>
+            <value>
+                <elementReference>Stage</elementReference>
+            </value>
+        </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <subflows>
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
         <locationX>842</locationX>
-        <locationY>3734</locationY>
+        <locationY>3626</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
@@ -2646,6 +2741,20 @@
         <name>OTPValue</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>RecordTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>RecordTypeValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
     </variables>
