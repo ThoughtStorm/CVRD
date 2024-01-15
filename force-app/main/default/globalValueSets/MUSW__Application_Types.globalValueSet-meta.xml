@@ -131,7 +131,7 @@
     <customValue>
         <fullName>Telecommunication_Antenna_Structure</fullName>
         <default>false</default>
-        <isActive>false</isActive>
+        <isActive>true</isActive>
         <label>Telecommunication Antenna Structure</label>
     </customValue>
     <customValue>
