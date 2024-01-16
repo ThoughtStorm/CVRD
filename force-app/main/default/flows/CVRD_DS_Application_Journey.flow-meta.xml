@@ -1459,7 +1459,7 @@
         </fields>
         <fields>
             <name>DPA</name>
-            <fieldText>Development Permit Areas</fieldText>
+            <fieldText>Development Permit Area</fieldText>
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>DPA_Column1</name>
@@ -2217,7 +2217,7 @@
         </fields>
         <fields>
             <name>DPA_Review</name>
-            <fieldText>Development Permit Areas</fieldText>
+            <fieldText>Development Permit Area</fieldText>
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>DPA_Review_Column1</name>
