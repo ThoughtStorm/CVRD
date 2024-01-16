@@ -76,32 +76,9 @@
         <label>Crown Land Referrals</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication_Antanna_Structure</fullName>
-        <default>false</default>
-        <label>Telecommunication Antanna Structure</label>
-    </customValue>
-    <customValue>
         <fullName>Telecommunication_Antenna_Structure</fullName>
         <default>false</default>
         <label>Telecommunication Antenna Structure</label>
-    </customValue>
-    <customValue>
-        <fullName>Business</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Business</label>
-    </customValue>
-    <customValue>
-        <fullName>Other</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Other</label>
-    </customValue>
-    <customValue>
-        <fullName>Contractor</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Contractor</label>
     </customValue>
     <customValue>
         <fullName>Animal</fullName>
@@ -110,10 +87,10 @@
         <label>Animal</label>
     </customValue>
     <customValue>
-        <fullName>Liquor</fullName>
+        <fullName>Land Use Contract Amendment or Discharge</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Liquor</label>
+        <label>Land Use Contract Amendment or Discharge</label>
     </customValue>
     <customValue>
         <fullName>Restaurant</fullName>
@@ -122,10 +99,10 @@
         <label>Restaurant</label>
     </customValue>
     <customValue>
-        <fullName>Land Use Contract Amendment or Discharge</fullName>
+        <fullName>Water Heater Replacement</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Land Use Contract Amendment or Discharge</label>
+        <label>Water Heater Replacement</label>
     </customValue>
     <customValue>
         <fullName>Electrical</fullName>
@@ -152,16 +129,34 @@
         <label>Building</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication Antenna Structure</fullName>
+        <fullName>Telecommunication_Antenna_Structure</fullName>
         <default>false</default>
-        <isActive>false</isActive>
+        <isActive>true</isActive>
         <label>Telecommunication Antenna Structure</label>
     </customValue>
     <customValue>
-        <fullName>Water Heater Replacement</fullName>
+        <fullName>Contractor</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Water Heater Replacement</label>
+        <label>Contractor</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Business</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Liquor</label>
     </customValue>
     <masterLabel>Application Types</masterLabel>
     <sorted>false</sorted>
