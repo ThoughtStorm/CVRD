@@ -56,9 +56,9 @@
         <label>Phased Development Agreement</label>
     </customValue>
     <customValue>
-        <fullName>CVRD_DS_Telecommunication_Antanna_Structure</fullName>
+        <fullName>CVRD_DS_Telecommunication_Antenna_Structure</fullName>
         <default>false</default>
-        <label>Telecommunication Antanna Structure</label>
+        <label>Telecommunication Antenna Structure</label>
     </customValue>
     <customValue>
         <fullName>CVRD_DS_Temporary_Use_Permit</fullName>
@@ -79,6 +79,12 @@
         <fullName>CVRD_DS_Crown_Land_Referrals</fullName>
         <default>false</default>
         <label>Crown Land Referrals</label>
+    </customValue>
+    <customValue>
+        <fullName>CVRD_DS_Telecommunication_Antanna_Structure</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CVRD_DS_Telecommunication_Antanna_Structure</label>
     </customValue>
     <customValue>
         <fullName>CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</fullName>
