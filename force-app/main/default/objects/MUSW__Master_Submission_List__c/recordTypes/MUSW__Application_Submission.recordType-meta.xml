@@ -143,10 +143,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>CVRD_DS_Minimum_Frontage_Exemption</fullName>
             <default>false</default>
         </values>
@@ -159,7 +155,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>CVRD_DS_Telecommunication_Antanna_Structure</fullName>
+            <fullName>CVRD_DS_Telecommunication_Antenna_Structure</fullName>
             <default>false</default>
         </values>
         <values>
