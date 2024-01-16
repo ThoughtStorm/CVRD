@@ -81,6 +81,11 @@
         <label>Telecommunication Antenna Structure</label>
     </customValue>
     <customValue>
+        <fullName>Telecommunication_Antanna_Structure</fullName>
+        <default>false</default>
+        <label>Telecommunication Antanna Structure</label>
+    </customValue>
+    <customValue>
         <fullName>Animal</fullName>
         <default>false</default>
         <isActive>false</isActive>
