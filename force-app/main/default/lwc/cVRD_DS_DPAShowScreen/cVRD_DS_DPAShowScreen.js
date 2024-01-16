@@ -23,13 +23,13 @@ export default class CVRD_DS_DPAShowScreen extends LightningElement {
             this.CommentData[i].Name = this.DPAList[i];
             this.CommentData[i].Exempt = false;
             this.CommentData[i].commentEnabled = true;
-            this.CommentData[i].Explaination = '';
+            this.CommentData[i].Explanation = '';
         }
         if (this.commentDataArray) {
             this.CommentData.forEach(commentObj=>{
                 this.commentDataArray.forEach(dataObj=>{
                     if(commentObj.Name===dataObj.CVRD_DS_DPA_Name__c){
-                        commentObj.Explaination=dataObj.CVRD_DS_Applicant_Comment__c;
+                        commentObj.Explanation=dataObj.CVRD_DS_Applicant_Comment__c;
                         commentObj.Exempt=true;
                         commentObj.commentEnabled=false;
                     }
@@ -57,7 +57,7 @@ export default class CVRD_DS_DPAShowScreen extends LightningElement {
             this.CommentData = this.CommentData.map(item => {
             if (item.id == id) {
                 console.log('inside if con++' + ischecked);
-                return { ...item, Explaination:'' };
+                return { ...item, Explanation:'' };
             }
             return item;
         });
@@ -79,8 +79,8 @@ export default class CVRD_DS_DPAShowScreen extends LightningElement {
 
         this.CommentData=this.CommentData.map(item=>{
             if(item.id==id){
-                console.log('this.hasEmptyComment=>'+item.Explaination);
-                return {...item,Explaination:event.target.value };
+                console.log('this.hasEmptyComment=>'+item.Explanation);
+                return {...item,Explanation:event.target.value };
             }
             return item;
         });
@@ -108,12 +108,12 @@ export default class CVRD_DS_DPAShowScreen extends LightningElement {
 
     @api validate() {
         
-        this.hasEmptyComment = this.CommentData.some(item => item.Exempt && (!item.Explaination || item.Explaination.trim() === ''));
+        this.hasEmptyComment = this.CommentData.some(item => item.Exempt && (!item.Explanation || item.Explanation.trim() === ''));
         if (this.hasEmptyComment) {
             this.commentDataArray = this.CommentData.filter(data => data.Exempt == true).map(data => {
                 return {
                     CVRD_DS_DPA_Name__c: data.Name,
-                    CVRD_DS_Applicant_Comment__c: data.Explaination
+                    CVRD_DS_Applicant_Comment__c: data.Explanation
                 };
             });
             /*for(var i=0;i<this.CommentData.length;i++){
@@ -131,7 +131,7 @@ export default class CVRD_DS_DPAShowScreen extends LightningElement {
             this.commentDataArray = this.CommentData.filter(data => data.Exempt == true).map(data => {
                 return {
                     CVRD_DS_DPA_Name__c: data.Name,
-                    CVRD_DS_Applicant_Comment__c: data.Explaination
+                    CVRD_DS_Applicant_Comment__c: data.Explanation
                 };
             });
             for(var i=0;i<this.CommentData.length;i++){
