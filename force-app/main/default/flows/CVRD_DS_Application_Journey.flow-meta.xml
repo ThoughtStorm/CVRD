@@ -97,7 +97,7 @@
         <locationX>622</locationX>
         <locationY>1190</locationY>
         <assignmentItems>
-            <assignToReference>Application_Record.CVRD_DS_Selected_DPAs__c</assignToReference>
+            <assignToReference>selectedDPAVariable</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Get_PID_Record.CVRD_DS_DPA__c</elementReference>
@@ -807,7 +807,7 @@
         <inputAssignments>
             <field>CVRD_DS_Selected_DPAs__c</field>
             <value>
-                <elementReference>Application_Record.CVRD_DS_Selected_DPAs__c</elementReference>
+                <elementReference>selectedDPAVariable</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1002,7 +1002,7 @@
                     <defaultValue>
                         <booleanValue>false</booleanValue>
                     </defaultValue>
-                    <fieldText>Mailing address is not same</fieldText>
+                    <fieldText>mailing address is different</fieldText>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
@@ -1201,7 +1201,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>AgentAuthorizationDescription</name>
-                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: Arial; font-size: 12px;&quot;&gt;Click on &lt;/span&gt;&lt;a href=&quot;http://www.google.com&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: Arial; font-size: 12px;&quot;&gt;&lt;strong&gt;&lt;u&gt;Agent Authorization File Request Form&lt;/u&gt;&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: Arial; font-size: 12px;&quot;&gt; to download the document.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: Arial; font-size: 12px;&quot;&gt;Document needs to be uploaded at the end of the application form.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-size: 14px;&quot;&gt;Go to  (&lt;/span&gt;&lt;a href=&quot;https://cvrd.ca/70/Planning-Development&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255); color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-size: 14px;&quot;&gt;https://cvrd.ca/70/Planning-Development&lt;/a&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-size: 14px;&quot;&gt;) to download an Agent Authorization form. This signed document must be uploaded at the Upload Documents phase of the application.&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
@@ -1379,12 +1379,12 @@
                     <name>Description</name>
                     <fieldText>Description</fieldText>
                     <fieldType>LargeTextArea</fieldType>
-                    <helpText>&lt;p&gt;&lt;span style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-size: 14px; background-color: rgba(9, 30, 66, 0.06);&quot;&gt;Provide a rationale documents in the document upload tab.&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Letter of Rationale and related documents can be provided at the Upload Documents stage of the application&lt;/span&gt;&lt;/p&gt;</helpText>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <validationRule>
-                        <errorMessage>&lt;p&gt;&lt;span style=&quot;color: rgb(253, 4, 4);&quot;&gt;Description count should not be more that 500 words.&lt;/span&gt;&lt;/p&gt;</errorMessage>
-                        <formulaExpression>{!DescriptionCharCount}&lt;=500</formulaExpression>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;color: rgb(241, 6, 6); background-color: rgb(255, 255, 255); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;Maximum 500 characters; additional information can be submitted at the Upload Documents stage.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>{!DescriptionCharCount}&lt;500</formulaExpression>
                     </validationRule>
                 </fields>
                 <inputParameters>
@@ -1471,7 +1471,7 @@
                     <inputParameters>
                         <name>DPA_Data</name>
                         <value>
-                            <elementReference>Application_Record.CVRD_DS_Selected_DPAs__c</elementReference>
+                            <elementReference>selectedDPAVariable</elementReference>
                         </value>
                     </inputParameters>
                     <inputParameters>
@@ -2241,12 +2241,22 @@
                     <inputParameters>
                         <name>DPA_Data</name>
                         <value>
-                            <elementReference>Application_Record.CVRD_DS_Selected_DPAs__c</elementReference>
+                            <elementReference>selectedDPAVariable</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>RecordTypeValue</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Development Permit</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -2571,15 +2581,10 @@
         </fields>
         <fields>
             <name>Success_Header</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 26px;&quot;&gt;New &lt;/strong&gt;&lt;strong style=&quot;font-size: 26px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!RecordTypeValue}&lt;/strong&gt;&lt;strong style=&quot;font-size: 26px;&quot;&gt; Application&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 26px; color: rgb(28, 163, 20);&quot;&gt;Success&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 26px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(0, 0, 0);&quot;&gt;Your &lt;/strong&gt;&lt;strong style=&quot;font-size: 26px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);&quot;&gt;{!RecordTypeValue}&lt;/strong&gt;&lt;strong style=&quot;font-size: 26px; color: rgb(0, 0, 0);&quot;&gt; &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 26px; color: rgb(0, 0, 0); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Application has been successfully submitted&lt;/strong&gt;&lt;strong style=&quot;font-size: 26px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);&quot;&gt; &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(23, 43, 77); font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;Your application will be reviewed for completeness and staff will contact you for payment.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
-        <fields>
-            <name>Body_Success</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-size: 14px;&quot;&gt;Your {!RecordTypeValue} Application has been submitted.&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <nextOrFinishButtonLabel>Continue to Submissions</nextOrFinishButtonLabel>
+        <nextOrFinishButtonLabel>Continue to Upload Documents Section</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
@@ -2775,6 +2780,13 @@
         <value>
             <booleanValue>false</booleanValue>
         </value>
+    </variables>
+    <variables>
+        <name>selectedDPAVariable</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>Stage</name>
