@@ -129,12 +129,6 @@
         <label>Building</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication Antenna Structure</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Telecommunication Antenna Structure</label>
-    </customValue>
-    <customValue>
         <fullName>Contractor</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -157,12 +151,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Land Use Contract Amendment or Discharge</label>
-    </customValue>
-    <customValue>
-        <fullName>Telecommunication_Antanna_Structure</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Telecommunication Antanna Structure</label>
     </customValue>
     <masterLabel>Application Types</masterLabel>
     <sorted>false</sorted>
