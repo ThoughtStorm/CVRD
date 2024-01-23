@@ -549,9 +549,12 @@
         <field>MUSW__Sequence_Number__c.MUSW__Source_Type_Fields__c</field>
         <readable>true</readable>
     </fieldPermissions>
+   <layoutAssignments>
+        <layout>MUSW__Application2__c-Development Permit %28DP%29 Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+    </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Crown Land Referrals Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
@@ -559,26 +562,31 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-Development Permit %28DP%29 Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-Crown Land Referrals Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-Liquor%2FCannabis Licence Referrals Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-Subdivision %28Referral%29 Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
@@ -594,7 +602,15 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-Subdivision %28Referral%29 Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
