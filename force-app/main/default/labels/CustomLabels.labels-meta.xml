@@ -14,4 +14,11 @@
         <shortDescription>CVRD_DS_DPA_Exemption_Applicable</shortDescription>
         <value>http://cvrd.ca/documentcenter/view/108344</value>
     </labels>
+    <labels>
+        <fullName>CVRD_DS_Instagram_Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CVRD_DS_Instagram_Link</shortDescription>
+        <value>https://www.instagram.com/cvrdlanduse/</value>
+    </labels>
 </CustomLabels>

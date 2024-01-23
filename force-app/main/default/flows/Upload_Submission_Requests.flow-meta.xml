@@ -759,7 +759,7 @@
         </connector>
         <fields>
             <name>Pending_Submissions_Display_Text</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Submission Requests&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Upload your required documentation to the submission request(s) below for {!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}. Ensure that each document is no larger than 1GB in size. You may upload multiple documents to each submission request.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Upload Documents&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Upload the following documents to complete your application for preliminary review. Documents with an asterisk ( * ) are mandatory. Please ensure each document is under 1 GB. You can upload multiple documents for each document type.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
