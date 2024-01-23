@@ -13,6 +13,7 @@
     <classAccesses>
         <apexClass>CVRD_DS_CreateSubmissions</apexClass>
         <enabled>false</enabled>
+    </classAccesses>
     <classAccesses>
         <apexClass>LightningForgotPasswordController</apexClass>
         <enabled>false</enabled>
@@ -553,11 +554,11 @@
         <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Development Permit %28DP%29 Layout</layout>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Development Permit %28DP%29 Layout</layout>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -565,7 +566,7 @@
         <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Development Permit %28DP%29 Layout</layout>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -578,6 +579,26 @@
     <layoutAssignments>
         <layout>MUSW__Application2__c-Subdivision %28Referral%29 Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application_Contact__c-MUSW__Application Contact Layout</layout>
