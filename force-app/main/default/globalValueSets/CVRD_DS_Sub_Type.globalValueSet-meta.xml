@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accreted Land</fullName>
+        <default>false</default>
+        <label>Accreted Land</label>
+    </customValue>
+    <customValue>
+        <fullName>Agricultural</fullName>
+        <default>false</default>
+        <label>Agricultural</label>
+    </customValue>
+    <customValue>
+        <fullName>ALC Exclusion</fullName>
+        <default>false</default>
+        <label>ALC Exclusion</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment</fullName>
+        <default>false</default>
+        <label>Amendment</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment/Extension</fullName>
+        <default>false</default>
+        <label>Amendment/Extension</label>
+    </customValue>
+    <customValue>
+        <fullName>Bare land Strata</fullName>
+        <default>false</default>
+        <label>Bare land Strata</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Strata</fullName>
+        <default>false</default>
+        <label>Building Strata</label>
+    </customValue>
+    <customValue>
+        <fullName>Conservation/GHG reduction</fullName>
+        <default>false</default>
+        <label>Conservation/GHG reduction</label>
+    </customValue>
+    <customValue>
+        <fullName>Conventional Subdivision</fullName>
+        <default>false</default>
+        <label>Conventional Subdivision</label>
+    </customValue>
+    <customValue>
+        <fullName>Delegated</fullName>
+        <default>false</default>
+        <label>Delegated</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Variance Permit - Major</fullName>
+        <default>false</default>
+        <label>Development Variance Permit - Major</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Variance Permit - Minor</fullName>
+        <default>false</default>
+        <label>Development Variance Permit - Minor</label>
+    </customValue>
+    <customValue>
+        <fullName>Discharge</fullName>
+        <default>false</default>
+        <label>Discharge</label>
+    </customValue>
+    <customValue>
+        <fullName>Environmental and Hazard</fullName>
+        <default>false</default>
+        <label>Environmental and Hazard</label>
+    </customValue>
+    <customValue>
+        <fullName>Extension-Major</fullName>
+        <default>false</default>
+        <label>Extension-Major</label>
+    </customValue>
+    <customValue>
+        <fullName>Extension-Minor</fullName>
+        <default>false</default>
+        <label>Extension-Minor</label>
+    </customValue>
+    <customValue>
+        <fullName>Form and Character</fullName>
+        <default>false</default>
+        <label>Form and Character</label>
+    </customValue>
+    <customValue>
+        <fullName>Form and Character - Signs</fullName>
+        <default>false</default>
+        <label>Form and Character - Signs</label>
+    </customValue>
+    <customValue>
+        <fullName>Land Use Bylaw Amendment</fullName>
+        <default>false</default>
+        <label>Land Use Bylaw Amendment</label>
+    </customValue>
+    <customValue>
+        <fullName>Leases</fullName>
+        <default>false</default>
+        <label>Leases</label>
+    </customValue>
+    <customValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Delegated</fullName>
+        <default>false</default>
+        <label>Non-Delegated</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-farm Use</fullName>
+        <default>false</default>
+        <label>Non-farm Use</label>
+    </customValue>
+    <customValue>
+        <fullName>OCP Amendment</fullName>
+        <default>false</default>
+        <label>OCP Amendment</label>
+    </customValue>
+    <customValue>
+        <fullName>Phased Strata</fullName>
+        <default>false</default>
+        <label>Phased Strata</label>
+    </customValue>
+    <customValue>
+        <fullName>Renewal</fullName>
+        <default>false</default>
+        <label>Renewal</label>
+    </customValue>
+    <customValue>
+        <fullName>Residential Use</fullName>
+        <default>false</default>
+        <label>Residential Use</label>
+    </customValue>
+    <customValue>
+        <fullName>Subdivision</fullName>
+        <default>false</default>
+        <label>Subdivision</label>
+    </customValue>
+    <customValue>
+        <fullName>Zoning Amendment</fullName>
+        <default>false</default>
+        <label>Zoning Amendment</label>
+    </customValue>
+    <description>Application Sub Types</description>
+    <masterLabel>Sub Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
