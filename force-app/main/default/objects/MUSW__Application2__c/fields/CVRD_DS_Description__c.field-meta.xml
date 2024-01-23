@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_DS_Description__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>Provide a rationale documents in the Document Required tab.</inlineHelpText>
+    <inlineHelpText>Letter of Rationale and related documents can be provided at the Upload Documents stage of the application</inlineHelpText>
     <label>Description</label>
     <length>500</length>
     <trackHistory>false</trackHistory>
