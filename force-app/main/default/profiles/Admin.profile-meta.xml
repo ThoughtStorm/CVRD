@@ -577,10 +577,6 @@
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-OCP%2C Zoning or Land Use Bylaw Amendment Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>MUSW__Application2__c-Subdivision %28Referral%29 Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
     </layoutAssignments>
