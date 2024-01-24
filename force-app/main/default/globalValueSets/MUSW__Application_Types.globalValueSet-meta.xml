@@ -129,12 +129,6 @@
         <label>Building</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication Antenna Structure</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Telecommunication Antenna Structure</label>
-    </customValue>
-    <customValue>
         <fullName>Contractor</fullName>
         <default>false</default>
         <isActive>false</isActive>
