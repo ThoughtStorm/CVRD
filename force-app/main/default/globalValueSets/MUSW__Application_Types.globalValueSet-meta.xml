@@ -76,16 +76,21 @@
         <label>Crown Land Referrals</label>
     </customValue>
     <customValue>
+        <fullName>Telecommunication_Antenna_Structure</fullName>
+        <default>false</default>
+        <label>Telecommunication Antenna Structure</label>
+    </customValue>
+    <customValue>
         <fullName>Animal</fullName>
         <default>false</default>
         <isActive>false</isActive>
         <label>Animal</label>
     </customValue>
     <customValue>
-        <fullName>Land Use Contract Amendment or Discharge</fullName>
+        <fullName>Liquor</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Land Use Contract Amendment or Discharge</label>
+        <label>Liquor</label>
     </customValue>
     <customValue>
         <fullName>Restaurant</fullName>
@@ -124,9 +129,9 @@
         <label>Building</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication_Antenna_Structure</fullName>
+        <fullName>Telecommunication Antenna Structure</fullName>
         <default>false</default>
-        <isActive>true</isActive>
+        <isActive>false</isActive>
         <label>Telecommunication Antenna Structure</label>
     </customValue>
     <customValue>
@@ -148,10 +153,16 @@
         <label>Business</label>
     </customValue>
     <customValue>
-        <fullName>Liquor</fullName>
+        <fullName>Land Use Contract Amendment or Discharge</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Liquor</label>
+        <label>Land Use Contract Amendment or Discharge</label>
+    </customValue>
+    <customValue>
+        <fullName>Telecommunication_Antanna_Structure</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Telecommunication Antanna Structure</label>
     </customValue>
     <masterLabel>Application Types</masterLabel>
     <sorted>false</sorted>
