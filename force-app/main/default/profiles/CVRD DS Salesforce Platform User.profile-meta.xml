@@ -15,10 +15,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CVRD_DS_CreateSubmissionsTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>CVRD_DS_RecordTypeDefine</apexClass>
         <enabled>false</enabled>
     </classAccesses>
