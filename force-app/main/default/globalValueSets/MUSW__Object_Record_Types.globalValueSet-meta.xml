@@ -81,6 +81,16 @@
         <label>Crown Land Referrals</label>
     </customValue>
     <customValue>
+        <fullName>CVRD_DS_Subdivision_Referral</fullName>
+        <default>false</default>
+        <label>Subdivision</label>
+    </customValue>
+    <customValue>
+        <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
+        <default>false</default>
+        <label>Liquor/Cannabis Licence Referrals</label>
+    </customValue>
+    <customValue>
         <fullName>CVRD_DS_Telecommunication_Antanna_Structure</fullName>
         <default>false</default>
         <isActive>false</isActive>
