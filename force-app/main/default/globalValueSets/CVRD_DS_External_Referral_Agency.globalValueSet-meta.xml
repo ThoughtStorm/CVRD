@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Advisory Planning Commission (EA A, EA B EA C, EA D, EA E, EA F, EA G, EA H, EA I, Joint ABC)</fullName>
+        <default>false</default>
+        <label>Advisory Planning Commission (EA A, EA B EA C, EA D, EA E, EA F, EA G, EA H, EA I, Joint ABC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Agricultural Land Commission</fullName>
+        <default>false</default>
+        <label>Agricultural Land Commission</label>
+    </customValue>
+    <customValue>
+        <fullName>AgriService BC</fullName>
+        <default>false</default>
+        <label>AgriService BC</label>
+    </customValue>
+    <customValue>
+        <fullName>BC Hydro</fullName>
+        <default>false</default>
+        <label>BC Hydro</label>
+    </customValue>
+    <customValue>
+        <fullName>BC Transit</fullName>
+        <default>false</default>
+        <label>BC Transit</label>
+    </customValue>
+    <customValue>
+        <fullName>Capital Regional District</fullName>
+        <default>false</default>
+        <label>Capital Regional District</label>
+    </customValue>
+    <customValue>
+        <fullName>Chemainus Volunteer Fire Dept</fullName>
+        <default>false</default>
+        <label>Chemainus Volunteer Fire Dept</label>
+    </customValue>
+    <customValue>
+        <fullName>City of Duncan</fullName>
+        <default>false</default>
+        <label>City of Duncan</label>
+    </customValue>
+    <customValue>
+        <fullName>City of Langford</fullName>
+        <default>false</default>
+        <label>City of Langford</label>
+    </customValue>
+    <customValue>
+        <fullName>Cobble Hill Improvement District</fullName>
+        <default>false</default>
+        <label>Cobble Hill Improvement District</label>
+    </customValue>
+    <customValue>
+        <fullName>Community Parks Advisory  Commission (EA A, EA B EA C, EA D, EA E, EA F, EA G, EA H, EA I, Joint ABC)</fullName>
+        <default>false</default>
+        <label>Community Parks Advisory  Commission (EA A, EA B EA C, EA D, EA E, EA F, EA G, EA H, EA I, Joint ABC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cowichan Bay Volunteer Fire Rescue</fullName>
+        <default>false</default>
+        <label>Cowichan Bay Volunteer Fire Rescue</label>
+    </customValue>
+    <customValue>
+        <fullName>Cowichan Bay Waterworks</fullName>
+        <default>false</default>
+        <label>Cowichan Bay Waterworks</label>
+    </customValue>
+    <customValue>
+        <fullName>Cowichan Estuary Environmental Management Plan Committee (CEEMP)</fullName>
+        <default>false</default>
+        <label>Cowichan Estuary Environmental Management Plan Committee (CEEMP)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cowichan Tribes</fullName>
+        <default>false</default>
+        <label>Cowichan Tribes</label>
+    </customValue>
+    <customValue>
+        <fullName>Ditidaht First Nation</fullName>
+        <default>false</default>
+        <label>Ditidaht First Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Duncan Fire Hall</fullName>
+        <default>false</default>
+        <label>Duncan Fire Hall</label>
+    </customValue>
+    <customValue>
+        <fullName>Fisheries &amp; Oceans Canada</fullName>
+        <default>false</default>
+        <label>Fisheries &amp; Oceans Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>Fish Habitat (RAPR)&quot;</fullName>
+        <default>false</default>
+        <label>Fish Habitat (RAPR)&quot;</label>
+    </customValue>
+    <customValue>
+        <fullName>Halalt First Nation</fullName>
+        <default>false</default>
+        <label>Halalt First Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Honeymoon Bay Volunteer Fire Dept</fullName>
+        <default>false</default>
+        <label>Honeymoon Bay Volunteer Fire Dept</label>
+    </customValue>
+    <customValue>
+        <fullName>Inlet Drive Improvement District</fullName>
+        <default>false</default>
+        <label>Inlet Drive Improvement District</label>
+    </customValue>
+    <customValue>
+        <fullName>Island Corridor Foundation</fullName>
+        <default>false</default>
+        <label>Island Corridor Foundation</label>
+    </customValue>
+    <customValue>
+        <fullName>Island Health</fullName>
+        <default>false</default>
+        <label>Island Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Islands Trust: Gabriola Office, Salt Spring Office, Victoria Office</fullName>
+        <default>false</default>
+        <label>Islands Trust: Gabriola Office, Salt Spring Office, Victoria Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Lake Cowichan First Nation (Ts&apos;uubaa-asatx)</fullName>
+        <default>false</default>
+        <label>Lake Cowichan First Nation (Ts&apos;uubaa-asatx)</label>
+    </customValue>
+    <customValue>
+        <fullName>Lake Cowichan Volunteer Fire Dept</fullName>
+        <default>false</default>
+        <label>Lake Cowichan Volunteer Fire Dept</label>
+    </customValue>
+    <customValue>
+        <fullName>Lyackson First Nation</fullName>
+        <default>false</default>
+        <label>Lyackson First Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Malahat Nation</fullName>
+        <default>false</default>
+        <label>Malahat Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Malahat volunteer Fire Dept</fullName>
+        <default>false</default>
+        <label>Malahat volunteer Fire Dept</label>
+    </customValue>
+    <customValue>
+        <fullName>Meredith Road Improvement District</fullName>
+        <default>false</default>
+        <label>Meredith Road Improvement District</label>
+    </customValue>
+    <customValue>
+        <fullName>Mesachie Lake Volunteer Fire Dept</fullName>
+        <default>false</default>
+        <label>Mesachie Lake Volunteer Fire Dept</label>
+    </customValue>
+    <customValue>
+        <fullName>Millar&apos;s Water Supply</fullName>
+        <default>false</default>
+        <label>Millar&apos;s Water Supply</label>
+    </customValue>
+    <customValue>
+        <fullName>Mill Bay volunteer Fire Dept</fullName>
+        <default>false</default>
+        <label>Mill Bay volunteer Fire Dept</label>
+    </customValue>
+    <customValue>
+        <fullName>Mill Bay Waterworks</fullName>
+        <default>false</default>
+        <label>Mill Bay Waterworks</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Agriculture &amp; Food</fullName>
+        <default>false</default>
+        <label>Ministry of Agriculture &amp; Food</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Energy, Mines &amp; Petroleum Resources</fullName>
+        <default>false</default>
+        <label>Ministry of Energy, Mines &amp; Petroleum Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Environment &amp; Climate Change Strategy</fullName>
+        <default>false</default>
+        <label>Ministry of Environment &amp; Climate Change Strategy</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Forests</fullName>
+        <default>false</default>
+        <label>Ministry of Forests</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Housing</fullName>
+        <default>false</default>
+        <label>Ministry of Housing</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Indigineous Relations &amp; Reconciliation</fullName>
+        <default>false</default>
+        <label>Ministry of Indigineous Relations &amp; Reconciliation</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Municipal Affairs</fullName>
+        <default>false</default>
+        <label>Ministry of Municipal Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Tourism, Arts &amp; Culture</fullName>
+        <default>false</default>
+        <label>Ministry of Tourism, Arts &amp; Culture</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Transportation &amp; Infrastructure</fullName>
+        <default>false</default>
+        <label>Ministry of Transportation &amp; Infrastructure</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Water, Land, and Resource Stewardship: Fish Habitat (RAPR)</fullName>
+        <default>false</default>
+        <label>Ministry of Water, Land, and Resource Stewardship: Fish Habitat (RAPR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Water, Land, and Resource Stewardship: Water Authorizations (Licensing)</fullName>
+        <default>false</default>
+        <label>Ministry of Water, Land, and Resource Stewardship: Water Authorizations (Licensing)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mosaic Forest Management</fullName>
+        <default>false</default>
+        <label>Mosaic Forest Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Municipality of North Cowichan</fullName>
+        <default>false</default>
+        <label>Municipality of North Cowichan</label>
+    </customValue>
+    <customValue>
+        <fullName>Nanaimo Airport Commission</fullName>
+        <default>false</default>
+        <label>Nanaimo Airport Commission</label>
+    </customValue>
+    <customValue>
+        <fullName>Pacheedaht First Nation</fullName>
+        <default>false</default>
+        <label>Pacheedaht First Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Parks Canada</fullName>
+        <default>false</default>
+        <label>Parks Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>Pauquachin First Nation</fullName>
+        <default>false</default>
+        <label>Pauquachin First Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Penelakut Tribe</fullName>
+        <default>false</default>
+        <label>Penelakut Tribe</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Schools</fullName>
+        <default>false</default>
+        <label>Private Schools</label>
+    </customValue>
+    <customValue>
+        <fullName>RCMP:Duncan, Shawnigan Lake, Lake Cowichan</fullName>
+        <default>false</default>
+        <label>RCMP:Duncan, Shawnigan Lake, Lake Cowichan</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional District of Nanaimo</fullName>
+        <default>false</default>
+        <label>Regional District of Nanaimo</label>
+    </customValue>
+    <customValue>
+        <fullName>Sahtlam Volunteer Fire Dept</fullName>
+        <default>false</default>
+        <label>Sahtlam Volunteer Fire Dept</label>
+    </customValue>
+    <customValue>
+        <fullName>School District #68</fullName>
+        <default>false</default>
+        <label>School District #68</label>
+    </customValue>
+    <customValue>
+        <fullName>School District #79</fullName>
+        <default>false</default>
+        <label>School District #79</label>
+    </customValue>
+    <customValue>
+        <fullName>Shawnigan Lake Volunteer Fire Dept</fullName>
+        <default>false</default>
+        <label>Shawnigan Lake Volunteer Fire Dept</label>
+    </customValue>
+    <customValue>
+        <fullName>Shawnigan Village Waterworks</fullName>
+        <default>false</default>
+        <label>Shawnigan Village Waterworks</label>
+    </customValue>
+    <customValue>
+        <fullName>Snuneymuxw Nation (Nanaimo)</fullName>
+        <default>false</default>
+        <label>Snuneymuxw Nation (Nanaimo)</label>
+    </customValue>
+    <customValue>
+        <fullName>Stz&apos;uminus First Nation</fullName>
+        <default>false</default>
+        <label>Stz&apos;uminus First Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>TimberWest Forest Corporation</fullName>
+        <default>false</default>
+        <label>TimberWest Forest Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>Town of Ladysmith</fullName>
+        <default>false</default>
+        <label>Town of Ladysmith</label>
+    </customValue>
+    <customValue>
+        <fullName>Town of Lake Cowichan</fullName>
+        <default>false</default>
+        <label>Town of Lake Cowichan</label>
+    </customValue>
+    <customValue>
+        <fullName>Transport Canada</fullName>
+        <default>false</default>
+        <label>Transport Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>Tsarlip First Nation</fullName>
+        <default>false</default>
+        <label>Tsarlip First Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Tseycum First Nation</fullName>
+        <default>false</default>
+        <label>Tseycum First Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Tswaout First Nation</fullName>
+        <default>false</default>
+        <label>Tswaout First Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Youbou Fire Dept</fullName>
+        <default>false</default>
+        <label>Youbou Fire Dept</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministry of Water, Land, and Resource Stewardship: Ecosystems (Water Sustainability Act)</fullName>
+        <default>false</default>
+        <label>Ministry of Water, Land, and Resource Stewardship: Ecosystems (Water Sustainability Act)</label>
+    </customValue>
+    <masterLabel>External Referral Agency</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
