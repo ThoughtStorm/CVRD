@@ -21,6 +21,10 @@
                 <behavior>Edit</behavior>
                 <field>CVRD_DS_Internal_Referral_Division__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_External_Referral_Agency__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
