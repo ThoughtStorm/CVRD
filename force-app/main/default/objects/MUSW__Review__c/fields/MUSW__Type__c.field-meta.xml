@@ -36,6 +36,11 @@
                 <default>false</default>
                 <label>Preliminary Review</label>
             </value>
+            <value>
+                <fullName>Referral Review</fullName>
+                <default>false</default>
+                <label>Referral Review</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
