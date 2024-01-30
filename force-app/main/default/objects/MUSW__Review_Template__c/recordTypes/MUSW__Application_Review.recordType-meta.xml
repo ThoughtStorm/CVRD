@@ -4,6 +4,49 @@
     <active>true</active>
     <label>Application Review</label>
     <picklistValues>
+        <picklist>CVRD_DS_Internal_Referral_Division__c</picklist>
+        <values>
+            <fullName>Building Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bylaw Enforcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parks %26 Trails</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recycling %26 Waste Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic Initiatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>MUSW__Application_Phases__c</picklist>
         <values>
             <fullName>Application</fullName>
@@ -209,6 +252,10 @@
         </values>
         <values>
             <fullName>Preliminary Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Review</fullName>
             <default>false</default>
         </values>
     </picklistValues>

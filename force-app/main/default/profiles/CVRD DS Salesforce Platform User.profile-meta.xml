@@ -549,6 +549,16 @@
         <field>MUSW__Sequence_Number__c.MUSW__Source_Type_Fields__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review_Template__c.CVRD_DS_Internal_Referral_Division__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review__c.CVRD_DS_Internal_Referral_Division__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>MUSW__Application2__c-Crown Land Referrals Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
