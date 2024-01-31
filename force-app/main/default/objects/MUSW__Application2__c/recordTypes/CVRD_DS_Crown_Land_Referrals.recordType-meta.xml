@@ -114,6 +114,121 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>CVRD_DS_Sub_Type__c</picklist>
+        <values>
+            <fullName>ALC Exclusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accreted Land</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agricultural</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment%2FExtension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bare land Strata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Building Strata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservation%2FGHG reduction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conventional Subdivision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delegated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Variance Permit - Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Variance Permit - Minor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental and Hazard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extension-Minor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character - Signs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Land Use Bylaw Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leases</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Delegated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-farm Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCP Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phased Strata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subdivision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoning Amendment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>MUSW__Applicant_Relationship__c</picklist>
         <values>
             <fullName>Contact</fullName>
