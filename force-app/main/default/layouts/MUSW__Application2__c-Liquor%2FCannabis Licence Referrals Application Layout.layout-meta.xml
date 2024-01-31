@@ -112,11 +112,6 @@
             <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-		<actionName>MUSW__Application2__c.CVRD_Confirm_and_Create_Application</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>2</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>MUSW__Application2__c.MUSW__Request_Override</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
@@ -150,6 +145,11 @@
             <actionName>MUSW__SendEmail</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>7</sortOrder>
+        </platformActionListItems>
+	    <platformActionListItems>
+		<actionName>MUSW__Application2__c.CVRD_Confirm_and_Create_Application</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>8</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
