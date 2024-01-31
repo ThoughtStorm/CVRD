@@ -115,6 +115,7 @@
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
         </platformActionListItems>
+         <platformActionListItems>
         <actionName>MUSW__Application2__c.CVRD_Confirm_and_Create_Application</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>2</sortOrder>
