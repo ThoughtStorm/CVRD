@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>CVRD_DS_Application_Inspection</fullName>
+    <fullName>MUSW__Code_Enforcement_Inspection</fullName>
     <active>true</active>
-    <label>Application Inspection</label>
+    <label>Code Enforcement Inspection</label>
     <picklistValues>
         <picklist>MUSW__Close_Action__c</picklist>
+        <values>
+            <fullName>Advisory Letter</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Approved</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Corrections Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfounded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verbal Warning</fullName>
             <default>false</default>
         </values>
     </picklistValues>

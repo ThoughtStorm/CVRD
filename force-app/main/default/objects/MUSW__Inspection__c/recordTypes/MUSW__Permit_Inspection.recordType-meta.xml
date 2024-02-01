@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>CVRD_DS_Application_Inspection</fullName>
+    <fullName>MUSW__Permit_Inspection</fullName>
     <active>true</active>
-    <label>Application Inspection</label>
+    <label>Permit Inspection</label>
     <picklistValues>
         <picklist>MUSW__Close_Action__c</picklist>
         <values>

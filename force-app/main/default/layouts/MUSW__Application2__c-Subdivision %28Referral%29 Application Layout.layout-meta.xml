@@ -165,6 +165,21 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>MUSW__SendEmail</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>MUSW__NewTask</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>5</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>MUSW__NewEvent</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>MUSW__Application2__c.MUSW__Add_Alert</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
@@ -190,45 +205,11 @@
             <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>MUSW__NewTask</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>5</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>MUSW__NewEvent</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>MUSW__LogACall</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>7</sortOrder>
         </platformActionListItems>
-        <platformActionListItems>
-            <actionName>MUSW__SendEmail</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>8</sortOrder>
-        </platformActionListItems>
     </platformActionList>
-    <relatedLists>
-        <fields>MUSW__First_Name__c</fields>
-        <fields>MUSW__Last_Name__c</fields>
-        <fields>MUSW__Email__c</fields>
-        <fields>MUSW__Phone__c</fields>
-        <fields>CVRD_DS_Owner_Country__c</fields>
-        <fields>CVRD_DS_Owner_State__c</fields>
-        <fields>CVRD_DS_Owner_City__c</fields>
-        <fields>CVRD_DS_Owner_Street__c</fields>
-        <fields>CVRD_DS_Owner_Postal_Code__c</fields>
-        <relatedList>MUSW__Application_Contact__c.MUSW__Application__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>MUSW__Attestor__c</fields>
-        <fields>MUSW__Attestation_Date__c</fields>
-        <fields>MUSW__Consent__c</fields>
-        <fields>MUSW__Attestation__c</fields>
-        <relatedList>MUSW__Attestation_Consent__c.MUSW__Application2__c</relatedList>
-    </relatedLists>
     <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>New</excludeButtons>
@@ -257,26 +238,10 @@
         <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>MUSW__Review__c.MUSW__Application2__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <fields>MUSW__Contact_Type__c</fields>
-        <fields>MUSW__Contact__c</fields>
-        <fields>NAME</fields>
-        <fields>MUSW__Project2__c</fields>
-        <relatedList>MUSW__Project_Contact__c.MUSW__Application2__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <relatedList>RelatedFileList</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedContentNoteList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>MUSW__Comment__c.CVRD_DS_Application__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
