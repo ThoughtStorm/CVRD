@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>CVRD_DS_Owner_State__c</fullName>
+    <fullName>CVRD_DS_Internal_Referral_Division__c</fullName>
     <externalId>false</externalId>
-    <label>Owner Province</label>
-    <required>true</required>
-    <trackHistory>false</trackHistory>
+    <label>Internal Referral Division</label>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
         <restricted>true</restricted>
-        <valueSetName>CVRD_DS_North_America_State</valueSetName>
+        <valueSetName>CVRD_DS_Internal_Referral_Division</valueSetName>
     </valueSet>
 </CustomField>

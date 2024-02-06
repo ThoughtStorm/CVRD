@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Sub_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>MUSW__Type2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>CVRD_DS_Sub_Type</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Agricultural</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Amendment/Extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Conservation/GHG reduction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Environmental and Hazard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Form and Character</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Form and Character - Signs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Accreted Land</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Bare land Strata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Building Strata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Conventional Subdivision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Leases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Phased Strata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
+            <valueName>Development Variance Permit - Major</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
+            <valueName>Development Variance Permit - Minor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
+            <valueName>Extension-Major</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
+            <valueName>Extension-Minor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <valueName>Land Use Bylaw Amendment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <valueName>OCP Amendment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <valueName>Zoning Amendment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
+            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <valueName>Amendment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
+            <valueName>Discharge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>ALC Exclusion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>Non-farm Use</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>Residential Use</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>Subdivision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <valueName>New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <valueName>Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liquor_Cannabis_Licence_Referrals</controllingFieldValue>
+            <valueName>Delegated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liquor_Cannabis_Licence_Referrals</controllingFieldValue>
+            <valueName>Non-Delegated</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
