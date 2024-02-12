@@ -11,7 +11,27 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AccountDataController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CVRD_DS_CreateSubmissions</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CVRD_DS_CreateSubmissionsTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CVRD_DS_RecordTypeDefine</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CVRD_OTPController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CVRD_OTPGenerator</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -46,12 +66,47 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_Address2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_Address_3__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DSCommercialOrIndustrial_Purposes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Address_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_Commercial_Or_Industrial_Purpose__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Crown_File_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Crown_Referral_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_HighWaterMark__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -66,7 +121,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_MOTI_File_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_No_of_Lots__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_Non_Exempted_DPAs__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Parcel_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Parcel_3__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -76,12 +151,32 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Preliminary_Auto_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_Selected_DPAs__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_SiteDisclosureStatement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_Site_Disclosure_Statement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_is_TopofaRavine_Bank__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -271,7 +366,82 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Application_Contact__c.CVRD_DS_Agent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Application_Contact__c.CVRD_DS_Primary_Owner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Application__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Business_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Business_Mailing_Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Business_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Business_Phone__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Contractor_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__First_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Last_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__License__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Mailing_Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Permit__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Phone__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application_Contact__c.MUSW__Relationship__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -282,6 +452,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Comment__c.CVRD_DS_Application__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Comment__c.CVRD_DS_DPARedirect__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -346,12 +521,242 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Inspection__c.CVRD_DS_Application_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Inspection__c.Issued_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__AlertCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Alert_Indicator__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Close_Action__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Closed_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Complaint2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Completed_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Due_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Duration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Equipment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Geolocation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Inspection_Template__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__License2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Milestone__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__On_Itinerary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Order__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Parcel__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Permit__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Previous_Inspection__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Priority__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Rank__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Requested_End_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Requested_Start_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Scheduled_End_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Scheduled_Start_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Scheduled_Start_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Start_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Master_Submission_List__c.CVRD_DS_DPA_Types__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Parcel__c.CVRD_DS_DPA__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding2__c.CVRD_DS_Application__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Proceeding2__c.Issued_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding2__c.MUSW__Agenda_Close_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding2__c.MUSW__Availability__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding2__c.MUSW__Maximum_Agenda_Items__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding2__c.MUSW__Proceeding_Body__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding2__c.MUSW__Scheduled_Agenda_Items__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding2__c.MUSW__Scheduled_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding2__c.MUSW__Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Review_Template__c.CVRD_DS_Internal_Referral_Division__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review_Template__c.MUSW__Review_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Review__c.CVRD_DS_External_Referral_Agency__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Review__c.CVRD_DS_Internal_Referral_Division__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review__c.MUSW__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -396,6 +801,10 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -420,7 +829,7 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
@@ -439,6 +848,16 @@
     <layoutAssignments>
         <layout>MUSW__Parcel__c-MUSW__Parcel Layout</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Proceeding2__c-MUSW__Proceeding Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Review_Template__c-MUSW__Review Template Application Review</layout>
+        <recordType>MUSW__Review_Template__c.MUSW__Application_Review</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Review__c-MUSW__Review Layout</layout>
+    </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -446,6 +865,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>MUSW__Application2__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>MUSW__Application_Contact__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -473,11 +901,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -488,6 +911,7 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -529,11 +953,11 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -543,7 +967,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Application_Template__c.MUSW__Land_Use_Application</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -555,6 +978,21 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>MUSW__Application_Template__c.MUSW__Permit_Application</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Inspection__c.CVRD_DS_Application_Inspection</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>MUSW__Inspection__c.MUSW__Code_Enforcement_Inspection</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>MUSW__Inspection__c.MUSW__Permit_Inspection</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -579,7 +1017,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Master_Fee_List__c.MUSW__Permit_Fee</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -595,7 +1032,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Master_Inspection_List__c.MUSW__Permit_Inspection</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -611,13 +1047,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Master_Submission_List__c.MUSW__Permit_Submission</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Master_Work_Item_List__c.MUSW__Permit_Work_Item</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -633,7 +1067,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Milestone_Template__c.MUSW__Permit_Milestone</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -654,7 +1087,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Review_Template__c.MUSW__Permit_Review</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -665,7 +1097,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>clariti__Document_Template__c.clariti__Application_Document</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -691,6 +1122,14 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>MUSW__Application2__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>MUSW__Inspection__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>MUSW__Proceeding2__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Customer Community Login</userLicense>
