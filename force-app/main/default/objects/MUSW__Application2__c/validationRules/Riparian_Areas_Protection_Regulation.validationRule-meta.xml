@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Riparian_Areas_Protection_Regulation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(CVRD_DS_HighWaterMark__c, &quot;Yes&quot;),
+    ISPICKVAL(CVRD_DS_is_TopofaRavine_Bank__c, &quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>CVRD_DS_is_TopofaRavine_Bank__c</errorDisplayField>
+    <errorMessage>If High Water Mark is YES, Is Top of a Ravine Bank is Required.</errorMessage>
+</ValidationRule>

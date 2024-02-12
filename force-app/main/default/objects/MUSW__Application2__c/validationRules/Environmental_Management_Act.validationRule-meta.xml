@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Environmental_Management_Act</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(CVRD_DSCommercialOrIndustrial_Purposes__c, &quot;Yes&quot;),
+    ISPICKVAL(CVRD_DS_SiteDisclosureStatement__c, &quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>CVRD_DS_SiteDisclosureStatement__c</errorDisplayField>
+    <errorMessage>If Commercial Or Industrial Purposes is YES, Site Disclosure Statement is required.</errorMessage>
+</ValidationRule>
