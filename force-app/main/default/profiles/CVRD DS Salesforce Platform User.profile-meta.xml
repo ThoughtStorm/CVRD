@@ -455,11 +455,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Comment__c.CVRD_DS_DPARedirect__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Comment__c.CVRD_DS_DPA_Name__c</field>
         <readable>true</readable>
