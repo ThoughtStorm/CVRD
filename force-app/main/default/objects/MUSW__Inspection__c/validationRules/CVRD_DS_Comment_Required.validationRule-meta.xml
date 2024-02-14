@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Comment_Required</fullName>
+    <active>true</active>
+    <description>Comment field is required when completed action is marked as &quot;Corrections Required&quot;.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(  MUSW__Close_Action__c  , &quot;Corrections Required&quot;),
+ISBLANK(  MUSW__Description__c  )
+)</errorConditionFormula>
+    <errorDisplayField>MUSW__Description__c</errorDisplayField>
+    <errorMessage>Comment is required, If Completed action marked as &quot;Corrections Required&quot;.</errorMessage>
+</ValidationRule>

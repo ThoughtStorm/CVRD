@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>MUSW__Type__c</fullName>
+    <fullName>MUSW__Status__c</fullName>
     <deprecated>false</deprecated>
-    <description>Scope of the inspection activity to be done.</description>
+    <description>Current status or outcome of the inspection.</description>
     <externalId>false</externalId>
-    <label>Type</label>
+    <label>Status</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
@@ -14,9 +14,14 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Site Visit</fullName>
+                <fullName>Pending</fullName>
                 <default>true</default>
-                <label>Site Visit</label>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
             </value>
         </valueSetDefinition>
     </valueSet>

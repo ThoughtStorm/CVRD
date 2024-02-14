@@ -208,6 +208,9 @@
                         <valueListItems>
                             <value>CVRD_DS_Applicant_Comment__c</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>CVRD_DS_DPARedirect__c</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -264,13 +267,25 @@
                     <name>relatedListFieldAliases</name>
                     <valueList>
                         <valueListItems>
+                            <value>NAME</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__First_Name__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>MUSW__Last_Name__c</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>MUSW__Phone__c</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__Email__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CVRD_DS_Primary_Owner__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CVRD_DS_Agent__c</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
