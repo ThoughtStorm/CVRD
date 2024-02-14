@@ -9,7 +9,7 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Not_Empty</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>Get_Application_Record.MUSW__Address__c</leftValueReference>
                 <operator>IsNull</operator>

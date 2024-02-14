@@ -385,7 +385,7 @@
                 <identifier>flexipage_fieldSection5</identifier>
                 <visibilityRule>
                     <criteria>
-                        <leftValue>{!Record.MUSW__Address__r.Name}</leftValue>
+                        <leftValue>{!Record.MUSW__Parcel__r.MUSW__Parcel_Number2__c}</leftValue>
                         <operator>NE</operator>
                     </criteria>
                 </visibilityRule>
