@@ -1,0 +1,182 @@
+<template>
+	<!--lightning-card-->
+	<!--h3 slot="title">
+            <lightning-icon icon-name="standard:timesheet" alternative-text="Event" size="small"></lightning-icon>
+            &nbsp;Bulk Contact Creation
+        </h3-->
+	<template if:false={Readonly}>
+		<template for:each={itemList} for:item="item" for:index="index">
+			<lightning-record-edit-form key={item.id} style="align:centre"
+				object-api-name="MUSW__Application_Location__c">
+				<lightning-messages> </lightning-messages>
+				<lightning-layout multiple-rows>
+					<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="5"
+						padding="around-small">
+						<lightning-input-field field-name="MUSW__Address__c" class="checkval2" data-id={item.id}
+							onchange={handleChangeAddress} value={item.address} variant="label-stacked">
+						</lightning-input-field>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="5"
+						padding="around-small">
+						<lightning-input-field field-name="MUSW__Parcel__c" value={item.parcel} data-id={item.id}
+							onchange={handleChangeParcel} class="checkval" label='PID' variant="label-stacked" required>
+						</lightning-input-field>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+						padding="around-small">
+						<div class="slds-p-top_medium">
+							<!--lightning-icon icon-name="action:new" access-key={item.id} id={index}
+                                alternative-text="Add Row" size="small" title="Add Row" onclick={addRow}>
+                            </lightning-icon-->
+							<lightning-icon icon-name="utility:delete" access-key={item.id} id={index}
+								alternative-text="Delete Row" style="position:relative; top:9px;" size="x-small"
+								onclick={removeRow}>
+							</lightning-icon>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+
+			</lightning-record-edit-form>
+		</template>
+	</template>
+	<template if:true={Readonly}>
+		<template for:each={itemList} for:item="item" for:index="index">
+			<lightning-record-edit-form key={item.id} style="align:centre"
+				object-api-name="MUSW__Application_Location__c">
+				<lightning-messages> </lightning-messages>
+				<lightning-layout multiple-rows>
+					<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="5"
+						padding="around-small">
+						<lightning-input-field field-name="MUSW__Address__c" class="checkval2" data-id={item.id}
+							onchange={handleChangeAddress} value={item.address} variant="label-stacked"  disabled>
+						</lightning-input-field>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="5"
+						padding="around-small">
+						<lightning-input-field field-name="MUSW__Parcel__c" value={item.parcel} data-id={item.id}
+							onchange={handleChangeParcel} class="checkval" label='PID' variant="label-stacked" required disabled>
+						</lightning-input-field>
+					</lightning-layout-item>
+					<!--lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+						padding="around-small">
+						<div class="slds-p-top_medium"-->
+							<!--lightning-icon icon-name="action:new" access-key={item.id} id={index}
+                                alternative-text="Add Row" size="small" title="Add Row" onclick={addRow}>
+                            </lightning-icon-->
+							<!--lightning-icon icon-name="utility:delete" access-key={item.id} id={index}
+								alternative-text="Delete Row" style="position:relative; top:9px;" size="x-small"
+								onclick={removeRow}>
+							</lightning-icon>
+						</div>
+					</lightning-layout-item-->
+				</lightning-layout>
+
+			</lightning-record-edit-form>
+		</template>
+	</template>
+	<template if:false={Readonly}>
+		<lightning-layout>
+			<div class="slds-align_absolute-center">
+				<!--lightning-button variant="success" onclick={handleSubmit} name="submit" label="Submit">
+                </lightning-button-->
+				<lightning-button slot="actions" variant="brand" label="Add Property Information" onclick={addRow}>
+				</lightning-button>
+			</div>
+		</lightning-layout>
+	</template>
+	<!--/lightning-card-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--------------------different code--------->
+	<!-- header -->
+	<!--div class="slds-tabs_card">
+        <div class="slds-page-header">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-opportunity">
+                                 <lightning-icon icon-name="standard:recipe" alternative-text="recipe" title="recipe"></lightning-icon>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-page-header__name">
+                                <div class="slds-page-header__name-title">
+                                    <h1>
+                                        <span>Lookup Field In LWC Inline Datatable Edit</span>
+                                        <span class="slds-page-header__title slds-truncate" title="Recently Viewed">TechDicer</span>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <br/-->
+	<!-- /header -->
+
+	<!-- create folder card -->
+	<!--lightning-card  variant="Narrow" class="cardSpinner">
+        <lightning-button slot="actions" variant="brand" label="Add Row" onclick={addRow}></lightning-button-->
+	<!-- loader -->
+	<!--div if:true={showSpinner}>
+            <lightning-spinner
+                alternative-text="Loading..." variant="brand">
+            </lightning-spinner>
+        </div-->
+	<!-----/loader-------->
+	<!--div class="slds-var-p-around_small">
+            <template if:true={data}>
+                <c-l-w-c-lookup-custom-datatable-type
+                    class="lookupCSS"
+                    key-field="Id"
+                    data={data} 
+                    columns={columns} 
+                    onlookupchanged={lookupChanged} 
+                    onvalueselect={handleSelection}
+                    draft-values={draftValues} 
+                    oncellchange={handleCellChange}
+                    onsave={handleSave}
+                    oncancel={handleCancel}
+                    hide-checkbox-column>
+                </c-l-w-c-lookup-custom-datatable-type>
+            </template>
+        </div>
+    </lightning-card-->
+</template>

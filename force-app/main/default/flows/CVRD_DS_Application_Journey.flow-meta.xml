@@ -2,10 +2,96 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>54.0</apiVersion>
     <assignments>
+        <name>Add_Agent_in_Application_Contact_collation</name>
+        <label>Add Agent in Application Contact collation</label>
+        <locationX>688</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.MUSW__First_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.FirstName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.MUSW__Last_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.LastName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.MUSW__Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.MUSW__Phone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Phone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.CVRD_DS_Agent__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.CVRD_DS_Owner_City__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.City</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.CVRD_DS_Owner_Country__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Country</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.CVRD_DS_Owner_Postal_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.PostalCode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.CVRD_DS_Owner_State__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.State</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactAgent.CVRD_DS_Owner_Street__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Street</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ApplicationContactAgent</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Application_Type_Screen</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Add_New_Contact_in_the_Application_contact_list</name>
         <label>Add New Contact in the Application contact list</label>
         <locationX>182</locationX>
-        <locationY>2114</locationY>
+        <locationY>2606</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
             <operator>Assign</operator>
@@ -49,7 +135,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>930</locationX>
-        <locationY>2570</locationY>
+        <locationY>3062</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -69,10 +155,33 @@
         </connector>
     </assignments>
     <assignments>
+        <name>assign_application_id_on_application_location</name>
+        <label>assign application id on application location</label>
+        <locationX>930</locationX>
+        <locationY>4118</locationY>
+        <assignmentItems>
+            <assignToReference>loop_to_create_application_location.MUSW__Application__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Application_record</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>createApplicationLocationRecords</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>loop_to_create_application_location</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>loop_to_create_application_location</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assign_Application_Record_Id_to_Comment_Record</name>
         <label>Assign Application Record Id to Comment Record</label>
         <locationX>666</locationX>
-        <locationY>3086</locationY>
+        <locationY>3578</locationY>
         <assignmentItems>
             <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
             <operator>Assign</operator>
@@ -101,24 +210,31 @@
     <assignments>
         <name>Assign_parcel_DPAs_to_Application_Selected_DPA</name>
         <label>Assign parcel DPAs to Application Selected DPA</label>
-        <locationX>622</locationX>
-        <locationY>1190</locationY>
+        <locationX>776</locationX>
+        <locationY>1598</locationY>
         <assignmentItems>
             <assignToReference>selectedDPAVariable</assignToReference>
-            <operator>Assign</operator>
+            <operator>Add</operator>
             <value>
-                <elementReference>Get_PID_Record.CVRD_DS_DPA__c</elementReference>
+                <elementReference>Loop_on_PID_records.CVRD_DS_DPA__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>selectedDPAVariable</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>;</stringValue>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>DPA_Screen</targetReference>
+            <targetReference>Loop_on_PID_records</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Primary_owner_mailing_address_to_new_owner</name>
         <label>Assign Primary owner mailing address to new owner</label>
         <locationX>50</locationX>
-        <locationY>1922</locationY>
+        <locationY>2414</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</assignToReference>
             <operator>Assign</operator>
@@ -162,7 +278,7 @@
         <name>Clearing_address_details_from_add_owner</name>
         <label>Clearing address details from add owner</label>
         <locationX>182</locationX>
-        <locationY>2222</locationY>
+        <locationY>2714</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_City__c</assignToReference>
             <operator>Assign</operator>
@@ -191,8 +307,8 @@
     <assignments>
         <name>DPA_Stages_assignment</name>
         <label>DPA Stages assignment</label>
-        <locationX>622</locationX>
-        <locationY>566</locationY>
+        <locationX>688</locationX>
+        <locationY>866</locationY>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
             <operator>Add</operator>
@@ -270,8 +386,8 @@
     <assignments>
         <name>Equate_stages</name>
         <label>Equate stages</label>
-        <locationX>886</locationX>
-        <locationY>566</locationY>
+        <locationX>952</locationX>
+        <locationY>866</locationY>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
             <operator>RemoveAll</operator>
@@ -290,7 +406,7 @@
     <assignments>
         <name>Stages_assignment</name>
         <label>Stages assignment</label>
-        <locationX>754</locationX>
+        <locationX>820</locationX>
         <locationY>134</locationY>
         <assignmentItems>
             <assignToReference>InitialStage</assignToReference>
@@ -362,8 +478,8 @@
     <assignments>
         <name>Update_Primary_Owner_check_on_Application_Contact_Record</name>
         <label>Update Primary Owner check on Application Contact Record</label>
-        <locationX>1326</locationX>
-        <locationY>1706</locationY>
+        <locationX>1458</locationX>
+        <locationY>2198</locationY>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
             <operator>Assign</operator>
@@ -493,8 +609,8 @@
     <decisions>
         <name>Check_Development_Permit_Stage</name>
         <label>Check Development Permit Stage</label>
-        <locationX>754</locationX>
-        <locationY>458</locationY>
+        <locationX>820</locationX>
+        <locationY>758</locationY>
         <defaultConnector>
             <targetReference>Equate_stages</targetReference>
         </defaultConnector>
@@ -519,7 +635,7 @@
         <name>Check_for_mailing_address_is_same_or_not</name>
         <label>Check for mailing address is same or not</label>
         <locationX>182</locationX>
-        <locationY>1814</locationY>
+        <locationY>2306</locationY>
         <defaultConnector>
             <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
         </defaultConnector>
@@ -544,9 +660,9 @@
         <name>Check_if_Comment_is_empty_or_not</name>
         <label>Check if Comment is empty or not</label>
         <locationX>842</locationX>
-        <locationY>2870</locationY>
+        <locationY>3362</locationY>
         <defaultConnector>
-            <targetReference>Success_Screen</targetReference>
+            <targetReference>loop_to_create_application_location</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -568,8 +684,8 @@
     <decisions>
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
-        <locationX>754</locationX>
-        <locationY>1598</locationY>
+        <locationX>820</locationX>
+        <locationY>2090</locationY>
         <defaultConnector>
             <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
         </defaultConnector>
@@ -591,10 +707,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Evaluate_agent_checkbox</name>
+        <label>Evaluate agent checkbox</label>
+        <locationX>820</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Application_Type_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Agent_is_Available</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>I_am_an_agent</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_Agent_in_Application_Contact_collation</targetReference>
+            </connector>
+            <label>Agent is Available</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Evaluate_Application_Type</name>
         <label>Evaluate Application Type</label>
-        <locationX>754</locationX>
-        <locationY>974</locationY>
+        <locationX>820</locationX>
+        <locationY>1274</locationY>
         <defaultConnector>
             <targetReference>Owner_Details_Screen</targetReference>
         </defaultConnector>
@@ -618,8 +759,8 @@
     <decisions>
         <name>Rec_check</name>
         <label>Rec check</label>
-        <locationX>1326</locationX>
-        <locationY>2246</locationY>
+        <locationX>1458</locationX>
+        <locationY>2738</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -707,7 +848,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>842</locationX>
-        <locationY>2462</locationY>
+        <locationY>2954</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -721,7 +862,7 @@
         <name>Loop_for_Comment_Records</name>
         <label>Loop for Comment Records</label>
         <locationX>578</locationX>
-        <locationY>2978</locationY>
+        <locationY>3470</locationY>
         <collectionReference>CommentRecords</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -729,6 +870,34 @@
         </nextValueConnector>
         <noMoreValuesConnector>
             <targetReference>Create_Comment_Record</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Loop_on_PID_records</name>
+        <label>Loop on PID records</label>
+        <locationX>688</locationX>
+        <locationY>1490</locationY>
+        <collectionReference>Get_PID_Record</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_parcel_DPAs_to_Application_Selected_DPA</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>DPA_Screen</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>loop_to_create_application_location</name>
+        <label>loop to create application location</label>
+        <locationX>842</locationX>
+        <locationY>4010</locationY>
+        <collectionReference>Application_Location_Record_Collation</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>assign_application_id_on_application_location</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>create_application_location_record</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -754,7 +923,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>842</locationX>
-        <locationY>2762</locationY>
+        <locationY>3254</locationY>
         <connector>
             <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
         </connector>
@@ -765,10 +934,24 @@
         <inputReference>ApplicationContactCreateList</inputReference>
     </recordCreates>
     <recordCreates>
+        <name>create_application_location_record</name>
+        <label>create application location record</label>
+        <locationX>842</locationX>
+        <locationY>4310</locationY>
+        <connector>
+            <targetReference>Success_Screen</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Fault_Screen</targetReference>
+        </faultConnector>
+        <inputReference>createApplicationLocationRecords</inputReference>
+    </recordCreates>
+    <recordCreates>
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>842</locationX>
-        <locationY>2354</locationY>
+        <locationY>2846</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -824,15 +1007,9 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>MUSW__Address__c</field>
+            <field>MUSW__Applicant__c</field>
             <value>
-                <elementReference>Application_Record.MUSW__Address__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>MUSW__Parcel__c</field>
-            <value>
-                <elementReference>PIDLookup.recordId</elementReference>
+                <elementReference>$User.ContactId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -866,9 +1043,9 @@
         <name>Create_Comment_Record</name>
         <label>Create Comment Record</label>
         <locationX>578</locationX>
-        <locationY>3278</locationY>
+        <locationY>3770</locationY>
         <connector>
-            <targetReference>Success_Screen</targetReference>
+            <targetReference>loop_to_create_application_location</targetReference>
         </connector>
         <faultConnector>
             <isGoTo>true</isGoTo>
@@ -879,21 +1056,21 @@
     <recordLookups>
         <name>Get_PID_Record</name>
         <label>Get PID Record</label>
-        <locationX>622</locationX>
-        <locationY>1082</locationY>
+        <locationX>688</locationX>
+        <locationY>1382</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Assign_parcel_DPAs_to_Application_Selected_DPA</targetReference>
+            <targetReference>Loop_on_PID_records</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
-            <operator>EqualTo</operator>
+            <operator>In</operator>
             <value>
-                <elementReference>PIDLookup.recordId</elementReference>
+                <elementReference>parcelIds</elementReference>
             </value>
         </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>MUSW__Parcel__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
@@ -902,7 +1079,7 @@
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
         <locationX>182</locationX>
-        <locationY>1706</locationY>
+        <locationY>2198</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1126,13 +1303,13 @@
     <screens>
         <name>Agent_Authorization_Screen</name>
         <label>Agent Authorization Screen</label>
-        <locationX>754</locationX>
+        <locationX>820</locationX>
         <locationY>242</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Application_Type_Screen</targetReference>
+            <targetReference>Evaluate_agent_checkbox</targetReference>
         </connector>
         <fields>
             <name>AgentAuthHeader</name>
@@ -1238,8 +1415,8 @@
     <screens>
         <name>Application_Type_Screen</name>
         <label>Application_Type_Screen</label>
-        <locationX>754</locationX>
-        <locationY>350</locationY>
+        <locationX>820</locationX>
+        <locationY>650</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1323,8 +1500,8 @@
     <screens>
         <name>Description_Screen</name>
         <label>Description Screen</label>
-        <locationX>754</locationX>
-        <locationY>758</locationY>
+        <locationX>820</locationX>
+        <locationY>1058</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1411,8 +1588,8 @@
     <screens>
         <name>DPA_Screen</name>
         <label>DPA Screen</label>
-        <locationX>622</locationX>
-        <locationY>1298</locationY>
+        <locationX>688</locationX>
+        <locationY>1790</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1515,8 +1692,8 @@
     <screens>
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
-        <locationX>1326</locationX>
-        <locationY>1814</locationY>
+        <locationX>1458</locationX>
+        <locationY>2306</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1658,30 +1835,6 @@
             <fields>
                 <name>Environment_Management_Act_Section3_Column2</name>
                 <fieldType>Region</fieldType>
-                <fields>
-                    <name>File_UploadSiteDisclosureStatement</name>
-                    <extensionName>forceContent:fileUpload</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>label</name>
-                        <value>
-                            <stringValue>Upload Site Disclosure Statement </stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>EnvironmentalActConditionV2</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -1699,8 +1852,8 @@
     <screens>
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
-        <locationX>1546</locationX>
-        <locationY>2462</locationY>
+        <locationX>1810</locationX>
+        <locationY>2954</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1723,8 +1876,8 @@
     <screens>
         <name>Owner_Details_Screen</name>
         <label>Owner Details Screen</label>
-        <locationX>754</locationX>
-        <locationY>1490</locationY>
+        <locationX>820</locationX>
+        <locationY>1982</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1959,8 +2112,8 @@
     <screens>
         <name>Property_Information</name>
         <label>Property Information</label>
-        <locationX>754</locationX>
-        <locationY>866</locationY>
+        <locationX>820</locationX>
+        <locationY>1166</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -2020,48 +2173,25 @@
                 <name>Property_InformationSection_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>PIDLookup</name>
-                    <extensionName>flowruntime:lookup</extensionName>
+                    <name>multiplePIDs</name>
+                    <extensionName>c:lWCDatatableWithLookup</extensionName>
                     <fieldType>ComponentInstance</fieldType>
                     <inputParameters>
-                        <name>fieldApiName</name>
+                        <name>applicationlocationRecs</name>
                         <value>
-                            <stringValue>MUSW__Parcel__c</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>label</name>
-                        <value>
-                            <stringValue>PID</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>objectApiName</name>
-                        <value>
-                            <stringValue>MUSW__Application2__c</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>recordId</name>
-                        <value>
-                            <elementReference>PIDLookup.recordId</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>required</name>
-                        <value>
-                            <booleanValue>true</booleanValue>
+                            <elementReference>Application_Location_Record_Collation</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Record.MUSW__Address__c</objectFieldReference>
+                    <outputParameters>
+                        <assignToReference>Application_Location_Record_Collation</assignToReference>
+                        <name>applicationlocationRecs</name>
+                    </outputParameters>
+                    <outputParameters>
+                        <assignToReference>parcelIds</assignToReference>
+                        <name>Parcel</name>
+                    </outputParameters>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -2091,8 +2221,8 @@
     <screens>
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
-        <locationX>1326</locationX>
-        <locationY>2030</locationY>
+        <locationX>1458</locationX>
+        <locationY>2522</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2191,30 +2321,29 @@
                 <name>Property_Information_review_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Address_Review</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;Address&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Application_Record.MUSW__Address__r.Name}&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
+                    <name>readonlymultiPID</name>
+                    <extensionName>c:lWCDatatableWithLookup</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>Readonly</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>applicationlocationRecs</name>
+                        <value>
+                            <elementReference>Application_Location_Record_Collation</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Property_Information_review_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Parcel_review</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;PID&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!PIDLookup.recordName}&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
+                        <stringValue>12</stringValue>
                     </value>
                 </inputParameters>
                 <isRequired>false</isRequired>
@@ -2448,8 +2577,8 @@
     <screens>
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
-        <locationX>1326</locationX>
-        <locationY>1922</locationY>
+        <locationX>1458</locationX>
+        <locationY>2414</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2532,16 +2661,6 @@
                     <fieldType>RadioButtons</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>RiparianAreasConditionV1</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
                 </fields>
                 <fields>
                     <name>Riparian_AreasDisplayTextV2</name>
@@ -2571,7 +2690,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>842</locationX>
-        <locationY>3518</locationY>
+        <locationY>4418</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2596,7 +2715,7 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>628</locationX>
+        <locationX>694</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Stages_assignment</targetReference>
@@ -2606,8 +2725,8 @@
     <subflows>
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
-        <locationX>1326</locationX>
-        <locationY>2138</locationY>
+        <locationX>1458</locationX>
+        <locationY>2630</locationY>
         <connector>
             <targetReference>Rec_check</targetReference>
         </connector>
@@ -2642,7 +2761,7 @@
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
         <locationX>842</locationX>
-        <locationY>3626</locationY>
+        <locationY>4526</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
@@ -2687,6 +2806,14 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>MUSW__Application2__c</objectType>
+    </variables>
+    <variables>
+        <name>ApplicationContactAgent</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Application_Contact__c</objectType>
     </variables>
     <variables>
         <name>ApplicationContactCreateList</name>
@@ -2737,6 +2864,14 @@
         <objectType>MUSW__Comment__c</objectType>
     </variables>
     <variables>
+        <name>createApplicationLocationRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Application_Location__c</objectType>
+    </variables>
+    <variables>
         <name>InitialStage</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
@@ -2759,6 +2894,13 @@
     </variables>
     <variables>
         <name>OTPValue</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>parcelIds</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>

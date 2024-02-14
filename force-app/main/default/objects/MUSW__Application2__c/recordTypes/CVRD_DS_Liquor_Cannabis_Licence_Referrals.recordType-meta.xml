@@ -2,7 +2,30 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
     <active>true</active>
+    <compactLayoutAssignment>MUSW__Application_Default</compactLayoutAssignment>
     <label>Liquor/Cannabis Licence Referrals</label>
+    <picklistValues>
+        <picklist>CVRD_DSCommercialOrIndustrial_Purposes__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CVRD_DS_HighWaterMark__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
     <picklistValues>
         <picklist>CVRD_DS_Non_Exempted_DPAs__c</picklist>
         <values>
@@ -110,6 +133,143 @@
         </values>
         <values>
             <fullName>DPA 9%3A Intensive Residential</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CVRD_DS_SiteDisclosureStatement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CVRD_DS_Sub_Type__c</picklist>
+        <values>
+            <fullName>ALC Exclusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accreted Land</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agricultural</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment%2FExtension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bare land Strata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Building Strata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservation%2FGHG reduction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conventional Subdivision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delegated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Variance Permit - Major</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Variance Permit - Minor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental and Hazard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extension-Minor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character - Signs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Land Use Bylaw Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leases</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Delegated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-farm Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCP Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phased Strata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subdivision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoning Amendment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CVRD_DS_is_TopofaRavine_Bank__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -274,11 +434,11 @@
         </values>
         <values>
             <fullName>In Progress</fullName>
-            <default>true</default>
+            <default>false</default>
         </values>
         <values>
             <fullName>Pending</fullName>
-            <default>false</default>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>
