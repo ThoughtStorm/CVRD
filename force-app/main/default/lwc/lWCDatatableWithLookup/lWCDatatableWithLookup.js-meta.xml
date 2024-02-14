@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<targets>
+		<target>lightning__FlowScreen</target>
+	</targets>
+	<targetConfigs>
+   		<targetConfig targets="lightning__FlowScreen">
+		<!--property name="InputAddresses" type="String" label="Input Addresses" description="List of Input Addresses" role="inputOnly"/>
+		<property name="InputParcel" type="String" label="Input Parcel" description="List of Input Parcels" role="inputOnly"/>
+	   	<property name="Addresses" type="String" label="Addresses" description="List of Addresses" role="outputOnly"/-->
+		<property name="Parcel" type="String[]" label="Parcel" description="List of Parcels" role="outputOnly"/>
+		<property name="Readonly" type="boolean" label="Read only" description="Fields are not editable" role="inputOnly"/>
+		<property name="applicationlocationRecs" type="@salesforce/schema/MUSW__Application_Location__c[]" label="Application Location Records" />
+   		</targetConfig>
+	</targetConfigs>
+</LightningComponentBundle>

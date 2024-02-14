@@ -52,14 +52,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>En Route</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>In Progress</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Pending</fullName>
             <default>true</default>
         </values>

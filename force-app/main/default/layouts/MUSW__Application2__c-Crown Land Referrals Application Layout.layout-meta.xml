@@ -83,7 +83,7 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>CVRD_DS_is_TopofaRavine_Bank__c</field>
             </layoutItems>
         </layoutColumns>
