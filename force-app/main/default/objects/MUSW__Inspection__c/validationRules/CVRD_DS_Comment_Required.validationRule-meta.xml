@@ -8,5 +8,5 @@ ISPICKVAL(  MUSW__Close_Action__c  , &quot;Corrections Required&quot;),
 ISBLANK(  MUSW__Description__c  )
 )</errorConditionFormula>
     <errorDisplayField>MUSW__Description__c</errorDisplayField>
-    <errorMessage>Comment is required, If Completed action marked as &quot;Corrections Required&quot;.</errorMessage>
+    <errorMessage>You must enter an explanation in the Comments field after setting the field Completed Action to Corrections Required.</errorMessage>
 </ValidationRule>
