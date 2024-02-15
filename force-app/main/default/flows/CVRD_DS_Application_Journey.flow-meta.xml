@@ -1193,7 +1193,7 @@
                 </fields>
                 <fields>
                     <name>Display_Owner_Address</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Owner Postal Code:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Owner Province: &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_State__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Owner Country:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_Country__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Owner Street:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_Street__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68);&quot;&gt;Owner City:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_City__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Mailing Address:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_Street__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;City:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Application_Contact_Record.CVRD_DS_Owner_City__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Province: &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!Application_Contact_Record.CVRD_DS_Owner_State__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Postal Code:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
@@ -1210,7 +1210,23 @@
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
-                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Postal_Code__c</objectFieldReference>
+                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Street__c</objectFieldReference>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_City__c</objectFieldReference>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
@@ -1242,39 +1258,7 @@
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
-                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</objectFieldReference>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Street__c</objectFieldReference>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Mailing_address_is_not_same</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_City__c</objectFieldReference>
+                    <objectFieldReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Postal_Code__c</objectFieldReference>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
@@ -2019,7 +2003,13 @@
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</objectFieldReference>
+                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Street__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_City__c</objectFieldReference>
                 </fields>
                 <fields>
                     <fieldType>ObjectProvided</fieldType>
@@ -2031,19 +2021,7 @@
                     <fieldType>ObjectProvided</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Country__c</objectFieldReference>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Street__c</objectFieldReference>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_City__c</objectFieldReference>
+                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</objectFieldReference>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -2457,7 +2435,7 @@
                     <inputParameters>
                         <name>columns</name>
                         <value>
-                            <stringValue>[{&quot;apiName&quot;:&quot;MUSW__First_Name__c&quot;,&quot;guid&quot;:&quot;column-e049&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Last_Name__c&quot;,&quot;guid&quot;:&quot;column-22bb&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Primary_Owner__c&quot;,&quot;guid&quot;:&quot;column-f5d6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Primary Owner&quot;,&quot;type&quot;:&quot;boolean&quot;},{&quot;apiName&quot;:&quot;MUSW__Email__c&quot;,&quot;guid&quot;:&quot;column-0a7b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;MUSW__Phone__c&quot;,&quot;guid&quot;:&quot;column-54c4&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Phone&quot;,&quot;type&quot;:&quot;phone&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_Street__c&quot;,&quot;guid&quot;:&quot;column-1dad&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Street&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Owner Street&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_City__c&quot;,&quot;guid&quot;:&quot;column-4d79&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;City&quot;,&quot;wrapText&quot;:false,&quot;order&quot;:6,&quot;label&quot;:&quot;Owner City&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_State__c&quot;,&quot;guid&quot;:&quot;column-eba3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Province&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:7,&quot;label&quot;:&quot;Owner State&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_Country__c&quot;,&quot;guid&quot;:&quot;column-c524&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Country&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:8,&quot;label&quot;:&quot;Owner Country&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_Postal_Code__c&quot;,&quot;guid&quot;:&quot;column-33f6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Zip/Postal Code&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:9,&quot;label&quot;:&quot;Owner Postal Code&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                            <stringValue>[{&quot;apiName&quot;:&quot;MUSW__First_Name__c&quot;,&quot;guid&quot;:&quot;column-e049&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;MUSW__Last_Name__c&quot;,&quot;guid&quot;:&quot;column-22bb&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Primary_Owner__c&quot;,&quot;guid&quot;:&quot;column-f5d6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Primary Owner&quot;,&quot;type&quot;:&quot;boolean&quot;},{&quot;apiName&quot;:&quot;MUSW__Email__c&quot;,&quot;guid&quot;:&quot;column-0a7b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;MUSW__Phone__c&quot;,&quot;guid&quot;:&quot;column-54c4&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Phone&quot;,&quot;type&quot;:&quot;phone&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_Street__c&quot;,&quot;guid&quot;:&quot;column-1dad&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Mailing Address&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Owner Street&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_City__c&quot;,&quot;guid&quot;:&quot;column-4d79&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;City&quot;,&quot;wrapText&quot;:false,&quot;order&quot;:6,&quot;label&quot;:&quot;Owner City&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_State__c&quot;,&quot;guid&quot;:&quot;column-eba3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Province&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:7,&quot;label&quot;:&quot;Owner State&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;CVRD_DS_Owner_Postal_Code__c&quot;,&quot;guid&quot;:&quot;column-33f6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Postal Code&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:8,&quot;label&quot;:&quot;Owner Postal Code&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
                         </value>
                     </inputParameters>
                     <inputParameters>

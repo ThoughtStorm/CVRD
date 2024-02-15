@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_DS_Owner_State__c</fullName>
     <externalId>false</externalId>
-    <label>Owner Province</label>
+    <label>Province</label>
     <required>true</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
