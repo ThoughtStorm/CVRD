@@ -15,7 +15,7 @@
             <sorted>false</sorted>
             <value>
                 <fullName>Site Visit</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>Site Visit</label>
             </value>
         </valueSetDefinition>

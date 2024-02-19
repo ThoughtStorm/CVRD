@@ -400,21 +400,7 @@
         <connector>
             <targetReference>method_calling_check</targetReference>
         </connector>
-        <filterLogic>or</filterLogic>
-        <filters>
-            <field>MUSW__Status__c</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Phase__c</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>MUSW__Status__c</field>
             <operator>EqualTo</operator>
@@ -430,7 +416,7 @@
             </value>
         </filters>
         <object>MUSW__Application2__c</object>
-        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>

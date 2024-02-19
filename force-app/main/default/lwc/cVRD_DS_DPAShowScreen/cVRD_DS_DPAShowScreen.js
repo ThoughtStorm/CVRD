@@ -5,6 +5,7 @@ export default class CVRD_DS_DPAShowScreen extends LightningElement {
     @api DPA_Data='';
     DPAExempturl=DPAExemptURL;
     DPAList=[];
+    DPAset= new Set();
     resetCommentData=[];
     @track CommentData=[];
     hasEmptyComment=false;
@@ -14,13 +15,17 @@ export default class CVRD_DS_DPAShowScreen extends LightningElement {
     @api nonExemptData='';
 
     connectedCallback() {
+        this.DPA_Data=this.DPA_Data.slice(0, this.DPA_Data.length-1);
 
         this.DPAList = this.DPA_Data.toString().split(';');
-        for (var i = 0; i < this.DPAList.length; i++) {
+        const setval=[...new Set(this.DPAList)];
+        console.log('this.DPAList.size'+setval.length);
+        
+        for (var i = 0; i < setval.length; i++) {
             this.CommentData[i] = {};
 
             this.CommentData[i].id = i;
-            this.CommentData[i].Name = this.DPAList[i];
+            this.CommentData[i].Name = setval[i];
             this.CommentData[i].Exempt = false;
             this.CommentData[i].commentEnabled = true;
             this.CommentData[i].Explanation = '';

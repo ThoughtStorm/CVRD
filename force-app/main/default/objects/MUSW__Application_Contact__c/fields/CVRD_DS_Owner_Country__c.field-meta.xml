@@ -3,7 +3,7 @@
     <fullName>CVRD_DS_Owner_Country__c</fullName>
     <externalId>false</externalId>
     <label>Owner Country</label>
-    <required>true</required>
+    <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>

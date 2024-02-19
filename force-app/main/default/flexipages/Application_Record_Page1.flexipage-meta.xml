@@ -111,23 +111,12 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>mapSettingsName</name>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>spatialField</name>
-                </componentInstanceProperties>
-                <componentName>MUSW:mapViewer</componentName>
-                <identifier>mapViewer</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-366bf793-f83e-429b-b99f-5272051337ef</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
                     <name>actionNames</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>New</value>
+                        </valueListItems>
+                    </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>adminFilters</name>
@@ -142,7 +131,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListApiName</name>
-                    <value>CVRD_DS_Comments__r</value>
+                    <value>MUSW__Application_Locations__r</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListDisplayType</name>
@@ -152,16 +141,19 @@
                     <name>relatedListFieldAliases</name>
                     <valueList>
                         <valueListItems>
-                            <value>CVRD_DS_DPA_Name__c</value>
+                            <value>NAME</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>CVRD_DS_Applicant_Comment__c</value>
+                            <value>MUSW__Parcel__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Address__c</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListLabel</name>
-                    <value>DPA Exemptions</value>
+                    <value>Property Information</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>showActionBar</name>
@@ -176,10 +168,10 @@
                     <value>Default</value>
                 </componentInstanceProperties>
                 <componentName>lst:dynamicRelatedList</componentName>
-                <identifier>lst_dynamicRelatedList</identifier>
+                <identifier>lst_dynamicRelatedList4</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-5223ec70-c2d0-4aac-85af-85853e39b1a2</name>
+        <name>Facet-16ded087-ecb5-4160-b26d-2492563e3a26</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -213,13 +205,25 @@
                     <name>relatedListFieldAliases</name>
                     <valueList>
                         <valueListItems>
+                            <value>NAME</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__First_Name__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>MUSW__Last_Name__c</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>MUSW__Phone__c</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__Email__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CVRD_DS_Agent__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CVRD_DS_Primary_Owner__c</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -356,28 +360,14 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-366bf793-f83e-429b-b99f-5272051337ef</value>
+                    <value>Facet-16ded087-ecb5-4160-b26d-2492563e3a26</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
-                    <value>{!$Label.MUSW__Map_Tab_Label}</value>
+                    <value>Property Information</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>customTab</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-5223ec70-c2d0-4aac-85af-85853e39b1a2</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>DPA Exemption</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab</identifier>
+                <identifier>flexipage_tab4</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>

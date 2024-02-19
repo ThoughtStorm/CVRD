@@ -44,6 +44,31 @@
         <field>MUSW__Application2__c.Agent_Authorization__c</field>
         <readable>true</readable>
     </fieldPermissions>
+     <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_HighWaterMark__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_SiteDisclosureStatement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_is_TopofaRavine_Bank__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DSCommercialOrIndustrial_Purposes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding2__c.CVRD_DS_Application__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_Address_3__c</field>
@@ -590,6 +615,14 @@
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>MUSW__Application2__c-Board of Variance Application Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-Covenant Amendment or Discharge Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>MUSW__Application2__c-Crown Land Referrals Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
     </layoutAssignments>
@@ -610,6 +643,18 @@
         <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>MUSW__Application2__c-Development Variance Permit %28DVP%29 Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-Flood Management Bylaw Exemption Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-Land Use Contract Amendment or Discharge Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>MUSW__Application2__c-Liquor%2FCannabis Licence Referrals Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
     </layoutAssignments>
@@ -617,8 +662,28 @@
         <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>MUSW__Application2__c-Minimum Frontage Exemption Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-OCP%2C Zoning or Land Use Bylaw Amendment Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-Phased Development Agreement Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>MUSW__Application2__c-Subdivision %28Referral%29 Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-Telecommunication Antanna Structure Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-Temporary Use Permit %28TUP%29 Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application_Contact__c-MUSW__Application Contact Layout</layout>
@@ -636,6 +701,16 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Parcel__c-MUSW__Parcel Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Proceeding2__c-MUSW__Proceeding Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Review_Template__c-MUSW__Review Template Application Review</layout>
+        <recordType>MUSW__Review_Template__c.MUSW__Application_Review</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Review__c-MUSW__Review Layout</layout>
     </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
