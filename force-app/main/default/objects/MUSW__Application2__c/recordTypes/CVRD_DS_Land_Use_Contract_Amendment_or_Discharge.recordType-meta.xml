@@ -16,6 +16,25 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>CVRD_DS_Completed_Approval__c</picklist>
+        <values>
+            <fullName>Board Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO%2FCFO Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DM Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>CVRD_DS_HighWaterMark__c</picklist>
         <values>
             <fullName>No</fullName>
@@ -410,11 +429,23 @@
     <picklistValues>
         <picklist>MUSW__Phase__c</picklist>
         <values>
+            <fullName>Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Application</fullName>
             <default>true</default>
         </values>
         <values>
-            <fullName>Closed</fullName>
+            <fullName>Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing</fullName>
             <default>false</default>
         </values>
         <values>
