@@ -795,6 +795,14 @@
         <picklistObject>MUSW__Application_Contact__c</picklistObject>
     </dynamicChoiceSets>
     <dynamicChoiceSets>
+        <name>EnvironmentalPicklistSet</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>CVRD_DSCommercialOrIndustrial_Purposes__c</picklistField>
+        <picklistObject>MUSW__Application2__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
         <name>RecordTypesList</name>
         <dataType>String</dataType>
         <displayField>Name</displayField>
@@ -832,14 +840,9 @@
         <scale>0</scale>
     </formulas>
     <formulas>
-        <name>FormulaforEnvironmentalV2</name>
-        <dataType>Boolean</dataType>
-        <expression>IF({!EnvironmentalActConditionV2}, true, false)</expression>
-    </formulas>
-    <formulas>
-        <name>FormulaforRiparianV2</name>
-        <dataType>Boolean</dataType>
-        <expression>IF({!RiparianAreasConditionV2}, true, false)</expression>
+        <name>SetEnvironmentalValue</name>
+        <dataType>String</dataType>
+        <expression>IF({!EnvironmentalActConditionV1}, &quot;Yes&quot;, &quot;No&quot;)</expression>
     </formulas>
     <interviewLabel>CVRD_DS_Application_Journey {!$Flow.CurrentDateTime}</interviewLabel>
     <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
@@ -965,9 +968,9 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>CVRD_DS_Commercial_Or_Industrial_Purpose__c</field>
+            <field>CVRD_DSCommercialOrIndustrial_Purposes__c</field>
             <value>
-                <elementReference>EnvironmentalActConditionV1</elementReference>
+                <elementReference>SetEnvironmentalValue</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -977,15 +980,9 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>CVRD_DS_High_Water_Mark__c</field>
+            <field>CVRD_DS_HighWaterMark__c</field>
             <value>
-                <elementReference>RiparianAreasConditionV1</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>CVRD_DS_Is_Top_of_a_Ravine_Bank__c</field>
-            <value>
-                <elementReference>FormulaforRiparianV2</elementReference>
+                <elementReference>RiparianAreasConditionV11</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1001,9 +998,15 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>CVRD_DS_Site_Disclosure_Statement__c</field>
+            <field>CVRD_DS_SiteDisclosureStatement__c</field>
             <value>
-                <elementReference>FormulaforEnvironmentalV2</elementReference>
+                <elementReference>EnvironmentalActConditionV22</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_is_TopofaRavine_Bank__c</field>
+            <value>
+                <elementReference>RiparianAreasConditionV22</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1545,7 +1548,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Description</name>
-                    <fieldText>Description</fieldText>
+                    <fieldText>Description (Maximum 500 characters)</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Letter of Rationale and related documents can be provided at the Upload Documents stage of the application&lt;/span&gt;&lt;/p&gt;</helpText>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -1771,28 +1774,10 @@
                         </conditions>
                     </visibilityRule>
                 </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>12</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithHeader</regionContainerType>
-        </fields>
-        <fields>
-            <name>Environment_Management_Act_Section3</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Environment_Management_Act_Section3_Column1</name>
-                <fieldType>Region</fieldType>
                 <fields>
-                    <name>EnvironmentalActConditionV2</name>
-                    <choiceReferences>EnvironmentalActSchedule2True</choiceReferences>
-                    <choiceReferences>EnvironmentalActSchedule2False</choiceReferences>
-                    <dataType>Boolean</dataType>
+                    <name>EnvironmentalActConditionV22</name>
+                    <choiceReferences>EnvironmentalPicklistSet</choiceReferences>
+                    <dataType>String</dataType>
                     <fieldText>A Site Disclosure Statement is required.</fieldText>
                     <fieldType>RadioButtons</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -1811,24 +1796,13 @@
                 <inputParameters>
                     <name>width</name>
                     <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Environment_Management_Act_Section3_Column2</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
+                        <stringValue>12</stringValue>
                     </value>
                 </inputParameters>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -2473,20 +2447,13 @@
                 </fields>
                 <fields>
                     <name>Schedule_2_review</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116); font-size: 12px; background-color: rgb(255, 255, 255);&quot;&gt;A Site Disclosure Statement is required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!EnvironmentalActConditionV2}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(116, 116, 116);&quot;&gt;A Site Disclosure Statement is required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!EnvironmentalActConditionV22}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <visibilityRule>
                         <conditionLogic>or</conditionLogic>
                         <conditions>
-                            <leftValueReference>EnvironmentalActConditionV2</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>EnvironmentalActConditionV2</leftValueReference>
-                            <operator>EqualTo</operator>
+                            <leftValueReference>EnvironmentalActConditionV22</leftValueReference>
+                            <operator>IsNull</operator>
                             <rightValue>
                                 <booleanValue>false</booleanValue>
                             </rightValue>
@@ -2513,30 +2480,13 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Riparian_Area_Message_1_review</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;30 metres of the high water mark of any water features&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!RiparianAreasConditionV1}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;30 metres of the high water mark of any water features&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!RiparianAreasConditionV11}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
                     <name>Riparian_Area_Message_2_review</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;A ravine or within 30 metres of the top of a ravine bank&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!RiparianAreasConditionV2}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;A ravine or within 30 metres of the top of a ravine bank&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!RiparianAreasConditionV22}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
-                    <visibilityRule>
-                        <conditionLogic>or</conditionLogic>
-                        <conditions>
-                            <leftValueReference>RiparianAreasConditionV2</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>RiparianAreasConditionV2</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>false</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -2621,20 +2571,18 @@
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
-                    <name>RiparianAreasConditionV1</name>
-                    <choiceReferences>RiparianAreasSchedule1True</choiceReferences>
-                    <choiceReferences>RiparianAreasSchedule1False</choiceReferences>
-                    <dataType>Boolean</dataType>
+                    <name>RiparianAreasConditionV11</name>
+                    <choiceReferences>EnvironmentalPicklistSet</choiceReferences>
+                    <dataType>String</dataType>
                     <fieldText>30 metres of the high water mark of any water features</fieldText>
                     <fieldType>RadioButtons</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>RiparianAreasConditionV2</name>
-                    <choiceReferences>RiparianAreasSchedule2True</choiceReferences>
-                    <choiceReferences>RiparianAreasSchedule2False</choiceReferences>
-                    <dataType>Boolean</dataType>
+                    <name>RiparianAreasConditionV22</name>
+                    <choiceReferences>EnvironmentalPicklistSet</choiceReferences>
+                    <dataType>String</dataType>
                     <fieldText>A ravine or within 30 metres of the top of a ravine bank</fieldText>
                     <fieldType>RadioButtons</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
