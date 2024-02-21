@@ -3,7 +3,7 @@
     <fullName>CVRD_DS_Cannabis_License</fullName>
     <active>true</active>
     <compactLayoutAssignment>MUSW__Application_Default</compactLayoutAssignment>
-    <label>Cannabis License</label>
+    <label>Cannabis Retail License</label>
     <picklistValues>
         <picklist>CVRD_DSCommercialOrIndustrial_Purposes__c</picklist>
         <values>
@@ -475,7 +475,7 @@
     <picklistValues>
         <picklist>MUSW__Type2__c</picklist>
         <values>
-            <fullName>Cannabis_License</fullName>
+            <fullName>Cannabis Retail License</fullName>
             <default>true</default>
         </values>
     </picklistValues>
