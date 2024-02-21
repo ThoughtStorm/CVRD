@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>MUSW__Application2__c</entityName>
+    <fieldName>MUSW__Phase__c</fieldName>
+    <masterLabel>App OCP, Zoning or Land Use Bylaw Amendm</masterLabel>
+    <recordTypeName>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordTypeName>
+</PathAssistant>
