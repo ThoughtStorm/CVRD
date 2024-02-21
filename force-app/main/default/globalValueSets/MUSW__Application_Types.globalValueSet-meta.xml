@@ -61,6 +61,11 @@
         <label>Subdivision (Referral)</label>
     </customValue>
     <customValue>
+        <fullName>Cannabis_License</fullName>
+        <default>false</default>
+        <label>Cannabis License</label>
+    </customValue>
+    <customValue>
         <fullName>Liquor_Cannabis_Licence_Referrals</fullName>
         <default>false</default>
         <label>Liquor/Cannabis Licence Referrals</label>
@@ -74,29 +79,6 @@
         <fullName>Telecommunication_Antenna_Structure</fullName>
         <default>false</default>
         <label>Telecommunication Antenna Structure</label>
-    </customValue>
-    <customValue>
-        <fullName>Cannabis Retail License</fullName>
-        <default>false</default>
-        <label>Cannabis Retail License</label>
-    </customValue>
-    <customValue>
-        <fullName>Business</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Business</label>
-    </customValue>
-    <customValue>
-        <fullName>Other</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Other</label>
-    </customValue>
-    <customValue>
-        <fullName>Contractor</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Contractor</label>
     </customValue>
     <customValue>
         <fullName>Animal</fullName>
@@ -147,16 +129,28 @@
         <label>Building</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication Antenna Structure</fullName>
+        <fullName>Contractor</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Telecommunication Antenna Structure</label>
+        <label>Contractor</label>
     </customValue>
     <customValue>
-        <fullName>Cannabis_License</fullName>
+        <fullName>Other</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Cannabis License</label>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Business</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Land Use Contract Amendment or Discharge</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Land Use Contract Amendment or Discharge</label>
     </customValue>
     <customValue>
         <fullName>Telecommunication_Antanna_Structure</fullName>
@@ -165,10 +159,9 @@
         <label>Telecommunication Antanna Structure</label>
     </customValue>
     <customValue>
-        <fullName>Land Use Contract Amendment or Discharge</fullName>
+        <fullName>Cannabis Retail License</fullName>
         <default>false</default>
-        <isActive>false</isActive>
-        <label>Land Use Contract Amendment or Discharge</label>
+        <label>Cannabis Retail License</label>
     </customValue>
     <masterLabel>Application Types</masterLabel>
     <sorted>false</sorted>
