@@ -158,6 +158,11 @@
         <isActive>false</isActive>
         <label>Telecommunication Antanna Structure</label>
     </customValue>
+    <customValue>
+        <fullName>Cannabis Retail License</fullName>
+        <default>false</default>
+        <label>Cannabis Retail License</label>
+    </customValue>
     <masterLabel>Application Types</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
