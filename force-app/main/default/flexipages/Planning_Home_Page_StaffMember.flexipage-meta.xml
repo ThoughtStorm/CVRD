@@ -21,8 +21,32 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>home:recentRecordContainer</componentName>
-                <identifier>home_recentRecordContainer</identifier>
+                <componentInstanceProperties>
+                    <name>entityNames</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>MUSW__Application2__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application_Contact__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Inspection__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Review__c</value>
+                        </valueListItems>
+                    </valueList>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>maxRecords</name>
+                    <value>5</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:recentItems</componentName>
+                <identifier>flexipage_recentItems</identifier>
             </componentInstance>
         </itemInstances>
         <name>left</name>
@@ -31,8 +55,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>home:eventContainer</componentName>
-                <identifier>home_eventContainer</identifier>
+                <componentName>runtime_sales_activities:todayTaskContainer</componentName>
+                <identifier>runtime_sales_activities_todayTaskContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>middle</name>
@@ -41,8 +65,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>runtime_sales_activities:todayTaskContainer</componentName>
-                <identifier>runtime_sales_activities_todayTaskContainer</identifier>
+                <componentName>home:eventContainer</componentName>
+                <identifier>home_eventContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>right</name>
