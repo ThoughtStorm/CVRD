@@ -986,6 +986,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>MUSW__Project2__c</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>MUSW__Inspection__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
