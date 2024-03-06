@@ -9,7 +9,7 @@
     <dashboardColorPalette>unity</dashboardColorPalette>
     <dashboardGridLayout>
         <dashboardGridComponents>
-            <colSpan>2</colSpan>
+            <colSpan>3</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
@@ -34,7 +34,7 @@
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>2</colSpan>
-            <columnIndex>2</columnIndex>
+            <columnIndex>3</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartSummary>
@@ -58,7 +58,7 @@
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>2</colSpan>
-            <columnIndex>4</columnIndex>
+            <columnIndex>5</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartSummary>
@@ -82,7 +82,31 @@
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>2</colSpan>
-            <columnIndex>6</columnIndex>
+            <columnIndex>7</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartSummary>
+                    <column>RowCount</column>
+                </chartSummary>
+                <componentType>Metric</componentType>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <groupingSortProperties/>
+                <header>Applications Under Appeal</header>
+                <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
+                <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
+                <indicatorHighColor>#00716B</indicatorHighColor>
+                <indicatorLowColor>#C23934</indicatorLowColor>
+                <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
+                <report>unfiled$public/Applications_Under_Appeal</report>
+                <showRange>false</showRange>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>4</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>3</colSpan>
+            <columnIndex>9</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartSummary>
@@ -105,7 +129,7 @@
             <rowSpan>4</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
+            <colSpan>6</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
@@ -138,11 +162,11 @@
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>4</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowSpan>12</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>4</columnIndex>
+            <colSpan>6</colSpan>
+            <columnIndex>6</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
@@ -178,9 +202,9 @@
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>4</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowSpan>12</rowSpan>
         </dashboardGridComponents>
-        <numberOfColumns>9</numberOfColumns>
+        <numberOfColumns>12</numberOfColumns>
         <rowHeight>36</rowHeight>
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
