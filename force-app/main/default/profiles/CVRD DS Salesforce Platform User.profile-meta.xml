@@ -715,7 +715,7 @@
         <recordType>MUSW__Review_Template__c.MUSW__Application_Review</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Review__c-MUSW__Review Layout</layout>
+        <layout>MUSW__Review__c-Application - Review Layout</layout>
     </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
