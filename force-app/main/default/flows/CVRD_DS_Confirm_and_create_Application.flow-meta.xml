@@ -66,7 +66,7 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>Application_Record.MUSW__Total_Balance__c</leftValueReference>
-                <operator>LessThanOrEqualTo</operator>
+                <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
                 </rightValue>
@@ -99,6 +99,27 @@
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Application_Record.MUSW__Type2__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Subdivision_Referral</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Application_Record.MUSW__Type2__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Crown_Land_Referrals</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Application_Record.MUSW__Type2__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Liquor_Cannabis_Licence_Referrals</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -153,6 +174,7 @@
         <queriedFields>MUSW__Status__c</queriedFields>
         <queriedFields>MUSW__Total_Balance__c</queriedFields>
         <queriedFields>CVRD_DS_Parcel_Electoral_Area__c</queriedFields>
+        <queriedFields>MUSW__Type2__c</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>Get_Milestone_record</name>
