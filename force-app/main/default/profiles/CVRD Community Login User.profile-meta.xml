@@ -44,6 +44,11 @@
         <field>MUSW__Application2__c.Agent_Authorization__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review__c.CVRD_DS_Planner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
      <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_HighWaterMark__c</field>
@@ -480,7 +485,7 @@
         <recordType>MUSW__Review_Template__c.MUSW__Application_Review</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Review__c-MUSW__Review Layout</layout>
+        <layout>MUSW__Review__c-Application - Review Layout</layout>
     </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
