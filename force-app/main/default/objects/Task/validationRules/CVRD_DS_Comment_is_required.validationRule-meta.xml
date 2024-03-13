@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Comment_is_required</fullName>
+    <active>true</active>
+    <description>Comment is required if the status is not marked to completed or not started.</description>
+    <errorConditionFormula>AND(
+  ISBLANK(Description),
+  ISCHANGED(Status),
+  NOT(ISPICKVAL(Status, &quot;Completed&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Description</errorDisplayField>
+    <errorMessage>Please provide a comment when the status is not &apos;Completed&apos;.</errorMessage>
+</ValidationRule>
