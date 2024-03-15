@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Due_Date</fullName>
+    <active>true</active>
+    <description>Task Due date Should not be in Past.</description>
+    <errorConditionFormula>TODAY() &gt; ActivityDate</errorConditionFormula>
+    <errorDisplayField>ActivityDate</errorDisplayField>
+    <errorMessage>You cannot select a past date.</errorMessage>
+</ValidationRule>
