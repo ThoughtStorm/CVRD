@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Due_date_email_before_5_days</name>
         <label>Due date email before 5 days</label>
-        <locationX>314</locationX>
+        <locationX>1106</locationX>
         <locationY>600</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
@@ -26,6 +26,12 @@
                 <elementReference>TaskEmailNotificationTemp</elementReference>
             </value>
         </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
         <nameSegment>emailSimple</nameSegment>
         <versionSegment>1</versionSegment>
     </actionCalls>
@@ -33,7 +39,42 @@
         <name>Send_Email_on_creation_of_task</name>
         <label>Send Email on creation of task</label>
         <locationX>50</locationX>
-        <locationY>276</locationY>
+        <locationY>600</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Owner:User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>ExternalEmailSubject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>TaskCreationNotification</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_on_creation_of_task_internal</name>
+        <label>Send Email on creation of task internal</label>
+        <locationX>314</locationX>
+        <locationY>600</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -52,7 +93,13 @@
         <inputParameters>
             <name>emailBody</name>
             <value>
-                <elementReference>TaskCreationNotification</elementReference>
+                <elementReference>InternalTemlate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -62,7 +109,7 @@
     <decisions>
         <name>Due_Date_Greater_Than_Today</name>
         <label>Due Date Greater Than Today</label>
-        <locationX>644</locationX>
+        <locationX>1436</locationX>
         <locationY>276</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -84,7 +131,7 @@
     <decisions>
         <name>Empty_Check_on_Review_Record</name>
         <label>Empty Check on Review Record</label>
-        <locationX>446</locationX>
+        <locationX>1238</locationX>
         <locationY>492</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -103,11 +150,77 @@
             <label>Review Record</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Evaluate_owner_of_the_task</name>
+        <label>Evaluate owner of the task</label>
+        <locationX>314</locationX>
+        <locationY>492</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>external_referral</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.ContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_on_creation_of_task</targetReference>
+            </connector>
+            <label>external referral</label>
+        </rules>
+        <rules>
+            <name>Internal_referral</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.ContactId</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_on_creation_of_task_internal</targetReference>
+            </connector>
+            <label>Internal referral</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Evaluate_Review_Record</name>
+        <label>Evaluate Review Record</label>
+        <locationX>578</locationX>
+        <locationY>384</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Review_record_exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_current_Review_Record_runtime</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Evaluate_owner_of_the_task</targetReference>
+            </connector>
+            <label>Review record exist</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>ExternalEmailSubject</name>
+        <dataType>String</dataType>
+        <expression>&apos;External Referral Input for &apos; &amp; {!Get_current_Review_Record_runtime.MUSW__Application2__r.Name}</expression>
+    </formulas>
+    <formulas>
+        <name>internalLink</name>
+        <dataType>String</dataType>
+        <expression>&apos;https://cvrd--uat.sandbox.lightning.force.com/&apos; &amp; {!$Record.Id}</expression>
+    </formulas>
     <formulas>
         <name>partnerPortalLink</name>
         <dataType>String</dataType>
-        <expression>LEFT({!$Api.Partner_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Partner_Server_URL_100})) &amp; {!partnerportalnameforurl} &amp; {!$Record.Id}</expression>
+        <expression>&apos;https://cvrd--uat.sandbox.my.site.com/CVRDCitizenshipPortal/&apos; &amp; {!$Record.Id}</expression>
     </formulas>
     <formulas>
         <name>RelatedTaskLink</name>
@@ -138,7 +251,7 @@
     <recordLookups>
         <name>Get_current_Review_Record</name>
         <label>Get current Review Record</label>
-        <locationX>446</locationX>
+        <locationX>1238</locationX>
         <locationY>384</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -156,11 +269,32 @@
         <object>MUSW__Review__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Get_current_Review_Record_runtime</name>
+        <label>Get current Review Record</label>
+        <locationX>578</locationX>
+        <locationY>276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Evaluate_Review_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>MUSW__Review__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <start>
-        <locationX>221</locationX>
+        <locationX>881</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_Email_on_creation_of_task</targetReference>
+            <targetReference>Get_current_Review_Record_runtime</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -200,42 +334,20 @@
         </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
+    <textTemplates>
+        <name>InternalTemlate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;&quot;&gt;Dear {!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName},&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;&quot;&gt;We are reaching out to invite your input regarding the {!Get_current_Review_Record_runtime.MUSW__Application2__r.Name} which is currently under review by the Cowichan Valley Regional District (CVRD). Your expertise and insights as an external referral are invaluable to our process.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;&quot;&gt;To provide your comments and suggestions, please log in to our online portal using the following link: {!internalLink} . Your input will be carefully considered by our team as we continue to evaluate the permit application.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;&quot;&gt;Thank you for your cooperation and support in ensuring that the permitting process is thorough and comprehensive. Should you have any questions or require further assistance, please do not hesitate to contact us.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Regards,&lt;/p&gt;&lt;p&gt;{!Get_current_Review_Record_runtime.CVRD_DS_Planner__r.FirstName} {!Get_current_Review_Record.CVRD_DS_Planner__r.LastName}&lt;/p&gt;&lt;p&gt;{!Get_current_Review_Record_runtime.CVRD_DS_Planner__r.Title}&lt;/p&gt;&lt;p&gt;Land Use Services Department&lt;/p&gt;&lt;p&gt;Cowichan Valley Regional District&lt;/p&gt;&lt;p&gt;175 Ingram Street DUNCAN BC V9L 1N7&lt;/p&gt;&lt;p&gt;Email:&amp;nbsp;{!Get_current_Review_Record_runtime.CVRD_DS_Planner__r.Email}&lt;/p&gt;&lt;p&gt;Telephone:&amp;nbsp;{!Get_current_Review_Record_runtime.CVRD_DS_Planner__r.Phone} Toll Free: 1.800.665.3955&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;I acknowledge that for thousands of years the Quw&apos;utsun, Malahat, Ts&apos;uubaa-asatx, Halalt, Penelakut, Stz&apos;uminus, Lyackson, Pauquachin, Ditidaht &amp;amp; Pacheedaht Peoples have walked gently on the unceded territories where I now work and live.&lt;/em&gt;&lt;/p&gt;</text>
+    </textTemplates>
     <textTemplates>
         <name>TaskCreationNotification</name>
-        <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>Dear External User,
-referral has been generated, click on below link and verify the application,
-{!partnerPortalLink}</text>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;&quot;&gt;Dear {!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName},&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;&quot;&gt;We are reaching out to invite your input regarding the {!Get_current_Review_Record_runtime.MUSW__Application2__r.Name} which is currently under review by the Cowichan Valley Regional District (CVRD). Your expertise and insights as an external referral are invaluable to our process.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;&quot;&gt;To provide your comments and suggestions, please log in to our online portal using the following link: {!partnerPortalLink}. Your input will be carefully considered by our team as we continue to evaluate the permit application.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, Calibri_EmbeddedFont, Calibri_MSFontService, sans-serif;&quot;&gt;Thank you for your cooperation and support in ensuring that the permitting process is thorough and comprehensive. Should you have any questions or require further assistance, please do not hesitate to contact us.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Regards,&lt;/p&gt;&lt;p&gt;{!Get_current_Review_Record_runtime.CVRD_DS_Planner__r.FirstName} {!Get_current_Review_Record.CVRD_DS_Planner__r.LastName}&lt;/p&gt;&lt;p&gt;{!Get_current_Review_Record_runtime.CVRD_DS_Planner__r.Title}&lt;/p&gt;&lt;p&gt;Land Use Services Department&lt;/p&gt;&lt;p&gt;Cowichan Valley Regional District&lt;/p&gt;&lt;p&gt;175 Ingram Street DUNCAN BC V9L 1N7&lt;/p&gt;&lt;p&gt;Email:&amp;nbsp;{!Get_current_Review_Record_runtime.CVRD_DS_Planner__r.Email}&lt;/p&gt;&lt;p&gt;Telephone:&amp;nbsp;{!Get_current_Review_Record_runtime.CVRD_DS_Planner__r.Phone} Toll Free: 1.800.665.3955&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;I acknowledge that for thousands of years the Quw&apos;utsun, Malahat, Ts&apos;uubaa-asatx, Halalt, Penelakut, Stz&apos;uminus, Lyackson, Pauquachin, Ditidaht &amp;amp; Pacheedaht Peoples have walked gently on the unceded territories where I now work and live.&lt;/em&gt;&lt;/p&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>TaskEmailNotificationTemp</name>
-        <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>Dear Reviewer,
-
-This is a reminder that you have five days left to complete your review for Development Services {!Get_current_Review_Record.MUSW__Application2__r.MUSW__Type2__c} application #{!Get_current_Review_Record.MUSW__Application2__r.Name}, per an email message sent to you on {!$Flow.CurrentDate}.  If you have any questions or concerns, please contact me at {!Get_current_Review_Record.CVRD_DS_Planner__r.Email} or {!Get_current_Review_Record.CVRD_DS_Planner__r.Phone} (Please do not respond to this email).
-
-Also reminding you that if you do not reply by the due date, I will be assuming that you have no review comments.
-
-Regards,
-{!Get_current_Review_Record.CVRD_DS_Planner__r.FirstName} {!Get_current_Review_Record.CVRD_DS_Planner__r.LastName}
-{!Get_current_Review_Record.CVRD_DS_Planner__r.Title}
-Land Use Services Department
-Cowichan Valley Regional District
-175 Ingram Street DUNCAN BC V9L 1N7
-Email:  {!Get_current_Review_Record.CVRD_DS_Planner__r.Email}
-Telephone:  {!Get_current_Review_Record.CVRD_DS_Planner__r.Phone} Toll Free: 1.800.665.3955
-
-I acknowledge that for thousands of years the Quw&apos;utsun, Malahat, Ts&apos;uubaa-asatx, Halalt, Penelakut, Stz&apos;uminus, Lyackson, Pauquachin, Ditidaht &amp; Pacheedaht Peoples have walked gently on the unceded territories where I now work and live.</text>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;Dear Reviewer,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;This is a reminder that you have five days left to complete your review for Development Services {!Get_current_Review_Record.MUSW__Application2__r.MUSW__Type2__c} application #{!Get_current_Review_Record.MUSW__Application2__r.Name}, per an email message sent to you on {!$Flow.CurrentDate}.  If you have any questions or concerns, please contact me at {!Get_current_Review_Record.CVRD_DS_Planner__r.Email} or {!Get_current_Review_Record.CVRD_DS_Planner__r.Phone} (Please do not respond to this email).&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;Also reminding you that if you do not reply by the due date, I will be assuming that you have no review comments.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;Regards,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;{!Get_current_Review_Record.CVRD_DS_Planner__r.FirstName} {!Get_current_Review_Record.CVRD_DS_Planner__r.LastName}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;{!Get_current_Review_Record.CVRD_DS_Planner__r.Title}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;Land Use Services Department&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;Cowichan Valley Regional District&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;175 Ingram Street DUNCAN BC V9L 1N7&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;Email:  {!Get_current_Review_Record.CVRD_DS_Planner__r.Email}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif;&quot;&gt;Telephone:  {!Get_current_Review_Record.CVRD_DS_Planner__r.Phone} Toll Free: 1.800.665.3955&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;I acknowledge that for thousands of years the Quw&apos;utsun, Malahat, Ts&apos;uubaa-asatx, Halalt, Penelakut, Stz&apos;uminus, Lyackson, Pauquachin, Ditidaht &amp;amp; Pacheedaht Peoples have walked gently on the unceded territories where I now work and live.&lt;/em&gt;&lt;/p&gt;</text>
     </textTemplates>
-    <variables>
-        <name>partnerportalnameforurl</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <stringValue>CVRDCitizenshipPortal/s/</stringValue>
-        </value>
-    </variables>
 </Flow>
