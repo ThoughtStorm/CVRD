@@ -135,7 +135,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>930</locationX>
-        <locationY>3062</locationY>
+        <locationY>3446</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -158,7 +158,7 @@
         <name>assign_application_id_on_application_location</name>
         <label>assign application id on application location</label>
         <locationX>930</locationX>
-        <locationY>4118</locationY>
+        <locationY>4502</locationY>
         <assignmentItems>
             <assignToReference>loop_to_create_application_location.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -181,7 +181,7 @@
         <name>Assign_Application_Record_Id_to_Comment_Record</name>
         <label>Assign Application Record Id to Comment Record</label>
         <locationX>666</locationX>
-        <locationY>3578</locationY>
+        <locationY>3962</locationY>
         <assignmentItems>
             <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
             <operator>Assign</operator>
@@ -302,6 +302,78 @@
         <connector>
             <isGoTo>true</isGoTo>
             <targetReference>Owner_Details_Screen</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</name>
+        <label>Copy 1 of Update Primary Owner check on Application Contact Record</label>
+        <locationX>1590</locationX>
+        <locationY>2498</locationY>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__First_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.FirstName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Last_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.LastName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Phone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Phone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_Street__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Street</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_City__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.City</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.PostalCode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Application_Contact_Record</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Environment_Management_Act</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -478,8 +550,8 @@
     <assignments>
         <name>Update_Primary_Owner_check_on_Application_Contact_Record</name>
         <label>Update Primary Owner check on Application Contact Record</label>
-        <locationX>1458</locationX>
-        <locationY>2198</locationY>
+        <locationX>1326</locationX>
+        <locationY>2498</locationY>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
             <operator>Assign</operator>
@@ -660,7 +732,7 @@
         <name>Check_if_Comment_is_empty_or_not</name>
         <label>Check if Comment is empty or not</label>
         <locationX>842</locationX>
-        <locationY>3362</locationY>
+        <locationY>3746</locationY>
         <defaultConnector>
             <targetReference>loop_to_create_application_location</targetReference>
         </defaultConnector>
@@ -682,12 +754,37 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Copy_1_of_Is_Agent</name>
+        <label>Copy 1 of Is Agent</label>
+        <locationX>1458</locationX>
+        <locationY>2390</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Agent_is_Available</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+            </connector>
+            <label>Copy 1 of Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
         <locationX>820</locationX>
         <locationY>2090</locationY>
         <defaultConnector>
-            <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+            <targetReference>Copy_1_of_Is_Agent</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -760,7 +857,7 @@
         <name>Rec_check</name>
         <label>Rec check</label>
         <locationX>1458</locationX>
-        <locationY>2738</locationY>
+        <locationY>3122</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -851,7 +948,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>842</locationX>
-        <locationY>2954</locationY>
+        <locationY>3338</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -865,7 +962,7 @@
         <name>Loop_for_Comment_Records</name>
         <label>Loop for Comment Records</label>
         <locationX>578</locationX>
-        <locationY>3470</locationY>
+        <locationY>3854</locationY>
         <collectionReference>CommentRecords</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -893,7 +990,7 @@
         <name>loop_to_create_application_location</name>
         <label>loop to create application location</label>
         <locationX>842</locationX>
-        <locationY>4010</locationY>
+        <locationY>4394</locationY>
         <collectionReference>Application_Location_Record_Collation</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -926,7 +1023,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>842</locationX>
-        <locationY>3254</locationY>
+        <locationY>3638</locationY>
         <connector>
             <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
         </connector>
@@ -940,7 +1037,7 @@
         <name>create_application_location_record</name>
         <label>create application location record</label>
         <locationX>842</locationX>
-        <locationY>4310</locationY>
+        <locationY>4694</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -954,7 +1051,7 @@
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>842</locationX>
-        <locationY>2846</locationY>
+        <locationY>3230</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -1046,7 +1143,7 @@
         <name>Create_Comment_Record</name>
         <label>Create Comment Record</label>
         <locationX>578</locationX>
-        <locationY>3770</locationY>
+        <locationY>4154</locationY>
         <connector>
             <targetReference>loop_to_create_application_location</targetReference>
         </connector>
@@ -1485,6 +1582,295 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
+        <name>Copy_1_of_Owner_Details_Screen</name>
+        <label>Copy 1 of Owner Details Screen</label>
+        <locationX>952</locationX>
+        <locationY>2090</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Evaluate_Add_Owner</targetReference>
+        </connector>
+        <fields>
+            <name>Copy_1_of_header_5</name>
+            <extensionName>c:cVRD_DS_Dev_App_header</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Copy_1_of_Owner_Info_stage</name>
+            <extensionName>clariti:FlowStages</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>currentStage</name>
+                <value>
+                    <stringValue>Owner Information</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>stages</name>
+                <value>
+                    <elementReference>Stage</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Copy_1_of_Owner_Details_Screen_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Copy_1_of_Owner_Details_Screen_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Copy_1_of_Owner_Information</name>
+            <fieldText>Owner Information</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Copy_1_of_Owner_Information_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>First_Name1</name>
+                    <extensionName>c:readOnlyFieldsForApplicationJourney</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>fieldType</name>
+                        <value>
+                            <stringValue>text</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>fieldLabel</name>
+                        <value>
+                            <stringValue>First Name</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>fieldValue</name>
+                        <value>
+                            <elementReference>$User.FirstName</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Last_Name1</name>
+                    <extensionName>c:readOnlyFieldsForApplicationJourney</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>fieldType</name>
+                        <value>
+                            <stringValue>text</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>fieldLabel</name>
+                        <value>
+                            <stringValue>Last Name</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>fieldValue</name>
+                        <value>
+                            <elementReference>$User.LastName</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Email1</name>
+                    <extensionName>c:readOnlyFieldsForApplicationJourney</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>fieldType</name>
+                        <value>
+                            <stringValue>email</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>fieldLabel</name>
+                        <value>
+                            <stringValue>Email</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>fieldValue</name>
+                        <value>
+                            <elementReference>$User.Email</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Phone1</name>
+                    <extensionName>c:readOnlyFieldsForApplicationJourney</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>fieldType</name>
+                        <value>
+                            <stringValue>Phone</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>fieldLabel</name>
+                        <value>
+                            <stringValue>Phone</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>fieldValue</name>
+                        <value>
+                            <elementReference>$User.Phone</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Copy_1_of_Owner_Information_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Mailing_Address</name>
+                    <defaultValue>
+                        <stringValue>{!$User.Street}
+{!$User.City}
+{!$User.State}
+{!$User.CountryCode}</stringValue>
+                    </defaultValue>
+                    <fieldText>Mailing Address</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>City</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>$User.City</elementReference>
+                    </defaultValue>
+                    <fieldText>City</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Province</name>
+                    <choiceReferences>ProvinceChoiceSet</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>$User.State</elementReference>
+                    </defaultValue>
+                    <fieldText>Province</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Postal_Code</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>$User.PostalCode</elementReference>
+                    </defaultValue>
+                    <fieldText>Postal_Code</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Copy_1_of_AddOwnerButton</name>
+            <extensionName>clariti:flowButtonBar</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>alignment</name>
+                <value>
+                    <stringValue>right</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>orientation</name>
+                <value>
+                    <stringValue>horizontal</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>showLines</name>
+                <value>
+                    <stringValue>neither</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>actionMode</name>
+                <value>
+                    <stringValue>navigation</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <stringValue>no</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>multiselect</name>
+                <value>
+                    <stringValue>no</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>buttons</name>
+                <value>
+                    <stringValue>[{&quot;label&quot;:&quot;Add Another Owner&quot;,&quot;value&quot;:&quot;Add Another Owner&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:adduser&quot;,&quot;index&quot;:0}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>Description_Screen</name>
         <label>Description Screen</label>
         <locationX>820</locationX>
@@ -1680,7 +2066,7 @@
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
         <locationX>1458</locationX>
-        <locationY>2306</locationY>
+        <locationY>2690</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1811,7 +2197,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1810</locationX>
-        <locationY>2954</locationY>
+        <locationY>3338</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2174,7 +2560,7 @@
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
         <locationX>1458</locationX>
-        <locationY>2522</locationY>
+        <locationY>2906</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2506,7 +2892,7 @@
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
         <locationX>1458</locationX>
-        <locationY>2414</locationY>
+        <locationY>2798</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2616,7 +3002,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>842</locationX>
-        <locationY>4418</locationY>
+        <locationY>4802</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2652,7 +3038,7 @@
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
         <locationX>1458</locationX>
-        <locationY>2630</locationY>
+        <locationY>3014</locationY>
         <connector>
             <targetReference>Rec_check</targetReference>
         </connector>
@@ -2687,7 +3073,7 @@
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
         <locationX>842</locationX>
-        <locationY>4526</locationY>
+        <locationY>4910</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
