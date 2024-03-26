@@ -135,7 +135,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>930</locationX>
-        <locationY>3254</locationY>
+        <locationY>3446</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -158,7 +158,7 @@
         <name>assign_application_id_on_application_location</name>
         <label>assign application id on application location</label>
         <locationX>930</locationX>
-        <locationY>4310</locationY>
+        <locationY>4502</locationY>
         <assignmentItems>
             <assignToReference>loop_to_create_application_location.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -181,7 +181,7 @@
         <name>Assign_Application_Record_Id_to_Comment_Record</name>
         <label>Assign Application Record Id to Comment Record</label>
         <locationX>666</locationX>
-        <locationY>3770</locationY>
+        <locationY>3962</locationY>
         <assignmentItems>
             <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
             <operator>Assign</operator>
@@ -299,6 +299,78 @@
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Postal_Code__c</assignToReference>
             <operator>Assign</operator>
         </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</name>
+        <label>Copy 1 of Update Primary Owner check on Application Contact Record</label>
+        <locationX>1590</locationX>
+        <locationY>2498</locationY>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__First_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.FirstName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Last_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.LastName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Phone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Phone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_Street__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Street</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_City__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.City</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.PostalCode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Application_Contact_Record</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Environment_Management_Act</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>DPA_Stages_assignment</name>
@@ -474,8 +546,8 @@
     <assignments>
         <name>Update_Primary_Owner_check_on_Application_Contact_Record</name>
         <label>Update Primary Owner check on Application Contact Record</label>
-        <locationX>1458</locationX>
-        <locationY>2390</locationY>
+        <locationX>1326</locationX>
+        <locationY>2498</locationY>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
             <operator>Assign</operator>
@@ -656,7 +728,7 @@
         <name>Check_if_Comment_is_empty_or_not</name>
         <label>Check if Comment is empty or not</label>
         <locationX>842</locationX>
-        <locationY>3554</locationY>
+        <locationY>3746</locationY>
         <defaultConnector>
             <targetReference>loop_to_create_application_location</targetReference>
         </defaultConnector>
@@ -678,12 +750,37 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Copy_1_of_Is_Agent</name>
+        <label>Copy 1 of Is Agent</label>
+        <locationX>1458</locationX>
+        <locationY>2390</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Agent_is_Available</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+            </connector>
+            <label>Copy 1 of Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
         <locationX>820</locationX>
         <locationY>2282</locationY>
         <defaultConnector>
-            <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+            <targetReference>Copy_1_of_Is_Agent</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -781,7 +878,7 @@
         <name>Rec_check</name>
         <label>Rec check</label>
         <locationX>1458</locationX>
-        <locationY>2930</locationY>
+        <locationY>3122</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -880,7 +977,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>842</locationX>
-        <locationY>3146</locationY>
+        <locationY>3338</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -894,7 +991,7 @@
         <name>Loop_for_Comment_Records</name>
         <label>Loop for Comment Records</label>
         <locationX>578</locationX>
-        <locationY>3662</locationY>
+        <locationY>3854</locationY>
         <collectionReference>CommentRecords</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -922,7 +1019,7 @@
         <name>loop_to_create_application_location</name>
         <label>loop to create application location</label>
         <locationX>842</locationX>
-        <locationY>4202</locationY>
+        <locationY>4394</locationY>
         <collectionReference>Application_Location_Record_Collation</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -955,7 +1052,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>842</locationX>
-        <locationY>3446</locationY>
+        <locationY>3638</locationY>
         <connector>
             <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
         </connector>
@@ -969,7 +1066,7 @@
         <name>create_application_location_record</name>
         <label>create application location record</label>
         <locationX>842</locationX>
-        <locationY>4502</locationY>
+        <locationY>4694</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -983,7 +1080,7 @@
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>842</locationX>
-        <locationY>3038</locationY>
+        <locationY>3230</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -1075,7 +1172,7 @@
         <name>Create_Comment_Record</name>
         <label>Create Comment Record</label>
         <locationX>578</locationX>
-        <locationY>3962</locationY>
+        <locationY>4154</locationY>
         <connector>
             <targetReference>loop_to_create_application_location</targetReference>
         </connector>
@@ -1692,10 +1789,17 @@
                 <name>Copy_1_of_Owner_Information_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <fieldType>ObjectProvided</fieldType>
+                    <name>Mailing_Address</name>
+                    <defaultValue>
+                        <stringValue>{!$User.Street}
+{!$User.City}
+{!$User.State}
+{!$User.CountryCode}</stringValue>
+                    </defaultValue>
+                    <fieldText>Mailing Address</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Street__c</objectFieldReference>
+                    <isRequired>true</isRequired>
                 </fields>
                 <fields>
                     <name>City</name>
@@ -1991,7 +2095,7 @@
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
         <locationX>1458</locationX>
-        <locationY>2498</locationY>
+        <locationY>2690</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2122,7 +2226,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1810</locationX>
-        <locationY>3146</locationY>
+        <locationY>3338</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2485,7 +2589,7 @@
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
         <locationX>1458</locationX>
-        <locationY>2714</locationY>
+        <locationY>2906</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2817,7 +2921,7 @@
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
         <locationX>1458</locationX>
-        <locationY>2606</locationY>
+        <locationY>2798</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2927,7 +3031,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>842</locationX>
-        <locationY>4610</locationY>
+        <locationY>4802</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2963,7 +3067,7 @@
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
         <locationX>1458</locationX>
-        <locationY>2822</locationY>
+        <locationY>3014</locationY>
         <connector>
             <targetReference>Rec_check</targetReference>
         </connector>
@@ -2998,7 +3102,7 @@
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
         <locationX>842</locationX>
-        <locationY>4718</locationY>
+        <locationY>4910</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
