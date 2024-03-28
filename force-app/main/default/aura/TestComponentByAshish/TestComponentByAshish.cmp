@@ -1,0 +1,40 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+	<!--Declaring attribute for aura component-->
+    <aura:attribute name="Name" type="String" />
+    <aura:attribute name="loadTable" type="boolean" default="false"/>
+    <aura:attribute name="AccList" type="List" />
+	<aura:attribute name="SearchName" type="String" />    
+    <!--Main UI Start Here-->
+    <h1>Dummy Site for deployment testing</h1><br/>
+    <div style="width:100%;Height:700px;Background-color:white;">
+    	<lightning:input type="String" label="Account Name" name="Name" value="{!v.Name}" onchange="{!c.handleName}"/>
+    	<lightning:button variant="brand" label="Save" title="Brand action" onclick="{! c.handleClick }" />
+        <br/>
+        <br/>
+        <div>
+        <lightning:input type="String" label="Enter Account Name" name="Name" value="{!v.SearchName}"/>
+        <lightning:button variant="brand" label="LoadAccounts" title="Brand action" onclick="{! c.searchRecord }" />
+        </div>
+    <aura:if isTrue="{!v.loadTable}">
+    
+    <div class="slds"> 
+    <table class="slds-table slds-table--bordered slds-table_fixed-layout slds-table_resizable-cols">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate">Account Id</span></th>
+                <th scope="col"><span class="slds-truncate">Account Name</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.AccList}" var="a">
+                <tr>
+                    <td>{!a.Id}</td>
+                    <td>{!a.Name}</td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+        </div>
+        </aura:if>
+    </div>
+</aura:component>
