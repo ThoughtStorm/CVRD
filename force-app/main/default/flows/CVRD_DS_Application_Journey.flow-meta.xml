@@ -135,7 +135,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>930</locationX>
-        <locationY>3062</locationY>
+        <locationY>4046</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -158,7 +158,7 @@
         <name>assign_application_id_on_application_location</name>
         <label>assign application id on application location</label>
         <locationX>930</locationX>
-        <locationY>4118</locationY>
+        <locationY>5102</locationY>
         <assignmentItems>
             <assignToReference>loop_to_create_application_location.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -181,7 +181,7 @@
         <name>Assign_Application_Record_Id_to_Comment_Record</name>
         <label>Assign Application Record Id to Comment Record</label>
         <locationX>666</locationX>
-        <locationY>3578</locationY>
+        <locationY>4562</locationY>
         <assignmentItems>
             <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
             <operator>Assign</operator>
@@ -205,6 +205,52 @@
         </assignmentItems>
         <connector>
             <targetReference>Loop_for_Comment_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Iteration_Count</name>
+        <label>Assign Iteration Count</label>
+        <locationX>842</locationX>
+        <locationY>3230</locationY>
+        <assignmentItems>
+            <assignToReference>IsFirstLocationRecord</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Application_Location_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Location_Record_to_application</name>
+        <label>Assign Location Record to application</label>
+        <locationX>930</locationX>
+        <locationY>3554</locationY>
+        <assignmentItems>
+            <assignToReference>LocationPID</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Application_Location_Record.MUSW__Parcel__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>LocationAddress</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Application_Location_Record.MUSW__Address__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>IsFirstLocationRecord</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Application_Location_Record</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -660,7 +706,7 @@
         <name>Check_if_Comment_is_empty_or_not</name>
         <label>Check if Comment is empty or not</label>
         <locationX>842</locationX>
-        <locationY>3362</locationY>
+        <locationY>4346</locationY>
         <defaultConnector>
             <targetReference>loop_to_create_application_location</targetReference>
         </defaultConnector>
@@ -679,6 +725,56 @@
                 <targetReference>Loop_for_Comment_Records</targetReference>
             </connector>
             <label>Comment is not empty</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Iteration_Count</name>
+        <label>Check Iteration Count</label>
+        <locationX>1062</locationX>
+        <locationY>3446</locationY>
+        <defaultConnector>
+            <targetReference>Loop_Application_Location_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Count_Equal_to_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsFirstLocationRecord</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Location_Record_to_application</targetReference>
+            </connector>
+            <label>Count Equal to 1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Is_Agent</name>
+        <label>Copy 1 of Is Agent</label>
+        <locationX>1458</locationX>
+        <locationY>2390</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Agent_is_Available</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+            </connector>
+            <label>Copy 1 of Yes</label>
         </rules>
     </decisions>
     <decisions>
@@ -773,7 +869,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Application_record</targetReference>
+                <targetReference>Assign_Iteration_Count</targetReference>
             </connector>
             <label>save record</label>
         </rules>
@@ -851,7 +947,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>842</locationX>
-        <locationY>2954</locationY>
+        <locationY>3938</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -862,10 +958,24 @@
         </noMoreValuesConnector>
     </loops>
     <loops>
+        <name>Loop_Application_Location_Record</name>
+        <label>Loop Application Location Record</label>
+        <locationX>842</locationX>
+        <locationY>3338</locationY>
+        <collectionReference>Application_Location_Record_Collation</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Check_Iteration_Count</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Create_Application_record</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
         <name>Loop_for_Comment_Records</name>
         <label>Loop for Comment Records</label>
         <locationX>578</locationX>
-        <locationY>3470</locationY>
+        <locationY>4454</locationY>
         <collectionReference>CommentRecords</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -893,7 +1003,7 @@
         <name>loop_to_create_application_location</name>
         <label>loop to create application location</label>
         <locationX>842</locationX>
-        <locationY>4010</locationY>
+        <locationY>4994</locationY>
         <collectionReference>Application_Location_Record_Collation</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -926,7 +1036,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>842</locationX>
-        <locationY>3254</locationY>
+        <locationY>4238</locationY>
         <connector>
             <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
         </connector>
@@ -940,7 +1050,7 @@
         <name>create_application_location_record</name>
         <label>create application location record</label>
         <locationX>842</locationX>
-        <locationY>4310</locationY>
+        <locationY>5294</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -954,7 +1064,7 @@
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>842</locationX>
-        <locationY>2846</locationY>
+        <locationY>3830</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -1010,9 +1120,21 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>MUSW__Address__c</field>
+            <value>
+                <elementReference>LocationAddress</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>MUSW__Applicant__c</field>
             <value>
                 <elementReference>$User.ContactId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Parcel__c</field>
+            <value>
+                <elementReference>LocationPID</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1046,7 +1168,7 @@
         <name>Create_Comment_Record</name>
         <label>Create Comment Record</label>
         <locationX>578</locationX>
-        <locationY>3770</locationY>
+        <locationY>4754</locationY>
         <connector>
             <targetReference>loop_to_create_application_location</targetReference>
         </connector>
@@ -1811,7 +1933,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1810</locationX>
-        <locationY>2954</locationY>
+        <locationY>3938</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2616,7 +2738,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>842</locationX>
-        <locationY>4418</locationY>
+        <locationY>5402</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2687,7 +2809,7 @@
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
         <locationX>842</locationX>
-        <locationY>4526</locationY>
+        <locationY>5510</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
@@ -2801,6 +2923,28 @@
         <name>InitialStage</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>IsFirstLocationRecord</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>LocationAddress</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>LocationPID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
     </variables>
