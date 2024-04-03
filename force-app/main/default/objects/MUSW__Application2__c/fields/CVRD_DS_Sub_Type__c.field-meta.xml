@@ -12,72 +12,52 @@
         <restricted>true</restricted>
         <valueSetName>CVRD_DS_Sub_Type</valueSetName>
         <valueSettings>
-            <controllingFieldValue>Development_Permit</controllingFieldValue>
-            <valueName>Agricultural</valueName>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>Change to hours</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Development_Permit</controllingFieldValue>
-            <valueName>Amendment/Extension</valueName>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>Lounge Endorsment</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Development_Permit</controllingFieldValue>
-            <valueName>Conservation/GHG reduction</valueName>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>New Outdoor Patio</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Development_Permit</controllingFieldValue>
-            <valueName>Environmental and Hazard</valueName>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>New Licence</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Development_Permit</controllingFieldValue>
-            <valueName>Form and Character</valueName>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>Relocate Licence</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Development_Permit</controllingFieldValue>
-            <valueName>Form and Character - Signs</valueName>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>Increase to Capacity</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
-            <valueName>Accreted Land</valueName>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>Special Event Permit</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
-            <valueName>Bare land Strata</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
-            <valueName>Building Strata</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
-            <valueName>Conventional Subdivision</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
-            <valueName>Leases</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
-            <valueName>Phased Strata</valueName>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>Special Event Permit - 150 + attendees</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
-            <valueName>Development Variance Permit - Major</valueName>
+            <valueName>Major - New</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
-            <valueName>Development Variance Permit - Minor</valueName>
+            <valueName>Major - Extension</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
-            <valueName>Extension-Major</valueName>
+            <valueName>Minor - New</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
-            <valueName>Extension-Minor</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
-            <valueName>Land Use Bylaw Amendment</valueName>
+            <valueName>Minor - Extension</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
@@ -88,8 +68,12 @@
             <valueName>Zoning Amendment</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <valueName>Land Use Bylaw Amendment</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
-            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
             <valueName>Amendment</valueName>
         </valueSettings>
         <valueSettings>
@@ -98,7 +82,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
-            <valueName>ALC Exclusion</valueName>
+            <valueName>Residential Use</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
@@ -106,27 +90,29 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
-            <valueName>Residential Use</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
             <valueName>Subdivision</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>ALC Exclusion</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
             <valueName>New</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
             <valueName>Renewal</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Liquor_Cannabis_Licence_Referrals</controllingFieldValue>
-            <valueName>Delegated</valueName>
+            <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
+            <valueName>Retail Sales</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Liquor_Cannabis_Licence_Referrals</controllingFieldValue>
-            <valueName>Non-Delegated</valueName>
+            <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
+            <valueName>Cannabis Licence Referrals</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

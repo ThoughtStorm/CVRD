@@ -135,7 +135,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>930</locationX>
-        <locationY>3254</locationY>
+        <locationY>4046</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -205,6 +205,52 @@
         </assignmentItems>
         <connector>
             <targetReference>Loop_for_Comment_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Iteration_Count</name>
+        <label>Assign Iteration Count</label>
+        <locationX>842</locationX>
+        <locationY>3230</locationY>
+        <assignmentItems>
+            <assignToReference>IsFirstLocationRecord</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Application_Location_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Location_Record_to_application</name>
+        <label>Assign Location Record to application</label>
+        <locationX>930</locationX>
+        <locationY>3554</locationY>
+        <assignmentItems>
+            <assignToReference>LocationPID</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Application_Location_Record.MUSW__Parcel__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>LocationAddress</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Application_Location_Record.MUSW__Address__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>IsFirstLocationRecord</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Application_Location_Record</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -299,6 +345,78 @@
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Postal_Code__c</assignToReference>
             <operator>Assign</operator>
         </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</name>
+        <label>Copy 1 of Update Primary Owner check on Application Contact Record</label>
+        <locationX>1590</locationX>
+        <locationY>2498</locationY>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__First_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.FirstName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Last_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.LastName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Phone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Phone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_Street__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Street</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_City__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.City</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.PostalCode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ApplicationContactList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Application_Contact_Record</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Environment_Management_Act</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>DPA_Stages_assignment</name>
@@ -678,12 +796,62 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Check_Iteration_Count</name>
+        <label>Check Iteration Count</label>
+        <locationX>1062</locationX>
+        <locationY>3446</locationY>
+        <defaultConnector>
+            <targetReference>Loop_Application_Location_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Count_Equal_to_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsFirstLocationRecord</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Location_Record_to_application</targetReference>
+            </connector>
+            <label>Count Equal to 1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Is_Agent</name>
+        <label>Copy 1 of Is Agent</label>
+        <locationX>1458</locationX>
+        <locationY>2390</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Agent_is_Available</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+            </connector>
+            <label>Copy 1 of Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
         <locationX>820</locationX>
         <locationY>2282</locationY>
         <defaultConnector>
-            <targetReference>Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
+            <targetReference>Copy_1_of_Is_Agent</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -794,7 +962,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Application_record</targetReference>
+                <targetReference>Assign_Iteration_Count</targetReference>
             </connector>
             <label>save record</label>
         </rules>
@@ -888,6 +1056,20 @@
         </nextValueConnector>
         <noMoreValuesConnector>
             <targetReference>Create_Application_Contact_records</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Loop_Application_Location_Record</name>
+        <label>Loop Application Location Record</label>
+        <locationX>842</locationX>
+        <locationY>3338</locationY>
+        <collectionReference>Application_Location_Record_Collation</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Check_Iteration_Count</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Create_Application_record</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
@@ -1039,9 +1221,21 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>MUSW__Address__c</field>
+            <value>
+                <elementReference>LocationAddress</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>MUSW__Applicant__c</field>
             <value>
                 <elementReference>$User.ContactId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Parcel__c</field>
+            <value>
+                <elementReference>LocationPID</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1692,10 +1886,17 @@
                 <name>Copy_1_of_Owner_Information_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <fieldType>ObjectProvided</fieldType>
+                    <name>Mailing_Address</name>
+                    <defaultValue>
+                        <stringValue>{!$User.Street}
+{!$User.City}
+{!$User.State}
+{!$User.CountryCode}</stringValue>
+                    </defaultValue>
+                    <fieldText>Mailing Address</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Application_Contact_Record.CVRD_DS_Owner_Street__c</objectFieldReference>
+                    <isRequired>true</isRequired>
                 </fields>
                 <fields>
                     <name>City</name>
@@ -1991,7 +2192,7 @@
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
         <locationX>1458</locationX>
-        <locationY>2498</locationY>
+        <locationY>2690</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2122,7 +2323,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1810</locationX>
-        <locationY>3146</locationY>
+        <locationY>3938</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2485,7 +2686,7 @@
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
         <locationX>1458</locationX>
-        <locationY>2714</locationY>
+        <locationY>2906</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2817,7 +3018,7 @@
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
         <locationX>1458</locationX>
-        <locationY>2606</locationY>
+        <locationY>2798</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2927,7 +3128,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>842</locationX>
-        <locationY>4610</locationY>
+        <locationY>5402</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2963,7 +3164,7 @@
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
         <locationX>1458</locationX>
-        <locationY>2822</locationY>
+        <locationY>3014</locationY>
         <connector>
             <targetReference>Rec_check</targetReference>
         </connector>
@@ -2998,7 +3199,7 @@
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
         <locationX>842</locationX>
-        <locationY>4718</locationY>
+        <locationY>5510</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
@@ -3112,6 +3313,28 @@
         <name>InitialStage</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>IsFirstLocationRecord</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>LocationAddress</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>LocationPID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
     </variables>

@@ -146,6 +146,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_DPA_Sub_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Related_Application__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Application2__c.MUSW__Completion_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
