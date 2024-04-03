@@ -741,7 +741,6 @@
         <tab>MUSW__Application2__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
-    <userLicense>Customer Community Login</userLicense>
     <userPermissions>
         <enabled>true</enabled>
         <name>ApiEnabled</name>
