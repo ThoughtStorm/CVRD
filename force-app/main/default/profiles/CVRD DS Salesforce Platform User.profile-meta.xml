@@ -80,7 +80,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Application__c</field>
         <readable>true</readable>
