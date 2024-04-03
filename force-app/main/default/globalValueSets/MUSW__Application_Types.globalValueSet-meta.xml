@@ -61,16 +61,6 @@
         <label>Subdivision (Referral)</label>
     </customValue>
     <customValue>
-        <fullName>Cannabis_License</fullName>
-        <default>false</default>
-        <label>Cannabis License</label>
-    </customValue>
-    <customValue>
-        <fullName>Liquor_Cannabis_Licence_Referrals</fullName>
-        <default>false</default>
-        <label>Liquor/Cannabis Licence Referrals</label>
-    </customValue>
-    <customValue>
         <fullName>Crown_Land_Referrals</fullName>
         <default>false</default>
         <label>Crown Land Referrals</label>
@@ -81,40 +71,50 @@
         <label>Telecommunication Antenna Structure</label>
     </customValue>
     <customValue>
-        <fullName>Animal</fullName>
+        <fullName>Cannabis Retail Licence</fullName>
         <default>false</default>
-        <isActive>false</isActive>
-        <label>Animal</label>
+        <label>Cannabis Retail Licence</label>
     </customValue>
     <customValue>
-        <fullName>Liquor</fullName>
+        <fullName>Liquor Licence Referrals</fullName>
         <default>false</default>
-        <isActive>false</isActive>
-        <label>Liquor</label>
+        <label>Liquor Licence Referrals</label>
     </customValue>
     <customValue>
-        <fullName>Restaurant</fullName>
+        <fullName>Land Use Contract Amendment or Discharge</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Restaurant</label>
+        <label>Land Use Contract Amendment or Discharge</label>
     </customValue>
     <customValue>
-        <fullName>Water Heater Replacement</fullName>
+        <fullName>Cannabis_Retail_License</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Water Heater Replacement</label>
+        <label>Cannabis Retail License</label>
     </customValue>
     <customValue>
-        <fullName>Electrical</fullName>
+        <fullName>Telecommunication_Antanna_Structure</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Electrical</label>
+        <label>Telecommunication Antanna Structure</label>
     </customValue>
     <customValue>
-        <fullName>Development Review</fullName>
+        <fullName>Cannabis_License</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Development Review</label>
+        <label>Cannabis License</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor_Cannabis_Licence_Referrals</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Liquor/Cannabis Licence Referrals</label>
+    </customValue>
+    <customValue>
+        <fullName>Building</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Building</label>
     </customValue>
     <customValue>
         <fullName>Variance</fullName>
@@ -123,10 +123,40 @@
         <label>Variance</label>
     </customValue>
     <customValue>
-        <fullName>Building</fullName>
+        <fullName>Development Review</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Building</label>
+        <label>Development Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Electrical</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Electrical</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Heater Replacement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Water Heater Replacement</label>
+    </customValue>
+    <customValue>
+        <fullName>Restaurant</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Restaurant</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Liquor</label>
+    </customValue>
+    <customValue>
+        <fullName>Animal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Animal</label>
     </customValue>
     <customValue>
         <fullName>Contractor</fullName>
@@ -145,23 +175,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Business</label>
-    </customValue>
-    <customValue>
-        <fullName>Land Use Contract Amendment or Discharge</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Land Use Contract Amendment or Discharge</label>
-    </customValue>
-    <customValue>
-        <fullName>Telecommunication_Antanna_Structure</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Telecommunication Antanna Structure</label>
-    </customValue>
-    <customValue>
-        <fullName>Cannabis Retail License</fullName>
-        <default>false</default>
-        <label>Cannabis Retail License</label>
     </customValue>
     <masterLabel>Application Types</masterLabel>
     <sorted>false</sorted>
