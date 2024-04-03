@@ -111,12 +111,6 @@
         <label>Liquor/Cannabis Licence Referrals</label>
     </customValue>
     <customValue>
-        <fullName>Telecommunication Antenna Structure</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Telecommunication Antenna Structure</label>
-    </customValue>
-    <customValue>
         <fullName>Building</fullName>
         <default>false</default>
         <isActive>false</isActive>
