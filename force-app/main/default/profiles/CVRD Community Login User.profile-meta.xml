@@ -155,7 +155,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.MUSW__Completion_Date__c</field>
         <readable>true</readable>
