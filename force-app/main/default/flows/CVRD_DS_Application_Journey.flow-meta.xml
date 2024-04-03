@@ -91,7 +91,7 @@
         <name>Add_New_Contact_in_the_Application_contact_list</name>
         <label>Add New Contact in the Application contact list</label>
         <locationX>182</locationX>
-        <locationY>2798</locationY>
+        <locationY>2606</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
             <operator>Assign</operator>
@@ -280,7 +280,7 @@
         <name>Assign_Primary_owner_mailing_address_to_new_owner</name>
         <label>Assign Primary owner mailing address to new owner</label>
         <locationX>50</locationX>
-        <locationY>2606</locationY>
+        <locationY>2414</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</assignToReference>
             <operator>Assign</operator>
@@ -324,7 +324,7 @@
         <name>Clearing_address_details_from_add_owner</name>
         <label>Clearing address details from add owner</label>
         <locationX>182</locationX>
-        <locationY>2906</locationY>
+        <locationY>2714</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_City__c</assignToReference>
             <operator>Assign</operator>
@@ -345,6 +345,10 @@
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Postal_Code__c</assignToReference>
             <operator>Assign</operator>
         </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Owner_Details_Screen</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</name>
@@ -749,7 +753,7 @@
         <name>Check_for_mailing_address_is_same_or_not</name>
         <label>Check for mailing address is same or not</label>
         <locationX>182</locationX>
-        <locationY>2498</locationY>
+        <locationY>2306</locationY>
         <defaultConnector>
             <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
         </defaultConnector>
@@ -849,7 +853,7 @@
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
         <locationX>820</locationX>
-        <locationY>2282</locationY>
+        <locationY>2090</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_Is_Agent</targetReference>
         </defaultConnector>
@@ -901,7 +905,7 @@
         <locationX>820</locationX>
         <locationY>1274</locationY>
         <defaultConnector>
-            <targetReference>Is_Agent</targetReference>
+            <targetReference>Owner_Details_Screen</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -918,31 +922,6 @@
                 <targetReference>Get_PID_Record</targetReference>
             </connector>
             <label>Application Type is Development permit</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Is_Agent</name>
-        <label>Is Agent</label>
-        <locationX>820</locationX>
-        <locationY>1982</locationY>
-        <defaultConnector>
-            <targetReference>Copy_1_of_Owner_Details_Screen</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>Yes</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Agent_is_Available</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Owner_Details_Screen</targetReference>
-            </connector>
-            <label>Yes</label>
         </rules>
     </decisions>
     <decisions>
@@ -990,14 +969,6 @@
         <object xsi:nil="true"/>
         <picklistField>CVRD_DSCommercialOrIndustrial_Purposes__c</picklistField>
         <picklistObject>MUSW__Application2__c</picklistObject>
-    </dynamicChoiceSets>
-    <dynamicChoiceSets>
-        <name>ProvinceChoiceSet</name>
-        <dataType>Picklist</dataType>
-        <displayField xsi:nil="true"/>
-        <object xsi:nil="true"/>
-        <picklistField>CVRD_DS_Owner_State__c</picklistField>
-        <picklistObject>MUSW__Application_Contact__c</picklistObject>
     </dynamicChoiceSets>
     <dynamicChoiceSets>
         <name>RecordTypesList</name>
@@ -1305,7 +1276,7 @@
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
         <locationX>182</locationX>
-        <locationY>2390</locationY>
+        <locationY>2198</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2093,7 +2064,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Is_Agent</targetReference>
+            <targetReference>Owner_Details_Screen</targetReference>
         </connector>
         <fields>
             <name>header_4</name>
@@ -2346,8 +2317,8 @@
     <screens>
         <name>Owner_Details_Screen</name>
         <label>Owner Details Screen</label>
-        <locationX>688</locationX>
-        <locationY>2090</locationY>
+        <locationX>820</locationX>
+        <locationY>1982</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -3159,7 +3130,7 @@
             <targetReference>Stages_assignment</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <subflows>
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
