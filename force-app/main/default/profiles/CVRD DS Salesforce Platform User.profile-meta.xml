@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
@@ -335,6 +334,11 @@
         <field>MUSW__Application2__c.MUSW__Total_Payments__c</field>
         <readable>true</readable>
     </fieldPermissions>
+     <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review__c.CVRD_DS_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.MUSW__Type2__c</field>
@@ -353,11 +357,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.MUSW__Use_Group__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-     <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Review__c.CVRD_DS_Comments__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
