@@ -39,6 +39,10 @@
                 <behavior>Edit</behavior>
                 <field>MUSW__Agenda_Close_Date__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Cancelled__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
