@@ -138,11 +138,6 @@
         <excludeButtons>MassChangeOwner</excludeButtons>
         <fields>NAME</fields>
         <fields>MUSW__BG_Description__c</fields>
-        <fields>MUSW__BG_File_Name__c</fields>
-        <fields>MUSW__BG_Page__c</fields>
-        <fields>MUSW__Author__c</fields>
-        <fields>MUSW__BG_Status__c</fields>
-        <fields>MUSW__BG_Type__c</fields>
         <fields>LAST_UPDATE</fields>
         <relatedList>MUSW__Comment__c.MUSW__Milestone__c</relatedList>
         <sortField>LAST_UPDATE</sortField>
@@ -160,7 +155,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hHr00000cspha</masterLabel>
+        <masterLabel>00hHr00000csph5</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
