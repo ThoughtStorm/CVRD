@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Comment_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(  MUSW__Completed_Action__c , &quot;Corrections Required&quot;),
+ISBLANK(  CVRD_DS_Comments__c )
+)</errorConditionFormula>
+    <errorDisplayField>CVRD_DS_Comments__c</errorDisplayField>
+    <errorMessage>You must enter an explanation in the Comments field after setting the field Completed Action to Corrections Required</errorMessage>
+</ValidationRule>

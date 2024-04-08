@@ -289,6 +289,11 @@
         <field>MUSW__Application2__c.MUSW__Project2__c</field>
         <readable>true</readable>
     </fieldPermissions>
+     <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review__c.CVRD_DS_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.MUSW__Project_Area__c</field>

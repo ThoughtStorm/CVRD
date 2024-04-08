@@ -19,10 +19,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>CVRD_DS_Internal_Referral_Division__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>CVRD_DS_Planner__c</field>
             </layoutItems>
         </layoutColumns>
@@ -34,6 +30,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>MUSW__Completed_Action__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Comments__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
