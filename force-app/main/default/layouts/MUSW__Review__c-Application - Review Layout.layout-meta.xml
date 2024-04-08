@@ -127,11 +127,6 @@
             <sortOrder>4</sortOrder>
         </platformActionListItems>
     </platformActionList>
-    <quickActionList>
-        <quickActionListItems>
-            <quickActionName>MUSW__Review__c.New_Referral</quickActionName>
-        </quickActionListItems>
-    </quickActionList>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
         <fields>TASK.WHO_NAME</fields>
