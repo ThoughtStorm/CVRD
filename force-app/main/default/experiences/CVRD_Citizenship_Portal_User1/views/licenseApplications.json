@@ -1,0 +1,77 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "1b4484fa-e543-4625-9c63-a9d7ca5b1204",
+  "label" : "License Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "8fb651c2-9f28-4c5e-9468-41bb4cc50faa",
+          "columns" : [ {
+            "UUID" : "a0bcc270-3fa7-43f8-b4c2-483e86d809d8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8fb651c2-9f28-4c5e-9468-41bb4cc50faa",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>License Applications</h1><p><br></p><p>You can start a new application by clicking the \"Next\" button below. At any time, you may click the \"Pause\" button to suspend your License application and finish at a later date. To access your paused applications, go to \"My Paused Applications.\"</p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "be912446-c144-4d6a-9369-82ba63df3bc2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "3e172140-af5b-470b-9961-5f2275a92e88",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a0bcc270-3fa7-43f8-b4c2-483e86d809d8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fc6c67df-458d-48aa-a39a-397be74ff2f4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "License Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "78b76a64-deb0-413b-9040-d0dbc973f4c8",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1a6bb993-d6a0-44a3-bd7d-5ea61d5226e2",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-License Applications"
+}

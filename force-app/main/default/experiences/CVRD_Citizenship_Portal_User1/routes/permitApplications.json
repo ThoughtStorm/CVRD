@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "1e0f4257-4054-484a-95d5-c7e1090d39f9",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Permit_Applications",
+  "id" : "c4d2ef0b-7171-4ce3-a7f5-b9f829328348",
+  "label" : "Permit Applications",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-Permit Applications",
+  "type" : "route",
+  "urlPrefix" : "permit-applications"
+}

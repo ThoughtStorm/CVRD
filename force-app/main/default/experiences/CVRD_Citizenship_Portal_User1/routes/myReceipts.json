@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "de9098f2-56b8-4c8d-b3d4-4ab6a415b846",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "My_Receipts",
+  "id" : "04e3fc1e-2a02-48fb-aa76-d8a532bd6579",
+  "label" : "My Receipts",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-My Receipts",
+  "type" : "route",
+  "urlPrefix" : "my-receipts"
+}

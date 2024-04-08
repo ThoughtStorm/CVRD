@@ -1,0 +1,71 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "03566269-fe2b-433e-b526-5864a34c8fc2",
+  "label" : "Request Inspection Date",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "805bf82a-8fd5-43de-9205-4351944cbd9a",
+          "columns" : [ {
+            "UUID" : "bfc84321-0781-4dd8-9a40-fb8e9e780dab",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "805bf82a-8fd5-43de-9205-4351944cbd9a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "[{\"label\":\"Permit_Id\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!Permit_Id}\"}]",
+            "flowName" : "clariti__Request_Inspection_Date"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "eca90b5f-5758-433f-8970-bed6fe64e590",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bfc84321-0781-4dd8-9a40-fb8e9e780dab",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "43a381e5-6c84-48ad-b23b-969ef9c9b2c8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Request Inspection Date"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "3f6d0f26-b100-428f-901f-a2cc2981d758",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b2026f84-ac0e-4bcd-bf7d-1c94ccfd1a5d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Request Inspection Date"
+}
