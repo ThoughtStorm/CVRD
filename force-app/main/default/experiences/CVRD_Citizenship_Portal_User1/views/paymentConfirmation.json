@@ -1,0 +1,70 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "60233d3a-bdb2-4a10-ab52-d2b482042970",
+  "label" : "Payment Confirmation",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a95ce938-d201-4178-8058-fe161161b63c",
+          "columns" : [ {
+            "UUID" : "9d11efea-6db1-410e-be6f-3c5cf4db039d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a95ce938-d201-4178-8058-fe161161b63c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>Your Payment is confirmed and the confirmation number is displayed on the screen. Keep the confirmation number you receive for your records. An email has been sent to you confirming the payment along with a copy of your receipt.&nbsp;If you would like to Print the receipt as a PDF, click Print Receipt.&nbsp;You can also email the receipt to yourself or to a different address. Click Email Receipt to send an email with a copy of the receipt to the specified address. If you want to simply view the receipt, click View Receipt.</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "5c1eaf31-b48c-4284-b39d-ca4165fb7093",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9d11efea-6db1-410e-be6f-3c5cf4db039d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "52e8d0d0-e896-4b4c-b20b-2c4a62794bf9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Payment Confirmation"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c86b183e-a115-4822-8a97-2503e7ceb027",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5811e913-3b2e-4ce4-9a78-38135f5c1082",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Payment Confirmation"
+}
