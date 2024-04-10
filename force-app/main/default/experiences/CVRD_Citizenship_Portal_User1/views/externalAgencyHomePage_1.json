@@ -1,0 +1,70 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "e3483107-dace-4b28-bc12-9a55fff48ecb",
+  "label" : "External Agency HomePage",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0) url(/sfsites/c/file-asset/CVRD_11?v=1) center center /cover",
+        "backgroundOverlay" : "rgba(255, 255, 255, 0.2)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "131229a1-fba1-49c3-9f2d-2410fd9e65af",
+          "columns" : [ {
+            "UUID" : "9cc6e5d0-f581-43ba-bef1-26f0fb98ab1f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 400
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "131229a1-fba1-49c3-9f2d-2410fd9e65af",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">﻿Welcome to the Cowichan Valley </strong></h1><h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">Regional District</strong></h1>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e45eedb4-b9dc-4e72-b9ae-086e2939af26",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9cc6e5d0-f581-43ba-bef1-26f0fb98ab1f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0cc6d1fa-6768-4aaf-ba80-2e58ec787c1e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "baa550ea-302a-48a7-bbd9-e776f30ab799",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9d574f42-918a-48a7-bc2a-013387c87706",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}
