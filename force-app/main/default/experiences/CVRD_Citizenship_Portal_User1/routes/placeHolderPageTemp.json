@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "b63d04e6-9517-4773-8a73-e51e8b866776",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Place_Holder_Page_Temp__c",
+  "id" : "e357e1b7-6d97-4673-bc02-5fc54d9e87ff",
+  "label" : "Place Holder Page Temp",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-place-holder-page-temp",
+  "type" : "route",
+  "urlPrefix" : "place-holder-page-temp"
+}
