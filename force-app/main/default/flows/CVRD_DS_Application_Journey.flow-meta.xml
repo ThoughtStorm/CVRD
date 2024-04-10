@@ -3185,7 +3185,7 @@
             <targetReference>Stages_assignment</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <subflows>
         <name>attestation_subflow</name>
         <label>attestation subflow</label>

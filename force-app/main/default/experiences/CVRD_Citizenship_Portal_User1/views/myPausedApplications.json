@@ -1,0 +1,119 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "c4e97f7b-2f84-4cc7-9e69-aefac6dd6716",
+  "label" : "My Paused Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6f1bc736-2521-4aee-ace9-8cb01ac50120",
+          "columns" : [ {
+            "UUID" : "8793e3dc-f59d-40b6-accb-5c9451ea7cb9",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6f1bc736-2521-4aee-ace9-8cb01ac50120",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>My Paused Applications</h1><p>To continue a paused application, click the \"Resume\" button. To delete a paused application, click the \"Delete\" button. Once a paused application is deleted, it cannot be restarted. The application will need to be restarted by using the buttons below. Please note that the Paused Application list below only shows up to ten (10) paused applications. If there are more then ten (10) pending applications, please complete a pause application or delete any that will not be completed.</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "67ceead1-90f9-4ecd-9f9e-0ed721c4caf4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8793e3dc-f59d-40b6-accb-5c9451ea7cb9",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ea34ee23-4cef-4028-bc71-396da4691b69",
+          "columns" : [ {
+            "UUID" : "fdd26a8c-8dff-4f0f-8941-589ce2cae1d2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ea34ee23-4cef-4028-bc71-396da4691b69",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "deleteButtonText" : "Delete",
+            "pageSize" : 10,
+            "resumeButtonAlign" : "right",
+            "resumeButtonLabel" : "Resume",
+            "showDeleteButton" : true,
+            "showNumberInTitle" : true,
+            "showOwnerName" : true,
+            "showPauseReason" : true,
+            "showPauseStep" : true,
+            "showPauseTime" : true,
+            "title" : "Paused Flows"
+          },
+          "componentName" : "forceCommunity:pausedInterviewCard",
+          "id" : "48b77dfa-fd05-45ca-a72c-c8e6bcaa0ef2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "fdd26a8c-8dff-4f0f-8941-589ce2cae1d2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "cd5c2100-4095-4b3b-89a3-4450a0587b00",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Paused Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "7c5b94ed-fa9e-4e7f-a0a6-ac091549a323",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "33747dcf-4bd3-4a62-8a39-dea225571b83",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-My Paused Applications"
+}

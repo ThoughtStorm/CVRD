@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "81b57ba9-475d-4693-b9ad-1e19ff47e593",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Receipt_Detail",
+  "id" : "81c32aa1-0be0-4dcb-9345-6407a91d2263",
+  "label" : "Receipt Detail",
+  "objectApiName" : "MUSW__Receipt__c",
+  "routeType" : "detail-a1S",
+  "type" : "route",
+  "urlPrefix" : "receipt"
+}
