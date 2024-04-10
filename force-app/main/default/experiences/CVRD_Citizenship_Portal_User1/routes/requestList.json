@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "eefece47-320c-4cfe-b7c4-10cf35771d68",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Request_List",
+  "id" : "8e6e51b5-1bbe-4293-8328-24da50a41911",
+  "label" : "Request List",
+  "objectApiName" : "MUSW__Request__c",
+  "routeType" : "list-a1W",
+  "type" : "route",
+  "urlPrefix" : "request"
+}

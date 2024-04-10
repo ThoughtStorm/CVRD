@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "57d02b4d-0f10-4b07-af4a-ab6290c71f54",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "New_Requests",
+  "id" : "c476ba68-6360-4518-8b0a-033e07a01ff9",
+  "label" : "New Requests",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-New Requests",
+  "type" : "route",
+  "urlPrefix" : "new-requests"
+}
