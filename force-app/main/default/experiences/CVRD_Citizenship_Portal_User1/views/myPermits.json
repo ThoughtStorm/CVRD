@@ -1,0 +1,157 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "cbe69856-990e-46cb-b7e8-76bb23c4200a",
+  "label" : "My Permits",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2dd8b348-2bd8-4852-bdad-50b3036b93cb",
+          "columns" : [ {
+            "UUID" : "53f00649-69e3-49ee-a2ff-17c2ba18cad3",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "841be391-137f-46e0-bc25-fcbd4fafc197",
+            "columnKey" : "be48f",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2dd8b348-2bd8-4852-bdad-50b3036b93cb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>My Permits</h1><p><br></p><p>Below is a list of your active permits. To see all of your permits, click the \"View All\" link at the bottom of the list. To see the details of a specific permit, click on the permit number.</p><p><br></p><p>If you would like to start a new permit application, click the&nbsp;&nbsp;\"New Permit Application\" button.&nbsp;&nbsp;To resume a paused application, go to \"My Paused Applications.\"</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c54f1fd5-6031-4d9d-b25f-aea2a3222293",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "53f00649-69e3-49ee-a2ff-17c2ba18cad3",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(18, 70, 84)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 25,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "large",
+            "noImageColor" : "rgb(212, 212, 212)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "",
+            "titleFontSize" : "large",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "f07bb66e-1de0-48ea-b2cd-56c0b2ecf0ff",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "841be391-137f-46e0-bc25-fcbd4fafc197",
+        "regionLabel" : "Column 2",
+        "regionName" : "be48f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "96abb3fd-7352-4770-8e40-d8c241abbcbf",
+          "columns" : [ {
+            "UUID" : "6af0a62e-dba1-47c8-9811-4be7f59a537d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "96abb3fd-7352-4770-8e40-d8c241abbcbf",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "Online_Active_Permits",
+            "layout" : "STANDARD",
+            "pageSize" : 100,
+            "scope" : "MUSW__Permit2__c",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "41f4d445-7663-4ac9-a211-37c943635413",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6af0a62e-dba1-47c8-9811-4be7f59a537d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "364d6f65-a1f6-49c4-bc6a-83bb1cde6ffa",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Permits"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b2a30080-680f-4b03-be9f-171019cd987c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "91d49f76-9650-47a6-ade9-5e41b73c90af",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-My Permits"
+}

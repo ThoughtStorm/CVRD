@@ -1,0 +1,105 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "3e02a3ff-55f0-460c-bd3e-bb7e2e4f7140",
+  "label" : "Permit Information",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "bdb2bcb9-3526-42e1-a8bb-bbe66d49dab3",
+          "columns" : [ {
+            "UUID" : "9e388f8b-886f-4fad-aac0-e7d6490c590a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "88393c69-7d6e-43e3-aa1d-60fe04229679",
+            "columnKey" : "dfe88",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "bdb2bcb9-3526-42e1-a8bb-bbe66d49dab3",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1><b>Permit Application Information</b></h1><p><br></p><p>Below you can find information on the process for each type of permit. To start a new application, click the \"New Permit Application\" button.</p><p><br></p><h2><b>Building Permits</b></h2><p>Building Permits are issued for the construction of all structures including new buildings, additions, interior finishing, signs, building moving and building demolitions. Generally, plan reviews are required and should be included with the application.</p><p><br></p><ul><li>Building</li><li>New Construction</li><li>Renovation</li><li>Garage</li><li>Fence</li><li>Outbuilding</li><li>Porch</li><li>Deck</li><li>Reroofing</li><li>Balcony</li><li>Retaining Wall</li><li>Swimming Pool</li></ul><p><br></p><h2><b>Trade Permits</b></h2><p>Trade permits are issued to a licensed contractor holding a valid business licence or home owner for any work undertaken if you are repairing, replacing, or installing electrical, mechanical, or plumbing fixtures.</p><p><br></p><ul><li>Electrical</li><li>Plumbing</li><li>Mechanical</li></ul><p><br></p><h2><b>Quick Permits</b></h2><p>&nbsp;Quick permits are issued for projects which do not require a plan review but may be subject to zoning approval and inspections.</p><p><br></p><ul><li>Water Heater Replacement</li><li>Solar Panel</li><li>Antenna</li><li>Sprinkler</li><li>HV/AC</li><li>Bath</li><li>Fireplace</li></ul><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "0cbe386b-72c9-4df3-a78e-fb558c9c2d0c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9e388f8b-886f-4fad-aac0-e7d6490c590a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(18, 70, 84)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 25,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "large",
+            "noImageColor" : "rgb(212, 212, 212)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "",
+            "titleFontSize" : "large",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "bc234c3a-3e20-4709-9326-9e959170ba79",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "88393c69-7d6e-43e3-aa1d-60fe04229679",
+        "regionLabel" : "Column 2",
+        "regionName" : "dfe88",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e2271198-f712-4b06-82e7-ba8964ad84c9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Permit Information"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c4b53714-2ea0-4e09-9336-1ea6f8255386",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "cf4ff23d-b819-4881-86ae-81f6526a5f5d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Permit Information"
+}
