@@ -16,17 +16,17 @@
                 <type>InternalLink</type>
             </navigationMenuItem>
             <navigationMenuItem>
-                <label>My Applications</label>
+                <label>My Paused Applications</label>
                 <position>1</position>
                 <publiclyAvailable>false</publiclyAvailable>
-                <target>/my-development-applications</target>
+                <target>/my-paused-applications</target>
                 <type>InternalLink</type>
             </navigationMenuItem>
             <navigationMenuItem>
-                <label>My Paused Applications</label>
+                <label>My Applications</label>
                 <position>2</position>
                 <publiclyAvailable>false</publiclyAvailable>
-                <target>/my-paused-applications</target>
+                <target>/my-development-applications</target>
                 <type>InternalLink</type>
             </navigationMenuItem>
         </subMenu>
