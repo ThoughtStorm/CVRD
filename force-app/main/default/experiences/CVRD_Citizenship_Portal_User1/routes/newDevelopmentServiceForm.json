@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "7a209632-dfd9-4ff6-84a2-375fa2012302",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "New_Development_Service_Form__c",
+  "id" : "53633a6d-d073-4c12-8404-4bf985ff5b05",
+  "label" : "New Development Service Form",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-new-development-service-form",
+  "type" : "route",
+  "urlPrefix" : "new-development-service-form"
+}

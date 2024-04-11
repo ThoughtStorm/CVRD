@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "47d31e78-d575-4298-82ba-bb1fee08dbd5",
+    "propertyOverrides" : {
+      "activeViewId" : "4b5fd483-97f6-464f-ab0c-96ccacc6ffdd"
+    },
+    "targetId" : "9cd829e1-5610-47b0-b078-fd024403f5db",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "External_Agency_Home_Page_External_Agency_Home_Page_Page",
+  "id" : "4ce68fcd-519c-4a60-afb2-afbcf011dcf4",
+  "type" : "experienceVariation"
+}

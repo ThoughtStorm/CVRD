@@ -1,0 +1,71 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "cd358233-e64b-4540-aa88-3d761a9a40c3",
+  "label" : "Submit Documents",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1d1292c2-5256-439e-b8ca-645149d601c2",
+          "columns" : [ {
+            "UUID" : "41da50d8-8404-4506-b5fc-b7df1baeb1b0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1d1292c2-5256-439e-b8ca-645149d601c2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "[{\"label\":\"ApplicationId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!Application_Id}\"},{\"label\":\"LicenseId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!License_Id}\"},{\"label\":\"PermitId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!Permit_Id}\"}]",
+            "flowName" : "clariti__Upload_Submission_Requests"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "181deb49-37e4-4e64-9d57-f40a713e6431",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "41da50d8-8404-4506-b5fc-b7df1baeb1b0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3a375792-b60f-4547-85ac-a6575dd2dfb5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Submit Documents"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "9577c736-c57e-4bd2-ab08-1e160fbcdfd5",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "952f1c6d-accd-4e0d-8d5c-461156cf6d1c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Submit Documents"
+}
