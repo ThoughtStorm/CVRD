@@ -1,0 +1,173 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "b032d0ab-6a55-4df4-9213-3c603703b5f8",
+  "label" : "My Account",
+  "regions" : [ {
+    "id" : "f7c1348f-a8a7-46d9-9c4e-7daf97975998",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e012b188-3ee3-4dcf-af49-89d43d16f3ef",
+          "columns" : [ {
+            "UUID" : "0b790825-01a0-4024-838a-96836b0cc8c3",
+            "columnKey" : "col1",
+            "columnName" : "column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ {
+              "attributes" : {
+                "recordId" : "{!CurrentUser.accountId}",
+                "sfdc:identifier" : "forceCommunity_recordHeadline"
+              },
+              "fqn" : "forceCommunity:recordHeadline"
+            }, {
+              "attributes" : {
+                "recordId" : "{!CurrentUser.accountId}",
+                "sfdc:identifier" : "forceCommunity_recordHomeTabs"
+              },
+              "fqn" : "forceCommunity:recordHomeTabs"
+            } ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e012b188-3ee3-4dcf-af49-89d43d16f3ef",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!CurrentUser.accountId}"
+          },
+          "componentName" : "forceCommunity:recordHeadline",
+          "id" : "0a002de7-6de9-4e5f-ab11-7221d79d1f79",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "adb4cda7-d8da-44ee-9ef8-cfd54f229e67",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "ade46e9c-bbe9-4b49-9a3b-67f558e4ae00",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "Account Details"
+              }, {
+                "UUID" : "6ba8c815-bdd7-4934-9623-0d3bb08c960c",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Contact Details"
+              }, {
+                "UUID" : "20529376-2ade-48fd-9957-402b12c9ef01",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "3",
+                "tabName" : "Employee Details"
+              } ],
+              "useOverflowMenu" : false
+            }
+          },
+          "componentName" : "forceCommunity:tabset",
+          "id" : "adb4cda7-d8da-44ee-9ef8-cfd54f229e67",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "allowEdit" : false,
+                "objectType" : "Account",
+                "recordId" : "{!recordId}"
+              },
+              "componentName" : "clariti:recordDetail",
+              "id" : "88f235fd-0854-4f43-bae1-8725f0f256b5",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "ade46e9c-bbe9-4b49-9a3b-67f558e4ae00",
+            "regionLabel" : "Account Details",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "allowEdit" : false,
+                "objectType" : "Contact",
+                "recordId" : "{!recordId}"
+              },
+              "componentName" : "clariti:recordDetail",
+              "id" : "d4e7428f-cf8b-433b-9e50-2e740f212316",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "6ba8c815-bdd7-4934-9623-0d3bb08c960c",
+            "regionLabel" : "Contact Details",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "clariti:employeeManagement",
+              "id" : "d1000cdd-a03c-4489-8378-adeb2aa576a4",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "20529376-2ade-48fd-9957-402b12c9ef01",
+            "regionLabel" : "Employee Details",
+            "regionName" : "3",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "0b790825-01a0-4024-838a-96836b0cc8c3",
+        "regionLabel" : "column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d239c358-d29f-46eb-8a35-1e0b08030e3a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "bd4f0549-b54c-4439-94c4-6eb872dca978",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Account"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "f29add8a-d0db-4bf8-9435-570190d16205",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d61305a6-f364-4652-89e0-f04ffa42b9eb",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-My Account"
+}

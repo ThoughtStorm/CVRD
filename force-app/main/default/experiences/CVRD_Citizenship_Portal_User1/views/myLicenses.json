@@ -1,0 +1,157 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "d1eb7da2-82a6-4e50-9378-485fb79becd1",
+  "label" : "My Licenses",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2248397b-5030-410d-8ac8-c645b1f14f74",
+          "columns" : [ {
+            "UUID" : "eb1d05f6-d6f1-4467-9bff-b2a88fbafecc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "cab6724b-eacc-4a0b-8faa-ccca00410634",
+            "columnKey" : "c13c3",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2248397b-5030-410d-8ac8-c645b1f14f74",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>My Licenses</h1><p><br></p><p>Below is a list of your active licenses. To see all of your licenses, click the \"View All\" link at the bottom of the list. To see the details of a specific license, click on the license number.</p><p><br></p><p>If you would like to start a new license application, click the&nbsp;&nbsp;\"New License Application\" button.&nbsp;&nbsp;To resume a paused application, go to \"My Paused Applications.\"</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d2034947-4d47-4731-b62d-2f9971dcdd08",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "eb1d05f6-d6f1-4467-9bff-b2a88fbafecc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(18, 70, 84)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 25,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "large",
+            "noImageColor" : "rgb(212, 212, 212)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "",
+            "titleFontSize" : "large",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "43311609-9f2f-4569-baf3-5b234e2e17a8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cab6724b-eacc-4a0b-8faa-ccca00410634",
+        "regionLabel" : "Column 2",
+        "regionName" : "c13c3",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c10e7620-070d-425b-ac1f-1ec57d0f4f38",
+          "columns" : [ {
+            "UUID" : "de33e506-f620-475a-a351-33985d5e5c36",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c10e7620-070d-425b-ac1f-1ec57d0f4f38",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "Online_All_Licenses",
+            "layout" : "STANDARD",
+            "pageSize" : 100,
+            "scope" : "MUSW__License2__c",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "464da962-4f15-4ee6-9a8e-bb91d194bc11",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "de33e506-f620-475a-a351-33985d5e5c36",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ae166032-e7ed-4f1d-b2bd-bc73dfe3405f",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Licenses"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5e402f62-c74a-4542-b09c-f35e21bd6fa5",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6c4f440a-33d8-4f02-9b58-b5666d8d606c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-My Licenses"
+}

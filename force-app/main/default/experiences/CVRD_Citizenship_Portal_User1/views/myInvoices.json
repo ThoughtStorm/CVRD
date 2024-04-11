@@ -1,0 +1,70 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "3f1179e7-aff2-41d7-a0c0-5f1ae7989f42",
+  "label" : "My Invoices",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "98e44e77-38f9-43a8-81e8-cb16157f69c3",
+          "columns" : [ {
+            "UUID" : "8324c292-f295-4ee0-9036-d630615a18e0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "98e44e77-38f9-43a8-81e8-cb16157f69c3",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>My Invoices</h1><p><br></p><p>Below is a list of your unpaid invoices. To see all of your invoices, click the \"View All\" link at the bottom of the list. To see the details of a specific invoice, click on the invoice number.</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "1188456b-3aa8-4377-859f-8ac205df7aab",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8324c292-f295-4ee0-9036-d630615a18e0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c4a97775-ff88-45f3-8733-7aea97487232",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Invoices"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "171836c7-45a1-4042-a31e-fa8eb91b8dd6",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8df94fb4-6ce5-4e50-9613-dd5578bb36a1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-My Invoices"
+}

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "1b4484fa-e543-4625-9c63-a9d7ca5b1204",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "License_Applications",
+  "id" : "6f43d9b7-2fac-4af2-844b-ebc11fba84d0",
+  "label" : "License Applications",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-License Applications",
+  "type" : "route",
+  "urlPrefix" : "license-applications"
+}
