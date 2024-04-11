@@ -1,0 +1,46 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "a4fc95fa-65ff-4018-a09f-1f782b67f006",
+  "label" : "License List",
+  "regions" : [ {
+    "id" : "7cbfb00f-ad94-49a8-b4e5-870cae123ef4",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "enableInlineEdit" : false,
+        "filterName" : "Online_All_Licenses",
+        "layout" : "FULL",
+        "pageSize" : 100,
+        "scope" : "MUSW__License2__c",
+        "showActionBar" : false,
+        "showChartsPanel" : false,
+        "showDisplay" : "grid",
+        "showFilterPanel" : false,
+        "showImageIcon" : true,
+        "showManualRefreshButton" : false,
+        "showObjectName" : false,
+        "showPinnedList" : true,
+        "showSearchBar" : true
+      },
+      "componentName" : "forceCommunity:objectHome",
+      "id" : "ea908afb-92e5-4710-afa0-cb226d8bb4ee",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9c016a35-59f9-4cb2-8322-edd2b22692c7",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "bbe1aa39-689b-4b90-807b-fba14e434d3d",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a0o"
+}
