@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "cd358233-e64b-4540-aa88-3d761a9a40c3",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Submit_Documents",
+  "id" : "b12e197a-f7c8-4e75-a51d-f5e95c1204fd",
+  "label" : "Submit Documents",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-Submit Documents",
+  "type" : "route",
+  "urlPrefix" : "submit-documents"
+}
