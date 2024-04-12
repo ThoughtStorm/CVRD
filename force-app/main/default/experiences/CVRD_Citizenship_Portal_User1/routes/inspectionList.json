@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "ade0ba6b-deff-4f4d-8522-d82f9d20a3e5",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Inspection_List",
+  "id" : "4a3f8163-28cb-43a7-b87c-8716812a183d",
+  "label" : "Inspection List",
+  "objectApiName" : "MUSW__Inspection__c",
+  "routeType" : "list-a0m",
+  "type" : "route",
+  "urlPrefix" : "inspection"
+}

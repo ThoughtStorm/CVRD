@@ -1,0 +1,60 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "87e66517-f60b-4adf-99ad-d826b82d4b37",
+  "label" : "Payment Cancel",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "79e27d5d-1bd9-45f3-b48b-d8f01d7ea6ee",
+          "columns" : [ {
+            "UUID" : "e549dab8-cb22-4c5b-b803-440c95235e2c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "79e27d5d-1bd9-45f3-b48b-d8f01d7ea6ee",
+      "regions" : [ {
+        "id" : "e549dab8-cb22-4c5b-b803-440c95235e2c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d8cc4844-6f8c-4019-b1ba-f2e3bfbe6f3c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Payment Cancel"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "32456d58-89ef-42db-8d5e-1808b076b8a3",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b77ed99e-ceb2-4183-ab3d-e7027ae592cc",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "qX121Y6m4LUgAnFgPJzykfH2U46QtL",
+  "type" : "view",
+  "viewType" : "custom-Payment Cancel"
+}

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "a3b09922-0de2-4df8-b370-74c0e3bbf251",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Comment_List",
+  "id" : "427bd1d8-c9a7-4a85-a9be-158e7d7a4030",
+  "label" : "Comment List",
+  "objectApiName" : "MUSW__Comment__c",
+  "routeType" : "list-a0S",
+  "type" : "route",
+  "urlPrefix" : "comment"
+}
