@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "0887b622-3867-4247-9d7b-6d3997b6c08c",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Milestone_List",
+  "id" : "858aa11a-4493-4361-9ba0-b4b868554ae9",
+  "label" : "Milestone List",
+  "objectApiName" : "MUSW__Milestone__c",
+  "routeType" : "list-a13",
+  "type" : "route",
+  "urlPrefix" : "milestone"
+}
