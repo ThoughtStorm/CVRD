@@ -1,0 +1,23 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "0887b622-3867-4247-9d7b-6d3997b6c08c",
+  "label" : "Milestone List",
+  "regions" : [ {
+    "id" : "d5847027-1ad6-4fd4-b90e-157635889761",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "f7c619de-3744-492a-84af-d468fe4174e6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "3ff990cd-edf1-4127-a8ab-e77505bcad51",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a13"
+}

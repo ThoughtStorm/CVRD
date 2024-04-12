@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "87e66517-f60b-4adf-99ad-d826b82d4b37",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Payment_Cancel",
+  "id" : "7cbef699-6162-4f4c-82c1-af161ecc02fc",
+  "label" : "Payment Cancel",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-Payment Cancel",
+  "type" : "route",
+  "urlPrefix" : "payment-cancel"
+}
