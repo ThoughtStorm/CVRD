@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "6fa16425-9dfa-466b-9696-4556e227d354",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Request_Related_List",
+  "id" : "51917c94-7bb4-4253-8a0a-6e07e2a5fbae",
+  "label" : "Request Related List",
+  "objectApiName" : "MUSW__Request__c",
+  "routeType" : "relatedlist-a1W",
+  "type" : "route",
+  "urlPrefix" : "request"
+}
