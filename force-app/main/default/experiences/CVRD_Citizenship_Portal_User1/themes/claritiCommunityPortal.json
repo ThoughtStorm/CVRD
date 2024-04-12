@@ -714,7 +714,7 @@
             "componentAttributes" : {
               "navAlignment" : "left",
               "navItemThreshold" : 6,
-              "navigationMenuEditorRefresh" : "External_Agency_Menu"
+              "navigationMenuEditorRefresh" : " "
             },
             "componentName" : "forceCommunity:themeNav",
             "id" : "0dd75088-5bd3-486e-b7fa-e64168a6474e",
