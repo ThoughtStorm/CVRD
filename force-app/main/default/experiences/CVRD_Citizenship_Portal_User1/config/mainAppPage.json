@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "5ccfba44-369d-4af9-96ed-db723f1ccc95",
+  "headMarkup" : null,
+  "id" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : true,
+  "label" : "main",
+  "templateName" : "Clariti_Community_Portal",
+  "type" : "appPage"
+}

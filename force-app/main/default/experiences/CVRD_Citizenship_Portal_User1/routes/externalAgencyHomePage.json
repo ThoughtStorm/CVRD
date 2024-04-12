@@ -1,0 +1,12 @@
+{
+  "activeViewId" : null,
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "External_Agency_Home_Page__c",
+  "id" : "9cd829e1-5610-47b0-b078-fd024403f5db",
+  "label" : "External Agency Home Page",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-external-agency-home-page",
+  "type" : "route",
+  "urlPrefix" : "external-agency-home-page"
+}
