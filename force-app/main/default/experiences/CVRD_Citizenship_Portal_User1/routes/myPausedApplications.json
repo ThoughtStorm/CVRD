@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "c4e97f7b-2f84-4cc7-9e69-aefac6dd6716",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "My_Paused_Applications",
+  "id" : "4f82cd0b-b6b3-495d-9b56-bbc9647432e8",
+  "label" : "My Paused Applications",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-My Paused Applications",
+  "type" : "route",
+  "urlPrefix" : "my-paused-applications"
+}

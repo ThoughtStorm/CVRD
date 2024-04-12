@@ -1,0 +1,46 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "f91aacc1-ab5e-47d4-ac4c-86bae1566983",
+  "label" : "Complaint List",
+  "regions" : [ {
+    "id" : "e5a0e697-200a-4fc5-ab60-67a6f134635d",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "enableInlineEdit" : false,
+        "filterName" : "Online_All_Complaints",
+        "layout" : "FULL",
+        "pageSize" : 100,
+        "scope" : "MUSW__Complaint2__c",
+        "showActionBar" : false,
+        "showChartsPanel" : false,
+        "showDisplay" : "grid",
+        "showFilterPanel" : false,
+        "showImageIcon" : true,
+        "showManualRefreshButton" : true,
+        "showObjectName" : false,
+        "showPinnedList" : true,
+        "showSearchBar" : true
+      },
+      "componentName" : "forceCommunity:objectHome",
+      "id" : "a859a63a-87b3-4238-b1d3-eccea35bb5d5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9e4b8d05-1522-4bdc-a567-f07966084ee7",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "6265bd6d-d263-4521-93cf-80f91ff875ed",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a0T"
+}
