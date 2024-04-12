@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "868f31f0-a55b-49f5-838b-7025645d8043",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Permit_Related_List",
+  "id" : "323aaf3f-73ce-45bd-a13f-7a4c67359d69",
+  "label" : "Permit Related List",
+  "objectApiName" : "MUSW__Permit2__c",
+  "routeType" : "relatedlist-a1B",
+  "type" : "route",
+  "urlPrefix" : "permit2"
+}
