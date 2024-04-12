@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "03566269-fe2b-433e-b526-5864a34c8fc2",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Request_Inspection_Date",
+  "id" : "e6ef65ad-9868-49aa-b91e-87b49fbf69c7",
+  "label" : "Request Inspection Date",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-Request Inspection Date",
+  "type" : "route",
+  "urlPrefix" : "request-inspection-date"
+}
