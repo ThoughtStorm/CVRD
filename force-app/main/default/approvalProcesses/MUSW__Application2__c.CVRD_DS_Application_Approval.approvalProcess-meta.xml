@@ -84,7 +84,7 @@
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
         <entryCriteria>
-            <booleanFilter>1 OR 2</booleanFilter>
+            <booleanFilter>1 OR 2 OR (3 AND 4)</booleanFilter>
             <criteriaItems>
                 <field>MUSW__Application2__c.MUSW__Type2__c</field>
                 <operation>notEqual</operation>
@@ -93,7 +93,17 @@
             <criteriaItems>
                 <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
                 <operation>notEqual</operation>
-                <value>Cannabis Licence Referrals</value>
+                <value>Retail Sales,Minor - New,Minor - Extension</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+                <operation>notEqual</operation>
+                <value>Discharge</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Covenant_Amendment/Discharge</value>
             </criteriaItems>
         </entryCriteria>
         <label>CO/CFO Approval</label>
