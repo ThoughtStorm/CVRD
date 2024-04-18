@@ -4,13 +4,132 @@
     <active>true</active>
     <label>Application Fee</label>
     <picklistValues>
+        <picklist>CVRD_DS_Application_Sub_Type__c</picklist>
+        <values>
+            <fullName>ALC Exclusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannabis Licence Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change to hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character - Signs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Increase to Capacity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Land Use Bylaw Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lounge Endorsment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Major - Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Major - New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minor - Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minor - New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Licence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Outdoor Patio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-farm Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCP Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relocate Licence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Event Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Event Permit - 150 %2B attendees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subdivision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoning Amendment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>MUSW__Application_Phases__c</picklist>
+        <values>
+            <fullName>Appeal</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Application</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Closed</fullName>
+            <fullName>Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hearing</fullName>
             <default>false</default>
         </values>
         <values>
@@ -40,7 +159,7 @@
     <picklistValues>
         <picklist>MUSW__Application_Types__c</picklist>
         <values>
-            <fullName>Development Permit %28DP%29</fullName>
+            <fullName>Development_Permit</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -97,7 +216,11 @@
     <picklistValues>
         <picklist>MUSW__Object_Record_Types__c</picklist>
         <values>
-            <fullName>Building_Permit</fullName>
+            <fullName>CVRD_DS_Cannabis_License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
             <default>false</default>
         </values>
     </picklistValues>
