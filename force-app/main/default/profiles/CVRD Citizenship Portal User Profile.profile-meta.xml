@@ -11,10 +11,6 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>AccountDataController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>CVRD_DS_CreateSubmissions</apexClass>
         <enabled>false</enabled>
     </classAccesses>
