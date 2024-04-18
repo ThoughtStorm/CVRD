@@ -920,11 +920,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>MUSW__Master_Fee_List__c.CVRD_DS_Application_Sub_Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>MUSW__Master_Fee_List__c.Manual_Selection__c</field>
         <readable>false</readable>
     </fieldPermissions>
