@@ -1210,11 +1210,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>MUSW__Proceeding2__c.CVRD_DS_Comment__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>MUSW__Proceeding2__c.Issued_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1251,16 +1246,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Proceeding2__c.MUSW__Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Review__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Schedule_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
