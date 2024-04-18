@@ -1275,11 +1275,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>MUSW__Review__c.Application_type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>MUSW__Review__c.CVRD_DS_Comments__c</field>
         <readable>false</readable>
     </fieldPermissions>
