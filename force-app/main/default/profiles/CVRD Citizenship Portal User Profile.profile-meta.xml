@@ -1200,11 +1200,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>MUSW__Parcel__c.Map__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Application__c</field>
         <readable>false</readable>
     </fieldPermissions>
