@@ -1886,10 +1886,6 @@
         <visible>false</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>ArcGIS_Map_Viewer</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>MUSW__Application2__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
@@ -1911,10 +1907,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>MUSW__Review__c</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Map_Viewer</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <userLicense>Guest User License</userLicense>
