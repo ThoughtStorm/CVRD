@@ -171,6 +171,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>CVRD_DS_Strata_Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>CVRD_DS_Subdivision_Referral</fullName>
             <default>false</default>
         </values>
