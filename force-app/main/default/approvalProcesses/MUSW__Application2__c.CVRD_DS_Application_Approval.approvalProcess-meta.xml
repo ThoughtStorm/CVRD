@@ -72,6 +72,10 @@
         <allowDelegate>false</allowDelegate>
         <approvalActions>
             <action>
+                <name>CVRD_DS_Update_application_status</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
                 <name>Update_field_to_CO_CFO_Approval</name>
                 <type>FieldUpdate</type>
             </action>
@@ -84,7 +88,7 @@
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
         <entryCriteria>
-            <booleanFilter>1 OR 2 OR (3 AND 4)</booleanFilter>
+            <booleanFilter>1 OR (2 AND 7) OR (3 AND 4) OR (5 AND 6) OR (8 AND 9)</booleanFilter>
             <criteriaItems>
                 <field>MUSW__Application2__c.MUSW__Type2__c</field>
                 <operation>notEqual</operation>
@@ -93,7 +97,7 @@
             <criteriaItems>
                 <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
                 <operation>notEqual</operation>
-                <value>Retail Sales,Minor - New,Minor - Extension</value>
+                <value>Minor - New,Minor - Extension</value>
             </criteriaItems>
             <criteriaItems>
                 <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
@@ -104,6 +108,31 @@
                 <field>MUSW__Application2__c.MUSW__Type2__c</field>
                 <operation>equals</operation>
                 <value>Covenant_Amendment/Discharge</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Cannabis Retail Licence</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+                <operation>notEqual</operation>
+                <value>Retail Sales</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Development_Variance_Permit</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Liquor Licence Referrals</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+                <operation>notEqual</operation>
+                <value>Delegated</value>
             </criteriaItems>
         </entryCriteria>
         <label>CO/CFO Approval</label>
