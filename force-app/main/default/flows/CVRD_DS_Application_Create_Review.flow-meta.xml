@@ -4,7 +4,7 @@
         <name>Create_Initial_Reviews</name>
         <label>Create Initial Reviews</label>
         <locationX>50</locationX>
-        <locationY>431</locationY>
+        <locationY>731</locationY>
         <actionName>MUSW__CreateInitialReviewsAction</actionName>
         <actionType>apex</actionType>
         <dataTypeMappings>
@@ -34,10 +34,42 @@
         </value>
     </constants>
     <decisions>
+        <name>Evaluate_completed_approval</name>
+        <label>Evaluate completed approval</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Is_New_Application_or_Status_Phase_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Development_Permit_Application_type</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CVRD_DS_Development_Permit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Completed_Approval__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GM Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Records_1</targetReference>
+            </connector>
+            <label>Development Permit Application type</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Is_New_Application_or_Status_Phase_Changed</name>
         <label>Is New Application or Status/Phase Changed</label>
         <locationX>182</locationX>
-        <locationY>323</locationY>
+        <locationY>623</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
@@ -92,11 +124,33 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Records_1</name>
+        <label>Update Records 1</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Is_New_Application_or_Status_Phase_Changed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>MUSW__Phase__c</field>
+            <value>
+                <stringValue>Close Out</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Is_New_Application_or_Status_Phase_Changed</targetReference>
+            <targetReference>Evaluate_completed_approval</targetReference>
         </connector>
         <object>MUSW__Application2__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
