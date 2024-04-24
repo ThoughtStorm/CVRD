@@ -1315,7 +1315,7 @@
         <locationY>2390</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Check_for_mailing_address_is_same_or_not</targetReference>
         </connector>
@@ -1638,7 +1638,7 @@
         <locationY>650</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Check_Development_Permit_Stage</targetReference>
         </connector>
@@ -1725,7 +1725,7 @@
         <locationY>2090</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Evaluate_Add_Owner</targetReference>
         </connector>
@@ -2016,7 +2016,7 @@
         <locationY>1058</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Property_Information</targetReference>
         </connector>
@@ -2106,7 +2106,7 @@
         <locationY>1790</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Is_Agent</targetReference>
         </connector>
@@ -2212,7 +2212,7 @@
         <locationY>2690</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Riparian_Areas_Protection_Regulation_Declaration</targetReference>
         </connector>
@@ -2369,7 +2369,7 @@
         <locationY>2090</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Evaluate_Add_Owner</targetReference>
         </connector>
@@ -2712,7 +2712,7 @@
         <locationY>2906</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>attestation_subflow</targetReference>
         </connector>
@@ -3053,15 +3053,19 @@
             <inputParameters>
                 <name>originPageURL</name>
                 <value>
-                    <stringValue>https://cvrd--dev1.sandbox.lightning.force.com, https://cvrd--dev1--c.sandbox.vf.force.com, https://cvrd--dev1.sandbox.my.site.com,https://cvrd--qa.sandbox.my.site.com</stringValue>
+
+                    <stringValue>https://cvrd--uat.sandbox.lightning.force.com, https://cvrd--uat--c.sandbox.vf.force.com, https://cvrd--uat.sandbox.my.site.com,https://cvrd--qa.sandbox.my.site.com</stringValue>
+
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
+
         <pauseButtonLabel>Pause Application</pauseButtonLabel>
-        <pausedText>&lt;p&gt;Application has been pause. &lt;a href=&quot;https://cvrd--dev1.sandbox.my.site.com/CVRDCitizenshipPortal/s/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Click here.&lt;/a&gt;&lt;/p&gt;</pausedText>
+        <pausedText>&lt;p&gt;Application has been pause. &lt;a href=&quot;https://cvrd--uat.sandbox.my.site.com/CVRDCitizenshipPortal/s/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Click here.&lt;/a&gt;&lt;/p&gt;</pausedText>
+
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
@@ -3072,7 +3076,7 @@
         <locationY>2798</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Review_Application_Screen</targetReference>
         </connector>
