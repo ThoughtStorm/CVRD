@@ -1,0 +1,104 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "40d2c23f-9cbe-40d5-852b-c59c1d87c02b",
+  "label" : "Planning Information",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d4a11db6-9c2c-4307-90fc-73d23b9b39d1",
+          "columns" : [ {
+            "UUID" : "089c2ff3-f5ed-44f9-9938-3f4206e95cdc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b9866d9d-306b-48ea-b08d-e5ba7790f4b2",
+            "columnKey" : "f91ff",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d4a11db6-9c2c-4307-90fc-73d23b9b39d1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>Planning Application Information</h1><p><br></p><p>Below you can find information on the process for each type of planning application. To start a new application, click the \"New Planning Application\" button.</p><p><br></p><h2><b>Lorem Ipsum</b></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in. Eu ultrices vitae auctor eu. Faucibus et molestie ac feugiat sed lectus.</p><p><br></p><ul><li>Quam adipiscing</li><li>Vitae proin</li><li>Sagittis nisl rhoncus</li><li>Mattis rhoncus.</li></ul><p><br></p><h2><b>Lorem Ipsum</b></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in. Eu ultrices vitae auctor eu. Faucibus et molestie ac feugiat sed lectus.</p><p><br></p><ul><li>Quam adipiscing</li><li>Vitae proin</li><li>Sagittis nisl rhoncus</li><li>Mattis rhoncus.</li></ul><p><br></p><h2><b>Lorem Ipsum</b></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in. Eu ultrices vitae auctor eu. Faucibus et molestie ac feugiat sed lectus.</p><p><br></p><ul><li>Quam adipiscing</li><li>Vitae proin</li><li>Sagittis nisl rhoncus</li><li>Mattis rhoncus.</li></ul><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c2dd39a2-54a8-41be-b65b-a9a629d1ef8f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "089c2ff3-f5ed-44f9-9938-3f4206e95cdc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(18, 70, 84)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 25,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "large",
+            "noImageColor" : "rgb(212, 212, 212)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "titleFontSize" : "large",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "389bceab-ce05-4b2c-a8b9-8a067730c7bb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b9866d9d-306b-48ea-b08d-e5ba7790f4b2",
+        "regionLabel" : "Column 2",
+        "regionName" : "f91ff",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c77152e3-399c-4c3e-9b49-bb2be7a70a7b",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Planning Information"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "000ac369-54cc-4948-8410-a42423f5d425",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4e669648-9ba6-4852-a456-8829442c4499",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Planning Information"
+}

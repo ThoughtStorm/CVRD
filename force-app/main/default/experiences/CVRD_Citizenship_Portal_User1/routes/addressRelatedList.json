@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "b7a8d856-2636-46fd-a2e3-9f475cc9bc76",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Address_Related_List",
+  "id" : "55a9158b-5d1d-431a-9912-8b659fb6063f",
+  "label" : "Address Related List",
+  "objectApiName" : "MUSW__Address__c",
+  "routeType" : "relatedlist-a04",
+  "type" : "route",
+  "urlPrefix" : "address"
+}
