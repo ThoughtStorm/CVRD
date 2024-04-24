@@ -1,0 +1,105 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "a37e705f-0d20-43d1-9028-91fb6c023827",
+  "label" : "License Information",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "5d3464fa-106f-40b5-8f5a-0f765a7303cd",
+          "columns" : [ {
+            "UUID" : "e3e4f40f-c52a-48ef-b8d8-5b88de064a64",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b7e084f1-a6f3-4873-bdb8-cfd94157b99f",
+            "columnKey" : "ef431",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "5d3464fa-106f-40b5-8f5a-0f765a7303cd",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>License Application Information</h1><p><br></p><p>Below you can find information on the process for each type of license application. To start a new application, click the \"New License Application\" button.</p><h2><br></h2><h2><b>Lorem Ipsum</b></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in. Eu ultrices vitae auctor eu. Faucibus et molestie ac feugiat sed lectus.</p><p><br></p><ul><li>Quam adipiscing</li><li>Vitae proin</li><li>Sagittis nisl rhoncus</li><li>Mattis rhoncus.</li></ul><p><br></p><h2><b>Lorem Ipsum</b></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in. Eu ultrices vitae auctor eu. Faucibus et molestie ac feugiat sed lectus.</p><p><br></p><ul><li>Quam adipiscing</li><li>Vitae proin</li><li>Sagittis nisl rhoncus</li><li>Mattis rhoncus.</li></ul><p><br></p><h2><b>Lorem Ipsum</b></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in. Eu ultrices vitae auctor eu. Faucibus et molestie ac feugiat sed lectus.</p><p><br></p><ul><li>Quam adipiscing</li><li>Vitae proin</li><li>Sagittis nisl rhoncus</li><li>Mattis rhoncus.</li></ul><h2><br></h2><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "12cb8ca6-f4bd-45a1-9dad-7b49bd0d0916",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e3e4f40f-c52a-48ef-b8d8-5b88de064a64",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(18, 70, 84)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 25,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "large",
+            "noImageColor" : "rgb(212, 212, 212)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "",
+            "titleFontSize" : "large",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "327f8da2-8272-400a-9eef-5df099682de6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b7e084f1-a6f3-4873-bdb8-cfd94157b99f",
+        "regionLabel" : "Column 2",
+        "regionName" : "ef431",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9ff02bae-ed34-4fa5-aa5b-b68954d6b637",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "License Information"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "df9044d1-9a4d-460e-ad4f-2c1572a76539",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "cec2a73f-b811-40ff-9419-d2fa71148270",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-License Information"
+}

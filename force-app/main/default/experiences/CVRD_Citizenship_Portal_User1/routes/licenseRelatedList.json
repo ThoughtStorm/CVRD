@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "58c20d79-a150-46bb-9f21-9771f56c64f6",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "License_Related_List",
+  "id" : "dcd49ed2-4ffb-4910-bbae-b56fda5de8f3",
+  "label" : "License Related List",
+  "objectApiName" : "MUSW__License2__c",
+  "routeType" : "relatedlist-a0o",
+  "type" : "route",
+  "urlPrefix" : "license2"
+}
