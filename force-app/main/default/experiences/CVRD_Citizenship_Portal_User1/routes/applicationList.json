@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "b502387c-840d-478f-9a64-4474fe992ff0",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Application_List",
+  "id" : "c7f1059b-919b-4dc1-bd64-90915ee6501e",
+  "label" : "Application List",
+  "objectApiName" : "MUSW__Application2__c",
+  "routeType" : "list-a08",
+  "type" : "route",
+  "urlPrefix" : "application2"
+}

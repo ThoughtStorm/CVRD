@@ -1,0 +1,71 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "7a209632-dfd9-4ff6-84a2-375fa2012302",
+  "label" : "New Development Service Form",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a06d7b0f-4007-4224-b5a9-7315583faa52",
+          "columns" : [ {
+            "UUID" : "f571bd37-3671-464a-b32d-6cfd95dddf36",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a06d7b0f-4007-4224-b5a9-7315583faa52",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "",
+            "flowName" : "CVRD_DS_Application_Journey"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "1cbe8d25-d90a-418b-91a8-530040e48416",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f571bd37-3671-464a-b32d-6cfd95dddf36",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "68c65a2e-ec77-411d-a85c-390858d3d51b",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "New Development Service Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a0d10c1d-f409-4b48-8b33-748a70e2ecbc",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a3d13f1b-107e-464f-bb25-5c14e341de20",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-new-development-service-form"
+}
