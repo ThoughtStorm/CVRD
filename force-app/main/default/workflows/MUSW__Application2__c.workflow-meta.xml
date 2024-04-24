@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <alerts>
-        <fullName>CVRD_DS_Email_Alert_for_Preliminary_Review</fullName>
-        <description>Email Alert for Preliminary Review</description>
+    <fieldUpdates>
+        <fullName>CVRD_DS_Update_application_Phase</fullName>
+        <field>MUSW__Phase__c</field>
+        <literalValue>Review</literalValue>
+        <name>Update application Phase</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
         <protected>false</protected>
-        <recipients>
-            <type>owner</type>
-        </recipients>
-        <senderAddress>noreply@claritisoftware.com</senderAddress>
-        <senderType>OrgWideEmailAddress</senderType>
-        <template>unfiled$public/Tesyt_1702978649141</template>
-    </alerts>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Completed_Approval</fullName>
+        <field>CVRD_DS_Completed_Approval__c</field>
+        <literalValue>DM Approval</literalValue>
+        <name>Update Completed Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Completed_Approval_to_GM_Approval</fullName>
+        <field>CVRD_DS_Completed_Approval__c</field>
+        <literalValue>GM Approval</literalValue>
+        <name>Update Completed Approval to GM Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_field_to_Board_Approval</fullName>
+        <field>CVRD_DS_Completed_Approval__c</field>
+        <literalValue>Board Approval</literalValue>
+        <name>Update field to Board Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_field_to_CO_CFO_Approval</fullName>
+        <field>CVRD_DS_Completed_Approval__c</field>
+        <literalValue>CO/CFO Approval</literalValue>
+        <name>Update field to CO/CFO Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
 </Workflow>
