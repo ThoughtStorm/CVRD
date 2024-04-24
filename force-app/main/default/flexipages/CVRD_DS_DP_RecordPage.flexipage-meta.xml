@@ -9,8 +9,21 @@
                         <valueListItems>
                             <value>Edit</value>
                         </valueListItems>
-                        <valueListItems>
+                       <valueListItems>
                             <value>MUSW__Application2__c.CVRD_Confirm_and_Create_Application</value>
+                            <visibilityRule>
+                                <booleanFilter>1 AND 2</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Application</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Completed</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>Submit</value>
