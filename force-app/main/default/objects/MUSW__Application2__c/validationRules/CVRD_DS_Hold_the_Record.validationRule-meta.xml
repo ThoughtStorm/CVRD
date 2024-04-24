@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Hold_the_Record</fullName>
+    <active>true</active>
+    <description>Lock the record when the status is ion hold.</description>
+    <errorConditionFormula>OR(
+
+AND(
+
+NOT(ISCHANGED(MUSW__Status__c)),ISPICKVAL(MUSW__Status__c, &quot;On Hold&quot;)),
+
+AND(ISCHANGED(MUSW__Phase__c),ISPICKVAL(PRIORVALUE(MUSW__Status__c),&quot;On Hold&quot;)))</errorConditionFormula>
+    <errorMessage>Application is on hold. Editing this record is not allowed except for changing the Status.</errorMessage>
+</ValidationRule>

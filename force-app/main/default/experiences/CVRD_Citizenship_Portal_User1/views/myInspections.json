@@ -1,0 +1,122 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "8ea27a1b-9be7-4c1d-aa08-e71eb7287e8d",
+  "label" : "My Inspections",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "53e0e5f6-590f-40ed-9d74-4440f7750f24",
+          "columns" : [ {
+            "UUID" : "2c925503-35e6-408a-9b5c-1b5034b6ca76",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "53e0e5f6-590f-40ed-9d74-4440f7750f24",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>My Inspections</h1><p><br></p><p>Below is a list of your active inspections. To see all of your inspections, click the \"View All\" link at the bottom of the list. To see the details of a specific inspection, click on the inspection number.</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "cc1d09bc-9911-4ee5-917c-7460beaf7861",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2c925503-35e6-408a-9b5c-1b5034b6ca76",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "80795058-fe1a-492f-8e29-f4074cd045bc",
+          "columns" : [ {
+            "UUID" : "d3b55899-c427-4105-adfd-7644678ec3ff",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "80795058-fe1a-492f-8e29-f4074cd045bc",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "Online_Open_Inspections",
+            "layout" : "STANDARD",
+            "pageSize" : 100,
+            "scope" : "MUSW__Inspection__c",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "4836d99f-e98d-44fa-af76-a028f1adfb09",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d3b55899-c427-4105-adfd-7644678ec3ff",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7fb8828b-6988-43ee-bfb7-b40f10d35097",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Inspections"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ec54b06b-2a6b-402d-99eb-4f87b12f225f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c5a1d4ef-7d92-4b7e-87ee-3baab44dfbe6",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-My Inspections"
+}

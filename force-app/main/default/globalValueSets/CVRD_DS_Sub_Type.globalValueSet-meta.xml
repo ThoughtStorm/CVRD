@@ -131,46 +131,100 @@
         <label>Special Event Permit - 150 + attendees</label>
     </customValue>
     <customValue>
-        <fullName>Extension-Minor</fullName>
+        <fullName>Cannabis Referral License</fullName>
         <default>false</default>
-        <isActive>false</isActive>
-        <label>Extension-Minor</label>
-    </customValue>
-    <customValue>
-        <fullName>Environmental and Hazard</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Environmental and Hazard</label>
-    </customValue>
-    <customValue>
-        <fullName>Development Variance Permit - Minor</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Development Variance Permit - Minor</label>
-    </customValue>
-    <customValue>
-        <fullName>Development Variance Permit - Major</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Development Variance Permit - Major</label>
+        <label>Cannabis Referral License</label>
     </customValue>
     <customValue>
         <fullName>Delegated</fullName>
         <default>false</default>
-        <isActive>false</isActive>
         <label>Delegated</label>
+    </customValue>
+    <customValue>
+        <fullName>Amend an Existing Liquor License</fullName>
+        <default>false</default>
+        <label>Amend an Existing Liquor License</label>
+    </customValue>
+    <customValue>
+        <fullName>Relocate the Liquor License</fullName>
+        <default>false</default>
+        <label>Relocate the Liquor License</label>
+    </customValue>
+    <customValue>
+        <fullName>Increase Number of Patrons</fullName>
+        <default>false</default>
+        <label>Increase Number of Patrons</label>
+    </customValue>
+    <customValue>
+        <fullName>Expand Operating Hours</fullName>
+        <default>false</default>
+        <label>Expand Operating Hours</label>
+    </customValue>
+    <customValue>
+        <fullName>Authorize an Event with Paid Participants</fullName>
+        <default>false</default>
+        <label>Authorize an Event with Paid Participants</label>
+    </customValue>
+    <customValue>
+        <fullName>Temporary Social Event Permit with &gt;= 150 Attendees</fullName>
+        <default>false</default>
+        <label>Temporary Social Event Permit with &gt;= 150 Attendees</label>
+    </customValue>
+    <customValue>
+        <fullName>Temporary Social Event Permit</fullName>
+        <default>false</default>
+        <label>Temporary Social Event Permit</label>
+    </customValue>
+    <customValue>
+        <fullName>Environmental and Hazard</fullName>
+        <default>false</default>
+        <label>Environmental and Hazard</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment/Extension</fullName>
+        <default>false</default>
+        <label>Amendment/Extension</label>
+    </customValue>
+    <customValue>
+        <fullName>Conservation/GHG reduction</fullName>
+        <default>false</default>
+        <label>Conservation/GHG reduction</label>
+    </customValue>
+    <customValue>
+        <fullName>Form and Character</fullName>
+        <default>false</default>
+        <label>Form and Character</label>
+    </customValue>
+    <customValue>
+        <fullName>Agricultural</fullName>
+        <default>false</default>
+        <label>Agricultural</label>
+    </customValue>
+    <customValue>
+        <fullName>Registration Amendment or Discharge</fullName>
+        <default>false</default>
+        <label>Registration Amendment or Discharge</label>
+    </customValue>
+    <customValue>
+        <fullName>Non - Adhering Residential Use</fullName>
+        <default>false</default>
+        <label>Non - Adhering Residential Use</label>
+    </customValue>
+    <customValue>
+        <fullName>Combined OCP Amendment and Zoning Bylaw Amendment</fullName>
+        <default>false</default>
+        <label>Combined OCP Amendment and Zoning Bylaw Amendment</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment or Discharge</fullName>
+        <default>false</default>
+        <label>Amendment or Discharge</label>
     </customValue>
     <customValue>
         <fullName>Conventional Subdivision</fullName>
         <default>false</default>
         <isActive>false</isActive>
         <label>Conventional Subdivision</label>
-    </customValue>
-    <customValue>
-        <fullName>Extension-Major</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Extension-Major</label>
     </customValue>
     <customValue>
         <fullName>Building Strata</fullName>
@@ -185,40 +239,22 @@
         <label>Bare land Strata</label>
     </customValue>
     <customValue>
-        <fullName>Amendment/Extension</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Amendment/Extension</label>
-    </customValue>
-    <customValue>
-        <fullName>Agricultural</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Agricultural</label>
-    </customValue>
-    <customValue>
         <fullName>Accreted Land</fullName>
         <default>false</default>
         <isActive>false</isActive>
         <label>Accreted Land</label>
     </customValue>
     <customValue>
-        <fullName>Conservation/GHG reduction</fullName>
+        <fullName>Development Variance Permit - Minor</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Conservation/GHG reduction</label>
+        <label>Development Variance Permit - Minor</label>
     </customValue>
     <customValue>
-        <fullName>Phased Strata</fullName>
+        <fullName>Extension-Minor</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Phased Strata</label>
-    </customValue>
-    <customValue>
-        <fullName>Non-Delegated</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Non-Delegated</label>
+        <label>Extension-Minor</label>
     </customValue>
     <customValue>
         <fullName>Leases</fullName>
@@ -227,10 +263,28 @@
         <label>Leases</label>
     </customValue>
     <customValue>
-        <fullName>Form and Character</fullName>
+        <fullName>Non-Delegated</fullName>
         <default>false</default>
         <isActive>false</isActive>
-        <label>Form and Character</label>
+        <label>Non-Delegated</label>
+    </customValue>
+    <customValue>
+        <fullName>Phased Strata</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Phased Strata</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Variance Permit - Major</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Development Variance Permit - Major</label>
+    </customValue>
+    <customValue>
+        <fullName>Extension-Major</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Extension-Major</label>
     </customValue>
     <description>Application Sub Types</description>
     <masterLabel>Sub Type</masterLabel>
