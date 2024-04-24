@@ -192,7 +192,23 @@
     <picklistValues>
         <picklist>CVRD_DS_Sub_Type__c</picklist>
         <values>
-            <fullName>Form and Character - Signs</fullName>
+            <fullName>Agricultural</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment%2FExtension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservation%2FGHG reduction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental and Hazard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -319,6 +335,17 @@
         </values>
         <values>
             <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Object_Record_Type__c</picklist>
+        <values>
+            <fullName>CVRD_DS_Cannabis_License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
             <default>false</default>
         </values>
     </picklistValues>

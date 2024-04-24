@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "8f86b092-3832-4b9f-aa6e-87616519d1df",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Parcel_List",
+  "id" : "81d58bc1-96a3-4232-b9a5-7159c5719974",
+  "label" : "Parcel List",
+  "objectApiName" : "MUSW__Parcel__c",
+  "routeType" : "list-a19",
+  "type" : "route",
+  "urlPrefix" : "parcel"
+}

@@ -1,0 +1,70 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "843097ea-36a2-419c-8f4d-e3c5919aea7c",
+  "label" : "Check Email",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 75,
+        "sectionConfig" : {
+          "UUID" : "f073b1a3-7362-41d4-9d59-4a8cfe81a205",
+          "columns" : [ {
+            "UUID" : "13e5cc8f-e023-4868-83d5-2e200be4c0ea",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f073b1a3-7362-41d4-9d59-4a8cfe81a205",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\">Welcome!</h1><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\">Check the email account associated with your username for instructions on resetting your password. Remember to look in your spam folder, where automated messages sometimes filter. If you still can't log in, contact your administrator.</p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9a13dce6-ca1d-4c8c-97b4-c959b7eb3214",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "13e5cc8f-e023-4868-83d5-2e200be4c0ea",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "85415be5-f986-4a4f-96b1-3984ce11a7ff",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Check Email"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5af77153-b605-4411-bb1c-b8820bf1f298",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "cb03438a-2171-401b-917d-7f75fe5af9e9",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "ai1SdTSszANzYNZJlXrXrQHO6i3lQa",
+  "type" : "view",
+  "viewType" : "custom-Check Email"
+}

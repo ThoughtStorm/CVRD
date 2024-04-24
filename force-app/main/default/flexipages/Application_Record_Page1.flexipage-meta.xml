@@ -31,6 +31,9 @@
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.MUSW__Add_Alert</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -509,63 +512,18 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentInstanceProperties>
+                    <name>showLegacyActivityComposer</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentName>runtime_sales_activities:activityPanel</componentName>
+                <identifier>runtime_sales_activities_activityPanel</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentName>MUSW:alertList</componentName>
-                <identifier>alertList</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-76e87976-ae2f-491d-b0a8-170ccbf0cb12</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>active</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-76e87976-ae2f-491d-b0a8-170ccbf0cb12</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>{!$Label.MUSW__Alerts_Tab_Label}</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-                <identifier>customTab2</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-d9e8b57f-ef5d-4314-8e5e-84515037bae4</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>tabs</name>
-                    <value>Facet-d9e8b57f-ef5d-4314-8e5e-84515037bae4</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tabset</componentName>
-                <identifier>flexipage_tabset2</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>MUSW:alertOverlay</componentName>
-                <identifier>alertOverlay</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>mapSettingsName</name>
-                    <value>CVRD</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>spatialField</name>
-                </componentInstanceProperties>
-                <componentName>MUSW:mapViewer</componentName>
-                <identifier>MUSW_mapViewer</identifier>
+                <identifier>MUSW_alertList</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

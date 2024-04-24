@@ -1,0 +1,157 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "fbd07aeb-5074-4836-8a54-85b4f48401bf",
+  "label" : "My Requests",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c7f386c3-c7d0-4343-af18-5bdc0938b395",
+          "columns" : [ {
+            "UUID" : "9ef25748-d9e8-4a08-92dc-70b1acf2e17b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "33f722c8-657d-45a0-bb2f-ebd3519bfc71",
+            "columnKey" : "31977",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c7f386c3-c7d0-4343-af18-5bdc0938b395",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>My Requests</h1><p><br></p><p>Below is a list of your active requests. To see all of your requests, click the \"View All\" at the bottom of the list. To submit a new request, click the \"New Request\" button. To see the details of a specific request, click on the request number.</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "0a0272d2-01af-4a82-8635-814dc0ee04ca",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9ef25748-d9e8-4a08-92dc-70b1acf2e17b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(18, 70, 84)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 25,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "large",
+            "noImageColor" : "rgb(212, 212, 212)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "",
+            "titleFontSize" : "large",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "229341f5-87d3-4b67-9f52-f67362aac37d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "33f722c8-657d-45a0-bb2f-ebd3519bfc71",
+        "regionLabel" : "Column 2",
+        "regionName" : "31977",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6ca4a427-ceea-4bc1-8b33-1a9bb10a6bd5",
+          "columns" : [ {
+            "UUID" : "a1ad9581-bf75-4cfa-893e-c55f380019d8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6ca4a427-ceea-4bc1-8b33-1a9bb10a6bd5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "Online_All_Requests",
+            "layout" : "STANDARD",
+            "pageSize" : 100,
+            "scope" : "MUSW__Request__c",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "e880368c-0358-42d0-a22d-021a5b5fdf4a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a1ad9581-bf75-4cfa-893e-c55f380019d8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "633a2a40-6a1d-47b2-be6f-7fb917ac37ef",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Requests"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "6068ff19-8555-4975-99f1-2c9d9c16cef0",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4f1b7908-5a23-4164-b243-79f859587e85",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-My Requests"
+}

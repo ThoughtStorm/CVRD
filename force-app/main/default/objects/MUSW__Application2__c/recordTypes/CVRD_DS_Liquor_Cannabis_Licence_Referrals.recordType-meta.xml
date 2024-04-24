@@ -192,7 +192,35 @@
     <picklistValues>
         <picklist>CVRD_DS_Sub_Type__c</picklist>
         <values>
-            <fullName>Form and Character - Signs</fullName>
+            <fullName>Amend an Existing Liquor License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Authorize an Event with Paid Participants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delegated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expand Operating Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Increase Number of Patrons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relocate the Liquor License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary Social Event Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary Social Event Permit with %3E%3D 150 Attendees</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -319,6 +347,17 @@
         </values>
         <values>
             <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Object_Record_Type__c</picklist>
+        <values>
+            <fullName>CVRD_DS_Cannabis_License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
             <default>false</default>
         </values>
     </picklistValues>
