@@ -425,6 +425,10 @@
     <picklistValues>
         <picklist>MUSW__Status__c</picklist>
         <values>
+            <fullName>Additional Information Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Canceled</fullName>
             <default>false</default>
         </values>
@@ -434,6 +438,10 @@
         </values>
         <values>
             <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
             <default>false</default>
         </values>
         <values>
