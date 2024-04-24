@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "6ad71447-4b14-4385-8048-d8468c71ac7d",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Payment_Redirect",
+  "id" : "aa945d78-38b7-42f1-852d-bff45a98954e",
+  "label" : "Payment Redirect",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-Payment Redirect",
+  "type" : "route",
+  "urlPrefix" : "payment-redirect"
+}
