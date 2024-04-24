@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "843097ea-36a2-419c-8f4d-e3c5919aea7c",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Check_Email",
+  "id" : "63327f26-457c-4c62-a580-7fa9d7b095a6",
+  "label" : "Check Email",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-Check Email",
+  "type" : "route",
+  "urlPrefix" : "check-email"
+}
