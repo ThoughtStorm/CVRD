@@ -1308,7 +1308,7 @@
         <locationY>2390</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Check_for_mailing_address_is_same_or_not</targetReference>
         </connector>
@@ -1629,7 +1629,7 @@
         <locationY>650</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Check_Development_Permit_Stage</targetReference>
         </connector>
@@ -1714,7 +1714,7 @@
         <locationY>2090</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Evaluate_Add_Owner</targetReference>
         </connector>
@@ -2003,7 +2003,7 @@
         <locationY>1058</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Property_Information</targetReference>
         </connector>
@@ -2091,7 +2091,7 @@
         <locationY>1790</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Is_Agent</targetReference>
         </connector>
@@ -2195,7 +2195,7 @@
         <locationY>2690</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Riparian_Areas_Protection_Regulation_Declaration</targetReference>
         </connector>
@@ -2350,7 +2350,7 @@
         <locationY>2090</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Evaluate_Add_Owner</targetReference>
         </connector>
@@ -2689,7 +2689,7 @@
         <locationY>2906</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>attestation_subflow</targetReference>
         </connector>
@@ -3047,7 +3047,7 @@
         <locationY>2798</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Review_Application_Screen</targetReference>
         </connector>
