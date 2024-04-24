@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "e7365e52-89d9-4205-b2fe-f1ae1e6589ef",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Submission_List",
+  "id" : "f43a6e1f-e90e-43b5-84ec-73d725e837e3",
+  "label" : "Submission List",
+  "objectApiName" : "MUSW__Submission__c",
+  "routeType" : "list-a1b",
+  "type" : "route",
+  "urlPrefix" : "submission"
+}

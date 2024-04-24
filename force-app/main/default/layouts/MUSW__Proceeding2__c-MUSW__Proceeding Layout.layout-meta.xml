@@ -25,6 +25,10 @@
                 <behavior>Edit</behavior>
                 <field>CVRD_DS_Application__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Cancelled__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -36,12 +40,12 @@
                 <field>MUSW__Scheduled_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>MUSW__Agenda_Close_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CVRD_DS_Cancelled__c</field>
+                <behavior>Required</behavior>
+                <field>MUSW__Maximum_Agenda_Items__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
