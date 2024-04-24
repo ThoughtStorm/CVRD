@@ -114,6 +114,8 @@
         <queriedFields>Id</queriedFields>
         <queriedFields>MUSW__Phase__c</queriedFields>
         <queriedFields>MUSW__Status__c</queriedFields>
+        <queriedFields>CVRD_DS_Parcel_Electoral_Area__c</queriedFields>
+        <queriedFields>MUSW__Total_Balance__c</queriedFields>
     </recordLookups>
     <recordUpdates>
         <name>Update_Application_Status</name>
