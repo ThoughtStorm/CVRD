@@ -13,35 +13,59 @@
         <valueSetName>CVRD_DS_Sub_Type</valueSetName>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Change to hours</valueName>
+            <valueName>Delegated</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Lounge Endorsment</valueName>
+            <valueName>Amend an Existing Liquor License</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>New Outdoor Patio</valueName>
+            <valueName>Relocate the Liquor License</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>New Licence</valueName>
+            <valueName>Increase Number of Patrons</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Relocate Licence</valueName>
+            <valueName>Expand Operating Hours</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Increase to Capacity</valueName>
+            <valueName>Authorize an Event with Paid Participants</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Special Event Permit</valueName>
+            <valueName>Temporary Social Event Permit with &gt;= 150 Attendees</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Special Event Permit - 150 + attendees</valueName>
+            <valueName>Temporary Social Event Permit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Form and Character - Signs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Environmental and Hazard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Amendment/Extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Conservation/GHG reduction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Form and Character</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Agricultural</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
@@ -72,17 +96,16 @@
             <valueName>Land Use Bylaw Amendment</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
-            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
-            <valueName>Amendment</valueName>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <valueName>Combined OCP Amendment and Zoning Bylaw Amendment</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
             <valueName>Discharge</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
-            <valueName>Residential Use</valueName>
+            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
+            <valueName>Registration Amendment or Discharge</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
@@ -97,6 +120,10 @@
             <valueName>ALC Exclusion</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>Non - Adhering Residential Use</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
             <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
             <valueName>New</valueName>
@@ -105,6 +132,10 @@
             <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
             <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
             <valueName>Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <valueName>Amendment or Discharge</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
