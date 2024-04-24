@@ -4,8 +4,8 @@
     <decisions>
         <name>Evaluate_application_Status</name>
         <label>Evaluate application Status</label>
-        <locationX>710</locationX>
-        <locationY>566</locationY>
+        <locationX>446</locationX>
+        <locationY>242</locationY>
         <defaultConnector>
             <targetReference>Error_Message_screen</targetReference>
         </defaultConnector>
@@ -21,7 +21,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Copy_1_of_Copy_1_of_Error_Screen</targetReference>
+                <targetReference>Copy_1_of_Error_Message_screen</targetReference>
             </connector>
             <label>Property information is pending</label>
         </rules>
@@ -36,24 +36,17 @@
                 </rightValue>
             </conditions>
             <conditions>
+                <leftValueReference>Application_Record.MUSW__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
                 <leftValueReference>Application_Record.MUSW__Total_Balance__c</leftValueReference>
                 <operator>LessThanOrEqualTo</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Get_Milestone_record</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Get_required_submission_records</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -72,60 +65,9 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Copy_1_of_Error_Screen</targetReference>
+                <targetReference>Copy_2_of_Error_Message_screen</targetReference>
             </connector>
             <label>Fee pending</label>
-        </rules>
-        <rules>
-            <name>Required_Documents_are_pending</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_required_submission_records</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Error_Screen</targetReference>
-            </connector>
-            <label>Required Documents are pending</label>
-        </rules>
-        <rules>
-            <name>Preliminary_Review_is_pending</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_Milestone_record</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Application_Record.MUSW__Type2__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Subdivision_Referral</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Application_Record.MUSW__Type2__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Crown_Land_Referrals</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Application_Record.MUSW__Type2__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Liquor_Cannabis_Licence_Referrals</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Copy_2_of_Error_Screen</targetReference>
-            </connector>
-            <label>Preliminary Review is pending</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -153,11 +95,11 @@
     <recordLookups>
         <name>Get_Application_record</name>
         <label>Get Application record</label>
-        <locationX>710</locationX>
+        <locationX>446</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Get_milestone_record_types</targetReference>
+            <targetReference>Evaluate_application_Status</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -172,113 +114,12 @@
         <queriedFields>Id</queriedFields>
         <queriedFields>MUSW__Phase__c</queriedFields>
         <queriedFields>MUSW__Status__c</queriedFields>
-        <queriedFields>MUSW__Total_Balance__c</queriedFields>
-        <queriedFields>CVRD_DS_Parcel_Electoral_Area__c</queriedFields>
-        <queriedFields>MUSW__Type2__c</queriedFields>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_Milestone_record</name>
-        <label>Get Milestone record</label>
-        <locationX>710</locationX>
-        <locationY>350</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Get_required_submission_records</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>MUSW__Application2__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>RecordTypeId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Get_milestone_record_types.Id</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Status__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Completed</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>MUSW__Milestone__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_milestone_record_types</name>
-        <label>Get milestone record types</label>
-        <locationX>710</locationX>
-        <locationY>242</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Get_Milestone_record</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>SobjectType</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>MUSW__Milestone__c</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>DeveloperName</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Admin_Review_Milestone</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>RecordType</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_required_submission_records</name>
-        <label>Get required submission records</label>
-        <locationX>710</locationX>
-        <locationY>458</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Evaluate_application_Status</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>MUSW__Application2__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Status__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Pending</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Required__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>MUSW__Submission__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
         <name>Update_Application_Status</name>
         <label>Update Application Status</label>
         <locationX>314</locationX>
-        <locationY>674</locationY>
+        <locationY>350</locationY>
         <connector>
             <targetReference>Success_Message</targetReference>
         </connector>
@@ -305,58 +146,44 @@
         <object>MUSW__Application2__c</object>
     </recordUpdates>
     <screens>
-        <name>Copy_1_of_Copy_1_of_Error_Screen</name>
-        <label>Copy 1 of Copy 1 of Error Screen</label>
+        <name>Copy_1_of_Error_Message_screen</name>
+        <label>Copy 1 of Error Message screen</label>
         <locationX>50</locationX>
-        <locationY>674</locationY>
+        <locationY>350</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <fields>
-            <name>Copy_1_of_Copy_1_of_DisplayErrormessage</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(244, 8, 8); font-size: 14px;&quot;&gt;Property information is missing&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <name>Copy_1_of_PhaseErrorMessage</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(244, 8, 8); font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;Property information is missing&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
+        <nextOrFinishButtonLabel>Done</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
+        <showHeader>false</showHeader>
     </screens>
     <screens>
-        <name>Copy_1_of_Error_Screen</name>
-        <label>Copy 1 of Error Screen</label>
+        <name>Copy_2_of_Error_Message_screen</name>
+        <label>Copy 2 of Error Message screen</label>
         <locationX>578</locationX>
-        <locationY>674</locationY>
+        <locationY>350</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <fields>
-            <name>Copy_1_of_DisplayErrormessage</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px; color: rgb(244, 8, 8);&quot;&gt;Fee is pending&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <name>Copy_2_of_PhaseErrorMessage</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(244, 8, 8); font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;Fee is pending&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
+        <nextOrFinishButtonLabel>Done</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Copy_2_of_Error_Screen</name>
-        <label>Copy 2 of Error Screen</label>
-        <locationX>1106</locationX>
-        <locationY>674</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <fields>
-            <name>Copy_2_of_DisplayErrormessage</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(244, 8, 8); font-size: 14px;&quot;&gt;Preliminary review is not completed&lt;/strong&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
+        <showHeader>false</showHeader>
     </screens>
     <screens>
         <name>Error_Message_screen</name>
         <label>Error Message screen</label>
-        <locationX>1370</locationX>
-        <locationY>674</locationY>
+        <locationX>842</locationX>
+        <locationY>350</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -370,26 +197,10 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
-        <name>Error_Screen</name>
-        <label>Error Screen</label>
-        <locationX>842</locationX>
-        <locationY>674</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <fields>
-            <name>DisplayErrormessage</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px; color: rgb(244, 8, 8);&quot;&gt;Required documents are not uploaded&lt;/strong&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
         <name>Success_Message</name>
         <label>Success Message</label>
         <locationX>314</locationX>
-        <locationY>782</locationY>
+        <locationY>458</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -402,7 +213,7 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>584</locationX>
+        <locationX>320</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Application_record</targetReference>
