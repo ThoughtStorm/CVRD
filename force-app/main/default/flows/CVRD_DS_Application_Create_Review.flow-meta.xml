@@ -44,19 +44,19 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Development_Permit_Application_type</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>CVRD_DS_Development_Permit</stringValue>
-                </rightValue>
-            </conditions>
+            <conditionLogic>1 AND 2</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.CVRD_DS_Completed_Approval__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>GM Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>EvaluateFormulaforApprovals</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -102,6 +102,11 @@
         </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>EvaluateFormulaforApprovals</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(NOT(OR(ISPICKVAL({!$Record.MUSW__Type2__c}, &apos;Development_Permit&apos;),ISPICKVAL({!$Record.MUSW__Type2__c}, &apos;Board_of_Variance&apos;),ISPICKVAL({!$Record.MUSW__Type2__c}, &apos;Subdivision_Referral&apos;),ISPICKVAL({!$Record.MUSW__Type2__c}, &apos;Crown_Land_Referrals&apos;))),OR(AND(NOT(OR(ISPICKVAL({!$Record.CVRD_DS_Sub_Type__c}, &apos;Minor - New&apos;),ISPICKVAL({!$Record.CVRD_DS_Sub_Type__c}, &apos;Minor - Extension&apos;))),ISPICKVAL({!$Record.MUSW__Type2__c}, &apos;Development_Variance_Permit&apos;)),AND(NOT(ISPICKVAL({!$Record.CVRD_DS_Sub_Type__c}, &apos;Discharge&apos;)),ISPICKVAL({!$Record.MUSW__Type2__c}, &apos;Covenant_Amendment/Discharge&apos;)),AND(NOT(ISPICKVAL({!$Record.CVRD_DS_Sub_Type__c}, &apos;Retail Sales&apos;)),ISPICKVAL({!$Record.MUSW__Type2__c}, &apos;Cannabis Retail Licence&apos;)),AND(NOT(ISPICKVAL({!$Record.CVRD_DS_Sub_Type__c}, &apos;Delegated&apos;)),ISPICKVAL({!$Record.MUSW__Type2__c}, &apos;Liquor Licence Referrals&apos;))))</expression>
+    </formulas>
     <interviewLabel>CVRD_DS_Application_Create_Review {!$Flow.CurrentDateTime}</interviewLabel>
     <label>CVRD_DS_Application_Create_Review</label>
     <overriddenFlow>clariti__Application_Create_Reviews</overriddenFlow>
