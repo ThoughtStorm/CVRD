@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "1e212eeb-0885-4962-9187-6e02badfcdf1",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Submission_Related_List",
+  "id" : "e100419a-c3af-49ce-8baf-e5df3cd59bb5",
+  "label" : "Submission Related List",
+  "objectApiName" : "MUSW__Submission__c",
+  "routeType" : "relatedlist-a1b",
+  "type" : "route",
+  "urlPrefix" : "submission"
+}

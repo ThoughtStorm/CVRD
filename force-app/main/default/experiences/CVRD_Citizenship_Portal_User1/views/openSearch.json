@@ -1,0 +1,68 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "d98877cb-63be-4865-95ec-d01d2e34f2f3",
+  "label" : "Open Search",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ca326f44-bb81-4307-935b-3c4e92838338",
+          "columns" : [ {
+            "UUID" : "4ed4b068-f4bf-4453-a284-2640cb152a9c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ca326f44-bb81-4307-935b-3c4e92838338",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:cVRD_DS_PublicApplicationSearch",
+          "id" : "aff35431-6c6b-42f0-9013-9c46b7f9e4cc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4ed4b068-f4bf-4453-a284-2640cb152a9c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "39e900c0-001d-4faa-9eb5-6d62f24eafee",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Open Search"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "06970b74-3f31-4b6d-8542-bc760f49e8e2",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a754a6cc-27d0-4d7d-997e-dedb0850b6d5",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-open-search"
+}
