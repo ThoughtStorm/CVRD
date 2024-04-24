@@ -1,0 +1,99 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "de9098f2-56b8-4c8d-b3d4-4ab6a415b846",
+  "label" : "My Receipts",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0224b2f1-e87c-42e2-a442-972955a7f0e6",
+          "columns" : [ {
+            "UUID" : "8ddc6a4e-e719-419c-b6bd-edfabb45a310",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0224b2f1-e87c-42e2-a442-972955a7f0e6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>My Receipts</h1><p><br></p><p>Below is a list of your receipts. To see all of your receipts, click the \"View All\" link at the bottom of the list. To see the details of a specific receipt, click on the receipt number.</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "1965a4a4-a737-4890-abba-f63280d6fab8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8ddc6a4e-e719-419c-b6bd-edfabb45a310",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "cf6bc0ca-7a0b-4c93-adf5-a4c8d91b2c8b",
+          "columns" : [ {
+            "UUID" : "6317db97-3a21-4dad-928c-359bf1a1d7c6",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cf6bc0ca-7a0b-4c93-adf5-a4c8d91b2c8b",
+      "regions" : [ {
+        "id" : "6317db97-3a21-4dad-928c-359bf1a1d7c6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b5990342-b55e-4bc6-8c57-c6e2651bd8b4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Receipts"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "4b171414-20f9-4093-9086-748b08f4ca1d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8b856ec9-12fe-460c-9865-4a78f8fb7bd5",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-My Receipts"
+}

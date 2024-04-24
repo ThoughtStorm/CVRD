@@ -1,0 +1,83 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "3f7228cd-3aa9-4c3a-88cf-108adcaae2c4",
+  "label" : "My Development Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "af552859-1e05-4f66-aea2-72b843d1eeb6",
+          "columns" : [ {
+            "UUID" : "7919057d-c544-45f1-9f66-febb4e422b1a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "af552859-1e05-4f66-aea2-72b843d1eeb6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : false,
+            "filterName" : "All",
+            "layout" : "FULL",
+            "pageSize" : 25,
+            "scope" : "MUSW__Application2__c",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "f8e18100-4f30-4ec8-9776-80601dd86fc1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7919057d-c544-45f1-9f66-febb4e422b1a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b32305f2-7d1d-4d2c-aae8-bb37d339eb87",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Development Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "78511919-f58c-4d8a-8350-2ec7f345c0ac",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2f8b1b1f-c707-44f1-b502-ee1e94fee069",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-my-development-applications"
+}
