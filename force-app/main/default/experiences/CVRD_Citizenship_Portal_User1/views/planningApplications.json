@@ -1,0 +1,70 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "60cd723b-2416-4772-9151-2c3dd27948ef",
+  "label" : "Planning Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "7748a199-4bea-445c-b09d-e96c96081a59",
+          "columns" : [ {
+            "UUID" : "abcfa535-a269-492f-b172-0cab6de1b4b8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7748a199-4bea-445c-b09d-e96c96081a59",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>Planning Applications</h1><p><br></p><p>You can start a new application by clicking the \"Start New Application\" button below. At any time, you may click the \"Pause\" button to suspend your Planning Application and finish at a later date. To access your paused applications, go to \"My Paused Applications.\"</p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "a9c04636-1c5c-4980-999d-a49cea26675d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "abcfa535-a269-492f-b172-0cab6de1b4b8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b97ebadc-a245-4125-9c0b-801932ece364",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Planning Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2c8764cc-9e5e-41e7-8dff-b2937c767702",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ccb07048-dd6b-4031-b08b-d90d3bad40e4",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Planning Applications"
+}

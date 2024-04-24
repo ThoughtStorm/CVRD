@@ -192,7 +192,19 @@
     <picklistValues>
         <picklist>CVRD_DS_Sub_Type__c</picklist>
         <values>
-            <fullName>Form and Character - Signs</fullName>
+            <fullName>ALC Exclusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non - Adhering Residential Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-farm Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subdivision</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -323,6 +335,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>MUSW__Object_Record_Type__c</picklist>
+        <values>
+            <fullName>CVRD_DS_Cannabis_License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>MUSW__Object_Type__c</picklist>
         <values>
             <fullName>MUSW%5F%5FApplication2%5F%5Fc</fullName>
@@ -398,6 +421,10 @@
     <picklistValues>
         <picklist>MUSW__Status__c</picklist>
         <values>
+            <fullName>Additional Information Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Canceled</fullName>
             <default>false</default>
         </values>
@@ -407,6 +434,10 @@
         </values>
         <values>
             <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
             <default>false</default>
         </values>
         <values>

@@ -390,21 +390,28 @@
             <assignToReference>Application_Contact_Record.CVRD_DS_Owner_Street__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$User.Street</elementReference>
+                <elementReference>Mailing_Address</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Owner_City__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$User.City</elementReference>
+                <elementReference>City</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>$User.PostalCode</elementReference>
+                <elementReference>Postal_Code</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.CVRD_DS_Owner_State__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Province</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -1308,7 +1315,7 @@
         <locationY>2390</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Check_for_mailing_address_is_same_or_not</targetReference>
         </connector>
@@ -1507,6 +1514,7 @@
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
+
         <fields>
             <name>Add_Owner_Screen_Section2</name>
             <fieldType>RegionContainer</fieldType>
@@ -1714,7 +1722,7 @@
         <locationY>650</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Check_Development_Permit_Stage</targetReference>
         </connector>
@@ -1789,6 +1797,7 @@
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
+
         <fields>
             <name>Application_Type_Screen_Section3</name>
             <fieldType>RegionContainer</fieldType>
@@ -1842,7 +1851,7 @@
         <locationY>2090</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Evaluate_Add_Owner</targetReference>
         </connector>
@@ -2121,6 +2130,7 @@
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
+
         <fields>
             <name>Copy_1_of_Owner_Details_Screen_Section3</name>
             <fieldType>RegionContainer</fieldType>
@@ -2174,7 +2184,7 @@
         <locationY>1058</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Property_Information</targetReference>
         </connector>
@@ -2252,6 +2262,7 @@
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
+
         <fields>
             <name>Description_Screen_Section3</name>
             <fieldType>RegionContainer</fieldType>
@@ -2305,7 +2316,7 @@
         <locationY>1790</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Is_Agent</targetReference>
         </connector>
@@ -2452,7 +2463,7 @@
         <locationY>2690</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Riparian_Areas_Protection_Regulation_Declaration</targetReference>
         </connector>
@@ -2573,6 +2584,7 @@
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
+
         <fields>
             <name>Environment_Management_Act_Section3</name>
             <fieldType>RegionContainer</fieldType>
@@ -2650,7 +2662,7 @@
         <locationY>2090</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Evaluate_Add_Owner</targetReference>
         </connector>
@@ -3075,7 +3087,7 @@
         <locationY>2906</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>attestation_subflow</targetReference>
         </connector>
@@ -3416,13 +3428,16 @@
             <inputParameters>
                 <name>originPageURL</name>
                 <value>
-                    <stringValue>https://cvrd--dev1.sandbox.lightning.force.com, https://cvrd--dev1--c.sandbox.vf.force.com, https://cvrd--dev1.sandbox.my.site.com,https://cvrd--qa.sandbox.my.site.com</stringValue>
+
+                    <stringValue>https://cvrd--uat.sandbox.lightning.force.com, https://cvrd--uat--c.sandbox.vf.force.com, https://cvrd--uat.sandbox.my.site.com,https://cvrd--qa.sandbox.my.site.com</stringValue>
+
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
+
         <fields>
             <name>Review_Application_Screen_Section8</name>
             <fieldType>RegionContainer</fieldType>
@@ -3476,7 +3491,7 @@
         <locationY>2798</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
+        <allowPause>true</allowPause>
         <connector>
             <targetReference>Review_Application_Screen</targetReference>
         </connector>

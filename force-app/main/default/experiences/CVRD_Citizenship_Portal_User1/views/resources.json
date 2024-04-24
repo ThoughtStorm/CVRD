@@ -1,0 +1,70 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "ec02aeef-7930-46d9-b76f-fedcbebb4f15",
+  "label" : "Resources",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2bd700a7-70fb-4962-a781-409b54c4e097",
+          "columns" : [ {
+            "UUID" : "009acae8-ce2b-4fe0-bed0-fbda36d91028",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2bd700a7-70fb-4962-a781-409b54c4e097",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><br></h2><h2>Agent Authorization File Request Form :</h2><p><br></p><ol><li><a href=\"https://www.cvrd.ca/DocumentCenter/View/89965/Agent-Authorization-File-Request-Form\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: rgb(0, 102, 204);\"><u>https://www.cvrd.ca/DocumentCenter/View/89965/Agent-Authorization-File-Request-Form</u></a></li></ol><p><br></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "12be82c1-3f82-4924-8af3-ed1d17c13afc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "009acae8-ce2b-4fe0-bed0-fbda36d91028",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "34f0ae2a-e7f2-4dbd-ac17-abd2e92c11cd",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Resources"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b26426c9-c324-4192-9a7a-ce5958c53c8a",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "52273615-d266-4247-8cde-f63a20ff6ca1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-resources"
+}

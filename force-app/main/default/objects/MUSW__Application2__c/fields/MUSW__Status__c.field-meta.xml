@@ -10,6 +10,7 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
+        <controllingField>MUSW__Phase__c</controllingField>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
@@ -32,6 +33,61 @@
                 <default>false</default>
                 <label>Canceled</label>
             </value>
+            <value>
+                <fullName>Additional Information Required</fullName>
+                <default>false</default>
+                <label>Additional Information Required</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
         </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Hearing</controllingFieldValue>
+            <controllingFieldValue>Appeal</controllingFieldValue>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <valueName>Pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Hearing</controllingFieldValue>
+            <controllingFieldValue>Appeal</controllingFieldValue>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <valueName>In Progress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Hearing</controllingFieldValue>
+            <controllingFieldValue>Appeal</controllingFieldValue>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <valueName>Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Hearing</controllingFieldValue>
+            <controllingFieldValue>Appeal</controllingFieldValue>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <valueName>Canceled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>Additional Information Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <valueName>On Hold</valueName>
+        </valueSettings>
     </valueSet>
 </CustomField>
