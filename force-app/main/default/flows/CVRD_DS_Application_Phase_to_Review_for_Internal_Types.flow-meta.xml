@@ -2,8 +2,8 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>60.0</apiVersion>
     <environments>Default</environments>
-    <interviewLabel>CVRD DS {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>CVRD DS Create Application Location Record</label>
+    <interviewLabel>CVRD DS - Application Phase to Review for Internal Types {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CVRD DS - Application Phase to Review for Internal Types</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -23,37 +23,30 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordCreates>
-        <name>Create_Application_Location_Record</name>
-        <label>Create Application Location Record</label>
+    <recordUpdates>
+        <name>Update_Application_phase_and_status</name>
+        <label>Update Application phase and status</label>
         <locationX>176</locationX>
-        <locationY>323</locationY>
+        <locationY>287</locationY>
         <inputAssignments>
-            <field>MUSW__Address__c</field>
+            <field>MUSW__Phase__c</field>
             <value>
-                <elementReference>$Record.MUSW__Address__c</elementReference>
+                <stringValue>Review</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>MUSW__Application__c</field>
+            <field>MUSW__Status__c</field>
             <value>
-                <elementReference>$Record.Id</elementReference>
+                <stringValue>Pending</stringValue>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>MUSW__Parcel__c</field>
-            <value>
-                <elementReference>$Record.MUSW__Parcel__c</elementReference>
-            </value>
-        </inputAssignments>
-        <object>MUSW__Application_Location__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Create_Application_Location_Record</targetReference>
+            <targetReference>Update_Application_phase_and_status</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -67,21 +60,14 @@
             <field>MUSW__Type2__c</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>Crown_Land_Referrals</stringValue>
+                <stringValue>Agricultural_Land_Reserve</stringValue>
             </value>
         </filters>
         <filters>
             <field>MUSW__Type2__c</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>Agricultural_Land_Reserve</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Parcel__c</field>
-            <operator>IsNull</operator>
-            <value>
-                <booleanValue>false</booleanValue>
+                <stringValue>Crown_Land_Referrals</stringValue>
             </value>
         </filters>
         <filters>
@@ -93,7 +79,7 @@
         </filters>
         <object>MUSW__Application2__c</object>
         <recordTriggerType>Create</recordTriggerType>
-        <triggerType>RecordAfterSave</triggerType>
+        <triggerType>RecordBeforeSave</triggerType>
     </start>
     <status>Active</status>
 </Flow>
