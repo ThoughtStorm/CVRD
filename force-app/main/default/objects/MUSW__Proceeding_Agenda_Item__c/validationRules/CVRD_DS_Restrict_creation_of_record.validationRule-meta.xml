@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Restrict_creation_of_record</fullName>
+    <active>true</active>
+    <description>Restrict creation of record when proceeding agenda is full or closed.</description>
+    <errorConditionFormula>AND(
+    ISNEW(),
+    MUSW__Proceeding__r.MUSW__Availability__c &lt;&gt; &quot;Open&quot;
+)</errorConditionFormula>
+    <errorMessage>You can&apos;t create a record when proceeding availability is closed or full.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "60cd723b-2416-4772-9151-2c3dd27948ef",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Planning_Applications",
+  "id" : "6a0bb4e7-b6e8-49a3-8b8c-c81defa429a8",
+  "label" : "Planning Applications",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-Planning Applications",
+  "type" : "route",
+  "urlPrefix" : "planning-applications"
+}
