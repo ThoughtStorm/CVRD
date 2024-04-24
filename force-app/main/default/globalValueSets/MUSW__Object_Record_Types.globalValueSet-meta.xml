@@ -71,11 +71,6 @@
         <label>Agricultural Land Reserve</label>
     </customValue>
     <customValue>
-        <fullName>CVRD_DS_Cannabis_License</fullName>
-        <default>false</default>
-        <label>Cannabis License</label>
-    </customValue>
-    <customValue>
         <fullName>CVRD_DS_Crown_Land_Referrals</fullName>
         <default>false</default>
         <label>Crown Land Referrals</label>
@@ -86,9 +81,19 @@
         <label>Subdivision</label>
     </customValue>
     <customValue>
+        <fullName>CVRD_DS_Cannabis_License</fullName>
+        <default>false</default>
+        <label>Cannabis Retail Licence</label>
+    </customValue>
+    <customValue>
         <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
         <default>false</default>
-        <label>Liquor/Cannabis Licence Referrals</label>
+        <label>Liquor Licence Referrals</label>
+    </customValue>
+    <customValue>
+        <fullName>CVRD_DS_Strata_Conversion</fullName>
+        <default>false</default>
+        <label>Strata Conversion</label>
     </customValue>
     <customValue>
         <fullName>CVRD_DS_Telecommunication_Antanna_Structure</fullName>

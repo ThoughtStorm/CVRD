@@ -1,0 +1,79 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "4b5fd483-97f6-464f-ab0c-96ccacc6ffdd",
+  "label" : "External Agency Home Page",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0) url(/sfsites/c/file-asset/CVRD_11?v=1) center center /cover",
+        "backgroundOverlay" : "rgba(255, 255, 255, 0.2)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6b2df41c-45e9-4f56-95f6-15c476ae8b32",
+          "columns" : [ {
+            "UUID" : "bd8d9174-b2bc-4c6e-a073-526ac214a359",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 400
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6b2df41c-45e9-4f56-95f6-15c476ae8b32",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>Welcome to the Cowichan Valley Regional District</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d5fc9c24-e608-4ee8-a71d-435170a67d35",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">Welcome to the Cowichan Valley</strong></h1><h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\"> Regional District</strong></h1>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "4f74cc33-5f4a-4e6a-9ce5-d03e16115b95",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bd8d9174-b2bc-4c6e-a073-526ac214a359",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e6861518-8a5c-46d6-9fb1-7a9cb57d4fb8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "External Agency Home Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "9493dd9e-249e-46b6-aba9-d463d493ec5f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fe149351-4d0f-4691-925f-7f3b86136f76",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "k9mHrZ7HEWjPthrkdvwt9WiLd56RDq",
+  "type" : "view",
+  "viewType" : "custom-external-agency-home-page"
+}

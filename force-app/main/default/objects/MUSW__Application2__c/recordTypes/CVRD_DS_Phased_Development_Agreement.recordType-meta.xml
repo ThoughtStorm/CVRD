@@ -192,7 +192,15 @@
     <picklistValues>
         <picklist>CVRD_DS_Sub_Type__c</picklist>
         <values>
-            <fullName>Form and Character - Signs</fullName>
+            <fullName>Amendment or Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -319,6 +327,17 @@
         </values>
         <values>
             <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Object_Record_Type__c</picklist>
+        <values>
+            <fullName>CVRD_DS_Cannabis_License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
             <default>false</default>
         </values>
     </picklistValues>
