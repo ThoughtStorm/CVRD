@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_Date_assigned_to_planner__c</fullName>
+    <description>Captures date assigned to the planner</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Planner assigned date</inlineHelpText>
+    <label>Date assigned to planner</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>
