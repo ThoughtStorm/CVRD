@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "74e2648f-a0a4-4535-a768-c12f4e72d22f",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Receipt_Related_List",
+  "id" : "e840b33f-097d-45e6-884b-20e827032aae",
+  "label" : "Receipt Related List",
+  "objectApiName" : "MUSW__Receipt__c",
+  "routeType" : "relatedlist-a1S",
+  "type" : "route",
+  "urlPrefix" : "receipt"
+}

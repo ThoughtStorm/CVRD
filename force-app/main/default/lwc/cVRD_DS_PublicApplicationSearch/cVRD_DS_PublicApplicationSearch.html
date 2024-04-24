@@ -2,24 +2,28 @@
 	<lightning-card>
 		<div class="slds-m-around_medium">
 			<lightning-layout multiple-rows>
-				<lightning-layout-item size="3" padding="around-small">
+				<lightning-layout-item size="1" padding="around-small">
+				</lightning-layout-item>
+				<lightning-layout-item size="2" padding="around-small">
 					<lightning-input type="search" label="Application" onchange={handleApplication}></lightning-input>
 				</lightning-layout-item>
-				<lightning-layout-item size="3" padding="around-small">
+				<lightning-layout-item size="2" padding="around-small">
 					<lightning-input type="search" label="Address" onchange={handleAddress}></lightning-input>
 				</lightning-layout-item>
-				<lightning-layout-item size="3" padding="around-small">
+				<lightning-layout-item size="2" padding="around-small">
 					<lightning-input type="search" label="PID" onchange={handlePID}></lightning-input>
 				</lightning-layout-item>
-				<lightning-layout-item size="1" padding="around-small">
+				<lightning-layout-item size="2" padding="around-small">
 					<!--lightning-input type="search" label="PID" onchange={handlePID}></lightning-input-->
-					<lightning-combobox name="ElectorialArea" label="Electorial Area" value={area} placeholder="--Select Area--"
+					<lightning-combobox name="ElectorialArea" label="Electoral Area" value={area} placeholder="--Select Area--"
 						options={options} onchange={handleCombo}></lightning-combobox>
 				</lightning-layout-item>
                 <lightning-layout-item size="2" padding="around-small">
 					<!--lightning-input type="search" label="PID" onchange={handlePID}></lightning-input-->
 					<lightning-button variant="brand" label="Search" onclick={handleSearch} style="position:relative; top:22px;" ></lightning-button>
 					<lightning-button variant="brand-outline" label="Cancel" onclick={handleCancel} style="position:relative; top:22px;" class="slds-m-left_x-small"></lightning-button>
+				</lightning-layout-item>
+				<lightning-layout-item size="1" padding="around-small">
 				</lightning-layout-item>
 
 			</lightning-layout>

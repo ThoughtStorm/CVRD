@@ -1,0 +1,70 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "b63d04e6-9517-4773-8a73-e51e8b866776",
+  "label" : "Place Holder Page Temp",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d8986647-c52b-4caa-a29f-b253b9152d6f",
+          "columns" : [ {
+            "UUID" : "4f9fe6be-ce34-4e50-a80b-105f6fea048e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d8986647-c52b-4caa-a29f-b253b9152d6f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong>Page Not Found(Under Implementation)</strong></h1><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7c26a259-1a6a-4e2d-aff4-f4293f10318a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4f9fe6be-ce34-4e50-a80b-105f6fea048e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "328a315f-dedf-47d6-8d8e-6a429c3a274c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Place Holder Page Temp"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "afac147c-e83b-421f-afb1-fa77a2e8b47b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c278cbae-9de2-4383-9e17-d46ca80e35a7",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-place-holder-page-temp"
+}

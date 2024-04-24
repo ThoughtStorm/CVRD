@@ -88,7 +88,10 @@
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
         <entryCriteria>
+
             <booleanFilter>1 OR (2 AND 7) OR (3 AND 4) OR (5 AND 6) OR (8 AND 9)</booleanFilter>
+
+
             <criteriaItems>
                 <field>MUSW__Application2__c.MUSW__Type2__c</field>
                 <operation>notEqual</operation>
@@ -97,7 +100,10 @@
             <criteriaItems>
                 <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
                 <operation>notEqual</operation>
+
                 <value>Minor - New,Minor - Extension</value>
+
+
             </criteriaItems>
             <criteriaItems>
                 <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
@@ -108,6 +114,7 @@
                 <field>MUSW__Application2__c.MUSW__Type2__c</field>
                 <operation>equals</operation>
                 <value>Covenant_Amendment/Discharge</value>
+
             </criteriaItems>
             <criteriaItems>
                 <field>MUSW__Application2__c.MUSW__Type2__c</field>
@@ -133,6 +140,7 @@
                 <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
                 <operation>notEqual</operation>
                 <value>Delegated</value>
+
             </criteriaItems>
         </entryCriteria>
         <label>CO/CFO Approval</label>
