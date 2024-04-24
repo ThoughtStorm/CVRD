@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "cc86d917-8e5e-46c3-b023-4d71a0b91d6e",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Permit_Detail",
+  "id" : "9326c712-fcaa-4fe0-9f8f-859de642a294",
+  "label" : "Permit Detail",
+  "objectApiName" : "MUSW__Permit2__c",
+  "routeType" : "detail-a1B",
+  "type" : "route",
+  "urlPrefix" : "permit2"
+}

@@ -1,0 +1,23 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "7ae9c55f-ca94-4c8d-9051-5757ccb3de1b",
+  "label" : "Receipt List",
+  "regions" : [ {
+    "id" : "fd3085ff-d365-45d1-baad-5f0ebc62229d",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "267593ca-3d5d-4889-94a4-becda27af4da",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "ba339362-4895-44be-b879-865c3f41f091",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a1S"
+}
