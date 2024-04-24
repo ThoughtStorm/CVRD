@@ -1,0 +1,157 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "50d8ec0a-d70f-4639-ba57-43c0a1114103",
+  "label" : "My Planning Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "44b541d7-6d78-487b-9389-dbde8fd691e0",
+          "columns" : [ {
+            "UUID" : "39a99451-ae2c-4305-b484-735f3e328b1c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "14ecebd6-7f96-46e7-b0a9-431ce01f78c3",
+            "columnKey" : "76dd4",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "44b541d7-6d78-487b-9389-dbde8fd691e0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>My Planning Applications</h1><p><br></p><p>Below is a list of your active planning applications. To see all of your planning applications, click the \"View All\" link at the bottom of the list. To see the details of a specific planning application, click on the planning application number.</p><p><br></p><p>If you would like to start a new planning application, click the&nbsp;&nbsp;\"New Planning Application\" button.&nbsp;&nbsp;To resume a paused application, go to \"My Paused Applications.\"</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "757129e6-6458-418a-a977-a67567cd6217",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "39a99451-ae2c-4305-b484-735f3e328b1c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(18, 70, 74)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 25,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "large",
+            "noImageColor" : "rgb(212, 212, 212)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "f71c6da1-ae86-484c-a5f9-8e90c47e083f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "14ecebd6-7f96-46e7-b0a9-431ce01f78c3",
+        "regionLabel" : "Column 2",
+        "regionName" : "76dd4",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "72b897a1-a0d4-4fff-8235-2bf43adc6ee0",
+          "columns" : [ {
+            "UUID" : "677a85a0-2a1c-419e-9d3f-b53358351efe",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "72b897a1-a0d4-4fff-8235-2bf43adc6ee0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "Online_Active_Planning_Applications",
+            "layout" : "STANDARD",
+            "pageSize" : 100,
+            "scope" : "MUSW__Application2__c",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "a32edd56-8395-44b4-85ed-edbb081674e9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "677a85a0-2a1c-419e-9d3f-b53358351efe",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a94ba729-23dd-4026-b5f4-729cebd4a599",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Planning Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "1c3ba9f6-8e79-4ccc-8eda-496f89965090",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "176045b9-921d-4590-ae9b-876641a1097f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-My Planning Applications"
+}

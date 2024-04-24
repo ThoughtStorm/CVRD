@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "064df751-4de2-42e3-a160-a721ff9c0872",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Complaint_Detail",
+  "id" : "8e416398-13a0-4bc0-aa0a-056f7f92e3fb",
+  "label" : "Complaint Detail",
+  "objectApiName" : "MUSW__Complaint2__c",
+  "routeType" : "detail-a0T",
+  "type" : "route",
+  "urlPrefix" : "complaint2"
+}
