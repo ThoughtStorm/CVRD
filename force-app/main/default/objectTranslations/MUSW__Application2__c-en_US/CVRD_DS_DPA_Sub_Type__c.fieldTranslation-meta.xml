@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>CVRD_DS_DPA_Sub_Type__c</name>
+    <picklistValues>
+        <masterLabel>Agricultural(DPA 8)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amendment/Extension(DPA 1-13)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conservation/GHG reduction(DPA 13)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Environmental and Hazard(DPA 1-7)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Form and Character (DPA 9-12)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Form and Character - Signs(DPA 9-12)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

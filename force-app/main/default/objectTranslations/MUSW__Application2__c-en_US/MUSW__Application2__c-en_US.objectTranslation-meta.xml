@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Applications</value>
+    </caseValues>
+    <fieldSets>
+        <label></label>
+        <name>clariti__ApplicationSearch</name>
+    </fieldSets>
+    <fieldSets>
+        <label></label>
+        <name>clariti__ApplicationSearchResults</name>
+    </fieldSets>
+    <layouts>
+        <layout>Agricultural Land Reserve Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Application Experience</layout>
+        <sections>
+            <label></label>
+            <section>Application Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Bylaw (OCP/Rezoning)</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Application Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ByLaw (Rezoning/OCP)</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Property Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Board of Variance Application Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Bylaw (OCP/Rezoning)</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Covenant Amendment or Discharge Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Crown Land Referrals Application Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Development Permit (DP) Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>ByLaw(RZ/OCP)</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Development Permit Area</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Development Variance Permit (DVP) Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Flood Management Bylaw Exemption Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Land Use Contract Amendment or Discharge Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Liquor/Cannabis Licence Referrals Application Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Minimum Frontage Exemption Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>OCP, Zoning or Land Use Bylaw Amendment Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Phased Development Agreement Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Strata Conversion</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Subdivision (Referral) Application Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Telecommunication Antanna Structure Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Temporary Use Permit (TUP) Layout</layout>
+        <sections>
+            <label></label>
+            <section>Action Items</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Environmental Management Act</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Riparian Areas Protection Regulation Declaration</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Application Number</nameFieldLabel>
+    <quickActions>
+        <label></label>
+        <name>CVRD_Confirm_and_Create_Application</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>CVRD_DS_Add_Fee</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>CVRD_DS_Cancel_Application</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>CVRD_DS_Manual_Fee</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>MUSW__Add_Alert</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>MUSW__Request_Override</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Sub_Application</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>clariti__PayOutstandingItems</name>
+    </quickActions>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Agricultural_Land_Reserve</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Board_of_Variance</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Cannabis_License</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Covenant_Amendment_or_Discharge</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Crown_Land_Referrals</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Development_Permit</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Development_Variance_Permit</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Flood_Management_Bylaw_Exemption</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Liquor_Cannabis_Licence_Referrals</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Minimum_Frontage_Exemption</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Phased_Development_Agreement</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Strata_Conversion</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Subdivision_Referral</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Telecommunication_Antenna_Structure</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>CVRD_DS_Temporary_Use_Permit</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Applicant_Owner_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CVRD_DS_Hold_the_Record</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Environmental_Management_Act</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Name_field_changed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Required_Site_Disclosure_Statement</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Riparian_Areas_Protection_Regulation</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>CVRD_DS_Create_Sub_Application</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>MUSW__Attach_Letter</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>MUSW__Link_Attachment</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>MUSW__RunAutomation</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>View_GIS_Map</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -47,6 +47,9 @@
                         <valueListItems>
                             <value>MUSW__Application2__c.MUSW__Add_Alert</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_Add_Fee</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>

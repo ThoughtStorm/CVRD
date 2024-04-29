@@ -1779,7 +1779,7 @@
         <layout>MUSW__Review__c-Application - Review Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Task-Referral Internal Task Layout</layout>
+        <layout>Task-Task Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>UserAlt-User Profile Layout</layout>
