@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Temporary Use Permit</label>
+    <protected>false</protected>
+    <values>
+        <field>CVRD_DS_AR_Ledger_Account_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CVRD_DS_AR_Ledger_Account_Number__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CVRD_DS_Application_Type__c</field>
+        <value xsi:type="xsd:string">Temporary_Use_Permit</value>
+    </values>
+    <values>
+        <field>CVRD_DS_Cash_Ledger_Account_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CVRD_DS_Cash_Ledger_Account_Number__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CVRD_DS_Revenue_Ledger_Account_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CVRD_DS_Revenue_Ledger_Account_Number__c</field>
+        <value xsi:type="xsd:string">01-1-5100-3565-325</value>
+    </values>
+</CustomMetadata>

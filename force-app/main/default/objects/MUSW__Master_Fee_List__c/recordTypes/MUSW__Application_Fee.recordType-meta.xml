@@ -4,9 +4,40 @@
     <active>true</active>
     <label>Application Fee</label>
     <picklistValues>
+        <picklist>CVRD_DS_Application_DP_Sub_Type__c</picklist>
+        <values>
+            <fullName>Agricultural%28DPA 8%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment%2FExtension%28DPA 1-13%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservation%2FGHG reduction%28DPA 13%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental and Hazard%28DPA 1-7%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character %28DPA 9-12%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character - Signs%28DPA 9-12%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>CVRD_DS_Application_Sub_Type__c</picklist>
         <values>
             <fullName>ALC Exclusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agricultural</fullName>
             <default>false</default>
         </values>
         <values>
@@ -19,6 +50,10 @@
         </values>
         <values>
             <fullName>Amendment or Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment%2FExtension</fullName>
             <default>false</default>
         </values>
         <values>
@@ -38,6 +73,14 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Combined OCP Amendment and Zoning Bylaw Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservation%2FGHG reduction</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Delegated</fullName>
             <default>false</default>
         </values>
@@ -46,7 +89,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Environmental and Hazard</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Expand Operating Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character</fullName>
             <default>false</default>
         </values>
         <values>
@@ -95,6 +146,10 @@
         </values>
         <values>
             <fullName>New Outdoor Patio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non - Adhering Residential Use</fullName>
             <default>false</default>
         </values>
         <values>
