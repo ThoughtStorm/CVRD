@@ -3,7 +3,7 @@
     <fullName>CVRD_DS_Description__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>Letter of Rationale and related documents can be provided at the Upload Documents stage of the application</inlineHelpText>
-    <label>Description</label>
+    <label>Application Proposal Description</label>
     <length>500</length>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
