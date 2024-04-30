@@ -7,7 +7,6 @@
     <excludeButtons>PrintableView</excludeButtons>
     <excludeButtons>RecordShareHierarchy</excludeButtons>
     <excludeButtons>Share</excludeButtons>
-    <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
@@ -15,30 +14,54 @@
         <label>Information</label>
         <layoutColumns>
             <layoutItems>
+                <behavior>Required</behavior>
+                <field>Name</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>MUSW__Type2__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MUSW__Account__c</field>
+                <field>CVRD_DS_Sub_Type__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>MUSW__Description__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Preliminary_Auto_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CVRD_DS_Parcel_Electoral_Area__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Description__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_RCRS_classification__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Units__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>MUSW__Applicant__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Agent_Authorization__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>MUSW__Phase__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>MUSW__Status__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Related_Application__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -48,27 +71,34 @@
                 <behavior>Edit</behavior>
                 <field>MUSW__Completion_Date__c</field>
             </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsTopToBottom</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>false</customLabel>
-        <detailHeading>false</detailHeading>
-        <editHeading>false</editHeading>
-        <label>Description Information</label>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MUSW__Description__c</field>
+                <field>CVRD_Application_Created_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CVRD_Application_Created_Year__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Date_assigned_to_planner__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Application_Status_Comments__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Fee_Receipt__c</field>
             </layoutItems>
         </layoutColumns>
-        <style>OneColumn</style>
+        <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Application Location</label>
+        <label>Property Information</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -76,38 +106,85 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MUSW__Parcel__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>MUSW__Geolocation__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>
-        <style>TwoColumnsTopToBottom</style>
+        <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Balance Details</label>
+        <label>Environmental Management Act</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>MUSW__Total_Fees__c</field>
-            </layoutItems>
-            <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Commercial_Or_Industrial_Purpose__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>MUSW__Total_Payments__c</field>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Site_Disclosure_Statement__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Riparian Areas Protection Regulation Declaration</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_High_Water_Mark__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Is_Top_of_a_Ravine_Bank__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>ByLaw (Rezoning/OCP)</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_BYLAW_RZ_OCP__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>MUSW__Total_Balance__c</field>
+                <behavior>Edit</behavior>
+                <field>CVRD_1st_Reading__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_2nd_Reading__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_3rd_Reading__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Adoption_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Registration_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Registration_Number__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -119,22 +196,18 @@
         <label>System Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CreatedById</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OwnerId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>LastModifiedById</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>LastModifiedById</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>Name</field>
+                <field>CreatedById</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -199,13 +272,23 @@
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
-        <fields>NAME</fields>
         <fields>MUSW__First_Name__c</fields>
         <fields>MUSW__Last_Name__c</fields>
         <fields>MUSW__Email__c</fields>
         <fields>MUSW__Phone__c</fields>
-        <fields>MUSW__Relationship__c</fields>
+        <fields>CVRD_DS_Owner_Country__c</fields>
+        <fields>CVRD_DS_Owner_State__c</fields>
+        <fields>CVRD_DS_Owner_City__c</fields>
+        <fields>CVRD_DS_Owner_Street__c</fields>
+        <fields>CVRD_DS_Owner_Postal_Code__c</fields>
         <relatedList>MUSW__Application_Contact__c.MUSW__Application__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>MUSW__Attestor__c</fields>
+        <fields>MUSW__Attestation_Date__c</fields>
+        <fields>MUSW__Consent__c</fields>
+        <fields>MUSW__Attestation__c</fields>
+        <relatedList>MUSW__Attestation_Consent__c.MUSW__Application2__c</relatedList>
     </relatedLists>
     <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
@@ -216,6 +299,10 @@
         <fields>MUSW__Cycle__c</fields>
         <fields>MUSW__Due_Date__c</fields>
         <relatedList>MUSW__Milestone__c.MUSW__Application2__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>MUSW__Submission__c.MUSW__Application2__c</relatedList>
     </relatedLists>
     <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
@@ -231,6 +318,10 @@
         <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>MUSW__Review__c.MUSW__Application2__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
         <fields>MUSW__Contact_Type__c</fields>
         <fields>MUSW__Contact__c</fields>
@@ -243,6 +334,26 @@
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedContentNoteList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>MUSW__Comment__c.CVRD_DS_Application__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>CreatedDate</fields>
+        <fields>StepStatus</fields>
+        <fields>OriginalActor</fields>
+        <fields>Actor</fields>
+        <fields>Comments</fields>
+        <relatedList>RelatedProcessHistoryList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>MUSW__Type2__c</fields>
+        <fields>MUSW__Applicant__c</fields>
+        <fields>MUSW__Status__c</fields>
+        <fields>MUSW__Completion_Date__c</fields>
+        <relatedList>MUSW__Application2__c.CVRD_DS_Related_Application__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

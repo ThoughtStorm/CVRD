@@ -36,6 +36,11 @@
                 <default>false</default>
                 <label>Form and Character - Signs(DPA 9-12)</label>
             </value>
+            <value>
+                <fullName>Form and Character (DPA 9-12)</fullName>
+                <default>false</default>
+                <label>Form and Character (DPA 9-12)</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
     <visibleLines>4</visibleLines>
