@@ -272,10 +272,12 @@
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>MUSW__Type__c</fields>
+        <fields>CVRD_DS_Application_Sub_Type__c</fields>
         <fields>MUSW__Amount__c</fields>
         <fields>MUSW__Amount_Waived__c</fields>
         <fields>MUSW__Outstanding_Fee__c</fields>
         <fields>MUSW__Fee_Paid_Date2__c</fields>
+        <fields>MUSW__Description__c</fields>
         <relatedList>MUSW__Fee__c.MUSW__Application2__c</relatedList>
         <sortField>MUSW__Outstanding_Fee__c</sortField>
         <sortOrder>Desc</sortOrder>
