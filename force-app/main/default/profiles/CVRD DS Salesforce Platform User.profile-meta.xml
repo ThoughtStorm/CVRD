@@ -15,10 +15,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CVRD_DS_Split_MultiPicklist</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>LightningForgotPasswordController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -29,6 +25,10 @@
     <classAccesses>
         <apexClass>LightningLoginFormController</apexClass>
         <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CVRD_DS_Split_MultiPicklist</apexClass>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>LightningLoginFormControllerTest</apexClass>
@@ -43,6 +43,46 @@
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_AR_Ledger_Account_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_AR_Ledger_Account_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Application_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Cash_Ledger_Account_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Cash_Ledger_Account_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Revenue_Ledger_Account_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Revenue_Ledger_Account_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+	 <fieldPermissions>
+        <editable>true</editable>
+        <<field>MUSW__Master_Fee_List__c.CVRD_DS_Application_DP_Sub_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>	
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Review__c.CVRD_DS_External_Referral_Agency__c</field>
@@ -86,16 +126,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Application__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <<field>MUSW__Master_Fee_List__c.CVRD_DS_Application_DP_Sub_Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-	<fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application2__c.CVRD_DS_Units__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -386,6 +416,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.MUSW__Valuation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Units__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <<field>MUSW__Master_Fee_List__c.CVRD_DS_Application_DP_Sub_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
