@@ -160,7 +160,7 @@
         </rules>
         <rules>
             <name>Yes</name>
-            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
+            <conditionLogic>4 AND (1 OR (2 AND 3))</conditionLogic>
             <conditions>
                 <leftValueReference>$Record__Prior</leftValueReference>
                 <operator>IsNull</operator>
@@ -180,6 +180,13 @@
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Development_Permit</stringValue>
                 </rightValue>
             </conditions>
             <connector>
