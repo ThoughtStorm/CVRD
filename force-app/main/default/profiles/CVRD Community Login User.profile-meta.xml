@@ -669,41 +669,6 @@
         <field>MUSW__Inspection__c.MUSW__On_Itinerary__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_AR_Ledger_Account_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_AR_Ledger_Account_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Application_Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Cash_Ledger_Account_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Cash_Ledger_Account_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Revenue_Ledger_Account_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Revenue_Ledger_Account_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
 	 <fieldPermissions>
         <editable>true</editable>
         <<field>MUSW__Master_Fee_List__c.CVRD_DS_Application_DP_Sub_Type__c</field>
