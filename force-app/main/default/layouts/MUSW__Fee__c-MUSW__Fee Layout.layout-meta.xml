@@ -22,6 +22,14 @@
                 <behavior>Required</behavior>
                 <field>MUSW__Type__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Additional_Fees__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Application_Sub_Type__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

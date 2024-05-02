@@ -47,11 +47,6 @@
                 <default>false</default>
                 <label>Other Fee</label>
             </value>
-            <value>
-                <fullName>Administration</fullName>
-                <default>false</default>
-                <label>Administration</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

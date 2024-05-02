@@ -1,9 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Copy_1_of_Create_DPA_Fee</name>
+        <label>Copy 1 of Create DPA Fee</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <actionName>CVRD_DS_Split_MultiPicklist</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>FeeTemplateRecords</name>
+            <value>
+                <elementReference>Get_DP_fee_template_records</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>MultipicklistValues</name>
+            <value>
+                <elementReference>$Record.CVRD_DS_DPA_Sub_Type__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>CVRD_DS_Split_MultiPicklist</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_1_of_Create_Fees</name>
+        <label>Copy 1 of Create Fees</label>
+        <locationX>842</locationX>
+        <locationY>647</locationY>
+        <actionName>MUSW__CreateFeesAction</actionName>
+        <actionType>apex</actionType>
+        <dataTypeMappings>
+            <typeName>T__relatedRecord</typeName>
+            <typeValue>MUSW__Application2__c</typeValue>
+        </dataTypeMappings>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>relatedRecord</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>MUSW__CreateFeesAction</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Create_DPA_Fee</name>
+        <label>Create DPA Fee</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <actionName>CVRD_DS_Split_MultiPicklist</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>FeeTemplateRecords</name>
+            <value>
+                <elementReference>Get_DP_fee_template_records</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>MultipicklistValues</name>
+            <value>
+                <elementReference>$Record.CVRD_DS_DPA_Sub_Type__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>CVRD_DS_Split_MultiPicklist</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
         <name>Create_Fees</name>
         <label>Create Fees</label>
-        <locationX>50</locationX>
+        <locationX>578</locationX>
         <locationY>431</locationY>
         <actionName>MUSW__CreateFeesAction</actionName>
         <actionType>apex</actionType>
@@ -25,26 +104,63 @@
     <decisions>
         <name>Is_New_Application_or_Application_Phase_Status_Changed</name>
         <label>Is New Application or Application Phase/Status Changed</label>
-        <locationX>182</locationX>
+        <locationX>578</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
+            <name>Development_Permit_Record_without_subtype</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_DPA_Sub_Type__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.CVRD_DS_DPA_Sub_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Get_DP_fee_template_records</targetReference>
+            </connector>
+            <label>Development Permit Record without subtype</label>
+        </rules>
+        <rules>
+            <name>Development_Permit_record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_DPA_Sub_Type__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Development_Permit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.CVRD_DS_DPA_Sub_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_fee_records_for_Application</targetReference>
+            </connector>
+            <label>Development Permit record</label>
+        </rules>
+        <rules>
             <name>Yes</name>
-            <conditionLogic>1 OR 2 OR 3 OR (4 AND 5)</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
+            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record__Prior</leftValueReference>
                 <operator>IsNull</operator>
@@ -71,6 +187,28 @@
             </connector>
             <label>Yes</label>
         </rules>
+        <rules>
+            <name>Yes_with_subtype_change</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Sub_Type__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.CVRD_DS_Sub_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_fee_records</targetReference>
+            </connector>
+            <label>Yes with subtype change</label>
+        </rules>
     </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD_DS_Create_Fee-Application {!$Flow.CurrentDateTime}</interviewLabel>
@@ -95,8 +233,140 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_existing_application_fee_records</name>
+        <label>Delete existing application fee records</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Copy_1_of_Create_Fees</targetReference>
+        </connector>
+        <inputReference>get_fee_records</inputReference>
+    </recordDeletes>
+    <recordDeletes>
+        <name>Delete_Fee_records</name>
+        <label>Delete Fee records</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Get_DP_fee_template_records</targetReference>
+        </connector>
+        <inputReference>Get_fee_records_for_Application</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Copy_1_of_Get_DP_fee_template_records</name>
+        <label>Copy 1 of Get DP fee template records</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Copy_1_of_Create_DPA_Fee</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CVRD_DS_Application_DP_Sub_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MUSW__Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>MUSW__Master_Fee_List__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_DP_fee_template_records</name>
+        <label>Get DP fee template records</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_DPA_Fee</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CVRD_DS_Application_DP_Sub_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MUSW__Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>MUSW__Master_Fee_List__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>get_fee_records</name>
+        <label>get fee records</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Delete_existing_application_fee_records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MUSW__Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Application Fee</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MUSW__Application2__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>MUSW__Fee__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_fee_records_for_Application</name>
+        <label>Get fee records for Application</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Delete_Fee_records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MUSW__Application2__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>MUSW__Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Application Fee</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>MUSW__Fee__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <start>
-        <locationX>56</locationX>
+        <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Is_New_Application_or_Application_Phase_Status_Changed</targetReference>
@@ -107,4 +377,27 @@
     </start>
     <status>Active</status>
     <triggerOrder>10</triggerOrder>
+    <variables>
+        <name>FeeCollation</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Fee__c</objectType>
+    </variables>
+    <variables>
+        <name>feeRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Fee__c</objectType>
+    </variables>
+    <variables>
+        <name>SplitMultipicklistValues</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
 </Flow>
