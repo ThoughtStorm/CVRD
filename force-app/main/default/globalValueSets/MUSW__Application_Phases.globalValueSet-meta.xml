@@ -26,6 +26,11 @@
         <label>Appeal</label>
     </customValue>
     <customValue>
+        <fullName>Issue</fullName>
+        <default>false</default>
+        <label>Issue</label>
+    </customValue>
+    <customValue>
         <fullName>Close Out</fullName>
         <default>false</default>
         <label>Close Out</label>
