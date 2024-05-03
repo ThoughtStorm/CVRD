@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Get_required_submission</name>
+        <label>Get required submission</label>
+        <locationX>314</locationX>
+        <locationY>974</locationY>
+        <actionName>CVRD_DS_Get_Required_Submissions</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Get_required_pending_submissions</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Record_Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>CVRD_DS_Get_Required_Submissions</nameSegment>
+        <outputParameters>
+            <assignToReference>ApexActionReturnVal</assignToReference>
+            <name>output</name>
+        </outputParameters>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
         <name>Redirect_To_Record_Detail_Page</name>
         <label>Redirect To Record Detail Page</label>
         <locationX>50</locationX>
-        <locationY>1490</locationY>
+        <locationY>1706</locationY>
         <actionName>clariti:flowNavigation</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -67,6 +91,22 @@
             <targetReference>Get_Permit_Name</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Assign_to_application_list</name>
+        <label>Assign to application list</label>
+        <locationX>314</locationX>
+        <locationY>1298</locationY>
+        <assignmentItems>
+            <assignToReference>ApplicationRecords</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Application_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</targetReference>
+        </connector>
+    </assignments>
     <constants>
         <name>Phase_Value</name>
         <dataType>String</dataType>
@@ -85,7 +125,7 @@
         <name>Evaluate_Button_Bar_Value</name>
         <label>Evaluate Button Bar Value</label>
         <locationX>314</locationX>
-        <locationY>1382</locationY>
+        <locationY>1598</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Button_Bar_Value_Finish</name>
@@ -196,7 +236,7 @@
         <name>Evaluate_Submissions_Complete</name>
         <label>Evaluate Submissions Complete</label>
         <locationX>314</locationX>
-        <locationY>1082</locationY>
+        <locationY>1190</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>Redirect_To_Record_Detail_Page</targetReference>
@@ -206,10 +246,10 @@
             <name>Evaluate_for_Required_Submissions</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_required_pending_submissions</leftValueReference>
-                <operator>IsNull</operator>
+                <leftValueReference>ApexActionReturnVal</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <stringValue>false</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -228,7 +268,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</targetReference>
+                <targetReference>Assign_to_application_list</targetReference>
             </connector>
             <label>Pending Submission Requests Uploaded (all satisfied / no fees)</label>
         </rules>
@@ -310,7 +350,7 @@
         <locationY>866</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Get_required_pending_submissions</targetReference>
+            <targetReference>Get_required_submission</targetReference>
         </connector>
         <filterLogic>(1 AND 4 AND 5) OR (2 AND 4 AND 6) OR (3 AND 4 AND 7)</filterLogic>
         <filters>
@@ -460,7 +500,7 @@
         <name>Get_required_pending_submissions</name>
         <label>Get required pending submissions</label>
         <locationX>314</locationX>
-        <locationY>974</locationY>
+        <locationY>1082</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Evaluate_Submissions_Complete</targetReference>
@@ -532,7 +572,7 @@
         <name>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</name>
         <label>Pending Submission Requests Uploaded (all satisfied / no fees)</label>
         <locationX>314</locationX>
-        <locationY>1190</locationY>
+        <locationY>1406</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -543,6 +583,20 @@
             <name>Confirmation_Page_1</name>
             <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 28px;&quot;&gt;Documents Successfully Uploaded&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;You have successfully uploaded documents in your pending application, Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-size: 14px; font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>createPDF</name>
+            <extensionName>c:createPDF</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>applicationRecords</name>
+                <value>
+                    <elementReference>ApplicationRecords</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <fields>
             <name>Button_Bar_1</name>
@@ -678,7 +732,7 @@
         <name>Pending_Submission_Required_Requests_Uploaded_some_satisfied_no_fees</name>
         <label>Pending Submission Requests Uploaded (some satisfied / no fees)</label>
         <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationY>1298</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -798,11 +852,26 @@
     </start>
     <status>Active</status>
     <variables>
+        <name>ApexActionReturnVal</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
         <name>Application_Id</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ApplicationRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Application2__c</objectType>
     </variables>
     <variables>
         <name>Button_Bar_Value</name>
