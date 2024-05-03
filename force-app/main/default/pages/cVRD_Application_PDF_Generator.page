@@ -1,0 +1,157 @@
+<apex:page controller="PrintJobPDFController" renderAs="pdf"  
+           applyHtmlTag="false" showHeader="false" cache="true" readOnly="true" >
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+            <style>
+                @page {
+                size: a4 portrait;    
+                padding-left: 2px;    
+                padding-right: 2px;
+                }
+                table{
+                border: 1px solid #22bcb9;
+                border-style: double;
+                outline: 1px solid #22bcb9;
+                outline-offset: -20px;
+                }
+                #table{
+                border-collapse: separate;
+                }
+            </style>
+        </head>
+        <div style="width:100%;">
+            <div style="margin-bottom:10px height:60px; float:left;">
+                <div style="width:50%;float:left;">
+                    <apex:image url="{! URLFOR($Resource.CVRD_Logo)}" style="height:50px" alt="CVRD Logo"/>
+                </div>
+                <div style="width:50%; float:right;">
+                    <div style="float:right;">Development Services</div>
+                    <div style="float:right;"><a href="{Instalink}" target="_blank"> <apex:image url="{! URLFOR($Resource.CVRD_Logo_Icon)}" style="color:black"/> cvrdlanduse</a> | ds@cvrd.bc.ca
+                    </div>
+                </div>
+            </div>
+            <div Style="width:100%; height:auto; float:left; clear:left;">
+                <div Style="width:100%; height:auto;float:left;">
+                    <apex:pageBlock mode="read-only">
+                        <h3 style="width:100%; height:28px; background-color: #22bcb9; color:black; text-align:left; float:left;">Application Details</h3>
+                    </apex:pageBlock>
+                </div>
+                <div Style="width:100%; height:auto; float:left; clear:left;">
+                    <apex:pageBlock mode="read-only">
+                        <apex:repeat var="a" value="{!ApplicationList}">
+                            <table style="font-family:sans-serif;" width="100%">
+                                <tr>
+                                    <th style="padding-left:5px;"> Application Number</th>
+                                    <td><apex:outputField value="{!a.Name}"/></td>
+                                </tr>
+                                <tr>
+                                    <th style="padding-left:5px;"> Type </th>
+                                    <td><apex:outputField value="{!a.MUSW__Type2__c}"/></td>
+                                </tr>
+                                <tr>
+                                    <th style="padding-left:5px;"> Applicant / Owner </th>
+                                    <td><apex:outputText value="{!a.MUSW__Applicant__r.Name}"/></td>
+                                </tr>
+                                <tr>
+                                    <th style="padding-left:5px;"> Status </th>
+                                    <td><apex:outputField value="{!a.MUSW__Status__c}"/></td>
+                                </tr>
+                                <tr>
+                                    <th style="padding-left:5px;"> Description </th>
+                                    <td><apex:outputField value="{!a.CVRD_DS_Description__c}"/></td>
+                                </tr>
+                                <tr>
+                                    <th style="padding-left:5px;"> Sub Type </th>
+                                    <td><apex:outputField value="{!a.CVRD_DS_Sub_Type__c}"/></td>
+                                </tr>
+                                <tr>
+                                    <th style="padding-left:5px;"> Link an existing Application </th>
+                                    <td><apex:outputField value="{!a.CVRD_DS_Related_Application__c}"/></td>
+                                </tr>
+                                <tr>
+                                    <th style="padding-left:5px;"> Phase </th>
+                                    <td><apex:outputField value="{!a.MUSW__Phase__c}"/></td>
+                                </tr>
+                            </table>
+                        </apex:repeat>
+                    </apex:pageBlock>
+                </div>
+                <div Style="width:100%; height:auto; float:left; clear:left;">
+                    <div Style="width:100%; height:auto; float:left;">
+                        <apex:pageBlock mode="read-only">
+                            <h3 style="width:100%; height:28px; background-color: #22bcb9; color:black; text-align:left; float:left;">Submission Details</h3>
+                        </apex:pageBlock>
+                    </div>
+                    <div Style="width:100%; height:auto; float:left; clear:left;">
+                        <apex:pageBlock mode="read-only">
+                            <table style="font-family:sans-serif; width:100%;">
+                                <tr>
+                                    <th> Document Name </th>
+                                    <th> Status </th>
+                                </tr>
+                                <apex:repeat var="a" value="{!SubmissionList}">
+                                    <tr>
+                                        <td> <apex:outputText value="{!a.Name}" /> </td>
+                                        <td> <apex:outputText value="{!a.MUSW__Status__c}" /> </td>
+                                    </tr>
+                                </apex:repeat>
+                            </table>
+                        </apex:pageBlock>
+                    </div>
+                </div>
+                <div Style="width:100%; height:auto; float:left; clear:left;">
+                    <div Style="width:100%; height:auto; float:left;">
+                        <apex:pageBlock mode="read-only">
+                            <h3 style="width:100%; height:28px; background-color: #22bcb9; color:black; text-align:left; float:left;">Owner Information</h3>
+                        </apex:pageBlock>
+                    </div>
+                    <div Style="width:100%; height:auto; float:left; clear:left;">
+                        <apex:pageBlock mode="read-only">
+                            <apex:repeat var="a" value="{!OwnerList}">
+                                <table style="font-family:sans-serif; width:100%;">
+                                    <tr>
+                                        <th> Number </th>
+                                        <th> First Name </th>
+                                        <th> Last Name </th>
+                                        <th> Primary Owner </th>
+                                    </tr>
+                                    <tr>
+                                        <td> <apex:outputText value="{!a.Name}" /> </td>
+                                        <td> <apex:outputText value="{!a.MUSW__First_Name__c}" /> </td>
+                                        <td> <apex:outputText value="{!a.MUSW__Last_Name__c}" /> </td>
+                                        <td> <apex:outputText value="{!a.CVRD_DS_Primary_Owner__c}" /> </td>
+                                    </tr>
+                                </table>
+                            </apex:repeat>
+                        </apex:pageBlock>
+                    </div>
+                </div>
+                <div Style="width:100%; height:auto; float:left; clear:left;">
+                    <div Style="width:100%; height:auto; float:left;">
+                        <apex:pageBlock mode="read-only">
+                            <h3 style="width:100%; height:28px; background-color: #22bcb9; color:black; text-align:left; float:left;">Property Information</h3>
+                        </apex:pageBlock>
+                    </div>
+                    <div Style="width:100%; height:auto; float:left; clear:left;">
+                        <apex:pageBlock mode="read-only">
+                            <apex:repeat var="a" value="{!PropertyInfoList}">
+                                <table style="font-family:sans-serif; width:100%;">
+                                    <tr>
+                                        <th> PID </th>
+                                        <th> Address </th>
+                                    </tr>
+                                    <tr>
+                                        <td> <apex:outputText value="{!a.MUSW__Parcel__r.Name}" /> </td>
+                                        <td> <apex:outputText value="{!a.MUSW__Address__r.Name }" /> </td>
+                                    </tr>
+                                </table>
+                            </apex:repeat>
+                        </apex:pageBlock>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </html>
+    
+</apex:page>
