@@ -51,6 +51,7 @@
             <controllingFieldValue>Hearing</controllingFieldValue>
             <controllingFieldValue>Appeal</controllingFieldValue>
             <controllingFieldValue>Close Out</controllingFieldValue>
+            <controllingFieldValue>Issue</controllingFieldValue>
             <valueName>Pending</valueName>
         </valueSettings>
         <valueSettings>
@@ -60,6 +61,7 @@
             <controllingFieldValue>Hearing</controllingFieldValue>
             <controllingFieldValue>Appeal</controllingFieldValue>
             <controllingFieldValue>Close Out</controllingFieldValue>
+            <controllingFieldValue>Issue</controllingFieldValue>
             <valueName>In Progress</valueName>
         </valueSettings>
         <valueSettings>
@@ -69,6 +71,7 @@
             <controllingFieldValue>Hearing</controllingFieldValue>
             <controllingFieldValue>Appeal</controllingFieldValue>
             <controllingFieldValue>Close Out</controllingFieldValue>
+            <controllingFieldValue>Issue</controllingFieldValue>
             <valueName>Completed</valueName>
         </valueSettings>
         <valueSettings>
@@ -78,6 +81,7 @@
             <controllingFieldValue>Hearing</controllingFieldValue>
             <controllingFieldValue>Appeal</controllingFieldValue>
             <controllingFieldValue>Close Out</controllingFieldValue>
+            <controllingFieldValue>Issue</controllingFieldValue>
             <valueName>Canceled</valueName>
         </valueSettings>
         <valueSettings>
