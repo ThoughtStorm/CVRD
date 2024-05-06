@@ -8,12 +8,6 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
-                            <value>MUSW__Application2__c.MUSW__Request_Override</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Edit</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>MUSW__Application2__c.CVRD_Confirm_and_Create_Application</value>
                             <visibilityRule>
                                 <booleanFilter>1 AND 2</booleanFilter>
@@ -28,6 +22,9 @@
                                     <rightValue>Completed</rightValue>
                                 </criteria>
                             </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
                             <value>Submit</value>
@@ -46,7 +43,76 @@
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
-                            <value>MUSW__Application2__c.MUSW__Add_Alert</value>
+                            <value>MUSW__Application2__c.CVRD_DS_Upload_Decision_File</value>
+                            <visibilityRule>
+                                <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>NE</operator>
+                                    <rightValue>Development_Permit</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>NE</operator>
+                                    <rightValue>Development_Variance_Permit</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>NE</operator>
+                                    <rightValue>Covenant_Amendment/Discharge</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>NE</operator>
+                                    <rightValue>Temporary_Use_Permit</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Issue</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Pending</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_Generate_Permit</value>
+                            <visibilityRule>
+                                <booleanFilter>(1 OR 2 OR 3 OR 4 ) AND (5 AND 6)</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Development_Permit</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Development_Variance_Permit</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Covenant_Amendment/Discharge</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Temporary_Use_Permit</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Issue</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Pending</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -68,7 +134,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>numVisibleActions</name>
-                    <value>4</value>
+                    <value>5</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
                 <identifier>force_highlightsPanel</identifier>
