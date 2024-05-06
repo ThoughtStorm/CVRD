@@ -11,23 +11,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>AccountDataController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_DS_CreateFee</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>CVRD_DS_CreateSubmissions</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_DS_CreateSubmissionsTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_DS_Get_Required_Submissions</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -35,29 +19,9 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CVRD_DS_RecordTypeDefine</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>CVRD_DS_Split_MultiPicklist</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_OTPController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_OTPGenerator</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_PDFCreateController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CreatePDFController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
+        <enabled>true</enabled>
+    </classAccesses>	
     <classAccesses>
         <apexClass>GoogleRecaptchaHandler</apexClass>
         <enabled>false</enabled>
@@ -91,19 +55,11 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>PrintJobPDFController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>interviewsByRecordController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>publicSearchController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
     <custom>true</custom>
-    <fieldPermissions>
+     <fieldPermissions>
         <editable>false</editable>
         <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_AR_Ledger_Account_Name__c</field>
         <readable>false</readable>
@@ -138,26 +94,11 @@
         <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Revenue_Ledger_Account_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event.CVRD_DS_Related_Object_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event.Due_Date_before_5_day__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Address__c.ObjectId__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Address__c.XCORDINATE__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
+	 <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Master_Fee_List__c.CVRD_DS_Application_DP_Sub_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>	
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.Agent_Authorization__c</field>
@@ -166,22 +107,22 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_1st_Reading__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_2nd_Reading__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_3rd_Reading__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_Adoption_Date__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -191,7 +132,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_Application_Created_Year__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -305,11 +246,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Application2__c.CVRD_DS_Units__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_is_TopofaRavine_Bank__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -326,17 +262,17 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_RCRS_classification__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_Registration_Date__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_Registration_Number__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -525,6 +461,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Units__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Master_Fee_List__c.CVRD_DS_Application_DP_Sub_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Application_Contact__c.CVRD_DS_Agent__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -619,11 +565,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Comment__c.CVRD_DS_DPARedirect__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Comment__c.CVRD_DS_DPA_Name__c</field>
         <readable>true</readable>
@@ -681,21 +622,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Comment__c.MUSW__Milestone__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Condition__c.CVRD_DS_Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Fee__c.CVRD_DS_Additional_Fees__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Fee__c.CVRD_DS_Application_Sub_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1020,52 +946,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Master_Fee_List__c.CVRD_DS_Application_DP_Sub_Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Master_Fee_List__c.CVRD_DS_Application_Sub_Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Master_Fee_List__c.MUSW__Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Master_Fee_List__c.Manual_Selection__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Master_Submission_List__c.CVRD_DS_DPA_Types__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Parcel_Relationship__c.MUSW__Action__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Parcel_Relationship__c.MUSW__Parcel__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Parcel_Relationship__c.MUSW__Recorded_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Parcel_Relationship__c.MUSW__Related_Parcel__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Parcel_Relationship__c.MUSW__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1339,11 +1225,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Parcel__c.Map__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Application__c</field>
         <readable>true</readable>
@@ -1352,11 +1233,6 @@
         <editable>true</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Cancelled__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Proceeding2__c.CVRD_DS_Comment__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1400,16 +1276,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Review__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Schedule_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Proceeding_Agenda_Item__c.MUSW__Application__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1432,11 +1298,6 @@
         <editable>true</editable>
         <field>MUSW__Review_Template__c.MUSW__Review_Type__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Review__c.Application_type__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -1544,19 +1405,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CVRD_DS_Related_Object_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Task.Description</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.Due_Date_before_5_day__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1673,8 +1524,25 @@
         <field>Task.WhoId</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Condition__c.CVRD_DS_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
-        <layout>CVRD_DS_Ledger_Account_Detail__mdt-Ledger Account Detail Layout</layout>
+        <layout>MUSW__Condition__c-Application Condition Layout</layout>
+        <recordType>MUSW__Condition__c.CVRD_DS_Application_Condition</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
+        <recordType>MUSW__Condition__c.MUSW__All</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
+        <recordType>MUSW__Condition__c.MUSW__Comment</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Contact-Contact Layout</layout>
@@ -1761,24 +1629,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Comment__c-MUSW__Comment Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Condition__c-Application Condition Layout</layout>
-        <recordType>MUSW__Condition__c.CVRD_DS_Application_Condition</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
-        <recordType>MUSW__Condition__c.MUSW__All</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
-        <recordType>MUSW__Condition__c.MUSW__Comment</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Fee__c-MUSW__Fee Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Inspection__c-Application Inspection</layout>
@@ -1875,14 +1725,6 @@
         <apexPage>CVRD_DS_AppSitePage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
-    <pageAccesses>
-        <apexPage>cVRD_Application_PDF_Generator</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>cVRD_PDF_Page</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
@@ -1977,11 +1819,6 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>MUSW__Application_Template__c.MUSW__Permit_Application</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>MUSW__Condition__c.CVRD_DS_Application_Condition</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -2132,10 +1969,6 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>ArcGIS_Map_Viewer</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>MUSW__Application2__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -2157,10 +1990,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>MUSW__Review__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Map_Viewer</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
