@@ -44,10 +44,7 @@
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
-                        <valueListItems>
-                            <value>MUSW__Application2__c.CVRD_DS_Add_Fee</value>
-                        </valueListItems>
-                        <valueListItems>
+                       <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Generate_Permit</value>
                             <visibilityRule>
                                 <booleanFilter>(1 OR 2 OR 3 ) AND (4 AND 5)</booleanFilter>
@@ -129,7 +126,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>numVisibleActions</name>
-                    <value>4</value>
+                    <value>3</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
                 <identifier>force_highlightsPanel</identifier>
