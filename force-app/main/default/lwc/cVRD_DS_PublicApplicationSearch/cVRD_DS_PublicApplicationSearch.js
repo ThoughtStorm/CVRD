@@ -63,7 +63,9 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
 
     handleCombo(event) {
         if (event.detail.value != 'none') {
+            console.log('Inside if');
             this.area = event.detail.value;
+            console.log('Inside if'+this.area);
         }
         //this.whereClause += `CVRD_DS_Parcel_Electoral_Area__c LIKE '%${event.detail.value}%' AND `;
     }
@@ -81,14 +83,15 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
             this.whereClause += `MUSW__Parcel__r.name LIKE '%${this.pid}%' AND `;
             this.flag = true;
         }
-        if (this.area != null) {
+        if (this.area != null && this.area!= 'none') {
+            console.log('Inside if2'+this.area);
             this.whereClause += `CVRD_DS_Parcel_Electoral_Area__c LIKE '%${this.area}%' AND `;
             this.flag = true;
         }
         /*if (this.whereClause.endsWith(' AND ')) {
             this.whereClause = this.whereClause.slice(0, -5);
         }*/
-        this.dynamicQuery = 'SELECT Id, Name,CreatedDate,MUSW__Applicant__r.name, MUSW__Status__c,MUSW__type2__c ,CVRD_DS_Parcel_Electoral_Area__c,MUSW__Address__r.name FROM MUSW__Application2__c WHERE ' + this.whereClause +'MUSW__Phase__c =\'Review\'';
+        this.dynamicQuery = 'SELECT Id, Name,CreatedDate,MUSW__Applicant__r.name, MUSW__Status__c,MUSW__type2__c ,CVRD_DS_Parcel_Electoral_Area__c,MUSW__Address__r.name FROM MUSW__Application2__c WHERE ' + this.whereClause +'MUSW__Phase__c !=\'Application\'';
         if (this.flag=true) {
             console.log(this.dynamicQuery);
             getAppList({ query: this.dynamicQuery })
