@@ -44,10 +44,13 @@
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
-                       <valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_Add_Fee</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Generate_Permit</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR 2 OR 3 OR 4 ) AND (5 AND 6)</booleanFilter>
+                                <booleanFilter>(1 OR 2 OR 3 ) AND (4 AND 5)</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Type2__c}</leftValue>
                                     <operator>EQUAL</operator>
@@ -57,11 +60,6 @@
                                     <leftValue>{!Record.MUSW__Type2__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Development_Permit</rightValue>
-                                </criteria>
-                                <criteria>
-                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Covenant_Amendment/Discharge</rightValue>
                                 </criteria>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Type2__c}</leftValue>
@@ -83,7 +81,7 @@
                         <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Upload_Decision_File</value>
                             <visibilityRule>
-                                <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+                                <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Type2__c}</leftValue>
                                     <operator>NE</operator>
@@ -93,11 +91,6 @@
                                     <leftValue>{!Record.MUSW__Type2__c}</leftValue>
                                     <operator>NE</operator>
                                     <rightValue>Development_Variance_Permit</rightValue>
-                                </criteria>
-                                <criteria>
-                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                                    <operator>NE</operator>
-                                    <rightValue>Covenant_Amendment/Discharge</rightValue>
                                 </criteria>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Type2__c}</leftValue>
@@ -136,7 +129,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>numVisibleActions</name>
-                    <value>3</value>
+                    <value>4</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
                 <identifier>force_highlightsPanel</identifier>
