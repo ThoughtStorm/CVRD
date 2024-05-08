@@ -63,9 +63,7 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
 
     handleCombo(event) {
         if (event.detail.value != 'none') {
-            console.log('Inside if');
             this.area = event.detail.value;
-            console.log('Inside if'+this.area);
         }
         //this.whereClause += `CVRD_DS_Parcel_Electoral_Area__c LIKE '%${event.detail.value}%' AND `;
     }
