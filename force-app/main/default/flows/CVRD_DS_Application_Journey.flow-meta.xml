@@ -2818,6 +2818,10 @@
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;color: rgb(241, 9, 20); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-size: 14px; background-color: rgba(9, 30, 66, 0.06);&quot;&gt;Please enter a 10-digit phone number with no spaces or hyphens.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>AND(NOT(CONTAINS({!Phone.value}, &apos;-&apos;)), LEN({!Phone.value})=10 )</formulaExpression>
+                    </validationRule>
                 </fields>
                 <inputParameters>
                     <name>width</name>
