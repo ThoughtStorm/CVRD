@@ -24,6 +24,9 @@
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
+                            <value>Edit</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>Submit</value>
                             <visibilityRule>
                                 <booleanFilter>1 AND 2</booleanFilter>
@@ -69,6 +72,9 @@
                                     <rightValue>Pending</rightValue>
                                 </criteria>
                             </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_Manual_Fee</value>
                         </valueListItems>
                         <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Generate_Permit</value>
