@@ -24,9 +24,6 @@
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
-                            <value>Edit</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>Submit</value>
                             <visibilityRule>
                                 <booleanFilter>1 AND 2</booleanFilter>
