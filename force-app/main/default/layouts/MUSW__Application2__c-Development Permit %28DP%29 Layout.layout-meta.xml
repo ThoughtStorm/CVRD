@@ -45,6 +45,10 @@
                 <behavior>Edit</behavior>
                 <field>CVRD_DS_Units__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Planner__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
