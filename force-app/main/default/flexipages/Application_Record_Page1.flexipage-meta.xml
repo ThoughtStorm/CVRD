@@ -45,7 +45,48 @@
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_Generate_Permit</value>
+                            <visibilityRule>
+                                <booleanFilter>(1 OR 2 OR 3 ) AND (4 AND 5)</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Development_Variance_Permit</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Development_Permit</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Temporary_Use_Permit</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Issue</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Pending</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__Application2__c.MUSW__Add_Alert</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_Confirm_and_Proceed</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Issue</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -67,7 +108,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>numVisibleActions</name>
-                    <value>3</value>
+                    <value>4</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
                 <identifier>force_highlightsPanel</identifier>
