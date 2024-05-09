@@ -51,9 +51,6 @@
                             <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>MUSW__Application2__c.CVRD_DS_Cancel_Application</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Generate_Permit</value>
                             <visibilityRule>
                                 <booleanFilter>1 AND 2</booleanFilter>
