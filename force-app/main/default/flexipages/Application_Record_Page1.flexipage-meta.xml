@@ -45,7 +45,7 @@
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
-                            <value>MUSW__Application2__c.CVRD_DS_Add_Fee</value>
+                            <value>MUSW__Application2__c.CVRD_DS_Manual_Fee</value>
                         </valueListItems>
                         <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Generate_Permit</value>
