@@ -399,7 +399,7 @@
         </values>
         <values>
             <fullName>Application</fullName>
-            <default>false</default>
+            <default>true</default>
         </values>
         <values>
             <fullName>Approval</fullName>
