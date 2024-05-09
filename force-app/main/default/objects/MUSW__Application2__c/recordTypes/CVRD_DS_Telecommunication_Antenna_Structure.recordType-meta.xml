@@ -402,6 +402,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Review</fullName>
             <default>false</default>
         </values>
