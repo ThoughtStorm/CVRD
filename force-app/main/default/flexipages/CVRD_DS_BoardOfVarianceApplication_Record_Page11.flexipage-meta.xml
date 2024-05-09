@@ -85,6 +85,9 @@
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_Manual_Fee</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Generate_Permit</value>
                             <visibilityRule>
                                 <booleanFilter>(1 OR 2 OR 3 OR 4 ) AND (5 AND 6)</booleanFilter>
