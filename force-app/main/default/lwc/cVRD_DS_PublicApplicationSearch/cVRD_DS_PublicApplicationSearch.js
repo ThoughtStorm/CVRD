@@ -2,7 +2,7 @@ import { LightningElement, track } from 'lwc';
 import getAppList from '@salesforce/apex/CVRD_DS_PublicSearchController.getAppList';
 
 const columns = [
-    { label: 'Electorial Area', fieldName: 'CVRD_DS_Parcel_Electoral_Area__c' },
+    { label: 'Electoral Area', fieldName: 'CVRD_DS_Parcel_Electoral_Area__c' },
     {
         label: 'Date Received', fieldName: 'CreatedDate', type: 'date', typeAttributes: {
             day: "numeric",
