@@ -155,6 +155,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Condition__c.CVRD_DS_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_Crown_Referral_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -693,6 +698,21 @@
         <field>MUSW__Review__c.CVRD_DS_Internal_Referral_Division__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>MUSW__Condition__c-Application Condition Layout</layout>
+        <recordType>MUSW__Condition__c.CVRD_DS_Application_Condition</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
+        <recordType>MUSW__Condition__c.MUSW__All</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
+        <recordType>MUSW__Condition__c.MUSW__Comment</recordType>
+    </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-Board of Variance Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
