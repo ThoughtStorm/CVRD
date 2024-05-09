@@ -1402,6 +1402,10 @@
                     <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgba(9, 30, 66, 0.06); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(250, 8, 8);&quot;&gt;Please enter a 10-digit phone number with no spaces or hyphens&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>AND(NOT(CONTAINS({!PhoneAddOwner.value}, &apos;-&apos;)), LEN({!PhoneAddOwner.value})=10 )</formulaExpression>
+                    </validationRule>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -2804,15 +2808,13 @@
                             <elementReference>Phone.value</elementReference>
                         </value>
                     </inputParameters>
-                    <inputParameters>
-                        <name>pattern</name>
-                        <value>
-                            <stringValue>^[\d]{10,15}</stringValue>
-                        </value>
-                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgba(9, 30, 66, 0.06); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(241, 9, 20);&quot;&gt;Please enter a 10-digit phone number with no spaces or hyphens&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>AND(NOT(CONTAINS({!Phone.value}, &apos;-&apos;)), LEN({!Phone.value})=10 )</formulaExpression>
+                    </validationRule>
                 </fields>
                 <inputParameters>
                     <name>width</name>
