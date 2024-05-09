@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_type_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( ISPICKVAL( MUSW__Type2__c , &apos;CVRD_DS_Development_Permit&apos;),AND(ISCHANGED(CVRD_DS_DPA_Sub_Type__c),ISBLANK( TEXT(CVRD_DS_Sub_Type__c) )),AND(ISCHANGED(CVRD_DS_Sub_Type__c), ISBLANK( TEXT(CVRD_DS_Sub_Type__c) ) ))</errorConditionFormula>
+    <errorMessage>Sub Type is required, sub type cannot be empty</errorMessage>
+</ValidationRule>
