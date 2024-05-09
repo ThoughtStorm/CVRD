@@ -22,6 +22,10 @@
                 <behavior>Edit</behavior>
                 <field>CVRD_DS_Type__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>CVRD_DS_Due_Date__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
