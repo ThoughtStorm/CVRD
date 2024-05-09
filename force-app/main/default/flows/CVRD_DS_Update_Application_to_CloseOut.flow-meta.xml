@@ -4,7 +4,7 @@
     <decisions>
         <name>Check_Condition_is_Completed</name>
         <label>Check Condition is Completed</label>
-        <locationX>244</locationX>
+        <locationX>250</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>Error_Screen</targetReference>
@@ -27,12 +27,44 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Check_Issue_is_Completed</name>
+        <label>Check Issue is Completed</label>
+        <locationX>182</locationX>
+        <locationY>1034</locationY>
+        <defaultConnector>
+            <targetReference>ErrorScreenV1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IssueCompleted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.MUSW__Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Issue</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordId.MUSW__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Application_phase_to_close_out</targetReference>
+            </connector>
+            <label>Completed</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Empty_Check_on_Condition</name>
         <label>Empty Check on Condition Record</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>242</locationY>
         <defaultConnector>
-            <targetReference>Update_Application_phase_to_close_out</targetReference>
+            <targetReference>Check_Issue_is_Completed</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -57,7 +89,7 @@
     <loops>
         <name>Iterate_Condition_Records</name>
         <label>Iterate Condition Records</label>
-        <locationX>68</locationX>
+        <locationX>74</locationX>
         <locationY>350</locationY>
         <collectionReference>Get_Condition_Records</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -65,7 +97,7 @@
             <targetReference>Check_Condition_is_Completed</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Update_Application_phase_to_close_out</targetReference>
+            <targetReference>Check_Issue_is_Completed</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -90,7 +122,7 @@
     <recordLookups>
         <name>Get_Condition_Records</name>
         <label>Get Condition Records</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -111,8 +143,8 @@
     <recordUpdates>
         <name>Update_Application_phase_to_close_out</name>
         <label>Update Application phase to close out</label>
-        <locationX>176</locationX>
-        <locationY>1034</locationY>
+        <locationX>50</locationX>
+        <locationY>1142</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -135,7 +167,7 @@
     <screens>
         <name>Error_Screen</name>
         <label>Error Screen</label>
-        <locationX>332</locationX>
+        <locationX>338</locationX>
         <locationY>566</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -149,10 +181,26 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>ErrorScreenV1</name>
+        <label>ErrorScreenV1</label>
+        <locationX>314</locationX>
+        <locationY>1142</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorDisplayText</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(189, 12, 12);&quot;&gt;Please Complete the Issue Phase.&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>Success_Screen</name>
         <label>Success Screen</label>
-        <locationX>176</locationX>
-        <locationY>1142</locationY>
+        <locationX>50</locationX>
+        <locationY>1250</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -165,7 +213,7 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Condition_Records</targetReference>
