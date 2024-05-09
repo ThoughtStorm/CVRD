@@ -387,7 +387,7 @@
         </values>
         <values>
             <fullName>Application</fullName>
-            <default>true</default>
+            <default>false</default>
         </values>
         <values>
             <fullName>Approval</fullName>
@@ -402,8 +402,12 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Review</fullName>
+            <fullName>Issue</fullName>
             <default>false</default>
+        </values>
+        <values>
+            <fullName>Review</fullName>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>
