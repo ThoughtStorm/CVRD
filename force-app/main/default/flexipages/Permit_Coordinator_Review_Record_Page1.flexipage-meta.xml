@@ -103,6 +103,39 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListApiName</name>
+                    <value>ActivityHistories</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>relatedListComponentOverride</name>
+                    <value>NONE</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>rowsToDisplay</name>
+                    <value>10</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showActionBar</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer5</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Planner Review</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>parentFieldApiName</name>
+                    <value>MUSW__Review__c.Id</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>relatedListApiName</name>
                     <value>AttachedContentNotes</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -185,23 +218,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.MUSW__Type__c</fieldItem>
                 <identifier>RecordMUSW_Type_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.CVRD_DS_Planner__c</fieldItem>
-                <identifier>RecordCVRD_DS_Planner_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Planner Review</rightValue>
-                    </criteria>
-                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-70d97f19-ef28-45c5-89ca-fc8963845e62</name>
