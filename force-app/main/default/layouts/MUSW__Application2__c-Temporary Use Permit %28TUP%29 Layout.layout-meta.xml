@@ -7,7 +7,6 @@
     <excludeButtons>PrintableView</excludeButtons>
     <excludeButtons>RecordShareHierarchy</excludeButtons>
     <excludeButtons>Share</excludeButtons>
-    <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
@@ -29,6 +28,66 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>CVRD_DS_Description__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Related_Application__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Application_Created_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CVRD_Application_Created_Year__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_RCRS_classification__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Date_assigned_to_planner__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Application_Status_Comments__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Fee_Receipt__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_BYLAW_RZ_OCP__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_1st_Reading__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_2nd_Reading__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_3rd_Reading__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Adoption_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Registration_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_Registration_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Units__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -177,8 +236,8 @@
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>MUSW__Type__c</fields>
         <fields>MUSW__Status__c</fields>
+        <fields>CVRD_DS_Type__c</fields>
         <fields>MUSW__Date_Resolved__c</fields>
         <relatedList>MUSW__Condition__c.MUSW__Application2__c</relatedList>
     </relatedLists>
@@ -220,10 +279,12 @@
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>MUSW__Type__c</fields>
+        <fields>CVRD_DS_Application_Sub_Type__c</fields>
         <fields>MUSW__Amount__c</fields>
         <fields>MUSW__Amount_Waived__c</fields>
         <fields>MUSW__Outstanding_Fee__c</fields>
         <fields>MUSW__Fee_Paid_Date2__c</fields>
+        <fields>MUSW__Description__c</fields>
         <relatedList>MUSW__Fee__c.MUSW__Application2__c</relatedList>
         <sortField>MUSW__Outstanding_Fee__c</sortField>
         <sortOrder>Desc</sortOrder>
@@ -257,6 +318,14 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>MUSW__Comment__c.CVRD_DS_Application__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>MUSW__Type2__c</fields>
+        <fields>MUSW__Applicant__c</fields>
+        <fields>MUSW__Status__c</fields>
+        <fields>MUSW__Completion_Date__c</fields>
+        <relatedList>MUSW__Application2__c.CVRD_DS_Related_Application__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
