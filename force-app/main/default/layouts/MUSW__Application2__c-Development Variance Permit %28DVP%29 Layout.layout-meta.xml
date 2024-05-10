@@ -41,10 +41,6 @@
                 <behavior>Readonly</behavior>
                 <field>CVRD_Application_Created_Year__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CVRD_DS_Planner__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -58,6 +54,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>MUSW__Status__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Planner__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -274,8 +274,8 @@
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>MUSW__Type__c</fields>
         <fields>MUSW__Status__c</fields>
+        <fields>CVRD_DS_Type__c</fields>
         <fields>MUSW__Date_Resolved__c</fields>
         <relatedList>MUSW__Condition__c.MUSW__Application2__c</relatedList>
     </relatedLists>
