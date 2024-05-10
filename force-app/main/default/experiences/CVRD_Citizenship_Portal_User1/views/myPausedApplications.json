@@ -65,6 +65,13 @@
       "id" : "ea34ee23-4cef-4028-bc71-396da4691b69",
       "regions" : [ {
         "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:cVRD_ResumeApplication",
+          "id" : "cf0e3aaa-8c84-423a-bc54-0ca55b2a5212",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
           "componentAttributes" : {
             "deleteButtonText" : "Delete",
             "pageSize" : 10,
