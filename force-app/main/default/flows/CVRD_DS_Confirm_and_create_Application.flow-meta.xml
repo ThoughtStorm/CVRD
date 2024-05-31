@@ -72,6 +72,7 @@
     </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD_DS_Confirm_and_create_Application {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD_DS_Confirm_and_create_Application</label>
     <processMetadataValues>
         <name>BuilderType</name>

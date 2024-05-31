@@ -3446,53 +3446,10 @@
             <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <fields>
-            <name>reCaptcha</name>
-            <extensionName>c:googleRecaptcha</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>secretKey</name>
-                <value>
-                    <stringValue>6LeA4K4pAAAAAPX8UDkSSNA9nvb7cLLJEs6uqoKI</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>siteKey</name>
-                <value>
-                    <stringValue>6LeA4K4pAAAAAEO3RI99zY3YRP7kuGbHFubpAbpn</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>originPageURL</name>
-                <value>
-                    <stringValue>https://cvrd--dev1.sandbox.lightning.force.com, https://cvrd--dev1--c.sandbox.vf.force.com, https://cvrd--dev1.sandbox.my.site.com,https://cvrd--qa.sandbox.my.site.com</stringValue>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
-        </fields>
-        <fields>
             <name>Review_Application_Screen_Section8</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>Review_Application_Screen_Section8_Column1</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>12</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
-        </fields>
-        <fields>
-            <name>Review_Application_Screen_Section9</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Review_Application_Screen_Section9_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Pause_Application9</name>
