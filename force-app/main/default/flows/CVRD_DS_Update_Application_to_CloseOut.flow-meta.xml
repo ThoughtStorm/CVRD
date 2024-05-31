@@ -45,13 +45,6 @@
                     <stringValue>Issue</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>recordId.MUSW__Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Completed</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Update_Application_phase_to_close_out</targetReference>
             </connector>
@@ -85,6 +78,7 @@
     </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD DS Update Application to CloseOut {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD DS Update Application to CloseOut</label>
     <loops>
         <name>Iterate_Condition_Records</name>
@@ -219,7 +213,7 @@
             <targetReference>Get_Condition_Records</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>recordId</name>
         <dataType>SObject</dataType>

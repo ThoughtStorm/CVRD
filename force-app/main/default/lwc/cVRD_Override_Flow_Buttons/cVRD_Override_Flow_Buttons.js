@@ -1,6 +1,7 @@
 import { LightningElement, api } from 'lwc';
 import { FlowAttributeChangeEvent, FlowNavigationPauseEvent, FlowNavigationNextEvent, FlowNavigationBackEvent  } from 'lightning/flowSupport';
 import { NavigationMixin } from 'lightning/navigation';
+import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
 export default class cVRD_Override_Flow_Buttons extends NavigationMixin(LightningElement) {
     @api availableActions = [];
@@ -12,12 +13,18 @@ export default class cVRD_Override_Flow_Buttons extends NavigationMixin(Lightnin
             this[NavigationMixin.Navigate]({
                 type: 'standard__webPage',
                 attributes: {
-                    url: 'https://cvrd--dev1.sandbox.my.site.com/CVRDCitizenshipPortal/s/'
+                    url: 'https://cvrd--qa.sandbox.my.site.com/CVRDCitizenshipPortal/s/'
                 }
             },
             true // Replaces the current page in your browser history with the URL
           );
-            eval("$A.get('e.force:refreshView').fire();");
+            //eval("$A.get('e.force:refreshView').fire();");
+            const evt = new ShowToastEvent({
+                title: 'Notification',
+                message: 'Application Paused Successfully',
+                variant: 'success',
+              });
+              this.dispatchEvent(evt);
         }
     }
     handleNext() {

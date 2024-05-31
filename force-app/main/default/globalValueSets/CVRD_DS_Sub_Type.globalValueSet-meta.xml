@@ -61,24 +61,24 @@
         <label>Land Use Bylaw Amendment</label>
     </customValue>
     <customValue>
-        <fullName>Major - New</fullName>
+        <fullName>Board - New</fullName>
         <default>false</default>
-        <label>Major - New</label>
+        <label>Board - New</label>
     </customValue>
     <customValue>
-        <fullName>Major - Extension</fullName>
+        <fullName>Board - Extension</fullName>
         <default>false</default>
-        <label>Major - Extension</label>
+        <label>Board - Extension</label>
     </customValue>
     <customValue>
-        <fullName>Minor - New</fullName>
+        <fullName>Delegated - New</fullName>
         <default>false</default>
-        <label>Minor - New</label>
+        <label>Delegated - New</label>
     </customValue>
     <customValue>
-        <fullName>Minor - Extension</fullName>
+        <fullName>Delegated - Extension</fullName>
         <default>false</default>
-        <label>Minor - Extension</label>
+        <label>Delegated - Extension</label>
     </customValue>
     <customValue>
         <fullName>Retail Sales</fullName>
@@ -221,6 +221,12 @@
         <label>Amendment or Discharge</label>
     </customValue>
     <customValue>
+        <fullName>Development Variance Permit - Major</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Development Variance Permit - Major</label>
+    </customValue>
+    <customValue>
         <fullName>Conventional Subdivision</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -251,6 +257,12 @@
         <label>Development Variance Permit - Minor</label>
     </customValue>
     <customValue>
+        <fullName>Extension-Major</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Extension-Major</label>
+    </customValue>
+    <customValue>
         <fullName>Extension-Minor</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -273,18 +285,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Phased Strata</label>
-    </customValue>
-    <customValue>
-        <fullName>Development Variance Permit - Major</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Development Variance Permit - Major</label>
-    </customValue>
-    <customValue>
-        <fullName>Extension-Major</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Extension-Major</label>
     </customValue>
     <description>Application Sub Types</description>
     <masterLabel>Sub Type</masterLabel>

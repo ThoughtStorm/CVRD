@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Get_Application_Record_Type</name>
         <label>Get Application Record Type</label>
-        <locationX>776</locationX>
+        <locationX>1370</locationX>
         <locationY>431</locationY>
         <actionName>MUSW__GetRecordTypeAction</actionName>
         <actionType>apex</actionType>
@@ -29,7 +29,7 @@
     <decisions>
         <name>Evaluate_Milestone_Status</name>
         <label>Evaluate Milestone Status</label>
-        <locationX>446</locationX>
+        <locationX>842</locationX>
         <locationY>755</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -93,11 +93,56 @@
             <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
             <label>Completed Corrections Required</label>
         </rules>
+        <rules>
+            <name>On_Hold</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On Hold</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Update_Application_Status_OnHold</targetReference>
+            </connector>
+            <label>On Hold</label>
+        </rules>
+        <rules>
+            <name>Additional_Information_Required</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Additional Information Required</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Update_Application_Status_Additional_Information</targetReference>
+            </connector>
+            <label>Additional Information Required</label>
+        </rules>
+        <rules>
+            <name>Appeal_Initiated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initiated</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Copy_1_of_Update_Application_Status_Initiated</targetReference>
+            </connector>
+            <label>Appeal Initiated</label>
+        </rules>
     </decisions>
     <decisions>
         <name>Evaluate_Milestone_Templates_Exist</name>
         <label>Evaluate Milestone Templates Exist</label>
-        <locationX>776</locationX>
+        <locationX>1370</locationX>
         <locationY>647</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -148,7 +193,7 @@
     <recordLookups>
         <name>Get_Application_Record</name>
         <label>Get Application Record</label>
-        <locationX>776</locationX>
+        <locationX>1370</locationX>
         <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -169,7 +214,7 @@
     <recordLookups>
         <name>Get_Milestone_Records</name>
         <label>Get Milestone Records</label>
-        <locationX>776</locationX>
+        <locationX>1370</locationX>
         <locationY>539</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -188,6 +233,48 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>Copy_1_of_Copy_1_of_Update_Application_Status_Initiated</name>
+        <label>Copy 1 of Copy 1 of Update Application Status In Initiated</label>
+        <locationX>1370</locationX>
+        <locationY>863</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Application_Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Initiated</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Application2__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_Update_Application_Status_Additional_Information</name>
+        <label>Copy 1 of Update Application Status Additional Information Required</label>
+        <locationX>1106</locationX>
+        <locationY>863</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Application_Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Additional Information Required</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Application2__c</object>
+    </recordUpdates>
+    <recordUpdates>
         <name>Copy_1_of_Update_Application_Status_Completed</name>
         <label>Copy 1 of Update Application Status Completed</label>
         <locationX>314</locationX>
@@ -204,6 +291,27 @@
             <field>MUSW__Status__c</field>
             <value>
                 <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Application2__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_Update_Application_Status_OnHold</name>
+        <label>Copy 1 of Update Application Status In On Hold</label>
+        <locationX>842</locationX>
+        <locationY>863</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Application_Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>On Hold</stringValue>
             </value>
         </inputAssignments>
         <object>MUSW__Application2__c</object>
@@ -251,7 +359,7 @@
         <object>MUSW__Application2__c</object>
     </recordUpdates>
     <start>
-        <locationX>650</locationX>
+        <locationX>1244</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Application_Record</targetReference>
@@ -282,7 +390,7 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>Bailout</name>
         <dataType>Boolean</dataType>

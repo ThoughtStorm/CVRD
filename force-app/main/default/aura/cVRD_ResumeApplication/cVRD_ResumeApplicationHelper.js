@@ -35,6 +35,14 @@
         $A.createComponent("lightning:flow", {"onstatuschange": component.get("c.statusChange")},
             function (content, status) {
                 if (status === "SUCCESS") {
+                    var toastEvent = $A.get("e.force:showToast");
+                    toastEvent.setParams({
+                        "title": "Success!",
+                        "message": "Application Resume successfully.",
+                        "type": 'success',
+                        "mode": 'pester'
+                    });
+                    toastEvent.fire();
                     component.find('overlayLib').showCustomModal({
                         cssClass: "mymodal slds-modal_large",
                         body: content,
