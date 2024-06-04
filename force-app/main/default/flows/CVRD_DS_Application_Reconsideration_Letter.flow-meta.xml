@@ -146,7 +146,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Application_Phase_to_Hearing</targetReference>
+                <targetReference>Copy_1_of_Update_Application_Record</targetReference>
             </connector>
             <label>Internal Application Check</label>
         </rules>
@@ -175,7 +175,6 @@
     </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD DS {!$Flow.CurrentDateTime}</interviewLabel>
-    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD DS Application - Reconsideration Letter</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -197,8 +196,8 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordUpdates>
-        <name>Update_Application_Phase_to_Hearing</name>
-        <label>Update Application Phase to Hearing</label>
+        <name>Copy_1_of_Update_Application_Record</name>
+        <label>Copy 1 of Update Application Record</label>
         <locationX>578</locationX>
         <locationY>566</locationY>
         <filterLogic>and</filterLogic>
@@ -212,7 +211,7 @@
         <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
-                <stringValue>Hearing</stringValue>
+                <stringValue>Appeal</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>

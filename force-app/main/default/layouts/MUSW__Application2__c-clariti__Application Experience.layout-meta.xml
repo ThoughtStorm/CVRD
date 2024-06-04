@@ -9,7 +9,6 @@
     <excludeButtons>PrintableView</excludeButtons>
     <excludeButtons>RecordShareHierarchy</excludeButtons>
     <excludeButtons>Share</excludeButtons>
-    <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
@@ -31,6 +30,22 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>CVRD_DS_Related_Application__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CVRD_Application_Created_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CVRD_Application_Created_Year__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CVRD_Fee_Receipt__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_CO_CFO_File_Uploaded__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -153,6 +168,11 @@
             <actionName>MUSW__Application2__c.clariti__PayOutstandingItems</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>MUSW__Application2__c.Upload_Reconsideration_Letter</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>1</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList/>

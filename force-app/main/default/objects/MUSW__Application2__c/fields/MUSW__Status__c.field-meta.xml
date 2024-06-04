@@ -3,7 +3,6 @@
     <fullName>MUSW__Status__c</fullName>
     <deprecated>false</deprecated>
     <description>The current status of the application. This picklist can be defined according to the client&apos;s business processes.</description>
-    <externalId>false</externalId>
     <label>Status</label>
     <required>false</required>
     <trackHistory>true</trackHistory>
@@ -24,6 +23,21 @@
                 <label>In Progress</label>
             </value>
             <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Additional Information Required</fullName>
+                <default>false</default>
+                <label>Additional Information Required</label>
+            </value>
+            <value>
+                <fullName>Initiated</fullName>
+                <default>false</default>
+                <label>Initiated</label>
+            </value>
+            <value>
                 <fullName>Completed</fullName>
                 <default>false</default>
                 <label>Completed</label>
@@ -34,14 +48,19 @@
                 <label>Canceled</label>
             </value>
             <value>
-                <fullName>Additional Information Required</fullName>
+                <fullName>Approved</fullName>
                 <default>false</default>
-                <label>Additional Information Required</label>
+                <label>Approved</label>
             </value>
             <value>
-                <fullName>On Hold</fullName>
+                <fullName>Rejected</fullName>
                 <default>false</default>
-                <label>On Hold</label>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Referred Back From Meeting</fullName>
+                <default>false</default>
+                <label>Referred Back From Meeting</label>
             </value>
         </valueSetDefinition>
         <valueSettings>
@@ -57,9 +76,7 @@
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
             <controllingFieldValue>Review</controllingFieldValue>
-            <controllingFieldValue>Approval</controllingFieldValue>
             <controllingFieldValue>Hearing</controllingFieldValue>
-            <controllingFieldValue>Appeal</controllingFieldValue>
             <controllingFieldValue>Close Out</controllingFieldValue>
             <controllingFieldValue>Issue</controllingFieldValue>
             <valueName>In Progress</valueName>
@@ -67,7 +84,17 @@
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
             <controllingFieldValue>Review</controllingFieldValue>
-            <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <valueName>On Hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>Additional Information Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
             <controllingFieldValue>Hearing</controllingFieldValue>
             <controllingFieldValue>Appeal</controllingFieldValue>
             <controllingFieldValue>Close Out</controllingFieldValue>
@@ -77,21 +104,21 @@
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
             <controllingFieldValue>Review</controllingFieldValue>
-            <controllingFieldValue>Approval</controllingFieldValue>
-            <controllingFieldValue>Hearing</controllingFieldValue>
-            <controllingFieldValue>Appeal</controllingFieldValue>
             <controllingFieldValue>Close Out</controllingFieldValue>
             <controllingFieldValue>Issue</controllingFieldValue>
             <valueName>Canceled</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Review</controllingFieldValue>
-            <valueName>Additional Information Required</valueName>
+            <valueName>Referred Back From Meeting</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Review</controllingFieldValue>
-            <controllingFieldValue>Close Out</controllingFieldValue>
-            <valueName>On Hold</valueName>
+            <controllingFieldValue>Approval</controllingFieldValue>
+            <valueName>Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Approval</controllingFieldValue>
+            <valueName>Rejected</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

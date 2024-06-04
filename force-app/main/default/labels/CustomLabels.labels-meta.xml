@@ -21,4 +21,11 @@
         <shortDescription>CVRD_DS_Instagram_Link</shortDescription>
         <value>https://www.instagram.com/cvrdlanduse/</value>
     </labels>
+    <labels>
+        <fullName>CVRD_DS_Portal_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CVRD DS Portal URL</shortDescription>
+        <value>https://cvrd--dev1.sandbox.my.site.com/CVRDCitizenshipPortal/s/</value>
+    </labels>
 </CustomLabels>

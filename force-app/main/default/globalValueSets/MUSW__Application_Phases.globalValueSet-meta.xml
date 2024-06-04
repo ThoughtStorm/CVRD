@@ -16,14 +16,14 @@
         <label>Approval</label>
     </customValue>
     <customValue>
-        <fullName>Hearing</fullName>
-        <default>false</default>
-        <label>Hearing</label>
-    </customValue>
-    <customValue>
         <fullName>Appeal</fullName>
         <default>false</default>
         <label>Appeal</label>
+    </customValue>
+    <customValue>
+        <fullName>Hearing</fullName>
+        <default>false</default>
+        <label>Hearing</label>
     </customValue>
     <customValue>
         <fullName>Issue</fullName>

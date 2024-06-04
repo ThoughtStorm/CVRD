@@ -1,11 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_Action_1</name>
+        <label>Send Email Action 1</label>
+        <locationX>446</locationX>
+        <locationY>431</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Evaluate_Application_Phase_and_Status</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.MUSW__Applicant__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Application - Rejection Email to Applicant</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>RejectionEmailtoApplicant</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
     <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>APplication_is_Rejected</name>
+        <label>APplication is Rejected</label>
+        <locationX>578</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Evaluate_Application_Phase_and_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rejected</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_Action_1</targetReference>
+            </connector>
+            <label>YES</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Evaluate_Application_Phase_and_Status</name>
         <label>Evaluate Application Phase and Status</label>
         <locationX>578</locationX>
-        <locationY>323</locationY>
+        <locationY>623</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Review_Completed</name>
@@ -225,7 +302,7 @@
         <name>Set_Application_to_Closed_Completed</name>
         <label>Set Application to Issue Pending</label>
         <locationX>842</locationX>
-        <locationY>431</locationY>
+        <locationY>731</locationY>
         <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
@@ -244,7 +321,7 @@
         <name>Set_Application_to_Hearing_Pending</name>
         <label>Set Application to Hearing Pending</label>
         <locationX>314</locationX>
-        <locationY>431</locationY>
+        <locationY>731</locationY>
         <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
@@ -263,7 +340,7 @@
         <name>Set_Application_to_Substantive_Review_Pending</name>
         <label>Set Application to Approval Pending</label>
         <locationX>50</locationX>
-        <locationY>431</locationY>
+        <locationY>731</locationY>
         <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
@@ -282,7 +359,7 @@
         <name>Update_Application_to_Hearing_Pending_for_Appeal_scenario</name>
         <label>Update Application to Hearing Pending for Appeal scenario</label>
         <locationX>578</locationX>
-        <locationY>431</locationY>
+        <locationY>731</locationY>
         <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
@@ -301,7 +378,7 @@
         <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Evaluate_Application_Phase_and_Status</targetReference>
+            <targetReference>APplication_is_Rejected</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -315,7 +392,12 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
+    <textTemplates>
+        <name>RejectionEmailtoApplicant</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Date : {!$Flow.CurrentDate}&lt;/p&gt;&lt;p&gt;File No.: &lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Name} &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Dear : {!$Record.MUSW__Applicant__r.FirstName} &lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!$Record.MUSW__Applicant__r.LastName}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;Re:&amp;nbsp;&amp;nbsp;Application No : &lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Name} &lt;/span&gt; (Address : {!$Record.MUSW__Address__r.Name}, /PID : &lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.MUSW__Parcel__r.Name})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Please be advised that your Development Permit Application No. &lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.Name}&lt;/span&gt; was denied by the CVRD Land Use Services Department via delegated decision authority.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Per CVRD Bylaw No. 4483, you have right to request that the CVRD Board reconsider this denial.&amp;nbsp;Please deliver a written request for reconsideration to the Corporate Officer, within thirty (30) days of receiving this written notice, by logging into &lt;u&gt;{!$Label.CVRD_DS_Portal_URL}&lt;/u&gt;, selecting your denied application, and attaching your written request in electronic format by clicking the REQUEST FOR RECONSIDERATION button.&lt;/p&gt;&lt;p&gt;If you have any questions, please do not hesitate to contact me at {!$Record.CVRD_DS_Planner__r.Phone}.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Yours truly,&amp;nbsp;&lt;/p&gt;&lt;p&gt;{!$Record.CVRD_DS_Planner__r.FirstName} {!$Record.CVRD_DS_Planner__r.LastName}&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!$Record.CVRD_DS_Planner__r.Title}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Development Services Division&amp;nbsp;&lt;/p&gt;&lt;p&gt;Land Use Services Department&lt;/p&gt;</text>
+    </textTemplates>
     <triggerOrder>20</triggerOrder>
     <variables>
         <name>Issued_Date</name>

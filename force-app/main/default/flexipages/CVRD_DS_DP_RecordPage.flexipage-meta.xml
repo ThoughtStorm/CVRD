@@ -76,6 +76,16 @@
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.Complete_Hearing</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Hearing</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>

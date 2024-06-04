@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body aria-readonly="false" style="height: auto; min-height: auto;">File No.: {{{MUSW__Application2__c.Name}}}<br />
+<br />
+Dear : {{{MUSW__Application2__c.MUSW__Applicant__c}}},<br />
+<br />
+&nbsp;Re:&nbsp;&nbsp;&nbsp;Application No :&nbsp;{{{MUSW__Application2__c.Name}}} (Address :&nbsp;{{{MUSW__Application2__c.MUSW__Address__c}}}, /PID :&nbsp;{{{MUSW__Application2__c.MUSW__Parcel__c}}} )<br />
+<br />
+Please be advised that your Development Permit Application No. {{{MUSW__Application2__c.Name}}}&nbsp;was denied by the CVRD Land Use Services Department via delegated decision authority.&nbsp;<br />
+<br />
+Per CVRD Bylaw No. 4483, you have right to request that the CVRD Board reconsider this denial.&nbsp;&nbsp;Please deliver a written request for reconsideration to the Corporate Officer, within thirty (30) days of receiving this written notice, by logging into 55555,&nbsp;selecting your denied application, and attaching your written request in electronic format by clicking the REQUEST FOR RECONSIDERATION button.<br />
+<br />
+If you have any questions, please do not hesitate to contact me at {{{MUSW__Application2__c.CVRD_DS_Planner__c.MobilePhone}}}.&nbsp;<br />
+<br />
+<br />
+&nbsp;<br />
+<br />
+Yours truly,<br />
+&nbsp;</body>
+</html>
