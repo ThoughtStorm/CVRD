@@ -94,7 +94,6 @@
     </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD DS - Application Upload Decision File {!$Flow.CurrentDateTime}</interviewLabel>
-    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD DS - Application Upload Decision File</label>
     <loops>
         <name>Loop_Condition_Records</name>
@@ -248,7 +247,7 @@
             <targetReference>Get_Condition_Record</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>DocumentIds</name>
         <dataType>String</dataType>

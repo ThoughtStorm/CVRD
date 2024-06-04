@@ -69,6 +69,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Review</fullName>
             <default>false</default>
         </values>
@@ -88,7 +92,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Initiated</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred Back From Meeting</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -303,6 +315,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Appeal Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Electrical Review</fullName>
             <default>false</default>
         </values>
@@ -320,6 +336,10 @@
         </values>
         <values>
             <fullName>Referral Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred Back From Meeting</fullName>
             <default>false</default>
         </values>
     </picklistValues>

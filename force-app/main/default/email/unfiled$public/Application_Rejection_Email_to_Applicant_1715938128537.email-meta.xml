@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template for applicant when application is rejected</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Application - Rejection Email to Applicant</name>
+    <relatedEntityType>MUSW__Application2__c</relatedEntityType>
+    <style>none</style>
+    <subject>Your Application is Rejected</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

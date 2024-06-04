@@ -26,6 +26,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Review</fullName>
             <default>false</default>
         </values>
@@ -45,7 +49,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Initiated</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred Back From Meeting</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -141,6 +153,10 @@
         <picklist>MUSW__Milestone_Name__c</picklist>
         <values>
             <fullName>Admin Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appeal Review</fullName>
             <default>false</default>
         </values>
         <values>

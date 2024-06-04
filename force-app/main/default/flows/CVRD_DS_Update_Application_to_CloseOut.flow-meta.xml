@@ -78,7 +78,6 @@
     </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD DS Update Application to CloseOut {!$Flow.CurrentDateTime}</interviewLabel>
-    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD DS Update Application to CloseOut</label>
     <loops>
         <name>Iterate_Condition_Records</name>
@@ -213,7 +212,7 @@
             <targetReference>Get_Condition_Records</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>recordId</name>
         <dataType>SObject</dataType>

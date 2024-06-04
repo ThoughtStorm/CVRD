@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body aria-readonly="false" style="height: auto; min-height: auto;">Hi&nbsp;<br />
+<br />
+Reconsideration letter has been successfully posted by the applicant.<br />
+Please review the file.<br />
+Application Number :&nbsp;{{{MUSW__Application2__c.Name}}}<br />
+Applicant Name :&nbsp;{{{MUSW__Application2__c.CVRD_DS_Planner__c}}}<br />
+<br />
+Regards,<br />
+CVRD Team<br />
+&nbsp;</body>
+</html>

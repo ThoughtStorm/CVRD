@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>MUSW__Review_Type__c</fullName>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Review Type</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
@@ -40,6 +39,16 @@
                 <fullName>Referral Review</fullName>
                 <default>false</default>
                 <label>Referral Review</label>
+            </value>
+            <value>
+                <fullName>Appeal Review</fullName>
+                <default>false</default>
+                <label>Appeal Review</label>
+            </value>
+            <value>
+                <fullName>Referred Back From Meeting</fullName>
+                <default>false</default>
+                <label>Referred Back From Meeting</label>
             </value>
         </valueSetDefinition>
     </valueSet>

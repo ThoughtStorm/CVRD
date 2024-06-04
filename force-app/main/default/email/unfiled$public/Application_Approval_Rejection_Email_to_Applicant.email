@@ -1,0 +1,5 @@
+Your Application is Rejected
+
+{!MUSW__Application2__c.Name}
+
+{!MUSW__Application2__c.CVRD_DS_Planner__r.MobilePhone}
