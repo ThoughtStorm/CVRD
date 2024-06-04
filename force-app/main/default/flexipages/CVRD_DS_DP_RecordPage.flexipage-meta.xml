@@ -51,6 +51,9 @@
                             <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_Cancel_Application</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Generate_Permit</value>
                             <visibilityRule>
                                 <booleanFilter>1 AND 2</booleanFilter>
@@ -73,6 +76,32 @@
                                     <leftValue>{!Record.MUSW__Phase__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Issue</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.Create_Agenda_Item</value>
+                            <visibilityRule>
+                                <booleanFilter>1 AND 2</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Hearing</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Pending</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.Complete_Hearing</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Hearing</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
