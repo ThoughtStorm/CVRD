@@ -1,0 +1,9 @@
+Hi 
+
+Reconsideration letter has been successfully posted by the applicant.
+Please review the file.
+Application Number : {!MUSW__Application2__c.Name}
+Applicant Name : {!MUSW__Application2__c.CVRD_DS_Planner__c}
+
+Regards,
+CVRD Team

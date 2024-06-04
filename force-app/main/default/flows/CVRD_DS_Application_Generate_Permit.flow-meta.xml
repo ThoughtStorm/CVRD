@@ -104,7 +104,6 @@
     </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD DS - Application Generate Permit {!$Flow.CurrentDateTime}</interviewLabel>
-    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD DS - Application Generate Permit</label>
     <loops>
         <name>Iterate_Condition_Record</name>
@@ -308,7 +307,7 @@
             <targetReference>Get_Condition_Record</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>DocumentRecordTypeId</name>
         <dataType>String</dataType>

@@ -37,6 +37,10 @@
         <allowDelegate>false</allowDelegate>
         <approvalActions>
             <action>
+                <name>Update_Application_Status_to_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
                 <name>Update_Completed_Approval_to_GM_Approval</name>
                 <type>FieldUpdate</type>
             </action>
@@ -63,7 +67,11 @@
         </rejectBehavior>
         <rejectionActions>
             <action>
-                <name>CVRD_DS_Update_application_Phase</name>
+                <name>Update_Application_Phase_to_Review</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Application_Status_to_Pending</name>
                 <type>FieldUpdate</type>
             </action>
         </rejectionActions>
@@ -71,10 +79,6 @@
     <approvalStep>
         <allowDelegate>false</allowDelegate>
         <approvalActions>
-            <action>
-                <name>CVRD_DS_Update_application_status</name>
-                <type>FieldUpdate</type>
-            </action>
             <action>
                 <name>Update_field_to_CO_CFO_Approval</name>
                 <type>FieldUpdate</type>
@@ -88,7 +92,7 @@
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
         <entryCriteria>
-            <booleanFilter>1 AND ((2 AND 7) OR (3 AND 4) OR (5 AND 6) OR (8 AND 9))</booleanFilter>
+            <booleanFilter>1 AND ((2 AND 7) OR (3 AND 4) OR (5 AND 6) OR (8 AND 9) OR 10 OR 11 OR 12 OR 13 OR 14 OR 15 OR 16)</booleanFilter>
             <criteriaItems>
                 <field>MUSW__Application2__c.MUSW__Type2__c</field>
                 <operation>notEqual</operation>
@@ -134,21 +138,51 @@
                 <operation>notEqual</operation>
                 <value>Delegated</value>
             </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Phased_Development_Agreement</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Agricultural_Land_Reserve</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>OCP_Zoning_or_Land_Use_Bylaw_Amendment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Telecommunication_Antenna_Structure</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Minimum_Frontage_Exception</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Temporary_Use_Permit</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>equals</operation>
+                <value>Flood_Management_Bylaw_Exemption</value>
+            </criteriaItems>
         </entryCriteria>
         <label>CO/CFO Approval</label>
         <name>CO_CFO_Approval</name>
         <rejectBehavior>
             <type>RejectRequest</type>
         </rejectBehavior>
-        <rejectionActions>
-            <action>
-                <name>CVRD_DS_Update_application_Phase</name>
-                <type>FieldUpdate</type>
-            </action>
-        </rejectionActions>
     </approvalStep>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND ( ( 5 OR 6 OR 7) OR 8)</booleanFilter>
         <criteriaItems>
             <field>MUSW__Application2__c.MUSW__Phase__c</field>
             <operation>equals</operation>
@@ -169,10 +203,30 @@
             <operation>notEqual</operation>
             <value>Subdivision (Referral)</value>
         </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+            <operation>equals</operation>
+            <value>Amendment,Discharge,Non-farm Use,Subdivision,ALC Exclusion,New,Renewal,OCP Amendment,Zoning Amendment,Land Use Bylaw Amendment,Major - New,Major - Extension,Retail Sales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+            <operation>equals</operation>
+            <value>Amend an Existing Liquor License,Relocate the Liquor License,Increase Number of Patrons,Expand Operating Hours,Authorize an Event with Paid Participants,Temporary Social Event Permit with &gt;= 150 Attendees,Temporary Social Event Permit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+            <operation>equals</operation>
+            <value>Non - Adhering Residential Use,Combined OCP Amendment and Zoning Bylaw Amendment,Amendment or Discharge,Registration Amendment or Discharge</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.MUSW__Type2__c</field>
+            <operation>equals</operation>
+            <value>Flood_Management_Bylaw_Exemption,Minimum_Frontage_Exception,Strata_Conversion,Telecommunication_Antenna_Structure</value>
+        </criteriaItems>
     </entryCriteria>
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
-    <label>CVRD DS Application Approval</label>
+    <label>CVRD DS Application Board Approval</label>
     <processOrder>1</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
