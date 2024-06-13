@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Copy_1_of_Create_DPA_Fee</name>
         <label>Copy 1 of Create DPA Fee</label>
-        <locationX>50</locationX>
+        <locationX>314</locationX>
         <locationY>539</locationY>
         <actionName>CVRD_DS_Split_MultiPicklist</actionName>
         <actionType>apex</actionType>
@@ -32,8 +32,29 @@
     <actionCalls>
         <name>Copy_1_of_Create_Fees</name>
         <label>Copy 1 of Create Fees</label>
-        <locationX>842</locationX>
+        <locationX>1106</locationX>
         <locationY>647</locationY>
+        <actionName>MUSW__CreateFeesAction</actionName>
+        <actionType>apex</actionType>
+        <dataTypeMappings>
+            <typeName>T__relatedRecord</typeName>
+            <typeValue>MUSW__Application2__c</typeValue>
+        </dataTypeMappings>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>relatedRecord</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>MUSW__CreateFeesAction</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Copy_2_of_Create_Fees</name>
+        <label>Copy 2 of Create Fees</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
         <actionName>MUSW__CreateFeesAction</actionName>
         <actionType>apex</actionType>
         <dataTypeMappings>
@@ -53,7 +74,7 @@
     <actionCalls>
         <name>Create_DPA_Fee</name>
         <label>Create DPA Fee</label>
-        <locationX>314</locationX>
+        <locationX>578</locationX>
         <locationY>755</locationY>
         <actionName>CVRD_DS_Split_MultiPicklist</actionName>
         <actionType>apex</actionType>
@@ -82,7 +103,7 @@
     <actionCalls>
         <name>Create_Fees</name>
         <label>Create Fees</label>
-        <locationX>578</locationX>
+        <locationX>842</locationX>
         <locationY>431</locationY>
         <actionName>MUSW__CreateFeesAction</actionName>
         <actionType>apex</actionType>
@@ -104,9 +125,45 @@
     <decisions>
         <name>Is_New_Application_or_Application_Phase_Status_Changed</name>
         <label>Is New Application or Application Phase/Status Changed</label>
-        <locationX>578</locationX>
+        <locationX>710</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Internal_Applications_creation</name>
+            <conditionLogic>(1 OR 2) AND 3 AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Agricultural_Land_Reserve</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Liquor Licence Referrals</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Sub_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_2_of_Create_Fees</targetReference>
+            </connector>
+            <label>Internal Applications creation</label>
+        </rules>
         <rules>
             <name>Development_Permit_Record_without_subtype</name>
             <conditionLogic>and</conditionLogic>
@@ -236,7 +293,7 @@
     <recordDeletes>
         <name>Delete_existing_application_fee_records</name>
         <label>Delete existing application fee records</label>
-        <locationX>842</locationX>
+        <locationX>1106</locationX>
         <locationY>539</locationY>
         <connector>
             <targetReference>Copy_1_of_Create_Fees</targetReference>
@@ -246,7 +303,7 @@
     <recordDeletes>
         <name>Delete_Fee_records</name>
         <label>Delete Fee records</label>
-        <locationX>314</locationX>
+        <locationX>578</locationX>
         <locationY>539</locationY>
         <connector>
             <targetReference>Get_DP_fee_template_records</targetReference>
@@ -256,7 +313,7 @@
     <recordLookups>
         <name>Copy_1_of_Get_DP_fee_template_records</name>
         <label>Copy 1 of Get DP fee template records</label>
-        <locationX>50</locationX>
+        <locationX>314</locationX>
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -284,7 +341,7 @@
     <recordLookups>
         <name>Get_DP_fee_template_records</name>
         <label>Get DP fee template records</label>
-        <locationX>314</locationX>
+        <locationX>578</locationX>
         <locationY>647</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -312,7 +369,7 @@
     <recordLookups>
         <name>get_fee_records</name>
         <label>get fee records</label>
-        <locationX>842</locationX>
+        <locationX>1106</locationX>
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -340,7 +397,7 @@
     <recordLookups>
         <name>Get_fee_records_for_Application</name>
         <label>Get fee records for Application</label>
-        <locationX>314</locationX>
+        <locationX>578</locationX>
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -366,7 +423,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>452</locationX>
+        <locationX>584</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Is_New_Application_or_Application_Phase_Status_Changed</targetReference>
