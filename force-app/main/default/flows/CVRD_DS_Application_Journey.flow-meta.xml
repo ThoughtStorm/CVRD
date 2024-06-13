@@ -1164,7 +1164,6 @@
             <targetReference>Success_Screen</targetReference>
         </connector>
         <faultConnector>
-            <isGoTo>true</isGoTo>
             <targetReference>Fault_Screen</targetReference>
         </faultConnector>
         <inputReference>createApplicationLocationRecords</inputReference>
@@ -1178,6 +1177,7 @@
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
         <faultConnector>
+            <isGoTo>true</isGoTo>
             <targetReference>Fault_Screen</targetReference>
         </faultConnector>
         <inputAssignments>
@@ -1220,6 +1220,12 @@
             <field>CVRD_DS_SiteDisclosureStatement__c</field>
             <value>
                 <elementReference>EnvironmentalActConditionV22</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Units__c</field>
+            <value>
+                <elementReference>Total_Units</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2666,8 +2672,8 @@
     <screens>
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
-        <locationX>2074</locationX>
-        <locationY>3830</locationY>
+        <locationX>1546</locationX>
+        <locationY>5294</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -3071,21 +3077,94 @@
             <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <fields>
-            <name>Property_Information_Section3</name>
+            <name>Unit_Information</name>
+            <fieldText>Unit Information</fieldText>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Property_Information_Section3_Column1</name>
+                <name>Unit_Information_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Total_Units</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Total_Units</elementReference>
+                    </defaultValue>
+                    <fieldText>Total Units</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;The number of units will be used to calculate application fees and any additional utility fee if applicable&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <visibilityRule>
+                        <conditionLogic>or</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Record_Types</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>CVRD_DS_Strata_Conversion</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Record_Types</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>CVRD_DS_Development_Permit</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Record_Types</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Unit_Information_Column2</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
                     <value>
-                        <stringValue>12</stringValue>
+                        <stringValue>8</stringValue>
                     </value>
                 </inputParameters>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <visibilityRule>
+                <conditionLogic>or</conditionLogic>
+                <conditions>
+                    <leftValueReference>Record_Types</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>CVRD_DS_Strata_Conversion</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>Record_Types</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>CVRD_DS_Development_Permit</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>Record_Types</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <fields>
             <name>Property_Information_Section4</name>
@@ -3450,6 +3529,23 @@
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>Review_Application_Screen_Section8_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Review_Application_Screen_Section9</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Review_Application_Screen_Section9_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Pause_Application9</name>
