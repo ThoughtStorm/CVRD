@@ -307,7 +307,7 @@
             <targetReference>Get_Condition_Record</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>DocumentRecordTypeId</name>
         <dataType>String</dataType>

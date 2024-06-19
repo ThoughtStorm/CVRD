@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_DS_Completed_Approval__c</fullName>
-    <externalId>false</externalId>
     <label>Completed Approval</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
@@ -30,6 +29,36 @@
                 <fullName>Board Approval</fullName>
                 <default>false</default>
                 <label>Board Approval</label>
+            </value>
+            <value>
+                <fullName>General Manager - GM Approved</fullName>
+                <default>false</default>
+                <label>General Manager - GM Approved</label>
+            </value>
+            <value>
+                <fullName>General Manager - GM Rejected</fullName>
+                <default>false</default>
+                <label>General Manager - GM Rejected</label>
+            </value>
+            <value>
+                <fullName>Board Approval - GM Approved</fullName>
+                <default>false</default>
+                <label>Board Approval - GM Approved</label>
+            </value>
+            <value>
+                <fullName>Board Approval - GM Rejected</fullName>
+                <default>false</default>
+                <label>Board Approval - GM Rejected</label>
+            </value>
+            <value>
+                <fullName>General Manager CO/CFO Approval</fullName>
+                <default>false</default>
+                <label>General Manager CO/CFO Approval</label>
+            </value>
+            <value>
+                <fullName>Board Approval - CO/CFO Approval</fullName>
+                <default>false</default>
+                <label>Board Approval - CO/CFO Approval</label>
             </value>
         </valueSetDefinition>
     </valueSet>
