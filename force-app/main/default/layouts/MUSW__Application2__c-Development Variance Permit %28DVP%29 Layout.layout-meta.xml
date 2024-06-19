@@ -35,15 +35,19 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>CVRD_Application_Created_Date__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CVRD_Application_Created_Year__c</field>
+                <field>CVRD_DS_CO_CFO_File_Uploaded__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>CVRD_DS_Planner__c</field>
+                <field>CVRD_DS_Review_Outcome__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Land_Title_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Land_Title_Registration_Date__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -58,6 +62,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>MUSW__Status__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Planner__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -274,8 +282,9 @@
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>CVRD_DS_Type__c</fields>
         <fields>MUSW__Status__c</fields>
+        <fields>CVRD_DS_Type__c</fields>
+        <fields>CVRD_DS_Due_Date__c</fields>
         <fields>MUSW__Date_Resolved__c</fields>
         <relatedList>MUSW__Condition__c.MUSW__Application2__c</relatedList>
     </relatedLists>
