@@ -47,7 +47,19 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>CVRD_DS_Planner__c</field>
+                <field>CVRD_DS_CO_CFO_File_Uploaded__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Review_Outcome__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Land_Title_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Land_Title_Registration_Date__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -66,6 +78,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>MUSW__Completion_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Planner__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -303,10 +319,19 @@
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>CVRD_DS_Type__c</fields>
         <fields>MUSW__Status__c</fields>
+        <fields>CVRD_DS_Type__c</fields>
+        <fields>CVRD_DS_Due_Date__c</fields>
         <fields>MUSW__Date_Resolved__c</fields>
         <relatedList>MUSW__Condition__c.MUSW__Application2__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>New</excludeButtons>
+        <fields>NAME</fields>
+        <fields>MUSW__Proceeding__c</fields>
+        <fields>CVRD_DS_Outcome__c</fields>
+        <relatedList>MUSW__Proceeding_Agenda_Item__c.MUSW__Application__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>MUSW__Attestor__c</fields>
