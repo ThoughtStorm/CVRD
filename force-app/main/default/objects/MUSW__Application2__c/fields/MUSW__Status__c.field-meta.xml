@@ -114,10 +114,12 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Close Out</controllingFieldValue>
             <valueName>Approved</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Close Out</controllingFieldValue>
             <valueName>Rejected</valueName>
         </valueSettings>
     </valueSet>

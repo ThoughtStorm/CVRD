@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_DS_Sub_Type__c</fullName>
-    <externalId>false</externalId>
     <label>Sub Type</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
@@ -69,19 +68,19 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
-            <valueName>Major - New</valueName>
+            <valueName>Board - New</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
-            <valueName>Major - Extension</valueName>
+            <valueName>Board - Extension</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
-            <valueName>Minor - New</valueName>
+            <valueName>Delegated - New</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
-            <valueName>Minor - Extension</valueName>
+            <valueName>Delegated - Extension</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
@@ -101,6 +100,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
             <valueName>Discharge</valueName>
         </valueSettings>
         <valueSettings>
@@ -126,16 +126,15 @@
         <valueSettings>
             <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
             <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
-            <valueName>New</valueName>
+            <valueName>Amendment</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
-            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
             <valueName>Renewal</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
-            <valueName>Amendment or Discharge</valueName>
+            <valueName>New</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
