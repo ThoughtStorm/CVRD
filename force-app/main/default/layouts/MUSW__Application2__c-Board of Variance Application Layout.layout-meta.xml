@@ -22,7 +22,7 @@
                 <field>MUSW__Phase__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>CVRD_DS_Description__c</field>
             </layoutItems>
             <layoutItems>
@@ -177,7 +177,7 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>CVRD_DS_is_TopofaRavine_Bank__c</field>
             </layoutItems>
         </layoutColumns>
