@@ -52,6 +52,13 @@
                     <elementReference>$Flow.CurrentDate</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Get_Application_Record</targetReference>
             </connector>
@@ -163,7 +170,7 @@
                 <targetReference>Due_date_Greater_than_Today</targetReference>
             </connector>
             <label>Due Email Notification to Planner</label>
-            <offsetNumber>-3</offsetNumber>
+            <offsetNumber>-30</offsetNumber>
             <offsetUnit>Days</offsetUnit>
             <recordField>CVRD_DS_Due_Date__c</recordField>
             <timeSource>RecordField</timeSource>

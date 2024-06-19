@@ -38,38 +38,6 @@
         </connector>
     </assignments>
     <decisions>
-        <name>Approval_Rejected</name>
-        <label>Approval Rejected</label>
-        <locationX>809</locationX>
-        <locationY>134</locationY>
-        <defaultConnector>
-            <targetReference>ErrorScreen2</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Rejected</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>recordId.MUSW__Phase__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Approval</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>recordId.MUSW__Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Rejected</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Upload_Screen</targetReference>
-            </connector>
-            <label>Rejected</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Check_Files_are_Uploaded</name>
         <label>Check Files are Uploaded</label>
         <locationX>512</locationX>
@@ -173,6 +141,38 @@
             <label>Planner</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>CloseOut_Rejected</name>
+        <label>CloseOut Rejected</label>
+        <locationX>809</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>ErrorScreen2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Rejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.MUSW__Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Close Out</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordId.MUSW__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rejected</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Upload_Screen</targetReference>
+            </connector>
+            <label>Rejected</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD DS {!$Flow.CurrentDateTime}</interviewLabel>
     <label>CVRD DS Application - Reconsideration Letter</label>
@@ -209,6 +209,9 @@
             </value>
         </filters>
         <inputAssignments>
+            <field>CVRD_DS_Review_Outcome__c</field>
+        </inputAssignments>
+        <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
                 <stringValue>Appeal</stringValue>
@@ -238,6 +241,9 @@
                 <elementReference>recordId.Id</elementReference>
             </value>
         </filters>
+        <inputAssignments>
+            <field>CVRD_DS_Review_Outcome__c</field>
+        </inputAssignments>
         <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
@@ -347,7 +353,7 @@
         <locationX>683</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Approval_Rejected</targetReference>
+            <targetReference>CloseOut_Rejected</targetReference>
         </connector>
     </start>
     <status>Active</status>

@@ -65,9 +65,15 @@
             </value>
         </filters>
         <inputAssignments>
+            <field>MUSW__Phase__c</field>
+            <value>
+                <stringValue>Issue</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>MUSW__Status__c</field>
             <value>
-                <stringValue>Completed</stringValue>
+                <stringValue>Pending</stringValue>
             </value>
         </inputAssignments>
         <object>MUSW__Application2__c</object>
