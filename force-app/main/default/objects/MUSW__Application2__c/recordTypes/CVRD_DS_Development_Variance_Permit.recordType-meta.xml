@@ -22,6 +22,18 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Board Approval - CO%2FCFO Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board Approval - GM Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board Approval - GM Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>CO%2FCFO Approval</fullName>
             <default>false</default>
         </values>
@@ -31,6 +43,18 @@
         </values>
         <values>
             <fullName>GM Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Manager - GM Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Manager - GM Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Manager CO%2FCFO Approval</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -46,10 +70,6 @@
         </values>
         <values>
             <fullName>Conservation%2FGHG reduction%28DPA 13%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Environmental and Hazard%28DPA 1-7%29</fullName>
             <default>false</default>
         </values>
         <values>
@@ -192,19 +212,19 @@
     <picklistValues>
         <picklist>CVRD_DS_Sub_Type__c</picklist>
         <values>
-            <fullName>Major - Extension</fullName>
+            <fullName>Board - Extension</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Major - New</fullName>
+            <fullName>Board - New</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Minor - Extension</fullName>
+            <fullName>Delegated - Extension</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Minor - New</fullName>
+            <fullName>Delegated - New</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -429,6 +449,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Canceled</fullName>
             <default>false</default>
         </values>
@@ -441,12 +465,24 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Initiated</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>On Hold</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Pending</fullName>
             <default>true</default>
+        </values>
+        <values>
+            <fullName>Referred Back From Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
