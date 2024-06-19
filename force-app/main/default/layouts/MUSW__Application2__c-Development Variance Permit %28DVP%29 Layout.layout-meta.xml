@@ -35,14 +35,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>CVRD_Application_Created_Date__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CVRD_Application_Created_Year__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>CVRD_DS_CO_CFO_File_Uploaded__c</field>
             </layoutItems>
             <layoutItems>
