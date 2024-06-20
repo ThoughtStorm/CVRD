@@ -134,7 +134,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Copy_1_of_Copy_1_of_Update_Application_Status_Initiated</targetReference>
+                <targetReference>Copy_1_of_Copy_1of_Update_Application_Status_Initiated</targetReference>
             </connector>
             <label>Appeal Initiated</label>
         </rules>
@@ -233,7 +233,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Copy_1_of_Copy_1_of_Update_Application_Status_Initiated</name>
+        <name>Copy_1_of_Copy_1of_Update_Application_Status_Initiated</name>
         <label>Copy 1 of Copy 1 of Update Application Status In Initiated</label>
         <locationX>1370</locationX>
         <locationY>863</locationY>
