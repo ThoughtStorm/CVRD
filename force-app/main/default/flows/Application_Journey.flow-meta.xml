@@ -129,7 +129,7 @@
         </rules>
         <rules>
             <name>CO_CFO_File_Uploaded</name>
-            <conditionLogic>(1 AND 2 AND 3 AND 4 AND 8 ) OR (5 AND 6 AND 7 ) OR (1 AND 2 AND 9 AND 10)</conditionLogic>
+            <conditionLogic>(1 AND 2 AND 3 AND 4 AND 8 ) OR (5 AND 6 AND 7 )</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -184,20 +184,6 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Board Approval - CO/CFO Approval</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Appeal</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.CVRD_DS_Completed_Approval__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>General Manager CO/CFO Approval</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -295,17 +281,28 @@
             <name>CO_CFO_Approved_General_Manager</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.CVRD_DS_Completed_Approval__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>General Manager CO/CFO Approval</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
                 <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Appeal</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Completed_Approval__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>General Manager - GM Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
