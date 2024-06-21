@@ -38,8 +38,22 @@
             <label>Review Completed</label>
         </rules>
         <rules>
-            <name>Approval_Completed</name>
-            <conditionLogic>and</conditionLogic>
+            <name>CO_CFO_File_Uploaded</name>
+            <conditionLogic>(1 AND 2 AND 3 AND 4 AND 8 ) OR (5 AND 6 AND 7 )</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
             <conditions>
                 <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -54,6 +68,21 @@
                     <stringValue>Completed</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Completed_Approval__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Board Approval - CO/CFO Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Application_to_Hearing_Pending</targetReference>
+            </connector>
+            <label>Board App -CO/CFO File Uploaded?</label>
+        </rules>
+        <rules>
+            <name>GM_Approved_Application_Approved</name>
+            <conditionLogic>1 AND ((2 AND 3 AND 4 ) OR (5 AND 6 AND 7 ))</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.MUSW__Total_Balance__c</leftValueReference>
                 <operator>LessThanOrEqualTo</operator>
@@ -93,8 +122,69 @@
             <connector>
                 <targetReference>Set_Application_to_Closed_Completed</targetReference>
             </connector>
-            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
-            <label>Hearing Completed</label>
+            <label>GM Approved - Application Approved</label>
+        </rules>
+        <rules>
+            <name>GM_Approved_Application_Denied</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Review_Outcome__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Application Denied</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Completed_Approval__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>General Manager - GM Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Phase_to_CloseOut</targetReference>
+            </connector>
+            <label>GM Approved - Application Denied</label>
+        </rules>
+        <rules>
+            <name>CO_CFO_Approved_General_Manager</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Appeal</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Completed_Approval__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>General Manager - GM Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Application_Phase_to_Hearing</targetReference>
+            </connector>
+            <label>CO/CFO Approved - General Manager</label>
         </rules>
     </decisions>
     <environments>Default</environments>
