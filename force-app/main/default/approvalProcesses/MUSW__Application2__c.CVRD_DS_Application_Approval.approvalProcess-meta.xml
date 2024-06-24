@@ -119,7 +119,7 @@
             <criteriaItems>
                 <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
                 <operation>notEqual</operation>
-                <value>Retail Sales</value>
+                <value>Cannabis Retail License (Board)</value>
             </criteriaItems>
             <criteriaItems>
                 <field>MUSW__Application2__c.MUSW__Type2__c</field>
@@ -204,7 +204,7 @@
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
             <operation>equals</operation>
-            <value>Amendment,Discharge,Non-farm Use,Subdivision,ALC Exclusion,New,Renewal,OCP Amendment,Zoning Amendment,Land Use Bylaw Amendment,Retail Sales,Board - New,Board - Extension</value>
+            <value>Amendment,Discharge,Non-farm Use,Subdivision,ALC Exclusion,New,Renewal,OCP Amendment,Zoning Amendment,Land Use Bylaw Amendment,Cannabis Retail License (Board),Board - New,Board - Extension</value>
         </criteriaItems>
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>

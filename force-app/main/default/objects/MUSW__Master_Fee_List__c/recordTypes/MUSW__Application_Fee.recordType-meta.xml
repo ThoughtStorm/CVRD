@@ -73,7 +73,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Cannabis Licence Referrals</fullName>
+            <fullName>Cannabis Retail License (delegated)</fullName>
             <default>false</default>
         </values>
         <values>
@@ -185,7 +185,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Retail Sales</fullName>
+            <fullName>Cannabis Retail License (Board)</fullName>
             <default>false</default>
         </values>
         <values>

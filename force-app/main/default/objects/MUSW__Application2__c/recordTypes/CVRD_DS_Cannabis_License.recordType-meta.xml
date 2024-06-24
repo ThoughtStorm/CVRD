@@ -212,11 +212,11 @@
     <picklistValues>
         <picklist>CVRD_DS_Sub_Type__c</picklist>
         <values>
-            <fullName>Cannabis Referral License</fullName>
+            <fullName>Cannabis Retail License (delegated)</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Retail Sales</fullName>
+            <fullName>Cannabis Retail License (Board)</fullName>
             <default>false</default>
         </values>
     </picklistValues>

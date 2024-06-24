@@ -83,11 +83,23 @@
     <customValue>
         <fullName>Retail Sales</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Retail Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Cannabis Retail License (Board)</fullName>
+        <default>false</default>
+        <label>Cannabis Retail License (Board)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cannabis Retail License (delegated)</fullName>
+        <default>false</default>
+        <label>Cannabis Retail License (delegated)</label>
     </customValue>
     <customValue>
         <fullName>Cannabis Licence Referrals</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Cannabis Licence Referrals</label>
     </customValue>
     <customValue>
