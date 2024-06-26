@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
-        <fullName>Approved</fullName>
-        <default>false</default>
-        <label>Approved</label>
-    </customValue>
-    <customValue>
         <fullName>Corrections Required</fullName>
         <default>false</default>
         <label>Corrections Required</label>
@@ -19,6 +14,11 @@
         <fullName>Approval Recommended</fullName>
         <default>false</default>
         <label>Approval Recommended</label>
+    </customValue>
+    <customValue>
+        <fullName>Approved</fullName>
+        <default>false</default>
+        <label>Approved</label>
     </customValue>
     <customValue>
         <fullName>Application Approved</fullName>
