@@ -11,21 +11,15 @@
         <label>Corrections Required</label>
     </customValue>
     <customValue>
-        <fullName>Denial Recommended</fullName>
-        <default>false</default>
-        <label>Denial Recommended</label>
-    </customValue>
-    <customValue>
         <fullName>Approval Recommended</fullName>
         <default>false</default>
         <label>Approval Recommended</label>
     </customValue>
     <customValue>
-        <fullName>Application Approved</fullName>
+        <fullName>Denial Recommended</fullName>
         <default>false</default>
-        <isActive>false</isActive>
-        <label>Application Approved</label>
+        <label>Denial Recommended</label>
     </customValue>
-    <masterLabel>Review Completed Actions</masterLabel>
+    <masterLabel>Milestone Completed Actions</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
