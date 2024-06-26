@@ -5,7 +5,7 @@
         <description>This assignment element sets the All Reviews Complete variable to False.</description>
         <name>Set_All_Reviews_Complete_False</name>
         <label>Set All Reviews Complete False</label>
-        <locationX>974</locationX>
+        <locationX>1150</locationX>
         <locationY>1055</locationY>
         <assignmentItems>
             <assignToReference>AllReviewsComplete</assignToReference>
@@ -22,7 +22,7 @@
         <description>This assignment element sets the All Review Pending variable to False.</description>
         <name>Set_All_Reviews_Pending_False</name>
         <label>Set All Reviews Pending False</label>
-        <locationX>1634</locationX>
+        <locationX>2074</locationX>
         <locationY>1055</locationY>
         <assignmentItems>
             <assignToReference>AllReviewsPending</assignToReference>
@@ -39,7 +39,7 @@
         <description>This assignment element sets the Any Review Corrections Required variable to True.</description>
         <name>Set_Any_Review_Corrections_Required_True</name>
         <label>Set Any Review Corrections Required True</label>
-        <locationX>754</locationX>
+        <locationX>930</locationX>
         <locationY>1355</locationY>
         <assignmentItems>
             <assignToReference>AnyReviewCorrectionsRequired</assignToReference>
@@ -55,7 +55,7 @@
     <decisions>
         <name>Check_Application</name>
         <label>Check Application</label>
-        <locationX>1392</locationX>
+        <locationX>1612</locationX>
         <locationY>323</locationY>
         <defaultConnector>
             <targetReference>Evaluate_Review_Status</targetReference>
@@ -75,14 +75,14 @@
                 <leftValueReference>$Record.MUSW__Completed_Action__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Application Approved</stringValue>
+                    <stringValue>Approval Recommended</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
                 <leftValueReference>$Record.MUSW__Completed_Action__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Application Denied</stringValue>
+                    <stringValue>Denial Recommended</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -101,7 +101,7 @@
     <decisions>
         <name>Evaluate_Is_All_Reviews_Complete_and_Any_Review_Corrections_Required</name>
         <label>Evaluate Is All Reviews Complete and Any Review Corrections Required</label>
-        <locationX>666</locationX>
+        <locationX>842</locationX>
         <locationY>1631</locationY>
         <defaultConnectorLabel>A Review is not Complete</defaultConnectorLabel>
         <rules>
@@ -119,6 +119,13 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Completed_Action__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -148,11 +155,69 @@
             </connector>
             <label>All Reviews Complete but Corrections Required</label>
         </rules>
+        <rules>
+            <name>Review_Approval_Recommended</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AllReviewsComplete</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>AnyReviewCorrectionsRequired</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Completed_Action__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approval Recommended</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Milestone_Approval_Recommended</targetReference>
+            </connector>
+            <label>Review Approval Recommended</label>
+        </rules>
+        <rules>
+            <name>Review_Denial_Recommended</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AllReviewsComplete</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>AnyReviewCorrectionsRequired</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Completed_Action__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Denial Recommended</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Milestone_to_Denial_Recommended</targetReference>
+            </connector>
+            <label>Review Denial Recommended</label>
+        </rules>
     </decisions>
     <decisions>
         <name>Evaluate_Is_Any_Review_Pending</name>
         <label>Evaluate Is Any Review Pending</label>
-        <locationX>1546</locationX>
+        <locationX>1986</locationX>
         <locationY>1331</locationY>
         <defaultConnectorLabel>A Review is not in Pending</defaultConnectorLabel>
         <rules>
@@ -174,7 +239,7 @@
     <decisions>
         <name>Evaluate_Is_Review_Completed_Action_Corrections_Required</name>
         <label>Evaluate Is Review Completed Action Corrections Required</label>
-        <locationX>886</locationX>
+        <locationX>1062</locationX>
         <locationY>1247</locationY>
         <defaultConnector>
             <targetReference>Loop_On_Completed_Reviews_with_Related_Milestone</targetReference>
@@ -199,7 +264,7 @@
     <decisions>
         <name>Evaluate_Is_Review_Status_Completed</name>
         <label>Evaluate Is Review Status Completed</label>
-        <locationX>886</locationX>
+        <locationX>1062</locationX>
         <locationY>947</locationY>
         <defaultConnector>
             <targetReference>Set_All_Reviews_Complete_False</targetReference>
@@ -224,7 +289,7 @@
     <decisions>
         <name>Evaluate_Is_Review_Status_Pending</name>
         <label>Evaluate Is Review Status Pending</label>
-        <locationX>1766</locationX>
+        <locationX>2206</locationX>
         <locationY>947</locationY>
         <defaultConnector>
             <targetReference>Loop_on_Pending_Reviews_with_Related_Milestone</targetReference>
@@ -250,7 +315,7 @@
         <description>This decision element evaluates Review status outcome in order. For the first outcome whose conditions are met, the flow takes the associated path. If no outcome’s conditions are met, the flow takes the path for the default outcome.</description>
         <name>Evaluate_Review_Status</name>
         <label>Evaluate Review Status</label>
-        <locationX>1392</locationX>
+        <locationX>1612</locationX>
         <locationY>623</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -350,7 +415,7 @@
     <loops>
         <name>Loop_On_Completed_Reviews_with_Related_Milestone</name>
         <label>Loop On Reviews with Related Milestone</label>
-        <locationX>666</locationX>
+        <locationX>842</locationX>
         <locationY>839</locationY>
         <collectionReference>Get_Completed_Reviews_with_Related_Milestone</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -364,7 +429,7 @@
     <loops>
         <name>Loop_on_Pending_Reviews_with_Related_Milestone</name>
         <label>Loop on Reviews with Related Milestone</label>
-        <locationX>1546</locationX>
+        <locationX>1986</locationX>
         <locationY>839</locationY>
         <collectionReference>Get_Pending_Reviews_with_Related_Milestone</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -398,7 +463,7 @@
     <recordLookups>
         <name>Get_Completed_Reviews_with_Related_Milestone</name>
         <label>Get Reviews with Related Milestone</label>
-        <locationX>666</locationX>
+        <locationX>842</locationX>
         <locationY>731</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -422,7 +487,7 @@
     <recordLookups>
         <name>Get_Pending_Reviews_with_Related_Milestone</name>
         <label>Get Reviews with Related Milestone</label>
-        <locationX>1546</locationX>
+        <locationX>1986</locationX>
         <locationY>731</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -445,7 +510,7 @@
     <recordUpdates>
         <name>Copy_1_of_Copy_1_of_Update_Milestone_Status_Initiated</name>
         <label>Copy 1 of Copy 1 of Update Milestone Status Initiated</label>
-        <locationX>2470</locationX>
+        <locationX>2910</locationX>
         <locationY>731</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -466,7 +531,7 @@
     <recordUpdates>
         <name>Copy_1_of_Update_Milestone_Status_In_Progress</name>
         <label>Copy 1 of Update Milestone Status On Hold</label>
-        <locationX>1942</locationX>
+        <locationX>2382</locationX>
         <locationY>731</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -487,7 +552,7 @@
     <recordUpdates>
         <name>Copy_2_of_Update_Milestone_Status_In_Progress</name>
         <label>Copy 2 of Update Milestone Status Additional Information</label>
-        <locationX>2206</locationX>
+        <locationX>2646</locationX>
         <locationY>731</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -506,9 +571,36 @@
         <object>MUSW__Milestone__c</object>
     </recordUpdates>
     <recordUpdates>
+        <name>Update_Milestone_Approval_Recommended</name>
+        <label>Update Milestone Approval Recommended</label>
+        <locationX>842</locationX>
+        <locationY>1739</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.MUSW__Milestone__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MUSW__Completed_Action__c</field>
+            <value>
+                <stringValue>Approval Recommended</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Milestone__c</object>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_Milestone_Status_and_Completed_Action_to_Completed_and_Approved</name>
         <label>Update Milestone Status and Completed Action to Completed and Approved</label>
-        <locationX>402</locationX>
+        <locationX>314</locationX>
         <locationY>1739</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -535,7 +627,7 @@
     <recordUpdates>
         <name>Update_Milestone_Status_and_Completed_Action_to_Completed_and_Corrections_Requir</name>
         <label>Update Milestone Status and Completed Action to Completed and Corrections Required</label>
-        <locationX>666</locationX>
+        <locationX>578</locationX>
         <locationY>1739</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -583,7 +675,7 @@
     <recordUpdates>
         <name>Update_Milestone_Status_Pending</name>
         <label>Update Milestone Status Pending</label>
-        <locationX>1414</locationX>
+        <locationX>1854</locationX>
         <locationY>1439</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -602,9 +694,36 @@
         <object>MUSW__Milestone__c</object>
     </recordUpdates>
     <recordUpdates>
+        <name>Update_Milestone_to_Denial_Recommended</name>
+        <label>Update Milestone to Denial Recommended</label>
+        <locationX>1106</locationX>
+        <locationY>1739</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.MUSW__Milestone__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MUSW__Completed_Action__c</field>
+            <value>
+                <stringValue>Denial Recommended</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Milestone__c</object>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_Review_Outcome</name>
         <label>Update Review Outcome</label>
-        <locationX>1260</locationX>
+        <locationX>1480</locationX>
         <locationY>431</locationY>
         <connector>
             <targetReference>Evaluate_Review_Status</targetReference>
@@ -626,7 +745,7 @@
         <object>MUSW__Application2__c</object>
     </recordUpdates>
     <start>
-        <locationX>1266</locationX>
+        <locationX>1486</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Check_Application</targetReference>

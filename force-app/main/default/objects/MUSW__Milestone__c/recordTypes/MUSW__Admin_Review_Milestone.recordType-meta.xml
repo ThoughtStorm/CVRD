@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>MUSW__Plan_Review_Milestone</fullName>
+    <fullName>MUSW__Admin_Review_Milestone</fullName>
     <active>true</active>
-    <label>Plan Review Milestone</label>
+    <label>Admin Review Milestone</label>
     <picklistValues>
         <picklist>EPR_Integration__c</picklist>
         <values>
@@ -53,10 +53,6 @@
         </values>
         <values>
             <fullName>In Progress</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Initiated</fullName>
             <default>false</default>
         </values>
         <values>
