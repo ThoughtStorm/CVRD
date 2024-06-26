@@ -35,10 +35,6 @@
         <allowDelegate>false</allowDelegate>
         <approvalActions>
             <action>
-                <name>General_Manager_CO_CFO_Approved</name>
-                <type>FieldUpdate</type>
-            </action>
-            <action>
                 <name>Update_General_Manager_GM_Approved</name>
                 <type>FieldUpdate</type>
             </action>
@@ -69,7 +65,7 @@
     <description>Application Approval for General Manager. V2</description>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
-        <booleanFilter>1 AND 2 AND 3 AND ( ( 4 OR 5 ) OR 6)</booleanFilter>
+        <booleanFilter>1 AND 2 AND 3 AND ( ( 4 OR 5 ) OR 6) AND 7</booleanFilter>
         <criteriaItems>
             <field>MUSW__Application2__c.MUSW__Phase__c</field>
             <operation>equals</operation>
@@ -88,7 +84,7 @@
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
             <operation>equals</operation>
-            <value>Cannabis Retail License (delegated),Delegated,Environmental and Hazard,Amendment/Extension,Conservation/GHG reduction,Form and Character,Agricultural,Registration Amendment or Discharge</value>
+            <value>Cannabis Retail License (delegated),Delegated,Environmental and Hazard,Amendment/Extension,Conservation/GHG reduction,Form and Character,Agricultural</value>
         </criteriaItems>
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
@@ -99,6 +95,11 @@
             <field>MUSW__Application2__c.MUSW__Type2__c</field>
             <operation>equals</operation>
             <value>Board_of_Variance,Development_Permit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Registration Amendment or Discharge</value>
         </criteriaItems>
     </entryCriteria>
     <finalApprovalRecordLock>true</finalApprovalRecordLock>

@@ -55,7 +55,7 @@
                 <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Approval</stringValue>
+                    <stringValue>Close Out</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -233,7 +233,7 @@
                 <leftValueReference>$Record.CVRD_DS_Review_Outcome__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Application Approved</stringValue>
+                    <stringValue>Approval Recommended</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -255,7 +255,7 @@
                 <leftValueReference>$Record.CVRD_DS_Review_Outcome__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Application Denied</stringValue>
+                    <stringValue>Denial Recommended</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -297,6 +297,9 @@
             <conditions>
                 <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
                 <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
             </conditions>
             <conditions>
                 <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
