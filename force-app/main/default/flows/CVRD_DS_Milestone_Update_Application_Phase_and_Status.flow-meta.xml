@@ -50,7 +50,14 @@
         </rules>
         <rules>
             <name>Completed_Approved</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>1 AND (2 OR 3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
             <conditions>
                 <leftValueReference>$Record.MUSW__Completed_Action__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -59,10 +66,17 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
+                <leftValueReference>$Record.MUSW__Completed_Action__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Completed</stringValue>
+                    <stringValue>Denial Recommended</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Completed_Action__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approval Recommended</stringValue>
                 </rightValue>
             </conditions>
             <connector>
