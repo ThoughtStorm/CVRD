@@ -3,7 +3,7 @@
     "id" : "b99d2d85-cb84-42dc-8e0c-2658c1e4334b",
     "propertyOverrides" : {
       "componentAttributes" : {
-        "navigationMenuEditorRefresh" : ""
+        "navigationMenuEditorRefresh" : "Default_Navigation2"
       }
     },
     "targetId" : "0dd75088-5bd3-486e-b7fa-e64168a6474e",
