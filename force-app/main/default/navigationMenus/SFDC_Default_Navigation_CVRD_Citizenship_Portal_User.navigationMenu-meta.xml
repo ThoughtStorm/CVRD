@@ -23,7 +23,7 @@
                 <type>InternalLink</type>
             </navigationMenuItem>
             <navigationMenuItem>
-                <label>My Applications</label>
+                <label>My Submitted Applications</label>
                 <position>2</position>
                 <publiclyAvailable>false</publiclyAvailable>
                 <target>/my-development-applications</target>
