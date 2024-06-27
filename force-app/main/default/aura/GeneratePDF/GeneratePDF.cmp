@@ -1,0 +1,10 @@
+<aura:component implements="lightning:availableForFlowScreens,force:hasRecordId" access="global">
+    <aura:attribute name="boolShowSpinner" type="boolean" />
+    
+    <lightning:button variant="brand" label="Generate PDF Aura" onclick="{! c.handleClick }"></lightning:button>
+    <br/><br/>
+    <aura:if isTrue="{!v.boolShowSpinner}">
+        <lightning:spinner alternative-text="Loading" size="large"></lightning:spinner>
+    </aura:if>
+	
+</aura:component>

@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Get_required_submission</name>
+        <label>Get required submission</label>
+        <locationX>710</locationX>
+        <locationY>974</locationY>
+        <actionName>CVRD_DS_Get_Required_Submissions</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Get_required_pending_submissions</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Record_Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>CVRD_DS_Get_Required_Submissions</nameSegment>
+        <outputParameters>
+            <assignToReference>ApexActionReturnVal</assignToReference>
+            <name>output</name>
+        </outputParameters>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
         <name>Redirect_To_Record_Detail_Page</name>
         <label>Redirect To Record Detail Page</label>
         <locationX>50</locationX>
-        <locationY>1490</locationY>
+        <locationY>1514</locationY>
         <actionName>clariti:flowNavigation</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -22,7 +46,7 @@
     <assignments>
         <name>Assign_Application_ID_to_Record_ID</name>
         <label>Assign Application ID to Record ID</label>
-        <locationX>710</locationX>
+        <locationX>1172</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -38,7 +62,7 @@
     <assignments>
         <name>Assign_License_ID_to_Record_ID</name>
         <label>Assign License ID to Record ID</label>
-        <locationX>446</locationX>
+        <locationX>908</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -54,7 +78,7 @@
     <assignments>
         <name>Assign_Permit_ID_to_Record_ID</name>
         <label>Assign Permit ID to Record ID</label>
-        <locationX>182</locationX>
+        <locationX>644</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -65,6 +89,22 @@
         </assignmentItems>
         <connector>
             <targetReference>Get_Permit_Name</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_to_application_list</name>
+        <label>Assign to application list</label>
+        <locationX>842</locationX>
+        <locationY>1298</locationY>
+        <assignmentItems>
+            <assignToReference>ApplicationRecords</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Application_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</targetReference>
         </connector>
     </assignments>
     <constants>
@@ -85,7 +125,7 @@
         <name>Evaluate_Button_Bar_Value</name>
         <label>Evaluate Button Bar Value</label>
         <locationX>314</locationX>
-        <locationY>1382</locationY>
+        <locationY>1406</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Button_Bar_Value_Finish</name>
@@ -122,7 +162,7 @@
     <decisions>
         <name>Evaluate_Record_ID</name>
         <label>Evaluate Record ID</label>
-        <locationX>578</locationX>
+        <locationX>1040</locationX>
         <locationY>134</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -195,8 +235,8 @@
     <decisions>
         <name>Evaluate_Submissions_Complete</name>
         <label>Evaluate Submissions Complete</label>
-        <locationX>314</locationX>
-        <locationY>1082</locationY>
+        <locationX>710</locationX>
+        <locationY>1190</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>Redirect_To_Record_Detail_Page</targetReference>
@@ -206,7 +246,7 @@
             <name>Evaluate_for_Required_Submissions</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_required_pending_submissions</leftValueReference>
+                <leftValueReference>varSubmissionsReequired</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -228,7 +268,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</targetReference>
+                <targetReference>Assign_to_application_list</targetReference>
             </connector>
             <label>Pending Submission Requests Uploaded (all satisfied / no fees)</label>
         </rules>
@@ -236,7 +276,7 @@
     <decisions>
         <name>Evaluate_Submissions_Pending</name>
         <label>Evaluate Submissions Pending</label>
-        <locationX>578</locationX>
+        <locationX>1040</locationX>
         <locationY>650</locationY>
         <defaultConnector>
             <targetReference>No_Pending_Submissions</targetReference>
@@ -283,7 +323,7 @@
     <recordLookups>
         <name>Get_Application_Name</name>
         <label>Get Application Name</label>
-        <locationX>710</locationX>
+        <locationX>1172</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -306,11 +346,11 @@
     <recordLookups>
         <name>Get_Fees</name>
         <label>Get Fees</label>
-        <locationX>314</locationX>
+        <locationX>710</locationX>
         <locationY>866</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Get_required_pending_submissions</targetReference>
+            <targetReference>Get_required_submission</targetReference>
         </connector>
         <filterLogic>(1 AND 4 AND 5) OR (2 AND 4 AND 6) OR (3 AND 4 AND 7)</filterLogic>
         <filters>
@@ -369,7 +409,7 @@
     <recordLookups>
         <name>Get_License_Name</name>
         <label>Get License Name</label>
-        <locationX>446</locationX>
+        <locationX>908</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -392,7 +432,7 @@
     <recordLookups>
         <name>Get_Pending_Submissions</name>
         <label>Get Pending Submissions</label>
-        <locationX>578</locationX>
+        <locationX>1040</locationX>
         <locationY>542</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -436,7 +476,7 @@
     <recordLookups>
         <name>Get_Permit_Name</name>
         <label>Get Permit Name</label>
-        <locationX>182</locationX>
+        <locationX>644</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -459,9 +499,9 @@
     <recordLookups>
         <name>Get_required_pending_submissions</name>
         <label>Get required pending submissions</label>
-        <locationX>314</locationX>
-        <locationY>974</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <locationX>710</locationX>
+        <locationY>1082</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Evaluate_Submissions_Complete</targetReference>
         </connector>
@@ -522,27 +562,50 @@
                 <booleanValue>true</booleanValue>
             </value>
         </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>MUSW__Submission__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <outputReference>varSubmissionsReequired</outputReference>
+        <queriedFields>Id</queriedFields>
     </recordLookups>
     <runInMode>DefaultMode</runInMode>
     <screens>
         <description>(all satisfied / no fees)</description>
         <name>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</name>
         <label>Pending Submission Requests Uploaded (all satisfied / no fees)</label>
-        <locationX>314</locationX>
-        <locationY>1190</locationY>
+        <locationX>842</locationX>
+        <locationY>1406</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
+            <isGoTo>true</isGoTo>
             <targetReference>Evaluate_Button_Bar_Value</targetReference>
         </connector>
         <fields>
             <name>Confirmation_Page_1</name>
             <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 28px;&quot;&gt;Documents Successfully Uploaded&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;You have successfully uploaded documents in your pending application, Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-size: 14px; font-family: Arial;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>createPDF</name>
+            <extensionName>c:createPDF</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>applicationRecords</name>
+                <value>
+                    <elementReference>ApplicationRecords</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>GeneratePDFAura</name>
+            <extensionName>c:GeneratePDF</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <fields>
             <name>Button_Bar_1</name>
@@ -603,7 +666,7 @@
     <screens>
         <name>No_Pending_Submissions</name>
         <label>No Pending Submissions</label>
-        <locationX>842</locationX>
+        <locationX>1370</locationX>
         <locationY>758</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -677,8 +740,8 @@
         <description>(some satisfied / no fees)</description>
         <name>Pending_Submission_Required_Requests_Uploaded_some_satisfied_no_fees</name>
         <label>Pending Submission Requests Uploaded (some satisfied / no fees)</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>314</locationX>
+        <locationY>1298</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -687,8 +750,33 @@
         </connector>
         <fields>
             <name>Copy_1_of_Confirmation_Page_3</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 28px;&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;You have successfully uploaded documents to your pending application, assigned Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 14px;&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(23, 43, 77); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;Additional documents are required. To upload additional documents click the &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;Previous &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;button&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;You have successfully uploaded &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;required &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;documents to your pending application, assigned Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 14px;&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(23, 43, 77); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;Additional documents are pending. To upload/view additional documents click the &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;Previous &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;button&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>varSubmissionsReequired.Id</leftValueReference>
+                    <operator>IsNull</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>required_Submissions</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;You have &lt;/span&gt;&lt;strong style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;required &lt;/strong&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;documents to be uploaded to your pending application, assigned Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;font-size: 14px; color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Click the &lt;/span&gt;&lt;strong style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Previous &lt;/strong&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;button to upload the all required documents&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>varSubmissionsReequired.Id</leftValueReference>
+                    <operator>IsNull</operator>
+                    <rightValue>
+                        <booleanValue>false</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <fields>
             <name>Copy_1_of_Button_Bar_3</name>
@@ -749,7 +837,7 @@
     <screens>
         <name>Pending_Submissions_Screen</name>
         <label>Pending Submissions Screen</label>
-        <locationX>314</locationX>
+        <locationX>710</locationX>
         <locationY>758</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -790,7 +878,7 @@
     </screens>
     <sourceTemplate>clariti__Upload_Submission_Requests</sourceTemplate>
     <start>
-        <locationX>452</locationX>
+        <locationX>914</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Evaluate_Record_ID</targetReference>
@@ -798,11 +886,26 @@
     </start>
     <status>Active</status>
     <variables>
+        <name>ApexActionReturnVal</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
         <name>Application_Id</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ApplicationRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Application2__c</objectType>
     </variables>
     <variables>
         <name>Button_Bar_Value</name>
@@ -855,5 +958,21 @@
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varRequiredSubmissions</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Submission__c</objectType>
+    </variables>
+    <variables>
+        <name>varSubmissionsReequired</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Submission__c</objectType>
     </variables>
 </Flow>
