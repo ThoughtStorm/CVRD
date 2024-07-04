@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_ProceedingType__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>ProceedingType</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Public Hearing</fullName>
+                <default>false</default>
+                <label>Public Hearing</label>
+            </value>
+            <value>
+                <fullName>Public Information Meeting</fullName>
+                <default>false</default>
+                <label>Public Information Meeting</label>
+            </value>
+            <value>
+                <fullName>Advisory Planning Commission</fullName>
+                <default>false</default>
+                <label>Advisory Planning Commission</label>
+            </value>
+            <value>
+                <fullName>Community Parks Advisory Commission</fullName>
+                <default>false</default>
+                <label>Community Parks Advisory Commission</label>
+            </value>
+            <value>
+                <fullName>Board of Variance</fullName>
+                <default>false</default>
+                <label>Board of Variance</label>
+            </value>
+            <value>
+                <fullName>Board Meeting</fullName>
+                <default>false</default>
+                <label>Board Meeting</label>
+            </value>
+            <value>
+                <fullName>EASC Meeting</fullName>
+                <default>false</default>
+                <label>EASC Meeting</label>
+            </value>
+            <value>
+                <fullName>Board Approval</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Board Approval</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
