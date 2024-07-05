@@ -749,19 +749,6 @@
                 <identifier>MUSW_alertList</identifier>
             </componentInstance>
         </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>mapSettingsName</name>
-                    <value>CVRD</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>spatialField</name>
-                </componentInstanceProperties>
-                <componentName>MUSW:mapViewer</componentName>
-                <identifier>MUSW_mapViewer</identifier>
-            </componentInstance>
-        </itemInstances>
         <name>sidebar</name>
         <type>Region</type>
     </flexiPageRegions>
