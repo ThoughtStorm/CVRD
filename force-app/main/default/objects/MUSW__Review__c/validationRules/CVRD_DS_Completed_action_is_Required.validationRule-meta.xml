@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Completed_action_is_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+    AND(
+        NOT(ISPICKVAL(MUSW__Status__c, &quot;Completed&quot;)),
+        NOT(ISPICKVAL(MUSW__Completed_Action__c, &quot;&quot;))
+    ),
+    AND(
+        ISPICKVAL(MUSW__Status__c, &quot;Completed&quot;),
+        ISPICKVAL(MUSW__Completed_Action__c, &quot;&quot;)
+    )
+)</errorConditionFormula>
+    <errorDisplayField>MUSW__Completed_Action__c</errorDisplayField>
+    <errorMessage>Completed Action is only required when status is set to &apos;Completed&apos;!</errorMessage>
+</ValidationRule>
