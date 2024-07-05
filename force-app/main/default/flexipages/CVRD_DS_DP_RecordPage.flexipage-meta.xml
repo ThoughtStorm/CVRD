@@ -56,6 +56,37 @@
                                     <operator>EQUAL</operator>
                                     <rightValue>Issue</rightValue>
                                 </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.Create_Agenda_Item</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Hearing</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.Complete_Hearing</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Hearing</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.Upload_Reconsideration_Letter</value>
+                            <visibilityRule>
+                                <booleanFilter>1 AND 2 AND ((3 AND 4) OR 5)</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Close Out</rightValue>
+                                </criteria>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Status__c}</leftValue>
                                     <operator>EQUAL</operator>
@@ -622,6 +653,19 @@
             <componentInstance>
                 <componentName>MUSW:alertList</componentName>
                 <identifier>MUSW_alertList</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>mapSettingsName</name>
+                    <value>CVRD</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>spatialField</name>
+                </componentInstanceProperties>
+                <componentName>MUSW:mapViewer</componentName>
+                <identifier>MUSW_mapViewer</identifier>
             </componentInstance>
         </itemInstances>
         <name>sidebar</name>
