@@ -79,6 +79,10 @@
                 <behavior>Edit</behavior>
                 <field>CVRD_Application_Status_Comments__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>MUSW__Geolocation__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -274,6 +278,14 @@
             <sortOrder>10</sortOrder>
         </platformActionListItems>
     </platformActionList>
+    <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>New</excludeButtons>
+        <fields>NAME</fields>
+        <fields>MUSW__Proceeding__c</fields>
+        <fields>CVRD_DS_Outcome__c</fields>
+        <relatedList>MUSW__Proceeding_Agenda_Item__c.MUSW__Application__c</relatedList>
+    </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
         <fields>MUSW__Type__c</fields>
