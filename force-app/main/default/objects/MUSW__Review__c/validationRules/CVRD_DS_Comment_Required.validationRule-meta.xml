@@ -7,5 +7,5 @@ ISPICKVAL(  MUSW__Completed_Action__c , &quot;Corrections Required&quot;),
 ISBLANK(  CVRD_DS_Comments__c )
 )</errorConditionFormula>
     <errorDisplayField>CVRD_DS_Comments__c</errorDisplayField>
-    <errorMessage>You must enter an explanation in the Comments field after setting the field Completed Action to Corrections Required</errorMessage>
+    <errorMessage>Comment is Required.</errorMessage>
 </ValidationRule>
