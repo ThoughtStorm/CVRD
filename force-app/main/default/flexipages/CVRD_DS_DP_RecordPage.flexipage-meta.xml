@@ -66,6 +66,16 @@
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
+                            <value>MUSW__Application2__c.Create_Agenda_Item</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Hearing</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__Application2__c.Complete_Hearing</value>
                             <visibilityRule>
                                 <criteria>
@@ -737,6 +747,19 @@
             <componentInstance>
                 <componentName>MUSW:alertList</componentName>
                 <identifier>MUSW_alertList</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>mapSettingsName</name>
+                    <value>CVRD</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>spatialField</name>
+                </componentInstanceProperties>
+                <componentName>MUSW:mapViewer</componentName>
+                <identifier>MUSW_mapViewer</identifier>
             </componentInstance>
         </itemInstances>
         <name>sidebar</name>
