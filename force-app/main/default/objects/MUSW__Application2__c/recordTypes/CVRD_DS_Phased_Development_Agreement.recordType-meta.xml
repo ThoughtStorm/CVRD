@@ -246,11 +246,27 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>3040-20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3045-20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3045-40</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>3060-20</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>3090-20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3300-20</fullName>
             <default>false</default>
         </values>
         <values>

@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_RCRS_classification__c</fullName>
     <description>Records classification number</description>
-    <externalId>false</externalId>
     <inlineHelpText>Records classification number based on Application type</inlineHelpText>
     <label>RCRS classification #</label>
     <required>false</required>
@@ -43,6 +42,26 @@
                 <fullName>3360-20</fullName>
                 <default>false</default>
                 <label>3360-20</label>
+            </value>
+            <value>
+                <fullName>3045-20</fullName>
+                <default>false</default>
+                <label>3045-20</label>
+            </value>
+            <value>
+                <fullName>3045-40</fullName>
+                <default>false</default>
+                <label>3045-40</label>
+            </value>
+            <value>
+                <fullName>3300-20</fullName>
+                <default>false</default>
+                <label>3300-20</label>
+            </value>
+            <value>
+                <fullName>3040-20</fullName>
+                <default>false</default>
+                <label>3040-20</label>
             </value>
         </valueSetDefinition>
         <valueSettings>
