@@ -47,6 +47,11 @@
                 <label>EASC Meeting</label>
             </value>
             <value>
+                <fullName>Special EASC Meeting</fullName>
+                <default>false</default>
+                <label>Special EASC Meeting</label>
+            </value>
+            <value>
                 <fullName>BOV</fullName>
                 <default>false</default>
                 <isActive>false</isActive>
