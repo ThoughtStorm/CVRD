@@ -23,6 +23,10 @@
                 <behavior>Required</behavior>
                 <field>MUSW__Scheduled_Date__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>CVRD_DS_Electoral_Area__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
