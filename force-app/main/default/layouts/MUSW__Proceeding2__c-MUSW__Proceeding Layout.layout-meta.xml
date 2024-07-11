@@ -41,11 +41,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>MUSW__Agenda_Close_Date__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>MUSW__Maximum_Agenda_Items__c</field>
+                <field>CVRD_DS_Electoral_Area__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
