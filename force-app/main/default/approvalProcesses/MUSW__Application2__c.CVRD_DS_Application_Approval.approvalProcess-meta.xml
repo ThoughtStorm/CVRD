@@ -209,7 +209,7 @@
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
             <operation>equals</operation>
-            <value>Amend an Existing Liquor License,Relocate the Liquor License,Increase Number of Patrons,Expand Operating Hours,Authorize an Event with Paid Participants,Temporary Social Event Permit with &gt;= 150 Attendees,Temporary Social Event Permit</value>
+            <value>Liquor License Referral (Board)</value>
         </criteriaItems>
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>

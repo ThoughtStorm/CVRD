@@ -45,7 +45,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Amend an Existing Liquor License</fullName>
+            <fullName>Liquor License Referral (Board)</fullName>
             <default>false</default>
         </values>
         <values>
@@ -58,10 +58,6 @@
         </values>
         <values>
             <fullName>Amendment%2FExtension</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Authorize an Event with Paid Participants</fullName>
             <default>false</default>
         </values>
         <values>
@@ -113,19 +109,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Expand Operating Hours</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Form and Character</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Form and Character - Signs</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Increase Number of Patrons</fullName>
             <default>false</default>
         </values>
         <values>
@@ -173,10 +161,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Relocate the Liquor License</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Renewal</fullName>
             <default>false</default>
         </values>
@@ -198,14 +182,6 @@
         </values>
         <values>
             <fullName>Subdivision</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Temporary Social Event Permit</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Temporary Social Event Permit with %3E%3D 150 Attendees</fullName>
             <default>false</default>
         </values>
         <values>
