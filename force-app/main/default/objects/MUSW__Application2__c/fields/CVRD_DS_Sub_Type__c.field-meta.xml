@@ -17,31 +17,31 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Lounge Endorsment</valueName>
+            <valueName> Liquor License Referral (Board)</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>New Outdoor Patio</valueName>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Form and Character - Signs</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>New Licence</valueName>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Environmental and Hazard</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Relocate Licence</valueName>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Amendment/Extension</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Increase to Capacity</valueName>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Conservation/GHG reduction</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Special Event Permit</valueName>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Form and Character</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Special Event Permit - 150 + attendees</valueName>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <valueName>Agricultural</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
