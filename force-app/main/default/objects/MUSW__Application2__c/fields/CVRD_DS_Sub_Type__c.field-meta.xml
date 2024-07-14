@@ -16,31 +16,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Amend an Existing Liquor License</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Relocate the Liquor License</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Increase Number of Patrons</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Expand Operating Hours</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Authorize an Event with Paid Participants</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Temporary Social Event Permit with &gt;= 150 Attendees</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Temporary Social Event Permit</valueName>
+            <valueName> Liquor License Referral (Board)</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Permit</controllingFieldValue>

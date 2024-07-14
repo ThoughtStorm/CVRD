@@ -153,38 +153,50 @@
         <label>Delegated</label>
     </customValue>
     <customValue>
+        <fullName>Liquor License Referral (Board)</fullName>
+        <default>false</default>
+        <label>Liquor License Referral (Board)</label>
+    </customValue>
+    <customValue>
         <fullName>Amend an Existing Liquor License</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Amend an Existing Liquor License</label>
     </customValue>
     <customValue>
         <fullName>Relocate the Liquor License</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Relocate the Liquor License</label>
     </customValue>
     <customValue>
         <fullName>Increase Number of Patrons</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Increase Number of Patrons</label>
     </customValue>
     <customValue>
         <fullName>Expand Operating Hours</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Expand Operating Hours</label>
     </customValue>
     <customValue>
         <fullName>Authorize an Event with Paid Participants</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Authorize an Event with Paid Participants</label>
     </customValue>
     <customValue>
         <fullName>Temporary Social Event Permit with &gt;= 150 Attendees</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Temporary Social Event Permit with &gt;= 150 Attendees</label>
     </customValue>
     <customValue>
         <fullName>Temporary Social Event Permit</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Temporary Social Event Permit</label>
     </customValue>
     <customValue>
