@@ -423,7 +423,7 @@
         </values>
         <values>
             <fullName>Application</fullName>
-            <default>false</default>
+            <default>true</default>
         </values>
         <values>
             <fullName>Approval</fullName>
@@ -443,7 +443,7 @@
         </values>
         <values>
             <fullName>Review</fullName>
-            <default>true</default>
+            <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>

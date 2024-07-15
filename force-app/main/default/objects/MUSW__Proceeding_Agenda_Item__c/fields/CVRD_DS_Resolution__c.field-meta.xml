@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_DS_Resolution__c</fullName>
-    <label>Comment</label>
+    <label>Comments</label>
     <length>32768</length>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

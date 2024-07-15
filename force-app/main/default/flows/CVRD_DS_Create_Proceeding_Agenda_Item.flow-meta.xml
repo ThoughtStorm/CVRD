@@ -439,7 +439,7 @@
                 </fields>
                 <fields>
                     <name>Resolution</name>
-                    <fieldText>Comment</fieldText>
+                    <fieldText>Comments</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
