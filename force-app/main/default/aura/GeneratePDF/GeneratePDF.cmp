@@ -1,7 +1,12 @@
 <aura:component implements="lightning:availableForFlowScreens,force:hasRecordId" access="global">
     <aura:attribute name="boolShowSpinner" type="boolean" />
-    
-    <lightning:button variant="brand" label="Generate PDF Aura" onclick="{! c.handleClick }"></lightning:button>
+    <aura:attribute name="showPDFButton" type="boolean" default="true"/>
+    <aura:attribute name="iframeUrl" type="String" />
+    <aura:attribute name="RecordId" type="MUSW__Application2__c[]" />
+     
+    <aura:if isTrue="{!v.showPDFButton}">
+    	<lightning:button variant="brand" label="Download a copy of your Application" onclick="{! c.handleClick }"></lightning:button>
+    </aura:if>
     <br/><br/>
     <aura:if isTrue="{!v.boolShowSpinner}">
         <lightning:spinner alternative-text="Loading" size="large"></lightning:spinner>
