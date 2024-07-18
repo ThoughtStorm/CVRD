@@ -94,7 +94,7 @@
                                 <criteria>
                                     <leftValue>{!Record.CVRD_DS_Sub_Type__c}</leftValue>
                                     <operator>EQUAL</operator>
-                                    <rightValue>Delegated</rightValue>
+                                    <rightValue>Liquor Licence Referral (delegated)</rightValue>
                                 </criteria>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Type2__c}</leftValue>

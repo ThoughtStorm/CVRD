@@ -84,7 +84,7 @@
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
             <operation>equals</operation>
-            <value>Cannabis Retail License (delegated),Delegated,Environmental and Hazard,Amendment/Extension,Conservation/GHG reduction,Form and Character,Agricultural</value>
+            <value>Cannabis Retail License (delegated),Liquor Licence Referral (delegated),Environmental and Hazard,Amendment/Extension,Conservation/GHG reduction,Form and Character,Agricultural</value>
         </criteriaItems>
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>

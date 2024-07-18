@@ -150,7 +150,13 @@
     <customValue>
         <fullName>Delegated</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Delegated</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor Licence Referral (delegated)</fullName>
+        <default>false</default>
+        <label>Liquor Licence Referral (delegated)</label>
     </customValue>
     <customValue>
         <fullName>Liquor License Referral (Board)</fullName>

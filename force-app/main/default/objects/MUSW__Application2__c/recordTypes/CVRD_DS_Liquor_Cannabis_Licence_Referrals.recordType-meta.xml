@@ -212,7 +212,7 @@
     <picklistValues>
         <picklist>CVRD_DS_Sub_Type__c</picklist>
         <values>
-            <fullName>Delegated</fullName>
+            <fullName>Liquor Licence Referral (delegated)</fullName>
             <default>false</default>
         </values>
         <values>
