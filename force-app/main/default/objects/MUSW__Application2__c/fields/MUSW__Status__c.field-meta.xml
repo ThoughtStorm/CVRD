@@ -62,6 +62,11 @@
                 <default>false</default>
                 <label>Referred Back From Meeting</label>
             </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -121,6 +126,10 @@
             <controllingFieldValue>Approval</controllingFieldValue>
             <controllingFieldValue>Close Out</controllingFieldValue>
             <valueName>Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <valueName>Denied</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

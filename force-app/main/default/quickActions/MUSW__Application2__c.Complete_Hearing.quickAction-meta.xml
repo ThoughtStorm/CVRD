@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
     <flowDefinition>CVRD_DS_Application_Complete_Hearing_Phase</flowDefinition>
-    <label>Complete Hearing</label>
+    <label>Complete Board Approval Phase</label>
     <optionsCreateFeedItem>false</optionsCreateFeedItem>
     <type>Flow</type>
 </QuickAction>

@@ -2,9 +2,76 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>61.0</apiVersion>
     <decisions>
+        <name>Check_Board_Meeting_Outcome</name>
+        <label>Check Board Meeting Outcome</label>
+        <locationX>182</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Success_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Back_to_Review_Phase</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7)</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.MUSW__Proceeding__r.MUSW__Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Board Meeting</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Outcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referall to staff for additional information recommended</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Outcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referral to staff recommended</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Outcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referred back to staff</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Outcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referred to staff for additional information</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Outcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>External referrals recommended</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Outcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referred to external agencies</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Application_To_Review_Phase</targetReference>
+            </connector>
+            <label>Back to Review Phase</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_Outcome_Records</name>
         <label>Check Outcome Records</label>
-        <locationX>182</locationX>
+        <locationX>336</locationX>
         <locationY>242</locationY>
         <defaultConnector>
             <targetReference>ErrorScreen</targetReference>
@@ -73,7 +140,7 @@
     <recordLookups>
         <name>Get_Outcome</name>
         <label>Get Outcome</label>
-        <locationX>182</locationX>
+        <locationX>336</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -99,12 +166,42 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Update_Outcome</name>
-        <label>Update Outcome</label>
+        <name>Update_Application_To_Review_Phase</name>
+        <label>Update Application To Review Phase</label>
         <locationX>50</locationX>
-        <locationY>458</locationY>
+        <locationY>674</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.MUSW__Application__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MUSW__Phase__c</field>
+            <value>
+                <stringValue>Review</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Application2__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Outcome</name>
+        <label>Update Outcome</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>Check_Board_Meeting_Outcome</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -125,7 +222,7 @@
     <screens>
         <name>ErrorScreen</name>
         <label>Error Screen</label>
-        <locationX>314</locationX>
+        <locationX>490</locationX>
         <locationY>350</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -141,7 +238,7 @@
     <screens>
         <name>OutCome_Screen</name>
         <label>OutCome Screen</label>
-        <locationX>50</locationX>
+        <locationX>182</locationX>
         <locationY>350</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -181,8 +278,8 @@
     <screens>
         <name>Success_Screen</name>
         <label>Success Screen</label>
-        <locationX>50</locationX>
-        <locationY>566</locationY>
+        <locationX>182</locationX>
+        <locationY>866</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -195,7 +292,7 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>56</locationX>
+        <locationX>210</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Outcome</targetReference>
