@@ -119,7 +119,7 @@
             <criteriaItems>
                 <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
                 <operation>notEqual</operation>
-                <value>Cannabis Retail License (Board)</value>
+                <value>Cannabis Retail License (delegated)</value>
             </criteriaItems>
             <criteriaItems>
                 <field>MUSW__Application2__c.MUSW__Type2__c</field>
