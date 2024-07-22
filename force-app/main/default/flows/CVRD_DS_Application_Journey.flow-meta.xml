@@ -4,8 +4,8 @@
     <assignments>
         <name>Add_New_Contact_in_the_Application_contact_list</name>
         <label>Add New Contact in the Application contact list</label>
-        <locationX>314</locationX>
-        <locationY>2690</locationY>
+        <locationX>578</locationX>
+        <locationY>2306</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
             <operator>Assign</operator>
@@ -49,14 +49,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Clearing_address_details_from_add_owner</targetReference>
+            <targetReference>Assign_Contact_Record_to_List</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
-        <locationX>1194</locationX>
-        <locationY>3938</locationY>
+        <locationX>1282</locationX>
+        <locationY>3746</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -78,8 +78,8 @@
     <assignments>
         <name>assign_application_id_on_application_location</name>
         <label>assign application id on application location</label>
-        <locationX>1194</locationX>
-        <locationY>4994</locationY>
+        <locationX>1282</locationX>
+        <locationY>4802</locationY>
         <assignmentItems>
             <assignToReference>loop_to_create_application_location.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -101,8 +101,8 @@
     <assignments>
         <name>Assign_Application_Record_Id_to_Comment_Record</name>
         <label>Assign Application Record Id to Comment Record</label>
-        <locationX>930</locationX>
-        <locationY>4454</locationY>
+        <locationX>1018</locationX>
+        <locationY>4262</locationY>
         <assignmentItems>
             <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
             <operator>Assign</operator>
@@ -129,10 +129,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Assign_Contact_Record_to_List</name>
+        <label>Assign Contact Record to List</label>
+        <locationX>314</locationX>
+        <locationY>2498</locationY>
+        <assignmentItems>
+            <assignToReference>ApplicationContactList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>AddNewApplicationContactRecord</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Clearing_address_details_from_add_owner</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assign_Iteration_Count</name>
         <label>Assign Iteration Count</label>
-        <locationX>1106</locationX>
-        <locationY>3122</locationY>
+        <locationX>1194</locationX>
+        <locationY>2930</locationY>
         <assignmentItems>
             <assignToReference>IsFirstLocationRecord</assignToReference>
             <operator>Assign</operator>
@@ -147,8 +163,8 @@
     <assignments>
         <name>Assign_Location_Record_to_application</name>
         <label>Assign Location Record to application</label>
-        <locationX>1194</locationX>
-        <locationY>3446</locationY>
+        <locationX>1282</locationX>
+        <locationY>3254</locationY>
         <assignmentItems>
             <assignToReference>LocationPID</assignToReference>
             <operator>Assign</operator>
@@ -178,7 +194,7 @@
         <name>Assign_Owner_Address</name>
         <label>Assign Owner Address</label>
         <locationX>314</locationX>
-        <locationY>2498</locationY>
+        <locationY>2306</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Street__c</assignToReference>
             <operator>Assign</operator>
@@ -207,15 +223,43 @@
                 <elementReference>Postal_Code</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>First_NameAddOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Last_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Last_NameAddOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EmailAddOwner.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Phone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PhoneAddOwner.value</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
-            <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
+            <targetReference>Assign_Contact_Record_to_List</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_parcel_DPAs_to_Application_Selected_DPA</name>
         <label>Assign parcel DPAs to Application Selected DPA</label>
-        <locationX>974</locationX>
-        <locationY>1490</locationY>
+        <locationX>1018</locationX>
+        <locationY>1298</locationY>
         <assignmentItems>
             <assignToReference>selectedDPAVariable</assignToReference>
             <operator>Add</operator>
@@ -238,7 +282,7 @@
         <name>Assign_Primary_owner_mailing_address_to_new_owner</name>
         <label>Assign Primary owner mailing address to new owner</label>
         <locationX>50</locationX>
-        <locationY>2498</locationY>
+        <locationY>2306</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</assignToReference>
             <operator>Assign</operator>
@@ -274,15 +318,43 @@
                 <elementReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>First_NameAddOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Last_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Last_NameAddOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EmailAddOwner.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Phone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PhoneAddOwner.value</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
-            <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
+            <targetReference>Assign_Contact_Record_to_List</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Clearing_address_details_from_add_owner</name>
         <label>Clearing address details from add owner</label>
         <locationX>314</locationX>
-        <locationY>2798</locationY>
+        <locationY>2606</locationY>
         <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_City__c</assignToReference>
             <operator>Assign</operator>
@@ -307,8 +379,8 @@
     <assignments>
         <name>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</name>
         <label>Copy 1 of Update Primary Owner check on Application Contact Record</label>
-        <locationX>1854</locationX>
-        <locationY>2390</locationY>
+        <locationX>1942</locationX>
+        <locationY>2198</locationY>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
             <operator>Assign</operator>
@@ -386,8 +458,8 @@
     <assignments>
         <name>DPA_Stages_assignment</name>
         <label>DPA Stages assignment</label>
-        <locationX>886</locationX>
-        <locationY>758</locationY>
+        <locationX>930</locationX>
+        <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
             <operator>Add</operator>
@@ -465,8 +537,8 @@
     <assignments>
         <name>Equate_stages</name>
         <label>Equate stages</label>
-        <locationX>1150</locationX>
-        <locationY>758</locationY>
+        <locationX>1194</locationX>
+        <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>Stage</assignToReference>
             <operator>RemoveAll</operator>
@@ -485,7 +557,7 @@
     <assignments>
         <name>Stages_assignment</name>
         <label>Stages assignment</label>
-        <locationX>1018</locationX>
+        <locationX>1062</locationX>
         <locationY>134</locationY>
         <assignmentItems>
             <assignToReference>InitialStage</assignToReference>
@@ -557,8 +629,8 @@
     <assignments>
         <name>Update_Primary_Owner_check_on_Application_Contact_Record</name>
         <label>Update Primary Owner check on Application Contact Record</label>
-        <locationX>1590</locationX>
-        <locationY>2390</locationY>
+        <locationX>1678</locationX>
+        <locationY>2198</locationY>
         <assignmentItems>
             <assignToReference>Application_Contact_Record.CVRD_DS_Primary_Owner__c</assignToReference>
             <operator>Assign</operator>
@@ -695,8 +767,8 @@
     <decisions>
         <name>Check_Development_Permit_Stage</name>
         <label>Check Development Permit Stage</label>
-        <locationX>1018</locationX>
-        <locationY>650</locationY>
+        <locationX>1062</locationX>
+        <locationY>458</locationY>
         <defaultConnector>
             <targetReference>Equate_stages</targetReference>
         </defaultConnector>
@@ -721,7 +793,7 @@
         <name>Check_for_mailing_address_is_same_or_not</name>
         <label>Check for mailing address is same or not</label>
         <locationX>314</locationX>
-        <locationY>2390</locationY>
+        <locationY>2198</locationY>
         <defaultConnector>
             <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
         </defaultConnector>
@@ -737,10 +809,10 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Agent_is_Available</leftValueReference>
+                <leftValueReference>I_am_an_agent</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <elementReference>AgentYes</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -759,10 +831,10 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Agent_is_Available</leftValueReference>
+                <leftValueReference>I_am_an_agent</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <elementReference>AgentNo</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -774,8 +846,8 @@
     <decisions>
         <name>Check_if_Comment_is_empty_or_not</name>
         <label>Check if Comment is empty or not</label>
-        <locationX>1106</locationX>
-        <locationY>4238</locationY>
+        <locationX>1194</locationX>
+        <locationY>4046</locationY>
         <defaultConnector>
             <targetReference>loop_to_create_application_location</targetReference>
         </defaultConnector>
@@ -799,8 +871,8 @@
     <decisions>
         <name>Check_Iteration_Count</name>
         <label>Check Iteration Count</label>
-        <locationX>1326</locationX>
-        <locationY>3338</locationY>
+        <locationX>1414</locationX>
+        <locationY>3146</locationY>
         <defaultConnector>
             <targetReference>Loop_Application_Location_Record</targetReference>
         </defaultConnector>
@@ -824,8 +896,8 @@
     <decisions>
         <name>Copy_1_of_Is_Agent</name>
         <label>Copy 1 of Is Agent</label>
-        <locationX>1722</locationX>
-        <locationY>2282</locationY>
+        <locationX>1810</locationX>
+        <locationY>2090</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_Update_Primary_Owner_check_on_Application_Contact_Record</targetReference>
         </defaultConnector>
@@ -834,10 +906,10 @@
             <name>Copy_1_of_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Agent_is_Available</leftValueReference>
+                <leftValueReference>I_am_an_agent</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <elementReference>AgentYes</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -849,8 +921,8 @@
     <decisions>
         <name>Evaluate_Add_Owner</name>
         <label>Evaluate Add Owner</label>
-        <locationX>1018</locationX>
-        <locationY>2174</locationY>
+        <locationX>1062</locationX>
+        <locationY>1982</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_Is_Agent</targetReference>
         </defaultConnector>
@@ -879,35 +951,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Evaluate_agent_checkbox</name>
-        <label>Evaluate agent checkbox</label>
-        <locationX>1018</locationX>
-        <locationY>350</locationY>
-        <defaultConnector>
-            <targetReference>Application_Type_Screen</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Agent_is_Available</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>I_am_an_agent</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Application_Type_Screen</targetReference>
-            </connector>
-            <label>Agent is Available</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Evaluate_Application_Type</name>
         <label>Evaluate Application Type</label>
-        <locationX>1018</locationX>
-        <locationY>1166</locationY>
+        <locationX>1062</locationX>
+        <locationY>974</locationY>
         <defaultConnector>
             <targetReference>Is_Agent</targetReference>
         </defaultConnector>
@@ -931,8 +978,8 @@
     <decisions>
         <name>Is_Agent</name>
         <label>Is Agent</label>
-        <locationX>1018</locationX>
-        <locationY>1874</locationY>
+        <locationX>1062</locationX>
+        <locationY>1682</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_Owner_Details_Screen</targetReference>
         </defaultConnector>
@@ -941,10 +988,10 @@
             <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Agent_is_Available</leftValueReference>
+                <leftValueReference>I_am_an_agent</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <elementReference>AgentYes</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -956,8 +1003,8 @@
     <decisions>
         <name>Rec_check</name>
         <label>Rec check</label>
-        <locationX>1722</locationX>
-        <locationY>3014</locationY>
+        <locationX>1810</locationX>
+        <locationY>2822</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -1055,8 +1102,8 @@
     <loops>
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
-        <locationX>1106</locationX>
-        <locationY>3830</locationY>
+        <locationX>1194</locationX>
+        <locationY>3638</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1069,8 +1116,8 @@
     <loops>
         <name>Loop_Application_Location_Record</name>
         <label>Loop Application Location Record</label>
-        <locationX>1106</locationX>
-        <locationY>3230</locationY>
+        <locationX>1194</locationX>
+        <locationY>3038</locationY>
         <collectionReference>Application_Location_Record_Collation</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1083,8 +1130,8 @@
     <loops>
         <name>Loop_for_Comment_Records</name>
         <label>Loop for Comment Records</label>
-        <locationX>842</locationX>
-        <locationY>4346</locationY>
+        <locationX>930</locationX>
+        <locationY>4154</locationY>
         <collectionReference>CommentRecords</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1097,8 +1144,8 @@
     <loops>
         <name>Loop_on_PID_records</name>
         <label>Loop on PID records</label>
-        <locationX>886</locationX>
-        <locationY>1382</locationY>
+        <locationX>930</locationX>
+        <locationY>1190</locationY>
         <collectionReference>Get_PID_Record</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1111,8 +1158,8 @@
     <loops>
         <name>loop_to_create_application_location</name>
         <label>loop to create application location</label>
-        <locationX>1106</locationX>
-        <locationY>4886</locationY>
+        <locationX>1194</locationX>
+        <locationY>4694</locationY>
         <collectionReference>Application_Location_Record_Collation</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1144,8 +1191,8 @@
     <recordCreates>
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
-        <locationX>1106</locationX>
-        <locationY>4130</locationY>
+        <locationX>1194</locationX>
+        <locationY>3938</locationY>
         <connector>
             <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
         </connector>
@@ -1158,8 +1205,8 @@
     <recordCreates>
         <name>create_application_location_record</name>
         <label>create application location record</label>
-        <locationX>1106</locationX>
-        <locationY>5186</locationY>
+        <locationX>1194</locationX>
+        <locationY>4994</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -1172,8 +1219,8 @@
     <recordCreates>
         <name>Create_Application_record</name>
         <label>Create Application record</label>
-        <locationX>1106</locationX>
-        <locationY>3722</locationY>
+        <locationX>1194</locationX>
+        <locationY>3530</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -1276,8 +1323,8 @@
     <recordCreates>
         <name>Create_Comment_Record</name>
         <label>Create Comment Record</label>
-        <locationX>842</locationX>
-        <locationY>4646</locationY>
+        <locationX>930</locationX>
+        <locationY>4454</locationY>
         <connector>
             <targetReference>loop_to_create_application_location</targetReference>
         </connector>
@@ -1290,8 +1337,8 @@
     <recordLookups>
         <name>Get_PID_Record</name>
         <label>Get PID Record</label>
-        <locationX>886</locationX>
-        <locationY>1274</locationY>
+        <locationX>930</locationX>
+        <locationY>1082</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_on_PID_records</targetReference>
@@ -1313,7 +1360,7 @@
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
         <locationX>314</locationX>
-        <locationY>2282</locationY>
+        <locationY>2090</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1396,7 +1443,7 @@
                     <inputParameters>
                         <name>required</name>
                         <value>
-                            <booleanValue>true</booleanValue>
+                            <booleanValue>false</booleanValue>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
@@ -1465,7 +1512,7 @@
                             </rightValue>
                         </conditions>
                         <conditions>
-                            <leftValueReference>Agent_is_Available</leftValueReference>
+                            <leftValueReference>I_am_an_agent</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
                                 <booleanValue>false</booleanValue>
@@ -1601,13 +1648,13 @@
     <screens>
         <name>Agent_Authorization_Screen</name>
         <label>Agent Authorization Screen</label>
-        <locationX>1018</locationX>
+        <locationX>1062</locationX>
         <locationY>242</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Evaluate_agent_checkbox</targetReference>
+            <targetReference>Application_Type_Screen</targetReference>
         </connector>
         <fields>
             <name>AgentAuthHeader</name>
@@ -1755,8 +1802,8 @@
     <screens>
         <name>Application_Type_Screen</name>
         <label>Application_Type_Screen</label>
-        <locationX>1018</locationX>
-        <locationY>542</locationY>
+        <locationX>1062</locationX>
+        <locationY>350</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1884,8 +1931,8 @@
     <screens>
         <name>Copy_1_of_Owner_Details_Screen</name>
         <label>Copy 1 of Owner Details Screen</label>
-        <locationX>1150</locationX>
-        <locationY>1982</locationY>
+        <locationX>1194</locationX>
+        <locationY>1790</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -2217,8 +2264,8 @@
     <screens>
         <name>Description_Screen</name>
         <label>Description Screen</label>
-        <locationX>1018</locationX>
-        <locationY>950</locationY>
+        <locationX>1062</locationX>
+        <locationY>758</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -2349,8 +2396,8 @@
     <screens>
         <name>DPA_Screen</name>
         <label>DPA Screen</label>
-        <locationX>886</locationX>
-        <locationY>1682</locationY>
+        <locationX>930</locationX>
+        <locationY>1490</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -2496,8 +2543,8 @@
     <screens>
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
-        <locationX>1722</locationX>
-        <locationY>2582</locationY>
+        <locationX>1810</locationX>
+        <locationY>2390</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -2671,8 +2718,8 @@
     <screens>
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
-        <locationX>2074</locationX>
-        <locationY>3830</locationY>
+        <locationX>1634</locationX>
+        <locationY>5102</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2695,8 +2742,8 @@
     <screens>
         <name>Owner_Details_Screen</name>
         <label>Owner Details Screen</label>
-        <locationX>886</locationX>
-        <locationY>1982</locationY>
+        <locationX>930</locationX>
+        <locationY>1790</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -2972,8 +3019,8 @@
     <screens>
         <name>Property_Information</name>
         <label>Property Information</label>
-        <locationX>1018</locationX>
-        <locationY>1058</locationY>
+        <locationX>1062</locationX>
+        <locationY>866</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -3124,8 +3171,8 @@
     <screens>
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
-        <locationX>1722</locationX>
-        <locationY>2798</locationY>
+        <locationX>1810</locationX>
+        <locationY>2606</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -3528,8 +3575,8 @@
     <screens>
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
-        <locationX>1722</locationX>
-        <locationY>2690</locationY>
+        <locationX>1810</locationX>
+        <locationY>2498</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -3681,8 +3728,8 @@
     <screens>
         <name>Success_Screen</name>
         <label>Success Screen</label>
-        <locationX>1106</locationX>
-        <locationY>5294</locationY>
+        <locationX>1194</locationX>
+        <locationY>5102</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -3707,18 +3754,18 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>892</locationX>
+        <locationX>936</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Stages_assignment</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <subflows>
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
-        <locationX>1722</locationX>
-        <locationY>2906</locationY>
+        <locationX>1810</locationX>
+        <locationY>2714</locationY>
         <connector>
             <targetReference>Rec_check</targetReference>
         </connector>
@@ -3752,8 +3799,8 @@
     <subflows>
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
-        <locationX>1106</locationX>
-        <locationY>5402</locationY>
+        <locationX>1194</locationX>
+        <locationY>5210</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
