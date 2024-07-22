@@ -194,6 +194,11 @@
         <object>CVRD_DS_Proceeding_OutcomeMapping__mdt</object>
     </dynamicChoiceSets>
     <environments>Default</environments>
+    <formulas>
+        <name>FormulaApplicationType</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(TEXT({!Get_Application_Record.MUSW__Type2__c}), &quot;_&quot;, &quot; &quot;)</expression>
+    </formulas>
     <interviewLabel>CVRD DS - Create Proceeding Agenda Item {!$Flow.CurrentDateTime}</interviewLabel>
     <label>CVRD DS - Create Proceeding Agenda Item</label>
     <processMetadataValues>
@@ -591,7 +596,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>ProceedingDisaplay</name>
-                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Application Number : &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!Get_Application_Record.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!Get_Application_Record.MUSW__Type2__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Application Number : &lt;/strong&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!Get_Application_Record.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Application Type : &lt;/strong&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!FormulaApplicationType}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
