@@ -72,10 +72,16 @@
                 <fieldItem>Record.CVRD_DS_Electoral_Area__c</fieldItem>
                 <identifier>RecordCVRD_DS_Electoral_Area_cField</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 OR 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.MUSW__Type__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>Advisory Planning Commission</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Community Parks Advisory Commission</rightValue>
                     </criteria>
                 </visibilityRule>
             </fieldInstance>
