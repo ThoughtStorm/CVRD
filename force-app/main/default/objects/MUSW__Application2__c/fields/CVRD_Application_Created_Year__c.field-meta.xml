@@ -2,13 +2,11 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_Application_Created_Year__c</fullName>
     <externalId>false</externalId>
-    <formula>YEAR(CVRD_Application_Created_Date__c)</formula>
+    <formula>TEXT(YEAR(CVRD_Application_Created_Date__c))</formula>
     <label>Application Created Year</label>
-    <precision>18</precision>
     <required>false</required>
-    <scale>0</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Number</type>
+    <type>Text</type>
     <unique>false</unique>
 </CustomField>
