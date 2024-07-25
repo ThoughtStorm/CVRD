@@ -35,6 +35,15 @@
                 <behavior>Edit</behavior>
                 <field>MobilePhone</field>
             </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsTopToBottom</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Company Information</label>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Email</field>
