@@ -3136,7 +3136,7 @@
                     <defaultValue>
                         <elementReference>Total_Units</elementReference>
                     </defaultValue>
-                    <fieldText>Total Units</fieldText>
+                    <fieldText>Number of Strata Units</fieldText>
                     <fieldType>InputField</fieldType>
                     <helpText>&lt;p&gt;The number of units will be used to calculate application fees and any additional utility fee if applicable&lt;/p&gt;</helpText>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
