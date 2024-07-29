@@ -12,7 +12,7 @@
         <valueSetName>CVRD_DS_Sub_Type</valueSetName>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName>Delegated</valueName>
+            <valueName>Liquor Licence Referral (delegated)</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>

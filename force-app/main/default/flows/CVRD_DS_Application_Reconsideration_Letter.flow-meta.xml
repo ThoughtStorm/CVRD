@@ -67,7 +67,7 @@
                 <leftValueReference>recordId.CVRD_DS_Sub_Type__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <stringValue>Delegated</stringValue>
+                    <stringValue>Liquor Licence Referral (delegated)</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -96,7 +96,7 @@
                 <leftValueReference>recordId.CVRD_DS_Sub_Type__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Delegated</stringValue>
+                    <stringValue>Liquor Licence Referral (delegated)</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
