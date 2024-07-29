@@ -4,7 +4,7 @@
         <name>Redirect_To_Record_Detail_Page</name>
         <label>Redirect To Record Detail Page</label>
         <locationX>314</locationX>
-        <locationY>1298</locationY>
+        <locationY>1406</locationY>
         <actionName>clariti:flowNavigation</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -20,9 +20,25 @@
     </actionCalls>
     <apiVersion>61.0</apiVersion>
     <assignments>
+        <name>ApplicationIDCollector</name>
+        <label>ApplicationIDCollector</label>
+        <locationX>842</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>ApplicationRecords</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Application_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Evaluate_Submissions_Pending</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assign_Application_ID_to_Record_ID</name>
         <label>Assign Application ID to Record ID</label>
-        <locationX>743</locationX>
+        <locationX>842</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -38,7 +54,7 @@
     <assignments>
         <name>Assign_License_ID_to_Record_ID</name>
         <label>Assign License ID to Record ID</label>
-        <locationX>479</locationX>
+        <locationX>578</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -54,7 +70,7 @@
     <assignments>
         <name>Assign_Permit_ID_to_Record_ID</name>
         <label>Assign Permit ID to Record ID</label>
-        <locationX>215</locationX>
+        <locationX>314</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -84,8 +100,8 @@
     <decisions>
         <name>Evaluate_Button_Bar_Value</name>
         <label>Evaluate Button Bar Value</label>
-        <locationX>534</locationX>
-        <locationY>1190</locationY>
+        <locationX>578</locationX>
+        <locationY>1298</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Button_Bar_Value_Finish</name>
@@ -118,7 +134,7 @@
     <decisions>
         <name>Evaluate_Record_ID</name>
         <label>Evaluate Record ID</label>
-        <locationX>611</locationX>
+        <locationX>710</locationX>
         <locationY>134</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -191,8 +207,8 @@
     <decisions>
         <name>Evaluate_Submissions_Complete</name>
         <label>Evaluate Submissions Complete</label>
-        <locationX>292</locationX>
-        <locationY>974</locationY>
+        <locationX>314</locationX>
+        <locationY>1082</locationY>
         <defaultConnector>
             <targetReference>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</targetReference>
         </defaultConnector>
@@ -216,8 +232,8 @@
     <decisions>
         <name>Evaluate_Submissions_Pending</name>
         <label>Evaluate Submissions Pending</label>
-        <locationX>611</locationX>
-        <locationY>650</locationY>
+        <locationX>710</locationX>
+        <locationY>758</locationY>
         <defaultConnector>
             <targetReference>No_Pending_Submissions</targetReference>
         </defaultConnector>
@@ -263,11 +279,11 @@
     <recordLookups>
         <name>Copy_1_of_Get_Pending_Submissions</name>
         <label>Copy 1 of Get Pending Submissions</label>
-        <locationX>743</locationX>
+        <locationX>842</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Evaluate_Submissions_Pending</targetReference>
+            <targetReference>ApplicationIDCollector</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -293,7 +309,7 @@
     <recordLookups>
         <name>Copy_2_of_Get_Pending_Submissions</name>
         <label>Copy 2 of Get Pending Submissions</label>
-        <locationX>479</locationX>
+        <locationX>578</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -323,7 +339,7 @@
     <recordLookups>
         <name>Copy_3_of_Get_Pending_Submissions</name>
         <label>Copy 3 of Get Pending Submissions</label>
-        <locationX>215</locationX>
+        <locationX>314</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -353,7 +369,7 @@
     <recordLookups>
         <name>Get_Application_Name</name>
         <label>Get Application Name</label>
-        <locationX>743</locationX>
+        <locationX>842</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -376,7 +392,7 @@
     <recordLookups>
         <name>Get_License_Name</name>
         <label>Get License Name</label>
-        <locationX>479</locationX>
+        <locationX>578</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -399,7 +415,7 @@
     <recordLookups>
         <name>Get_Permit_Name</name>
         <label>Get Permit Name</label>
-        <locationX>215</locationX>
+        <locationX>314</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -422,8 +438,8 @@
     <recordLookups>
         <name>Get_required_pending_submissions</name>
         <label>Get required pending submissions</label>
-        <locationX>292</locationX>
-        <locationY>866</locationY>
+        <locationX>314</locationX>
+        <locationY>974</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Evaluate_Submissions_Complete</targetReference>
@@ -494,8 +510,8 @@
         <description>(all satisfied / no fees)</description>
         <name>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</name>
         <label>Pending Submission Requests Uploaded (all satisfied / no fees)</label>
-        <locationX>534</locationX>
-        <locationY>1082</locationY>
+        <locationX>578</locationX>
+        <locationY>1190</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -508,9 +524,49 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
+            <name>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
             <name>GeneratePDFAura</name>
             <extensionName>c:GeneratePDF</extensionName>
             <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>RecordId</name>
+                <value>
+                    <elementReference>ApplicationRecords</elementReference>
+                </value>
+            </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -574,8 +630,8 @@
     <screens>
         <name>No_Pending_Submissions</name>
         <label>No Pending Submissions</label>
-        <locationX>930</locationX>
-        <locationY>758</locationY>
+        <locationX>1106</locationX>
+        <locationY>866</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -583,6 +639,54 @@
             <name>No_Pending_Submissions_Display_Text</name>
             <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Submission Requests&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;You have no pending submission requests for &lt;u style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>No_Pending_Submissions_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>No_Pending_Submissions_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>No_Pending_Submissions_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>No_Pending_Submissions_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>GeneratePDF1</name>
+            <extensionName>c:GeneratePDF</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>RecordId</name>
+                <value>
+                    <elementReference>ApplicationRecords</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <fields>
             <name>Button_Bar_0</name>
@@ -645,7 +749,7 @@
         <name>Pending_Submission_Required_Requests_Uploaded_some_satisfied_no_fees</name>
         <label>Pending Submission Requests Uploaded (some satisfied / no fees)</label>
         <locationX>50</locationX>
-        <locationY>1082</locationY>
+        <locationY>1190</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -738,8 +842,8 @@
     <screens>
         <name>Pending_Submissions_Screen</name>
         <label>Pending Submissions Screen</label>
-        <locationX>292</locationX>
-        <locationY>758</locationY>
+        <locationX>314</locationX>
+        <locationY>866</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -748,7 +852,7 @@
         </connector>
         <fields>
             <name>Pending_Submissions_Display_Text</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Upload Documents&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77);&quot;&gt;Upload the following documents to complete your application for preliminary review. Documents with an asterisk ( * ) are mandatory. Please ensure each document is under 1 GB. You can upload multiple documents for each document type.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 28px;&quot;&gt;Upload Documents&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;Upload the following documents to complete your application for preliminary review. Documents with an asterisk ( * ) are mandatory.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;em style=&quot;font-size: 14px;&quot;&gt;Note: Maximum file size is 10 MB. Allowed file types are PDF, DOC, XLS, DOCX, XLSX, JPG, PNG.&lt;/em&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -779,7 +883,7 @@
     </screens>
     <sourceTemplate>clariti__Upload_Submission_Requests</sourceTemplate>
     <start>
-        <locationX>485</locationX>
+        <locationX>584</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Evaluate_Record_ID</targetReference>

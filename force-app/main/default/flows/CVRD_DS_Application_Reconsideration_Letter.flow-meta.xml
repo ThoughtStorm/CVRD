@@ -175,6 +175,7 @@
     </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD DS {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD DS Application - Reconsideration Letter</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -345,6 +346,11 @@
                 <assignToReference>DocumentIds</assignToReference>
                 <name>contentDocIds</name>
             </outputParameters>
+        </fields>
+        <fields>
+            <name>NoteMessage</name>
+            <fieldText>&lt;p&gt;&lt;em&gt;Note: Maximum file size is 10 MB. Allowed file types are PDF, DOC, XLS, DOCX, XLSX, JPG, PNG.&lt;/em&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
