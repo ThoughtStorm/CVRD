@@ -2,7 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_DS_Units__c</fullName>
     <externalId>false</externalId>
-    <label>Units</label>
+    <inlineHelpText>The number of units will be used to calculate application fees and any additional utility fee if applicable</inlineHelpText>
+    <label>Number of Strata Units</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>
