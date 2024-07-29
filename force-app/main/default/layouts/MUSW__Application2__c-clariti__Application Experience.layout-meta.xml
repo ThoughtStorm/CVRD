@@ -31,22 +31,6 @@
                 <behavior>Edit</behavior>
                 <field>CVRD_DS_Related_Application__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CVRD_Application_Created_Date__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CVRD_Application_Created_Year__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CVRD_Fee_Receipt__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CVRD_DS_CO_CFO_File_Uploaded__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -113,11 +97,11 @@
         <label>Fees Details</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>MUSW__Total_Fees__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>MUSW__Total_Payments__c</field>
             </layoutItems>
         </layoutColumns>
