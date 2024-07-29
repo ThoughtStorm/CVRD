@@ -3079,7 +3079,55 @@
             <name>Property_Information_Section3</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Property_Information_Section3_Column1</name>
+                <name>Unit_Information_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Total_Units</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Total_Units</elementReference>
+                    </defaultValue>
+                    <fieldText>Number of Strata Units</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;The number of units will be used to calculate application fees and any additional utility fee if applicable&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <visibilityRule>
+                        <conditionLogic>or</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Record_Types</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>CVRD_DS_Strata_Conversion</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Record_Types</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>CVRD_DS_Development_Permit</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Record_Types</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Unit_Information_Column2</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
