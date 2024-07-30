@@ -212,11 +212,11 @@
     <picklistValues>
         <picklist>CVRD_DS_Sub_Type__c</picklist>
         <values>
-            <fullName>Liquor Licence Referral (delegated)</fullName>
+            <fullName>Liquor Licence Referral %28delegated%29</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Liquor License Referral (Board)</fullName>
+            <fullName>Liquor License Referral %28Board%29</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -438,11 +438,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Hearing</fullName>
+            <fullName>Issue</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Issue</fullName>
+            <fullName>Report Approval</fullName>
             <default>false</default>
         </values>
         <values>

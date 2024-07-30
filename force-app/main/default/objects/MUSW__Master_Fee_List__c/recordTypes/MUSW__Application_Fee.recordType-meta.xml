@@ -45,10 +45,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Liquor License Referral (Board)</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Amendment</fullName>
             <default>false</default>
         </values>
@@ -69,11 +65,15 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Cannabis Retail License (delegated)</fullName>
+            <fullName>Cannabis Referral License</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Cannabis Referral License</fullName>
+            <fullName>Cannabis Retail License %28Board%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannabis Retail License %28delegated%29</fullName>
             <default>false</default>
         </values>
         <values>
@@ -86,10 +86,6 @@
         </values>
         <values>
             <fullName>Conservation%2FGHG reduction</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Liquor Licence Referral (delegated)</fullName>
             <default>false</default>
         </values>
         <values>
@@ -122,6 +118,14 @@
         </values>
         <values>
             <fullName>Land Use Bylaw Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquor Licence Referral %28delegated%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquor License Referral %28Board%29</fullName>
             <default>false</default>
         </values>
         <values>
@@ -169,10 +173,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Cannabis Retail License (Board)</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Special Event Permit</fullName>
             <default>false</default>
         </values>
@@ -208,11 +208,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Hearing</fullName>
+            <fullName>Issue</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Issue</fullName>
+            <fullName>Report Approval</fullName>
             <default>false</default>
         </values>
         <values>

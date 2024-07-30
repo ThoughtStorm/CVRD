@@ -462,11 +462,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Hearing</fullName>
+            <fullName>Issue</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Issue</fullName>
+            <fullName>Report Approval</fullName>
             <default>false</default>
         </values>
         <values>

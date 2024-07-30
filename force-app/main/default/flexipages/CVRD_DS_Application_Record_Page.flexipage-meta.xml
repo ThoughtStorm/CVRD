@@ -38,7 +38,7 @@
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Phase__c}</leftValue>
                                     <operator>EQUAL</operator>
-                                    <rightValue>Approval</rightValue>
+                                    <rightValue>Report Approval</rightValue>
                                 </criteria>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Status__c}</leftValue>
@@ -99,7 +99,7 @@
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Phase__c}</leftValue>
                                     <operator>EQUAL</operator>
-                                    <rightValue>Hearing</rightValue>
+                                    <rightValue>Approval</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -112,7 +112,7 @@
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Phase__c}</leftValue>
                                     <operator>EQUAL</operator>
-                                    <rightValue>Hearing</rightValue>
+                                    <rightValue>Approval</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>

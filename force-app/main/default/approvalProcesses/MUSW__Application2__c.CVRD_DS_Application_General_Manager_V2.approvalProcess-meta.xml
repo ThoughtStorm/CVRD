@@ -69,7 +69,7 @@
         <criteriaItems>
             <field>MUSW__Application2__c.MUSW__Phase__c</field>
             <operation>equals</operation>
-            <value>Approval,Appeal</value>
+            <value>Appeal,Report Approval</value>
         </criteriaItems>
         <criteriaItems>
             <field>MUSW__Application2__c.RecordType</field>
@@ -94,7 +94,7 @@
         <criteriaItems>
             <field>MUSW__Application2__c.MUSW__Type2__c</field>
             <operation>equals</operation>
-            <value>Board_of_Variance,Development_Permit</value>
+            <value>Development_Permit,Board_of_Variance</value>
         </criteriaItems>
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
