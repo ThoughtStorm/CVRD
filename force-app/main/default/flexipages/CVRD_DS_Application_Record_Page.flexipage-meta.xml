@@ -75,7 +75,7 @@
                         <valueListItems>
                             <value>MUSW__Application2__c.Upload_Reconsideration_Letter</value>
                             <visibilityRule>
-                                <booleanFilter>1 AND 2 AND ((3 AND 4) OR 5)</booleanFilter>
+                                <booleanFilter>1 AND 2 AND 3</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Phase__c}</leftValue>
                                     <operator>EQUAL</operator>
@@ -90,16 +90,6 @@
                                     <leftValue>{!Record.MUSW__Type2__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Liquor Licence Referrals</rightValue>
-                                </criteria>
-                                <criteria>
-                                    <leftValue>{!Record.CVRD_DS_Sub_Type__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Liquor Licence Referral (delegated)</rightValue>
-                                </criteria>
-                                <criteria>
-                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Board_of_Variance</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -389,6 +379,16 @@
                 <identifier>RecordMUSW_Address_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.MUSW__Geolocation__c</fieldItem>
+                <identifier>RecordMUSW_Geolocation_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-42036f50-58a4-484e-936a-b46e920951bc</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -439,6 +439,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.CVRD_DS_No_of_Lots__c</fieldItem>
                 <identifier>RecordCVRD_DS_No_of_Lots_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.MUSW__Geolocation__c</fieldItem>
+                <identifier>RecordMUSW_Geolocation_cField2</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-9f2829eb-d774-4799-b45a-4d53d3d662c2</name>
@@ -1351,24 +1361,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection10</identifier>
-                <visibilityRule>
-                    <booleanFilter>1 OR 2 OR 3</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Phase__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Hearing</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Phase__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Issue</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Phase__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Close Out</rightValue>
-                    </criteria>
-                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <itemInstances>
