@@ -89,12 +89,24 @@
     <customValue>
         <fullName>Cannabis Retail License (Board)</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Cannabis Retail License (Board)</label>
     </customValue>
     <customValue>
         <fullName>Cannabis Retail License (delegated)</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Cannabis Retail License (delegated)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cannabis Retail Licence (Board)</fullName>
+        <default>false</default>
+        <label>Cannabis Retail Licence (Board)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cannabis Retail Licence (delegated)</fullName>
+        <default>false</default>
+        <label>Cannabis Retail Licence (delegated)</label>
     </customValue>
     <customValue>
         <fullName>Cannabis Licence Referrals</fullName>
@@ -161,7 +173,13 @@
     <customValue>
         <fullName>Liquor License Referral (Board)</fullName>
         <default>false</default>
+        <isActive>false</isActive>
         <label>Liquor License Referral (Board)</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor Licence Referral (Board)</fullName>
+        <default>false</default>
+        <label>Liquor Licence Referral (Board)</label>
     </customValue>
     <customValue>
         <fullName>Amend an Existing Liquor License</fullName>
