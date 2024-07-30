@@ -55,7 +55,7 @@
         <connector>
             <targetReference>Create_Application_Location_Record</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>(1 OR 2 OR 3 OR 5 )AND 4</filterLogic>
         <filters>
             <field>MUSW__Type2__c</field>
             <operator>EqualTo</operator>
@@ -88,7 +88,7 @@
             <field>MUSW__Type2__c</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>Board_of_Variance</stringValue>
+                <stringValue>Liquor Licence Referrals</stringValue>
             </value>
         </filters>
         <object>MUSW__Application2__c</object>
