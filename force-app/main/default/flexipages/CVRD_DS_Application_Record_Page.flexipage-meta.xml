@@ -397,7 +397,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.MUSW__Parcel__c</fieldItem>
                 <identifier>RecordMUSW_Parcel_cField</identifier>
@@ -598,10 +598,10 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.CVRD_DS_CO_CFO_File_Uploaded__c</fieldItem>
-                <identifier>RecordCVRD_DS_CO_CFO_File_Uploaded_cField</identifier>
+                <fieldItem>Record.CVRD_DS_Review_Outcome__c</fieldItem>
+                <identifier>RecordCVRD_DS_Review_Outcome_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-1e22bb47-339c-4c5f-ac56-2d44585f276a</name>
@@ -614,8 +614,21 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.CVRD_DS_Review_Outcome__c</fieldItem>
-                <identifier>RecordCVRD_DS_Review_Outcome_cField</identifier>
+                <fieldItem>Record.CVRD_DS_CO_CFO_File_Uploaded__c</fieldItem>
+                <identifier>RecordCVRD_DS_CO_CFO_File_Uploaded_cField</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 AND 2</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Application</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Review</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-42550e19-7a5e-4148-bc1a-1655fc9105d6</name>
