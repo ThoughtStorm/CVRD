@@ -45,7 +45,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Liquor License Referral (Board)</fullName>
+            <fullName>Liquor Licence Referral (Board)</fullName>
             <default>false</default>
         </values>
         <values>
@@ -69,7 +69,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Cannabis Retail License (delegated)</fullName>
+            <fullName>Cannabis Retail Licence (delegated)</fullName>
             <default>false</default>
         </values>
         <values>
@@ -169,7 +169,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Cannabis Retail License (Board)</fullName>
+            <fullName>Cannabis Retail Licence (Board)</fullName>
             <default>false</default>
         </values>
         <values>
