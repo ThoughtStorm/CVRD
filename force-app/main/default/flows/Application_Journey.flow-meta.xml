@@ -148,7 +148,7 @@
                 <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Approval</stringValue>
+                    <stringValue>Report Approval</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -240,7 +240,7 @@
                 <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Approval</stringValue>
+                    <stringValue>Report Approval</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -269,7 +269,7 @@
                 <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Approval</stringValue>
+                    <stringValue>Report Approval</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -383,7 +383,7 @@
         <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
-                <stringValue>Hearing</stringValue>
+                <stringValue>Approval</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -402,7 +402,7 @@
         <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
-                <stringValue>Approval</stringValue>
+                <stringValue>Report Approval</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -424,7 +424,7 @@
         <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
-                <stringValue>Hearing</stringValue>
+                <stringValue>Approval</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>

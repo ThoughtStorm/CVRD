@@ -61,11 +61,27 @@
     <picklistValues>
         <picklist>MUSW__Application_Phases__c</picklist>
         <values>
+            <fullName>Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Application</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Closed</fullName>
+            <fullName>Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Report Approval</fullName>
             <default>false</default>
         </values>
         <values>
@@ -89,6 +105,10 @@
         </values>
         <values>
             <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred Back From Meeting</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -123,43 +143,11 @@
     <picklistValues>
         <picklist>MUSW__Object_Record_Types__c</picklist>
         <values>
-            <fullName>CVRD_DS_Board_of_Variance</fullName>
+            <fullName>CVRD_DS_Cannabis_License</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>CVRD_DS_Development_Permit</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CVRD_DS_Covenant_Amendment_or_Discharge</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CVRD_DS_Development_Variance_Permit</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CVRD_DS_Flood_Management_Bylaw_Exemption</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CVRD_DS_Minimum_Frontage_Exemption</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CVRD_DS_Phased_Development_Agreement</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CVRD_DS_Telecommunication_Antenna_Structure</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>CVRD_DS_Temporary_Use_Permit</fullName>
+            <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
             <default>false</default>
         </values>
     </picklistValues>

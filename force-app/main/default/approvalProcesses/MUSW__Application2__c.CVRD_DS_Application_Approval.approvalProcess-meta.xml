@@ -184,7 +184,7 @@
         <criteriaItems>
             <field>MUSW__Application2__c.MUSW__Phase__c</field>
             <operation>equals</operation>
-            <value>Approval</value>
+            <value>Report Approval</value>
         </criteriaItems>
         <criteriaItems>
             <field>MUSW__Application2__c.MUSW__Status__c</field>

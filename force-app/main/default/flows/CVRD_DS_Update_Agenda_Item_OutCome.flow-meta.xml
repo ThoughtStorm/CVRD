@@ -185,7 +185,7 @@
             <field>MUSW__Phase__c</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>Hearing</stringValue>
+                <stringValue>Approval</stringValue>
             </value>
         </filters>
         <inputAssignments>

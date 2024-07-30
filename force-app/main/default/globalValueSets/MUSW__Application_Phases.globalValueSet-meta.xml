@@ -11,9 +11,9 @@
         <label>Review</label>
     </customValue>
     <customValue>
-        <fullName>Approval</fullName>
+        <fullName>Report Approval</fullName>
         <default>false</default>
-        <label>Approval</label>
+        <label>Report Approval</label>
     </customValue>
     <customValue>
         <fullName>Appeal</fullName>
@@ -21,9 +21,9 @@
         <label>Appeal</label>
     </customValue>
     <customValue>
-        <fullName>Hearing</fullName>
+        <fullName>Approval</fullName>
         <default>false</default>
-        <label>Hearing</label>
+        <label>Approval</label>
     </customValue>
     <customValue>
         <fullName>Issue</fullName>
