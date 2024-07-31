@@ -42,6 +42,13 @@
             </value>
         </assignmentItems>
         <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Add_Owner_Business_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
             <assignToReference>ApplicationContactList</assignToReference>
             <operator>Add</operator>
             <value>
@@ -251,6 +258,13 @@
                 <elementReference>PhoneAddOwner.value</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Add_Owner_Business_Name</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Assign_Contact_Record_to_List</targetReference>
         </connector>
@@ -344,6 +358,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>PhoneAddOwner.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Add_Owner_Business_Name</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -442,6 +463,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Province</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Owner_Business_Name</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -671,6 +699,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Province1</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Business_Name</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -1460,6 +1495,14 @@
                         <formulaExpression>AND(NOT(CONTAINS({!PhoneAddOwner.value}, &apos;-&apos;)), LEN({!PhoneAddOwner.value})=10 )</formulaExpression>
                     </validationRule>
                 </fields>
+                <fields>
+                    <name>Add_Owner_Business_Name</name>
+                    <dataType>String</dataType>
+                    <fieldText>Business Name</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -2098,6 +2141,17 @@
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Owner_Business_Name</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Owner_Business_Name</elementReference>
+                    </defaultValue>
+                    <fieldText>Business Name</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -2869,6 +2923,17 @@
                         <formulaExpression>AND(NOT(CONTAINS({!Phone.value}, &apos;-&apos;)), LEN({!Phone.value})=10 )</formulaExpression>
                     </validationRule>
                 </fields>
+                <fields>
+                    <name>Business_Name</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Business_Name</elementReference>
+                    </defaultValue>
+                    <fieldText>Business Name</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -3143,26 +3208,12 @@
                     <isRequired>true</isRequired>
                     <scale>0</scale>
                     <visibilityRule>
-                        <conditionLogic>or</conditionLogic>
+                        <conditionLogic>and</conditionLogic>
                         <conditions>
                             <leftValueReference>Record_Types</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
                                 <stringValue>CVRD_DS_Strata_Conversion</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Record_Types</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>CVRD_DS_Development_Permit</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Record_Types</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
@@ -3189,26 +3240,12 @@
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
             <visibilityRule>
-                <conditionLogic>or</conditionLogic>
+                <conditionLogic>and</conditionLogic>
                 <conditions>
                     <leftValueReference>Record_Types</leftValueReference>
                     <operator>EqualTo</operator>
                     <rightValue>
                         <stringValue>CVRD_DS_Strata_Conversion</stringValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>Record_Types</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>CVRD_DS_Development_Permit</stringValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>Record_Types</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</stringValue>
                     </rightValue>
                 </conditions>
             </visibilityRule>
