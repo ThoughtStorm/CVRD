@@ -45,6 +45,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Liquor Licence Referral (Board)</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Amendment</fullName>
             <default>false</default>
         </values>
@@ -65,15 +69,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Cannabis Referral License</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Cannabis Retail License %28Board%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Cannabis Retail License %28delegated%29</fullName>
+            <fullName>Cannabis Retail Licence (delegated)</fullName>
             <default>false</default>
         </values>
         <values>
@@ -125,10 +121,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Liquor License Referral %28Board%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Lounge Endorsment</fullName>
             <default>false</default>
         </values>
@@ -170,6 +162,10 @@
         </values>
         <values>
             <fullName>Residential Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannabis Retail Licence (Board)</fullName>
             <default>false</default>
         </values>
         <values>

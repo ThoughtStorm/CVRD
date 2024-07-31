@@ -16,7 +16,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
-            <valueName> Liquor License Referral (Board)</valueName>
+            <valueName>Liquor Licence Referral (Board)</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Development_Permit</controllingFieldValue>
@@ -114,11 +114,11 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
-            <valueName>Cannabis Retail License (Board)</valueName>
+            <valueName>Cannabis Retail Licence (Board)</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
-            <valueName>Cannabis Retail License (delegated)</valueName>
+            <valueName>Cannabis Retail Licence (delegated)</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>
