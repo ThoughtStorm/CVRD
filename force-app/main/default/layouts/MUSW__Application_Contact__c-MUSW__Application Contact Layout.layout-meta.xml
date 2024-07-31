@@ -23,20 +23,21 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>MUSW__Phone__c</field>
+                <field>MUSW__Last_Name__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>MUSW__Email__c</field>
+                <behavior>Required</behavior>
+                <field>MUSW__Phone__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Edit</behavior>
+                <field>MUSW__Email__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>MUSW__Last_Name__c</field>
+                <behavior>Edit</behavior>
+                <field>MUSW__Business_Name__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

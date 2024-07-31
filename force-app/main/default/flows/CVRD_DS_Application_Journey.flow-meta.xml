@@ -42,6 +42,13 @@
             </value>
         </assignmentItems>
         <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Add_Owner_Business_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
             <assignToReference>ApplicationContactList</assignToReference>
             <operator>Add</operator>
             <value>
@@ -207,6 +214,41 @@
                 <elementReference>Postal_Code</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>First_NameAddOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Last_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Last_NameAddOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EmailAddOwner.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Phone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PhoneAddOwner.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Add_Owner_Business_Name</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Add_New_Contact_in_the_Application_contact_list</targetReference>
         </connector>
@@ -272,6 +314,41 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Application_Contact_Record.CVRD_DS_Owner_Postal_Code__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__First_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>First_NameAddOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Last_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Last_NameAddOwner</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EmailAddOwner.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Phone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PhoneAddOwner.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AddNewApplicationContactRecord.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Add_Owner_Business_Name</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -370,6 +447,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Province</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Owner_Business_Name</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -599,6 +683,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Province1</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Application_Contact_Record.MUSW__Business_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Business_Name</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -1407,6 +1498,14 @@
                         <formulaExpression>AND(NOT(CONTAINS({!PhoneAddOwner.value}, &apos;-&apos;)), LEN({!PhoneAddOwner.value})=10 )</formulaExpression>
                     </validationRule>
                 </fields>
+                <fields>
+                    <name>Add_Owner_Business_Name</name>
+                    <dataType>String</dataType>
+                    <fieldText>Business Name</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -2047,6 +2146,17 @@
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Owner_Business_Name</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Owner_Business_Name</elementReference>
+                    </defaultValue>
+                    <fieldText>Business Name</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -2821,6 +2931,17 @@
                         <formulaExpression>AND(NOT(CONTAINS({!Phone.value}, &apos;-&apos;)), LEN({!Phone.value})=10 )</formulaExpression>
                     </validationRule>
                 </fields>
+                <fields>
+                    <name>Business_Name</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Business_Name</elementReference>
+                    </defaultValue>
+                    <fieldText>Business Name</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -3079,7 +3200,41 @@
             <name>Property_Information_Section3</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Property_Information_Section3_Column1</name>
+                <name>Unit_Information_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Total_Units</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Total_Units</elementReference>
+                    </defaultValue>
+                    <fieldText>Number of Strata Units</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;The number of units will be used to calculate application fees and any additional utility fee if applicable&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Record_Types</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>CVRD_DS_Strata_Conversion</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Unit_Information_Column2</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -3090,7 +3245,17 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Record_Types</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>CVRD_DS_Strata_Conversion</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <fields>
             <name>Property_Information_Section4</name>
