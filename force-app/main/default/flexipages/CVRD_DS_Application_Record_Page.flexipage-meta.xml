@@ -228,8 +228,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.CVRD_DS_Sub_Type__c</fieldItem>
-                <identifier>RecordCVRD_DS_Sub_Type_cField2</identifier>
+                <fieldItem>Record.CVRD_DS_DPA_Sub_Type__c</fieldItem>
+                <identifier>RecordCVRD_DS_DPA_Sub_Type_cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.MUSW__Type2__c}</leftValue>
@@ -1919,7 +1919,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
-                    <value>Approval</value>
+                    <value>Report Approval</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab</identifier>
