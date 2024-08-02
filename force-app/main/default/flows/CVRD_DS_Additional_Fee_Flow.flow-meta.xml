@@ -164,12 +164,12 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Section1</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Type: &lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;{!Get_Application_Record.MUSW__Type2__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Type: &lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;{!Get_Application_Record.RecordType.Name}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
                     <name>UnitTextfieldinfo</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Number of Existing Units: &lt;/strong&gt;{!Get_Application_Record.CVRD_DS_Units__c}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Number of Strata Units: &lt;/strong&gt;{!Get_Application_Record.CVRD_DS_Units__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
