@@ -45,6 +45,10 @@
                 <behavior>Readonly</behavior>
                 <field>MUSW__Phase__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CVRD_DS_Units__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
