@@ -298,13 +298,6 @@
         <locationX>50</locationX>
         <locationY>2306</locationY>
         <assignmentItems>
-            <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Country__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Application_Contact_Record.CVRD_DS_Owner_Country__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_State__c</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -3203,7 +3196,7 @@
                     </defaultValue>
                     <fieldText>Number of Strata Units</fieldText>
                     <fieldType>InputField</fieldType>
-                    <helpText>&lt;p&gt;The number of units will be used to calculate application fees and any additional utility fee if applicable&lt;/p&gt;</helpText>
+                    <helpText>&lt;p&gt;The number of units will be used to calculate application fees and any additional utility fees if applicable&lt;/p&gt;</helpText>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <scale>0</scale>
