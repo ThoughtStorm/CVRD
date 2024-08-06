@@ -75,7 +75,7 @@
                         <valueListItems>
                             <value>MUSW__Application2__c.Upload_Reconsideration_Letter</value>
                             <visibilityRule>
-                                <booleanFilter>1 AND 2 AND 3</booleanFilter>
+                                <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Phase__c}</leftValue>
                                     <operator>EQUAL</operator>
@@ -90,6 +90,11 @@
                                     <leftValue>{!Record.MUSW__Type2__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Liquor Licence Referrals</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.CVRD_DS_Sub_Type__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Liquor Licence Referral (delegated)</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -1819,6 +1824,22 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>mapSettingsName</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>spatialField</name>
+                </componentInstanceProperties>
+                <componentName>MUSW:mapViewer</componentName>
+                <identifier>MUSW_mapViewer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-0cb66e1b-2589-4cd7-9dca-a70b0a106af2</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>active</name>
                     <value>true</value>
                 </componentInstanceProperties>
@@ -1937,6 +1958,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab5</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-0cb66e1b-2589-4cd7-9dca-a70b0a106af2</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Map</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab6</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
