@@ -70,13 +70,6 @@
                     <stringValue>Liquor Licence Referral (delegated)</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>recordId.MUSW__Type2__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Board_of_Variance</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Update_Application_Record</targetReference>
             </connector>
@@ -84,7 +77,7 @@
         </rules>
         <rules>
             <name>Internal_Application_Check</name>
-            <conditionLogic>((1 AND 2) OR 3) AND 4</conditionLogic>
+            <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>recordId.MUSW__Type2__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -97,13 +90,6 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Liquor Licence Referral (delegated)</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>recordId.MUSW__Type2__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Board_of_Variance</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
