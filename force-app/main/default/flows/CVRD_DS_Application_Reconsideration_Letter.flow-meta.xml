@@ -337,6 +337,16 @@
             <name>NoteMessage</name>
             <fieldText>&lt;p&gt;&lt;em&gt;Note: Maximum file size is 10 MB. Allowed file types are PDF, DOC, XLS, DOCX, XLSX, JPG, PNG.&lt;/em&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>recordId.MUSW__Type2__c</leftValueReference>
+                    <operator>NotEqualTo</operator>
+                    <rightValue>
+                        <stringValue>Liquor Licence Referrals</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
