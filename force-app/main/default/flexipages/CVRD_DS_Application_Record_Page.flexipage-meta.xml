@@ -1898,12 +1898,6 @@
                 <identifier>runtime_sales_activities_activityPanel</identifier>
             </componentInstance>
         </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>cVRD_DS_Proceeding_Details</componentName>
-                <identifier>c_cVRD_DS_Proceeding_Details</identifier>
-            </componentInstance>
-        </itemInstances>
         <mode>Replace</mode>
         <name>sidebar</name>
         <type>Region</type>
