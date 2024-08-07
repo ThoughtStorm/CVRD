@@ -390,8 +390,25 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.MUSW__Geolocation__c</fieldItem>
-                <identifier>RecordMUSW_Geolocation_cField</identifier>
+                <fieldItem>Record.CVRD_DS_No_of_Lots__c</fieldItem>
+                <identifier>RecordCVRD_DS_No_of_Lots_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CVRD_DS_Units__c</fieldItem>
+                <identifier>RecordCVRD_DS_Units_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Strata_Conversion</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-42036f50-58a4-484e-936a-b46e920951bc</name>
@@ -406,6 +423,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.MUSW__Parcel__c</fieldItem>
                 <identifier>RecordMUSW_Parcel_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.MUSW__Geolocation__c</fieldItem>
+                <identifier>RecordMUSW_Geolocation_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-71637d28-e004-40bb-aef7-a71262eff6b2</name>
@@ -433,75 +460,6 @@
             </componentInstance>
         </itemInstances>
         <name>Facet-fc70de81-1280-4db6-bb9e-5f9466365ad3</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.CVRD_DS_No_of_Lots__c</fieldItem>
-                <identifier>RecordCVRD_DS_No_of_Lots_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.MUSW__Geolocation__c</fieldItem>
-                <identifier>RecordMUSW_Geolocation_cField2</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-9f2829eb-d774-4799-b45a-4d53d3d662c2</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.CVRD_DS_Units__c</fieldItem>
-                <identifier>RecordCVRD_DS_Units_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Strata_Conversion</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-12ea761d-eae6-4268-aedc-d7b64af05b1c</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-9f2829eb-d774-4799-b45a-4d53d3d662c2</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column27</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-12ea761d-eae6-4268-aedc-d7b64af05b1c</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column28</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-32c2408d-3b19-46cb-b352-0e5c4bc800a1</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -1173,70 +1131,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection11</identifier>
-                <visibilityRule>
-                    <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Subdivision_Referral</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Agricultural_Land_Reserve</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Liquor Licence Referrals</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Crown_Land_Referrals</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>columns</name>
-                    <value>Facet-32c2408d-3b19-46cb-b352-0e5c4bc800a1</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Property Details</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection14</identifier>
-                <visibilityRule>
-                    <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>Subdivision_Referral</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>Agricultural_Land_Reserve</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>Liquor Licence Referrals</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>Crown_Land_Referrals</rightValue>
-                    </criteria>
-                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <itemInstances>
