@@ -926,11 +926,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Application_Location__c.Geolocation__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Application_Location__c.MUSW__Address__c</field>
         <readable>true</readable>
     </fieldPermissions>
