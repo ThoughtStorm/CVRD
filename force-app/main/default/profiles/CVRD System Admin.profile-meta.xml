@@ -1691,11 +1691,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Parcel__c.Map__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Proceeding2__c.Application_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
