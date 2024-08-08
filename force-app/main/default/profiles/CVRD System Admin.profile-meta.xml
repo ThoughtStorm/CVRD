@@ -1691,11 +1691,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Proceeding2__c.Application_Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Application__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1755,29 +1750,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Proceeding2__c.Outcome__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Outcome__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Proceeding_Type_del__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Public_Link__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Public_URL__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
