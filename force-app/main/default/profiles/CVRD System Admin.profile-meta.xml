@@ -451,16 +451,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Address__c.ObjectId__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Address__c.XCORDINATE__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Application2__c.Agent_Authorization__c</field>
         <readable>true</readable>
     </fieldPermissions>
