@@ -450,11 +450,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Event.Due_Date_before_5_day__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Address__c.ObjectId__c</field>
         <readable>true</readable>
@@ -1972,11 +1967,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.Due_Date_before_5_day__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
