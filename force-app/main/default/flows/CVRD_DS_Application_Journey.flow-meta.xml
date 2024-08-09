@@ -1389,7 +1389,7 @@
         <object>MUSW__Parcel__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <runInMode>DefaultMode</runInMode>
+    <runInMode>SystemModeWithSharing</runInMode>
     <screens>
         <name>Add_Owner_Screen</name>
         <label>Add New Owner Screen</label>
