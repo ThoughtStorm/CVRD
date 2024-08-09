@@ -1755,16 +1755,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Review__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Schedule_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Proceeding_Agenda_Item__c.MUSW__Application__c</field>
         <readable>true</readable>
