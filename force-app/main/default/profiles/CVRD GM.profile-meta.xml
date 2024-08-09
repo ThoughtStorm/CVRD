@@ -27,10 +27,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CVRD_OTPController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>GoogleRecaptchaHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
