@@ -2245,10 +2245,6 @@
         <apexPage>CVRD_DS_AppSitePage</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
-    <pageAccesses>
-        <apexPage>cVRD_PDF_Page</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
     <recordTypeVisibilities>
         <default>true</default>
         <personAccountDefault>true</personAccountDefault>
