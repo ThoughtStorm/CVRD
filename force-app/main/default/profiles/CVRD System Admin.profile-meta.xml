@@ -2246,10 +2246,6 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>cVRD_Application_PDF_Generator</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>cVRD_PDF_Page</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
