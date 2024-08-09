@@ -1701,11 +1701,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Proceeding2__c.CVRD_DS_Comment__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Electoral_Area__c</field>
         <readable>true</readable>
     </fieldPermissions>
