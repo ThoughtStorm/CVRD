@@ -11,10 +11,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>AccountDataController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>CVRD_DS_CreateSubmissions</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -23,23 +19,11 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CVRD_DS_InsertProceedingOutcome</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>CVRD_DS_PublicSearchController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CVRD_DS_Split_MultiPicklist</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_PDFCreateController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CreatePDFController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -80,10 +64,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>interviewsByRecordController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>publicSearchController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>true</custom>
