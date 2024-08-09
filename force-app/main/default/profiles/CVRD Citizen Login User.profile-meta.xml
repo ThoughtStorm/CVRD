@@ -11,19 +11,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>AccountDataController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_DS_CreateFee</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>CVRD_DS_CreateSubmissions</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_DS_CreateSubmissionsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -31,40 +19,12 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CVRD_DS_InsertProceedingOutcome</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_DS_Moneriscontroller</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>CVRD_DS_PublicSearchController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_DS_RecordTypeDefine</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CVRD_DS_Split_MultiPicklist</apexClass>
         <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_OTPController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_OTPGenerator</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CVRD_PDFCreateController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>CreatePDFController</apexClass>
-        <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>GoogleRecaptchaHandler</apexClass>
@@ -103,19 +63,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>cvrd_DS_GetProceedingDetails</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>cvrd_DS_Submission_FileController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>interviewsByRecordController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>publicSearchController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>
@@ -326,17 +274,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Contact.BuyerAttributes</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Contact.Department</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Contact.DepartmentGroup</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -461,31 +399,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Contact.TitleType</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event.CVRD_DS_Related_Object_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event.Due_Date_before_5_day__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Address__c.ObjectId__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Address__c.XCORDINATE__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Application2__c.Agent_Authorization__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -532,11 +445,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DSCommercialOrIndustrial_Purposes__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Application2__c.CVRD_DS_Application_Number_redirect__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -966,11 +874,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Application_Location__c.Geolocation__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>MUSW__Application_Location__c.MUSW__Address__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1012,11 +915,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Comment__c.CVRD_DS_Application__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Comment__c.CVRD_DS_DPARedirect__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1740,16 +1638,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Parcel__c.Map__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Proceeding2__c.Application_Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Application__c</field>
         <readable>true</readable>
@@ -1757,11 +1645,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Cancelled__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Proceeding2__c.CVRD_DS_Comment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1810,43 +1693,13 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Proceeding2__c.Outcome__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Outcome__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Proceeding_Type_del__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Public_Link__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Public_URL__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Resolution__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Review__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Schedule_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1873,11 +1726,6 @@
         <editable>true</editable>
         <field>MUSW__Review_Template__c.MUSW__Review_Type__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>MUSW__Review__c.Application_type__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -1977,11 +1825,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Sequence_Number__c.MUSW__Source_Type_Fields__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Submission__c.CVRD_DS_Publicly_Available__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2399,14 +2242,6 @@
         <apexPage>CVRD_DS_AppSitePage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
-    <pageAccesses>
-        <apexPage>cVRD_Application_PDF_Generator</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>cVRD_PDF_Page</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
     <recordTypeVisibilities>
         <default>true</default>
         <personAccountDefault>true</personAccountDefault>
@@ -2687,10 +2522,6 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>ArcGIS_Map_Viewer</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>MUSW__Application2__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -2712,10 +2543,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>MUSW__Review__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Map_Viewer</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
