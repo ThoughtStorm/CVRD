@@ -63,7 +63,7 @@
         <name>assign_application_Id_on_application_contact</name>
         <label>assign application Id on application contact</label>
         <locationX>1282</locationX>
-        <locationY>3746</locationY>
+        <locationY>3938</locationY>
         <assignmentItems>
             <assignToReference>Create_Application_Contact_record.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -86,7 +86,7 @@
         <name>assign_application_id_on_application_location</name>
         <label>assign application id on application location</label>
         <locationX>1282</locationX>
-        <locationY>4802</locationY>
+        <locationY>4994</locationY>
         <assignmentItems>
             <assignToReference>loop_to_create_application_location.MUSW__Application__c</assignToReference>
             <operator>Assign</operator>
@@ -109,7 +109,7 @@
         <name>Assign_Application_Record_Id_to_Comment_Record</name>
         <label>Assign Application Record Id to Comment Record</label>
         <locationX>1018</locationX>
-        <locationY>4262</locationY>
+        <locationY>4454</locationY>
         <assignmentItems>
             <assignToReference>Loop_for_Comment_Records.CVRD_DS_Application__c</assignToReference>
             <operator>Assign</operator>
@@ -155,7 +155,7 @@
         <name>Assign_Iteration_Count</name>
         <label>Assign Iteration Count</label>
         <locationX>1194</locationX>
-        <locationY>2930</locationY>
+        <locationY>3122</locationY>
         <assignmentItems>
             <assignToReference>IsFirstLocationRecord</assignToReference>
             <operator>Assign</operator>
@@ -171,7 +171,7 @@
         <name>Assign_Location_Record_to_application</name>
         <label>Assign Location Record to application</label>
         <locationX>1282</locationX>
-        <locationY>3254</locationY>
+        <locationY>3446</locationY>
         <assignmentItems>
             <assignToReference>LocationPID</assignToReference>
             <operator>Assign</operator>
@@ -473,7 +473,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Environment_Management_Act</targetReference>
+            <targetReference>Evaluate_Environmental_and_Riparian_area</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -709,7 +709,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Environment_Management_Act</targetReference>
+            <targetReference>Evaluate_Environmental_and_Riparian_area</targetReference>
         </connector>
     </assignments>
     <choices>
@@ -805,10 +805,10 @@
             <name>DPA_Stage</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>RecordTypeValue</leftValueReference>
+                <leftValueReference>SelectedApplicationName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Development Permit</stringValue>
+                    <stringValue>CVRD_DS_Development_Permit</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -875,7 +875,7 @@
         <name>Check_if_Comment_is_empty_or_not</name>
         <label>Check if Comment is empty or not</label>
         <locationX>1194</locationX>
-        <locationY>4046</locationY>
+        <locationY>4238</locationY>
         <defaultConnector>
             <targetReference>loop_to_create_application_location</targetReference>
         </defaultConnector>
@@ -900,7 +900,7 @@
         <name>Check_Iteration_Count</name>
         <label>Check Iteration Count</label>
         <locationX>1414</locationX>
-        <locationY>3146</locationY>
+        <locationY>3338</locationY>
         <defaultConnector>
             <targetReference>Loop_Application_Location_Record</targetReference>
         </defaultConnector>
@@ -991,16 +991,41 @@
             <name>Application_Type_is_Development_permit</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>RecordTypeValue</leftValueReference>
+                <leftValueReference>SelectedApplicationName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Development Permit</stringValue>
+                    <stringValue>CVRD_DS_Development_Permit</stringValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>Get_PID_Record</targetReference>
             </connector>
             <label>Application Type is Development permit</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Evaluate_Environmental_and_Riparian_area</name>
+        <label>Evaluate Environmental and Riparian area</label>
+        <locationX>1810</locationX>
+        <locationY>2390</locationY>
+        <defaultConnector>
+            <targetReference>Review_Application_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Required</defaultConnectorLabel>
+        <rules>
+            <name>Required</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>EnvironmetalRiparianRequired</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Environment_Management_Act</targetReference>
+            </connector>
+            <label>Required</label>
         </rules>
     </decisions>
     <decisions>
@@ -1032,7 +1057,7 @@
         <name>Rec_check</name>
         <label>Rec check</label>
         <locationX>1810</locationX>
-        <locationY>2822</locationY>
+        <locationY>3014</locationY>
         <defaultConnectorLabel>Do Not save Record</defaultConnectorLabel>
         <rules>
             <name>save_record</name>
@@ -1075,15 +1100,7 @@
         <picklistObject>MUSW__Application2__c</picklistObject>
     </dynamicChoiceSets>
     <dynamicChoiceSets>
-        <name>ProvinceChoiceSet</name>
-        <dataType>Picklist</dataType>
-        <displayField xsi:nil="true"/>
-        <object xsi:nil="true"/>
-        <picklistField>CVRD_DS_Owner_State__c</picklistField>
-        <picklistObject>MUSW__Application_Contact__c</picklistObject>
-    </dynamicChoiceSets>
-    <dynamicChoiceSets>
-        <name>RecordTypesList</name>
+        <name>ExternalApplicationChoice</name>
         <dataType>String</dataType>
         <displayField>Name</displayField>
         <filterLogic>and</filterLogic>
@@ -1095,6 +1112,34 @@
             </value>
         </filters>
         <filters>
+            <field>DeveloperName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>CVRD_DS_Agricultural_Land_Reserve</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>CVRD_DS_Crown_Land_Referrals</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>CVRD_DS_Liquor_Cannabis_Licence_Referrals</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>CVRD_DS_Subdivision_Referral</stringValue>
+            </value>
+        </filters>
+        <filters>
             <field>IsActive</field>
             <operator>EqualTo</operator>
             <value>
@@ -1103,14 +1148,24 @@
         </filters>
         <object>RecordType</object>
         <outputAssignments>
+            <assignToReference>SelectedApplicationName</assignToReference>
+            <field>DeveloperName</field>
+        </outputAssignments>
+        <outputAssignments>
             <assignToReference>RecordTypeId</assignToReference>
             <field>Id</field>
         </outputAssignments>
-        <outputAssignments>
-            <assignToReference>RecordTypeValue</assignToReference>
-            <field>Name</field>
-        </outputAssignments>
-        <valueField>DeveloperName</valueField>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>ProvinceChoiceSet</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>CVRD_DS_Owner_State__c</picklistField>
+        <picklistObject>MUSW__Application_Contact__c</picklistObject>
     </dynamicChoiceSets>
     <environments>Default</environments>
     <formulas>
@@ -1118,6 +1173,11 @@
         <dataType>Number</dataType>
         <expression>LEN({!Description})</expression>
         <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>EnvironmetalRiparianRequired</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(OR({!SelectedApplicationName}=&apos;CVRD_DS_Board_of_Variance&apos;,{!SelectedApplicationName}=&apos;CVRD_DS_Development_Permit&apos;,{!SelectedApplicationName}=&apos;CVRD_DS_Strata_Conversion&apos;,{!SelectedApplicationName}=&apos;CVRD_DS_Development_Variance_Permit&apos;,{!SelectedApplicationName}=&apos;CVRD_DS_Minimum_Frontage_Exemption&apos;,{!SelectedApplicationName}=&apos;CVRD_DS_Temporary_Use_Permit&apos;,{!SelectedApplicationName}=&apos;CVRD_DS_Telecommunication_Antenna_Structure&apos;,{!SelectedApplicationName}=&apos;CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment&apos;,{!SelectedApplicationName}=&apos;CVRD_DS_Phased_Development_Agreement&apos;), true, false)</expression>
     </formulas>
     <formulas>
         <name>SetEnvironmentalValue</name>
@@ -1131,7 +1191,7 @@
         <name>Create_Application_Contact_record</name>
         <label>Create Application Contact record</label>
         <locationX>1194</locationX>
-        <locationY>3638</locationY>
+        <locationY>3830</locationY>
         <collectionReference>ApplicationContactList</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1145,7 +1205,7 @@
         <name>Loop_Application_Location_Record</name>
         <label>Loop Application Location Record</label>
         <locationX>1194</locationX>
-        <locationY>3038</locationY>
+        <locationY>3230</locationY>
         <collectionReference>Application_Location_Record_Collation</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1159,7 +1219,7 @@
         <name>Loop_for_Comment_Records</name>
         <label>Loop for Comment Records</label>
         <locationX>930</locationX>
-        <locationY>4154</locationY>
+        <locationY>4346</locationY>
         <collectionReference>CommentRecords</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1187,7 +1247,7 @@
         <name>loop_to_create_application_location</name>
         <label>loop to create application location</label>
         <locationX>1194</locationX>
-        <locationY>4694</locationY>
+        <locationY>4886</locationY>
         <collectionReference>Application_Location_Record_Collation</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -1220,7 +1280,7 @@
         <name>Create_Application_Contact_records</name>
         <label>Create Application Contact records</label>
         <locationX>1194</locationX>
-        <locationY>3938</locationY>
+        <locationY>4130</locationY>
         <connector>
             <targetReference>Check_if_Comment_is_empty_or_not</targetReference>
         </connector>
@@ -1234,7 +1294,7 @@
         <name>create_application_location_record</name>
         <label>create application location record</label>
         <locationX>1194</locationX>
-        <locationY>4994</locationY>
+        <locationY>5186</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -1247,7 +1307,7 @@
         <name>Create_Application_record</name>
         <label>Create Application record</label>
         <locationX>1194</locationX>
-        <locationY>3530</locationY>
+        <locationY>3722</locationY>
         <connector>
             <targetReference>Create_Application_Contact_record</targetReference>
         </connector>
@@ -1358,7 +1418,7 @@
         <name>Create_Comment_Record</name>
         <label>Create Comment Record</label>
         <locationX>930</locationX>
-        <locationY>4454</locationY>
+        <locationY>4646</locationY>
         <connector>
             <targetReference>loop_to_create_application_location</targetReference>
         </connector>
@@ -1904,7 +1964,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Record_Types</name>
-                    <choiceReferences>RecordTypesList</choiceReferences>
+                    <choiceReferences>ExternalApplicationChoice</choiceReferences>
                     <dataType>String</dataType>
                     <fieldText>Application Type</fieldText>
                     <fieldType>RadioButtons</fieldType>
@@ -2592,8 +2652,8 @@
     <screens>
         <name>Environment_Management_Act</name>
         <label>Environment Management Act</label>
-        <locationX>1810</locationX>
-        <locationY>2390</locationY>
+        <locationX>1678</locationX>
+        <locationY>2498</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -2767,7 +2827,7 @@
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
         <locationX>1634</locationX>
-        <locationY>5102</locationY>
+        <locationY>5294</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -3203,7 +3263,7 @@
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
-                            <leftValueReference>Record_Types</leftValueReference>
+                            <leftValueReference>SelectedApplicationName</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
                                 <stringValue>CVRD_DS_Strata_Conversion</stringValue>
@@ -3235,7 +3295,7 @@
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
-                    <leftValueReference>Record_Types</leftValueReference>
+                    <leftValueReference>SelectedApplicationName</leftValueReference>
                     <operator>EqualTo</operator>
                     <rightValue>
                         <stringValue>CVRD_DS_Strata_Conversion</stringValue>
@@ -3276,7 +3336,7 @@
         <name>Review_Application_Screen</name>
         <label>Review Application Screen</label>
         <locationX>1810</locationX>
-        <locationY>2606</locationY>
+        <locationY>2798</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -3572,6 +3632,16 @@
             </fields>
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>EnvironmetalRiparianRequired</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <fields>
             <name>Riparian_Areas_Declaration_review</name>
@@ -3600,6 +3670,16 @@
             </fields>
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>EnvironmetalRiparianRequired</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <fields>
             <name>Review_Application_Screen_Section8</name>
@@ -3650,8 +3730,8 @@
     <screens>
         <name>Riparian_Areas_Protection_Regulation_Declaration</name>
         <label>Riparian Areas Protection Regulation Declaration</label>
-        <locationX>1810</locationX>
-        <locationY>2498</locationY>
+        <locationX>1678</locationX>
+        <locationY>2606</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -3804,7 +3884,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>1194</locationX>
-        <locationY>5102</locationY>
+        <locationY>5294</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -3840,7 +3920,7 @@
         <name>attestation_subflow</name>
         <label>attestation subflow</label>
         <locationX>1810</locationX>
-        <locationY>2714</locationY>
+        <locationY>2906</locationY>
         <connector>
             <targetReference>Rec_check</targetReference>
         </connector>
@@ -3875,7 +3955,7 @@
         <name>Upload_Documents_Flow</name>
         <label>Upload Documents Flow</label>
         <locationX>1194</locationX>
-        <locationY>5210</locationY>
+        <locationY>5402</locationY>
         <flowName>Upload_Submission_Requests</flowName>
         <inputAssignments>
             <name>Application_Id</name>
@@ -4065,6 +4145,13 @@
         <value>
             <booleanValue>false</booleanValue>
         </value>
+    </variables>
+    <variables>
+        <name>SelectedApplicationName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>selectedDPAVariable</name>
