@@ -86,7 +86,7 @@
               "buttonText" : "Log in",
               "buttonTextColor" : "",
               "buttonTextHoverColor" : "",
-              "customizableUserProfileMenuEditor" : "",
+              "customizableUserProfileMenuEditor" : "Default_User_Profile_Menu2",
               "menuStyleSettings" : "{\"selectedMenuStyleSetting\":\"iconOnly\",\"selectedIconSetting\":\"userAvatar\",\"includeCompanyName\":false,\"selectedTextOrientationSetting\":\"right\"}"
             },
             "componentName" : "forceCommunity:customizableUserProfileMenu",
@@ -148,7 +148,7 @@
         }, {
           "components" : [ {
             "componentAttributes" : {
-              "NavigationMenuEditorRefresh" : "",
+              "NavigationMenuEditorRefresh" : "Default_Navigation2",
               "hideAppLauncher" : true,
               "menuAlignment" : "left"
             },
@@ -714,7 +714,7 @@
             "componentAttributes" : {
               "navAlignment" : "left",
               "navItemThreshold" : 6,
-              "navigationMenuEditorRefresh" : ""
+              "navigationMenuEditorRefresh" : "External_Agency_Menu"
             },
             "componentName" : "forceCommunity:themeNav",
             "id" : "0dd75088-5bd3-486e-b7fa-e64168a6474e",
@@ -971,7 +971,7 @@
             "componentAttributes" : {
               "navAlignment" : "left",
               "navItemThreshold" : 6,
-              "navigationMenuEditorRefresh" : ""
+              "navigationMenuEditorRefresh" : "Default_Navigation2"
             },
             "componentName" : "forceCommunity:themeNav",
             "id" : "99a19ee0-95c8-44cc-b34d-250929956cbe",
