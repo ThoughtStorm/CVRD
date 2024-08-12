@@ -57,16 +57,6 @@
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
-        }, {
-          "componentAttributes" : {
-            "showAmountOwing" : true,
-            "showPayNow" : true
-          },
-          "componentName" : "clariti:amountToPay",
-          "id" : "da308780-cfb7-4e5f-8807-03526dcec6e7",
-          "renderPriority" : "NEUTRAL",
-          "renditionMap" : { },
-          "type" : "component"
         } ],
         "id" : "a50783c7-fb84-4d87-8257-f30f74cf06bd",
         "regionLabel" : "Column 1",

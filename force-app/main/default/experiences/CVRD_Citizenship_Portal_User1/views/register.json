@@ -7,8 +7,17 @@
   "regions" : [ {
     "components" : [ {
       "componentAttributes" : {
-        "flowArguments" : "[{\"label\":\"contactID\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!contactID}\"}]",
-        "flowName" : "clariti__User_Registration"
+        "richTextValue" : "<p><strong style=\"font-size: 28px;\">Self Registration Page</strong></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "41947fea-d6c6-4cc8-8d97-a9e406e5e668",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "flowArguments" : "[]",
+        "flowName" : "User_Registration"
       },
       "componentName" : "forceCommunity:flowCommunity",
       "id" : "0c7b4890-e3ce-4ce0-acdc-27ba565506b0",

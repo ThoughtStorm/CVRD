@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "e02c1a66-23d1-477e-8f90-6a35c8712e29",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Application_Details__c",
+  "id" : "8bb40eb9-b5c5-45f0-9fd8-a38bf4e94fda",
+  "label" : "Application Details",
+  "pageAccess" : "Public",
+  "routeType" : "custom-open-application-details",
+  "type" : "route",
+  "urlPrefix" : "open-application-details"
+}

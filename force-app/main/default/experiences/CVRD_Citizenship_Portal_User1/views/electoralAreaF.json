@@ -2,8 +2,8 @@
   "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
   "componentName" : "siteforce:dynamicLayout",
   "dataProviders" : [ ],
-  "id" : "d98877cb-63be-4865-95ec-d01d2e34f2f3",
-  "label" : "Open Search",
+  "id" : "894aeb73-a531-4974-8935-8421e89103b5",
+  "label" : "Electoral Area - F",
   "regions" : [ {
     "components" : [ {
       "componentAttributes" : {
@@ -11,9 +11,9 @@
         "backgroundOverlay" : "rgba(0,0,0,0.5)",
         "contentAreaWidth" : 100,
         "sectionConfig" : {
-          "UUID" : "ca326f44-bb81-4307-935b-3c4e92838338",
+          "UUID" : "ae647998-0bbd-4dea-ae0c-2acd083d477e",
           "columns" : [ {
-            "UUID" : "4ed4b068-f4bf-4453-a284-2640cb152a9c",
+            "UUID" : "0177d23b-0904-4a4b-8f6e-7198d93bfb95",
             "columnKey" : "1",
             "columnName" : "Column 1",
             "columnWidth" : "12",
@@ -23,32 +23,32 @@
         "sectionHeight" : 300
       },
       "componentName" : "forceCommunity:section",
-      "id" : "ca326f44-bb81-4307-935b-3c4e92838338",
+      "id" : "ae647998-0bbd-4dea-ae0c-2acd083d477e",
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : {
-            "enableInlineEdit" : false,
-            "filterName" : "Electrol_Area",
+            "enableInlineEdit" : true,
+            "filterName" : "Electoral_Area_F",
             "layout" : "STANDARD",
             "pageSize" : 100,
             "scope" : "MUSW__Application2__c",
-            "showActionBar" : false,
-            "showChartsPanel" : false,
+            "showActionBar" : true,
+            "showChartsPanel" : true,
             "showDisplay" : "showall",
-            "showFilterPanel" : false,
-            "showImageIcon" : false,
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
             "showManualRefreshButton" : true,
-            "showObjectName" : false,
-            "showPinnedList" : false,
+            "showObjectName" : true,
+            "showPinnedList" : true,
             "showSearchBar" : true
           },
           "componentName" : "forceCommunity:objectHome",
-          "id" : "089669e3-05c8-4bae-94c4-f1d184f9e1c7",
+          "id" : "e42583aa-58c1-4ad1-bb9d-d7fef75eb49d",
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
         } ],
-        "id" : "4ed4b068-f4bf-4453-a284-2640cb152a9c",
+        "id" : "0177d23b-0904-4a4b-8f6e-7198d93bfb95",
         "regionLabel" : "Column 1",
         "regionName" : "1",
         "renditionMap" : { },
@@ -58,7 +58,7 @@
       "renditionMap" : { },
       "type" : "component"
     } ],
-    "id" : "39e900c0-001d-4faa-9eb5-6d62f24eafee",
+    "id" : "fc072ff8-b2cd-4b10-8770-82e93efd7fea",
     "regionName" : "content",
     "type" : "region"
   }, {
@@ -66,18 +66,18 @@
       "componentAttributes" : {
         "customHeadTags" : "",
         "description" : "",
-        "title" : "Open Search"
+        "title" : "Electoral Area - F"
       },
       "componentName" : "forceCommunity:seoAssistant",
-      "id" : "06970b74-3f31-4b6d-8542-bc760f49e8e2",
+      "id" : "cf5c3082-3b1e-4d52-b3c8-8223260ebf90",
       "renditionMap" : { },
       "type" : "component"
     } ],
-    "id" : "a754a6cc-27d0-4d7d-997e-dedb0850b6d5",
+    "id" : "9aa05187-2ba4-41b5-abf4-ed6f053eec5f",
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
   } ],
   "themeLayoutType" : "Inner",
   "type" : "view",
-  "viewType" : "custom-open-search"
+  "viewType" : "custom-electoral-area-f"
 }

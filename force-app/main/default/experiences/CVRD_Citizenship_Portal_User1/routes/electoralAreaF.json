@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "894aeb73-a531-4974-8935-8421e89103b5",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Electoral_Area_F__c",
+  "id" : "a777ed98-6c86-4822-8519-664bb895104c",
+  "label" : "Electoral Area - F",
+  "pageAccess" : "Public",
+  "routeType" : "custom-electoral-area-f",
+  "type" : "route",
+  "urlPrefix" : "electoral-area-f"
+}
