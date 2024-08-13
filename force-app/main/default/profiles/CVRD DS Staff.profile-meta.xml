@@ -6461,10 +6461,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>clariti__SObjectUtilsTest_gis</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>clariti__SObjectUtils_gis</apexClass>
         <enabled>true</enabled>
     </classAccesses>
