@@ -27981,9 +27981,6 @@
         <layout>clariti__LedgerTreatment__c-clariti__Ledger Treatment Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>clariti__Map__c-clariti__Map Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>clariti__Object_Balance_Settings__mdt-clariti__Object Balance Settings Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -29959,10 +29956,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>clariti__LedgerTreatment__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>clariti__Map__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
