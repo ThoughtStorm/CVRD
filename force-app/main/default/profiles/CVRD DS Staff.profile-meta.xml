@@ -17190,7 +17190,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Application2__c.CVRD_DS_Public_URL__c</field>
+        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Public_URL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -17200,7 +17200,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Application2__c.CVRD_DS_Publicly_Available__c</field>
+        <field>MUSW__Submission__c.CVRD_DS_Publicly_Available__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
