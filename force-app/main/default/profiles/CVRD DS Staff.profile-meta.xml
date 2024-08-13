@@ -5001,10 +5001,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>clariti__Constants_gis</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>clariti__Constants_projdox</apexClass>
         <enabled>true</enabled>
     </classAccesses>
