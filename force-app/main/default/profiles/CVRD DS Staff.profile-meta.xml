@@ -5913,14 +5913,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>clariti__MapGeometrySelector</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__MapGeometrySelectorTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>clariti__MapSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
