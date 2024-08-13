@@ -13699,10 +13699,6 @@
     </customMetadataTypeAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
-        <name>clariti__ArcGIS_Map_Component_Button_Setting__mdt</name>
-    </customMetadataTypeAccesses>
-    <customMetadataTypeAccesses>
-        <enabled>true</enabled>
         <name>clariti__ArcGIS_Map_Configuration__mdt</name>
     </customMetadataTypeAccesses>
     <customMetadataTypeAccesses>
@@ -24514,16 +24510,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__ArcGIS_Map_Component_Button_Setting__mdt.clariti__Button_Label__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__ArcGIS_Map_Component_Button_Setting__mdt.clariti__Flow_API_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>clariti__BankDeposit__c.clariti__DateOfDeposit__c</field>
         <readable>false</readable>
@@ -27902,9 +27888,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkThanks-Thanks Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>clariti__ArcGIS_Map_Component_Button_Setting__mdt-clariti__ArcGIS Map Component Button Setting Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>clariti__ArcGIS_Map_Configuration__mdt-clariti__ArcGIS Map Configuration Layout</layout>
