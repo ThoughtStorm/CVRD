@@ -1765,22 +1765,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>MUSW__ArcGISOnPremAuthProvider</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>MUSW__ArcGISOnPremAuthProviderTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>MUSW__ArcGISOnlineAuthProvider</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>MUSW__ArcGISOnlineAuthProviderTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>MUSW__AssessmentTriggerHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -4694,70 +4678,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>clariti__AmountToPayControllerTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISAdminController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISAdminControllerTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISAdminService</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISClient</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISMapConfigButtonPicklist</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISMapConfigButtonPicklistTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISMapConfigurationPicklist</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISMapConfigurationPicklistTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISMapController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISMapControllerTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISMapIntegrationMsg</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISMapPageController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISMsg</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISService</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISShapeMsg</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__ArcGISTokenMsg</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -13696,10 +13616,6 @@
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
         <name>MUSW__Record_Manage_Setting__mdt</name>
-    </customMetadataTypeAccesses>
-    <customMetadataTypeAccesses>
-        <enabled>true</enabled>
-        <name>clariti__ArcGIS_Map_Configuration__mdt</name>
     </customMetadataTypeAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
@@ -27877,9 +27793,6 @@
         <layout>WorkThanks-Thanks Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>clariti__ArcGIS_Map_Configuration__mdt-clariti__ArcGIS Map Configuration Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>clariti__BankDeposit__c-clariti__Bank Deposit Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -28991,10 +28904,6 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>MUSW__ArcGISOnlineOAuthCallback</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>MUSW__AutomationAssess</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -29184,10 +29093,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>clariti__AnswersHome</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>clariti__ArcGISMapPage</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
