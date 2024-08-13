@@ -29894,10 +29894,6 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>clariti__ArcGIS_Settings</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>clariti__BankDeposit__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
