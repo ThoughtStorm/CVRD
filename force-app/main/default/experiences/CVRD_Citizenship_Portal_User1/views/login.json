@@ -20,6 +20,23 @@
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "enableServerSideVerification" : true,
+        "frameTitle" : "",
+        "isHuman" : false,
+        "originPageURL" : "https://cvrd--qa.sandbox.my.site.com/",
+        "required" : true,
+        "requiredMessage" : "",
+        "requiredOnce" : false,
+        "secretKey" : "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe",
+        "siteKey" : "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+      },
+      "componentName" : "c:googleRecaptcha",
+      "id" : "80a3e4d2-3f91-46da-ab46-2da43e985a49",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
     } ],
     "id" : "ab34768a-35e3-41ee-bc44-0df38957c1b3",
     "regionName" : "content",
@@ -42,7 +59,7 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
-        "richTextValue" : "<h5><br></h5><h1><span style=\"font-size: 28px;\">Welcome to the City of Clariti</span></h1><p><span style=\"font-size: 14px;\">Enter your username and password below to Log In. If you haven't registered before, you may do so by clicking </span><strong style=\"font-size: 14px;\">Register</strong><span style=\"font-size: 14px;\">. If you are having trouble logging in, try resetting your password by clicking </span><a href=\"/login/ForgotPassword\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"font-size: 14px;\"><strong>Forgot Password</strong>.</a></p><p>&nbsp;</p>"
+        "richTextValue" : "<h5><br></h5><p><strong style=\"font-size: 28px;\">Welcome to The Cowichan Valley Regional District</strong></p><p><span style=\"font-size: 14px;\">Enter your username and password below to Log In. If you haven't registered before, you may do so by clicking </span><a href=\"SelfRegister\" rel=\"noopener noreferrer\" target=\"_self\" style=\"font-size: 14px;\"><strong>Register</strong></a><span style=\"font-size: 14px;\">. If you are having trouble logging in, try resetting your password by clicking </span><a href=\"ForgotPassword\" rel=\"noopener noreferrer\" target=\"_self\" style=\"font-size: 14px;\"><strong>Forgot Password</strong>.</a></p><p>&nbsp;</p>"
       },
       "componentName" : "forceCommunity:richTextInline",
       "id" : "45ce481c-e798-48ea-93c3-f5b9487a121e",

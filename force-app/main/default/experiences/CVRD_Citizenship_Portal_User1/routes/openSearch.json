@@ -4,7 +4,7 @@
   "configurationTags" : [ ],
   "devName" : "Open_Search__c",
   "id" : "53a17ca3-4dd6-46f0-9398-5fb965893ad2",
-  "label" : "Open Search",
+  "label" : "Electoral Area - A",
   "pageAccess" : "Public",
   "routeType" : "custom-open-search",
   "type" : "route",

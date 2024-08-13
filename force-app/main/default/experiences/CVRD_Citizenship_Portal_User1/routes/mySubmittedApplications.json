@@ -4,9 +4,9 @@
   "configurationTags" : [ ],
   "devName" : "My_Development_Applications__c",
   "id" : "140ed1fb-576b-4b36-80cc-9429dad1f28f",
-  "label" : "My Development Applications",
+  "label" : "My Submitted Applications",
   "pageAccess" : "UseParent",
   "routeType" : "custom-my-development-applications",
   "type" : "route",
-  "urlPrefix" : "my-development-applications"
+  "urlPrefix" : "My-Submitted-Applications"
 }

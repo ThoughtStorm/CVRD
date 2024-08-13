@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "b4e08649-2071-4a55-a411-358c2ea4426d",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Electoral_Area_C__c",
+  "id" : "91fce97a-5482-4b39-9c74-6ed4401a7efc",
+  "label" : "Electoral Area - C",
+  "pageAccess" : "Public",
+  "routeType" : "custom-electoral-area-c",
+  "type" : "route",
+  "urlPrefix" : "electoral-area-c"
+}

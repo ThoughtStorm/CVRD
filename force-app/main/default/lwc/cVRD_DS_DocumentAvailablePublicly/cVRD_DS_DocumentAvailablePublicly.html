@@ -1,0 +1,26 @@
+<template>
+		<div class="slds-section slds-is-open">
+			<template if:true={documents}>
+				<lightning-card title="Documents">
+				<template for:each={documents} for:item="key">
+					<div key={key.submissionName} class="slds-m-around_medium">
+						<h3 class="slds-section__title slds-theme_shade">
+                            <span class="slds-truncate slds-p-horizontal_small">{key.submissionName}</span>
+						</h3>
+						<div class="slds-section__content" id="expando-unique-id">
+							<lightning-button class="slds-m-left_medium slds-m-bottom_medium" variant="base" label={key.title} onclick={handleDownload} data-url={key.urls}>
+							</lightning-button>
+						</div>
+					</div>
+				</template>
+				</lightning-card>
+			</template>
+			<template if:false={documents}>
+				The documents are not publicly accessible.
+			</template>
+		</div>
+		<template if:true={error}>
+			<div class="slds-text-color_error">{error}</div>
+		</template>
+	
+</template>
