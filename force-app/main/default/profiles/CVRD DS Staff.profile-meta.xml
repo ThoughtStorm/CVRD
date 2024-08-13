@@ -5913,14 +5913,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>clariti__MapSelector</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__MapSelectorTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>clariti__MergeTemplateSeedDataObject</apexClass>
         <enabled>true</enabled>
     </classAccesses>
