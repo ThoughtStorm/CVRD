@@ -25311,16 +25311,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>clariti__Map_Geometry__c.clariti__Data__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__Map_Geometry__c.clariti__Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>clariti__NotificationMessage__e.clariti__Mode__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -27991,9 +27981,6 @@
         <layout>clariti__LedgerTreatment__c-clariti__Ledger Treatment Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>clariti__Map_Geometry__c-clariti__Map Geometry Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>clariti__Map__c-clariti__Map Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -29976,10 +29963,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>clariti__LedgerTreatment__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>clariti__Map_Geometry__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
