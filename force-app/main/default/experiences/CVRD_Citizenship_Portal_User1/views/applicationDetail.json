@@ -21,15 +21,6 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
-        "recordId" : "{!recordId}"
-      },
-      "componentName" : "forceCommunity:pathAssistant",
-      "id" : "fe3be9a1-279c-4db0-a760-72516702c39d",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    }, {
-      "componentAttributes" : {
         "tabsetConfig" : {
           "UUID" : "6d549517-4c3e-4ec7-a57a-1db99665341d",
           "activeTab" : "",
