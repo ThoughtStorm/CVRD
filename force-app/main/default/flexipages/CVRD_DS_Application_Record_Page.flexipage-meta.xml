@@ -429,7 +429,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.MUSW__Geolocation__c</fieldItem>
                 <identifier>RecordMUSW_Geolocation_cField</identifier>
@@ -1291,6 +1291,39 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection2</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Subdivision_Referral</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Crown_Land_Referrals</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Cannabis Retail Licence</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Liquor Licence Referrals</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Covenant_Amendment/Discharge</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Flood_Management_Bylaw_Exemption</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1309,6 +1342,39 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection3</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Subdivision_Referral</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Crown_Land_Referrals</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Cannabis Retail Licence</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Liquor Licence Referrals</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Covenant_Amendment/Discharge</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Flood_Management_Bylaw_Exemption</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -1896,6 +1962,12 @@
                 </componentInstanceProperties>
                 <componentName>runtime_sales_activities:activityPanel</componentName>
                 <identifier>runtime_sales_activities_activityPanel</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>cVRD_DS_Proceeding_Details</componentName>
+                <identifier>c_cVRD_DS_Proceeding_Details</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
