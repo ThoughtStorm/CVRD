@@ -1228,6 +1228,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Outcome__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>MUSW__Proceeding_Agenda_Item__c.MUSW__License__c</field>
         <readable>false</readable>
     </fieldPermissions>
