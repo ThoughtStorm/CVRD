@@ -12,11 +12,11 @@
     </applicationVisibilities>
     <classAccesses>
         <apexClass>cvrd_DS_Submission_FileController</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>cvrd_DS_GetProceedingDetails</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CVRD_DS_CreateSubmissions</apexClass>
@@ -1237,7 +1237,7 @@
         <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
+        <layout>MUSW__Application2__c-Guest Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
     </layoutAssignments>
     <layoutAssignments>
