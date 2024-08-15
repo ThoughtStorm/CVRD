@@ -77,10 +77,12 @@
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : {
+            "allowEdit" : false,
+            "objectType" : "MUSW__Application2__c",
             "recordId" : "{!recordId}"
           },
-          "componentName" : "forceCommunity:lwcRecordDetail",
-          "id" : "222817ff-46b0-440c-b130-8aaa0db8145b",
+          "componentName" : "clariti:recordDetail",
+          "id" : "fe4fa465-2fd1-4af9-bbfa-6e43bb4e4759",
           "renditionMap" : { },
           "type" : "component"
         } ],
