@@ -248,7 +248,7 @@
     </screens>
     <screens>
         <name>Success_Message</name>
-        <label>Success Message</label>
+        <label>SuccessMessage</label>
         <locationX>314</locationX>
         <locationY>458</locationY>
         <allowBack>false</allowBack>

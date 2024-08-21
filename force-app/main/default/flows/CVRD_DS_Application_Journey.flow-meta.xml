@@ -84,7 +84,7 @@
     </assignments>
     <assignments>
         <name>assign_application_id_on_application_location</name>
-        <label>assign application id on application location</label>
+        <label>assignapplication id on application location</label>
         <locationX>1282</locationX>
         <locationY>4994</locationY>
         <assignmentItems>
