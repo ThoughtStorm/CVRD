@@ -306,7 +306,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.MUSW__Phase__c</fieldItem>
                 <identifier>RecordMUSW_Phase_cField</identifier>
@@ -330,7 +330,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.MUSW__Status__c</fieldItem>
                 <identifier>RecordMUSW_Status_cField</identifier>
@@ -939,7 +939,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.MUSW__Total_Fees__c</fieldItem>
                 <identifier>RecordMUSW_Total_Fees_cField</identifier>
@@ -949,7 +949,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.MUSW__Total_Payments__c</fieldItem>
                 <identifier>RecordMUSW_Total_Payments_cField</identifier>
