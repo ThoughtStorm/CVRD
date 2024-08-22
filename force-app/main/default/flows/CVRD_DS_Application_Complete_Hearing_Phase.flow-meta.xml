@@ -138,7 +138,7 @@
         <fields>
             <name>DeclartionCheckBox</name>
             <dataType>Boolean</dataType>
-            <fieldText>By confirming, you will complete the board approval phase. Please note that once confirmed, the board approval phase cannot be revisited.</fieldText>
+            <fieldText>By confirming, you will complete the approval phase. Please note that once confirmed, the approval phase cannot be revisited.</fieldText>
             <fieldType>InputField</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
