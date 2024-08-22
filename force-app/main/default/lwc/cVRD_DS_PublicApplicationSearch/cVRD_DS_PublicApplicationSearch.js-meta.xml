@@ -5,5 +5,11 @@
 	<targets>
 		<target>lightning__HomePage</target>
 		<target>lightningCommunity__Page</target>
+		<target>lightningCommunity__Default</target>
 	</targets>
+	<targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="area_val" label="ElectorialArea" type="String" default="{!area_val}"/>
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>
