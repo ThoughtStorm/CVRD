@@ -166,7 +166,7 @@
             <choiceReferences>OutcomeApprovedChoiceSet</choiceReferences>
             <choiceReferences>OutComeDeniedChoiceSet</choiceReferences>
             <dataType>String</dataType>
-            <fieldText>Board Approval Final Outcome</fieldText>
+            <fieldText>Approval Final Outcome</fieldText>
             <fieldType>DropdownBox</fieldType>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
@@ -184,7 +184,7 @@
         <allowPause>false</allowPause>
         <fields>
             <name>DisplaySuceessMessage</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(25, 141, 32); background-color: rgb(255, 255, 255);&quot;&gt;Board Approval is Completed!&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(25, 141, 32); background-color: rgb(255, 255, 255);&quot;&gt;Approval is Completed!&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
