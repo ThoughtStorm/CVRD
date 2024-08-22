@@ -3397,7 +3397,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Application_type_review</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Application Type  &lt;/span&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Record_Types}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Application Type &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt; &lt;/span&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Record_Types}&lt;/strong&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -3413,7 +3413,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Description_review</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Description&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Description}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(116, 116, 116);&quot;&gt;Description&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(116, 116, 116);&quot;&gt;{!Description}&lt;/strong&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
