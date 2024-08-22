@@ -3,7 +3,6 @@
     <fullName>MUSW__Proceeding_Default</fullName>
     <fields>Name</fields>
     <fields>MUSW__Type__c</fields>
-    <fields>MUSW__Proceeding_Body__c</fields>
     <fields>MUSW__Scheduled_Date__c</fields>
     <label>Proceeding Default</label>
 </CompactLayout>
