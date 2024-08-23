@@ -36,10 +36,6 @@
                 <behavior>Readonly</behavior>
                 <field>MUSW__Completed_Action__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>MUSW__Related_To__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
