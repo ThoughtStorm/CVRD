@@ -9,7 +9,7 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Planner_Review</name>
-            <conditionLogic>1 AND (2 OR 3 )</conditionLogic>
+            <conditionLogic>1 AND (2 OR 3 OR 4 )</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -29,6 +29,13 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.MUSW__Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Appeal</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -153,10 +160,26 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>Update_APplication_Co_CFO_Check</name>
+        <label>Update APplication Co/CFO Check</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <inputAssignments>
+            <field>CVRD_DS_CO_CFO_File_Uploaded__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_Planner_review_to_Correction_Required</name>
         <label>Update Planner review to Correction Required</label>
         <locationX>50</locationX>
         <locationY>647</locationY>
+        <connector>
+            <targetReference>Update_APplication_Co_CFO_Check</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
