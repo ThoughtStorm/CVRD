@@ -14,12 +14,8 @@
         <label>Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>MUSW__Type__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CVRD_DS_Planner__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -45,7 +41,7 @@
         <label>Related</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>MUSW__Application2__c</field>
             </layoutItems>
         </layoutColumns>
