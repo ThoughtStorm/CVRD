@@ -7,10 +7,12 @@
 						<h3 class="slds-section__title slds-theme_shade">
                             <span class="slds-truncate slds-p-horizontal_small">{key.submissionName}</span>
 						</h3>
-						<div class="slds-section__content" id="expando-unique-id">
-							<lightning-button class="slds-m-left_medium slds-m-bottom_medium" variant="base" label={key.title} onclick={handleDownload} data-url={key.urls}>
+						<template for:each={key.urls} for:item="val">
+						<div key={val} class="slds-section__content" id="expando-unique-id">
+							<lightning-button class="slds-m-left_medium slds-m-bottom_medium" variant="base" label={val.title} onclick={handleDownload} data-url={key.url}>
 							</lightning-button>
 						</div>
+						</template>
 					</div>
 				</template>
 				</lightning-card>

@@ -1,43 +1,86 @@
 <template>
 	<lightning-card>
+		<div class="slds-page-header slds-page-header_related-list">
+			<div class="slds-page-header__row">
+				<div class="slds-page-header__col-title">
+					<div class="slds-media">
+						<div class="slds-media__body">
+							<div class="slds-page-header__name">
+								<div class="slds-page-header__name-title">
+									<h1>
+										<span class="slds-page-header__title" >Electoral Area '{area_val}' Applications</span>
+									</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slds-page-header__col-actions">
+					<div class="slds-page-header__controls">
+						<div class="slds-page-header__control">
+							<ul class="slds-button-group-list">
+								<li>
+									<template if:true={recordData}>
+										<lightning-input type="search" label="Search Application Number"
+										onchange={handleSearch}></lightning-input>
+									</template>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="slds-m-around_medium">
-			<lightning-layout multiple-rows>
-				<lightning-layout-item size="1" padding="around-small">
-				</lightning-layout-item>
-				<lightning-layout-item size="2" padding="around-small">
-					<lightning-input type="search" label="Application" onchange={handleApplication}></lightning-input>
-				</lightning-layout-item>
-				<lightning-layout-item size="2" padding="around-small">
-					<lightning-input type="search" label="Address" onchange={handleAddress}></lightning-input>
-				</lightning-layout-item>
-				<lightning-layout-item size="2" padding="around-small">
-					<lightning-input type="search" label="PID" onchange={handlePID}></lightning-input>
-				</lightning-layout-item>
-				<lightning-layout-item size="2" padding="around-small">
-					<!--lightning-input type="search" label="PID" onchange={handlePID}></lightning-input-->
-					<lightning-combobox name="ElectorialArea" label="Electoral Area" value={area} placeholder="--Select Area--" 
-						options={options} onchange={handleCombo}></lightning-combobox>
-				</lightning-layout-item>
-                <lightning-layout-item size="2" padding="around-small">
-					<!--lightning-input type="search" label="PID" onchange={handlePID}></lightning-input-->
-					<lightning-button variant="brand" label="Search" onclick={handleSearch} style="position:relative; top:22px;" ></lightning-button>
-					<lightning-button variant="brand-outline" label="Cancel" onclick={handleCancel} style="position:relative; top:22px;" class="slds-m-left_x-small"></lightning-button>
-				</lightning-layout-item>
-				<lightning-layout-item size="1" padding="around-small">
-				</lightning-layout-item>
-
-			</lightning-layout>
-			<template if:true={data}>
-				<lightning-datatable key-field="Id" data={data} columns={columns} hide-checkbox-column="true"
-					show-row-number-column="true" onrowaction={handleRowAction}>
+			<template if:true={recordData}>
+				<lightning-datatable key-field="id" data={recordData} columns={columns} hide-checkbox-column="true"
+					show-row-number-column="true" sorted-by={sortBy} sorted-direction={sortDirection}
+					onsort={doSorting}>
 				</lightning-datatable>
 			</template>
-            <template if:false={data}>
+			<template if:false={recordData}>
 				<div class="slds-text-heading_small">{errorMessage}</div>
 			</template>
 			<template if:true={error}>
-				{error}>
+				{error}
 			</template>
 		</div>
+		<p slot="footer">
+			<!--<b>{pageNumber} of {totalPages}</b>
+			<lightning-button-group class="slds-m-around_medium">
+				<lightning-button variant="brand-outline" label="&#x00AB;" onclick={first}></lightning-button>
+				<lightning-button variant="brand-outline" label="&lt;" onclick={previous}></lightning-button>
+				<lightning-button variant="brand-outline" label="&gt;" onclick={next}></lightning-button>
+				<lightning-button variant="brand-outline" label="&#x00BB;" onclick={last}></lightning-button>
+			</lightning-button-group>-->
+			<template if:true={recordData}>
+                <div style="background: rgb(243, 243, 243);height:50px;margin-top:5px;">        
+                    <div class="slds-grid" style="height:4em;float: right;">
+                        <button class="slds-button slds-button_icon icon_button icon_button_disabled" title="First" role="first" onclick={handleFirst} disabled={first}>
+                            <svg viewBox="0 0 1024 1024" class="icon">
+                                <g><path d="M1024 1024 256 512 1024 0Z"  /><path d="M0 128l256 0 0 768-256 0 0-768Z"  /></g>
+                            </svg>  
+                        </button>
+                        <button class="slds-button slds-button_icon icon_button icon_button_disabled" title="Previous" role="previous" onclick={handlePrevious} disabled={first}>
+                            <svg viewBox="0 0 1024 1024" class="icon">
+                                <g><path d="M1024 1024 256 512 1024 0Z"  /></g>
+                            </svg>
+                        </button>
+                        <span class="vcenter currentpage">{currentPage}</span>
+                        <span class="vcenter" style="font-weight: 500;">&nbsp;/&nbsp;{totalPages}</span>
+                        <button class="slds-button slds-button_icon icon_button" title="Next" role="next" onclick={handleNext} disabled={last}>
+                            <svg viewBox="0 0 1024 1024" class="icon">
+                                <g><path d="M0 0 768 512 0 1024Z"  /></g>
+                            </svg>
+                        </button>
+                        <button class="slds-button slds-button_icon icon_button" title="Last" role="last" onclick={handleLast} disabled={last}>
+                            <svg viewBox="0 0 1024 1024" class="icon">
+                                <g><path d="M0 0 768 512 0 1024Z"  /><path d="M768 128l256 0 0 768-256 0 0-768Z"  /></g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </template>
+		</p>
 	</lightning-card>
 </template>

@@ -22,16 +22,19 @@ export default class CVRD_DS_DocumentAvailablePublicly extends LightningElement 
         const documentsArray = [];
         for (const submissionName in documentsMap) {
             if (documentsMap.hasOwnProperty(submissionName)) {
-                let bracketValue = JSON.stringify(documentsMap[submissionName]);
-                let name = bracketValue.match(/\(([^)]+)\)/);
-                let url = bracketValue.split(')').slice(1).join(')').trim()
-                url = url.slice(0, -2);
-                console.log(url);
-                documentsArray.push({
-                    submissionName: submissionName,
-                    urls: url,
-                    title: name[1]
-                });
+                const documentEntries = documentsMap[submissionName];
+                const urls = documentEntries.map(entry => {
+                                let name = entry.match(/\(([^)]+)\)/);
+                                let url = entry.split(')').slice(1).join(')').trim()
+                                return {
+                                    title: name[1],
+                                    url: url
+                                };
+                            });
+                            documentsArray.push({
+                                submissionName: submissionName,
+                                urls: urls
+                            });
             }
         }
         return documentsArray;
