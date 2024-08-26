@@ -79,15 +79,17 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
         }
 
     //}
-    doSorting(event) {
-        console.log('inside method doSorting');
-        this.sortBy = event.detail.fieldName;
+    doSorting(event) {      
+        this.sortBy = event.detail.fieldName; 
         this.sortDirection = event.detail.sortDirection;
         this.sortData(this.sortBy, this.sortDirection);
         this.updatePage();
     }
     sortData(fieldname, direction) {
-        console.log('inside method sortData');
+        if(fieldname=='AppLink'){
+            fieldname='Name';
+        }
+        
         let parseData = JSON.parse(JSON.stringify(this.details));
         // Return the value stored in the field
         let keyValue = (a) => {
