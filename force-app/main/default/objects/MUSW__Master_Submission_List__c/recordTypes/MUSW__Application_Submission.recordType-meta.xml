@@ -115,7 +115,67 @@
     <picklistValues>
         <picklist>MUSW__Application_Types__c</picklist>
         <values>
+            <fullName>Agricultural_Land_Reserve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board_of_Variance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannabis Retail Licence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covenant_Amendment%2FDischarge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crown_Land_Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Development_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development_Variance_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flood_Management_Bylaw_Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquor Licence Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minimum_Frontage_Exception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCP_Zoning_or_Land_Use_Bylaw_Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phased_Development_Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strata_Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subdivision_Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunication_Antenna_Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary_Use_Permit</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -143,11 +203,79 @@
     <picklistValues>
         <picklist>MUSW__Object_Record_Types__c</picklist>
         <values>
+            <fullName>Building_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Agricultural_Land_Reserve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Board_of_Variance</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>CVRD_DS_Cannabis_License</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>CVRD_DS_Covenant_Amendment_or_Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Crown_Land_Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Development_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Development_Variance_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Flood_Management_Bylaw_Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Minimum_Frontage_Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Phased_Development_Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Strata_Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Subdivision_Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Telecommunication_Antenna_Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Temporary_Use_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade_Permit</fullName>
             <default>false</default>
         </values>
     </picklistValues>
