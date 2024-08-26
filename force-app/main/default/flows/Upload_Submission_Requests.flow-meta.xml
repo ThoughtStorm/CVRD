@@ -205,28 +205,28 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Evaluate_Submissions_Complete</name>
-        <label>Evaluate Submissions Complete</label>
+        <name>Evaluate_Required_Submission_pending</name>
+        <label>Evaluate Required Submission pending</label>
         <locationX>314</locationX>
         <locationY>1082</locationY>
         <defaultConnector>
             <targetReference>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
-            <name>Evaluate_for_Required_Submissions</name>
+            <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varSubmissionsReequired</leftValueReference>
-                <operator>IsNull</operator>
+                <leftValueReference>PendingRequiredSubmissions</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>Pending_Submission_Required_Requests_Uploaded_some_satisfied_no_fees</targetReference>
             </connector>
-            <label>Evaluate for Required Submissions</label>
+            <label>Yes</label>
         </rules>
     </decisions>
     <decisions>
@@ -442,7 +442,7 @@
         <locationY>974</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Evaluate_Submissions_Complete</targetReference>
+            <targetReference>Evaluate_Required_Submission_pending</targetReference>
         </connector>
         <filterLogic>(1 AND 4 AND 7 AND 8) OR (2 AND 4 AND 5 AND 8) OR (3 AND 4 AND 6 AND 8)</filterLogic>
         <filters>
@@ -877,6 +877,10 @@
                 <assignToReference>Pending_Submissions_Boolean</assignToReference>
                 <name>pendingSubmissions</name>
             </outputParameters>
+            <outputParameters>
+                <assignToReference>PendingRequiredSubmissions</assignToReference>
+                <name>pendingRequiredSubmissions</name>
+            </outputParameters>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -957,6 +961,13 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>MUSW__Submission__c</objectType>
+    </variables>
+    <variables>
+        <name>PendingRequiredSubmissions</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>Permit_Id</name>
