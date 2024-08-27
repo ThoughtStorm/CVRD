@@ -4,7 +4,7 @@
         <name>Redirect_To_Record_Detail_Page</name>
         <label>Redirect To Record Detail Page</label>
         <locationX>314</locationX>
-        <locationY>1406</locationY>
+        <locationY>1298</locationY>
         <actionName>clariti:flowNavigation</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -101,7 +101,7 @@
         <name>Evaluate_Button_Bar_Value</name>
         <label>Evaluate Button Bar Value</label>
         <locationX>578</locationX>
-        <locationY>1298</locationY>
+        <locationY>1190</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Button_Bar_Value_Finish</name>
@@ -205,28 +205,28 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Evaluate_Submissions_Complete</name>
-        <label>Evaluate Submissions Complete</label>
+        <name>Evaluate_Required_Submission_pending</name>
+        <label>Evaluate Required Submission pending</label>
         <locationX>314</locationX>
-        <locationY>1082</locationY>
+        <locationY>974</locationY>
         <defaultConnector>
             <targetReference>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
-            <name>Evaluate_for_Required_Submissions</name>
+            <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varSubmissionsReequired</leftValueReference>
-                <operator>IsNull</operator>
+                <leftValueReference>PendingRequiredSubmissions</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>Pending_Submission_Required_Requests_Uploaded_some_satisfied_no_fees</targetReference>
             </connector>
-            <label>Evaluate for Required Submissions</label>
+            <label>Yes</label>
         </rules>
     </decisions>
     <decisions>
@@ -435,83 +435,13 @@
         <queriedFields>Name</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordLookups>
-        <name>Get_required_pending_submissions</name>
-        <label>Get required pending submissions</label>
-        <locationX>314</locationX>
-        <locationY>974</locationY>
-        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Evaluate_Submissions_Complete</targetReference>
-        </connector>
-        <filterLogic>(1 AND 4 AND 7 AND 8) OR (2 AND 4 AND 5 AND 8) OR (3 AND 4 AND 6 AND 8)</filterLogic>
-        <filters>
-            <field>MUSW__Application2__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Application_Id</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Permit2__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Permit_Id</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__License2__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>License_Id</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Status__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <elementReference>Status_Value</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Permit2__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__License2__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Application2__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Required__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <object>MUSW__Submission__c</object>
-        <outputReference>varSubmissionsReequired</outputReference>
-        <queriedFields>Id</queriedFields>
-    </recordLookups>
     <runInMode>DefaultMode</runInMode>
     <screens>
         <description>(all satisfied / no fees)</description>
         <name>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</name>
         <label>Pending Submission Requests Uploaded (all satisfied / no fees)</label>
         <locationX>578</locationX>
-        <locationY>1190</locationY>
+        <locationY>1082</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -749,39 +679,14 @@
         <name>Pending_Submission_Required_Requests_Uploaded_some_satisfied_no_fees</name>
         <label>Pending Submission Requests Uploaded (some satisfied / no fees)</label>
         <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationY>1082</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <fields>
-            <name>Copy_1_of_Confirmation_Page_3</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;You have successfully uploaded &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;required &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;documents to your pending application, assigned Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 14px;&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(23, 43, 77); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;Additional documents are pending. To upload/view additional documents click the &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;Previous &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(23, 43, 77); font-size: 14px;&quot;&gt;button&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>varSubmissionsReequired.Id</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
             <name>required_Submissions</name>
             <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Additional Documents Required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;You have &lt;/span&gt;&lt;strong style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;required &lt;/strong&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;documents to be uploaded to your pending application, assigned Preliminary Application Number &lt;/span&gt;&lt;u style=&quot;font-size: 14px; color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;{!Get_Application_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); background-color: rgb(255, 255, 255); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Click the &lt;/span&gt;&lt;strong style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Previous &lt;/strong&gt;&lt;span style=&quot;font-size: 14px; color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;button to upload the all required documents&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>varSubmissionsReequired.Id</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>false</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
         </fields>
         <fields>
             <name>Copy_1_of_Button_Bar_3</name>
@@ -848,7 +753,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Get_required_pending_submissions</targetReference>
+            <targetReference>Evaluate_Required_Submission_pending</targetReference>
         </connector>
         <fields>
             <name>Pending_Submissions_Display_Text</name>
@@ -876,6 +781,10 @@
             <outputParameters>
                 <assignToReference>Pending_Submissions_Boolean</assignToReference>
                 <name>pendingSubmissions</name>
+            </outputParameters>
+            <outputParameters>
+                <assignToReference>PendingRequiredSubmissions</assignToReference>
+                <name>pendingRequiredSubmissions</name>
             </outputParameters>
         </fields>
         <showFooter>true</showFooter>
@@ -957,6 +866,13 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>MUSW__Submission__c</objectType>
+    </variables>
+    <variables>
+        <name>PendingRequiredSubmissions</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>Permit_Id</name>
