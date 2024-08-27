@@ -106,7 +106,7 @@
             <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Upload_meeting_documents</leftValueReference>
+                <leftValueReference>ContentVersionIds</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>

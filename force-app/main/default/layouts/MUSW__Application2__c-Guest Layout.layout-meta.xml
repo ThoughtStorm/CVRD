@@ -22,6 +22,10 @@
                 <behavior>Edit</behavior>
                 <field>MUSW__Address__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CVRD_DS_Email__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

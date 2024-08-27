@@ -10,7 +10,7 @@
 						<template for:each={key.urls} for:item="val">
 							<div key={val} class="slds-section__content" id="expando-unique-id">
 								<lightning-button class="slds-m-left_medium slds-m-bottom_medium" variant="base"
-									label={val.title} onclick={handleDownload} data-url={key.url}>
+									label={val.title} onclick={handleDownload} data-url={val.url}>
 								</lightning-button>
 							</div>
 						</template>
