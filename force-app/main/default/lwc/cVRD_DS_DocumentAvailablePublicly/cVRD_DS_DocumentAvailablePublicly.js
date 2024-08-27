@@ -6,12 +6,18 @@ export default class CVRD_DS_DocumentAvailablePublicly extends LightningElement 
     documents;
     error;
     bracketValue;
+    errorMessage;
     @wire(getFileId, { ApplicationId: '$recordId' })
     wiredDocuments({ error, data }) {
         if (data) {
             this.documents = this.transformDocumentsData(data);
-            this.error = undefined;
-            console.log(this.documents);
+            if(this.documents!=null && this.documents!=''){
+                this.error = undefined;
+            }
+            else{
+                this.documents = undefined;
+            this.errorMessage = 'The documents are not publicly accessible.';
+            }
         } else if (error) {
             this.error = error.body.message;
             this.documents = undefined;
@@ -20,7 +26,7 @@ export default class CVRD_DS_DocumentAvailablePublicly extends LightningElement 
 
     transformDocumentsData(documentsMap) {
         const documentsArray = [];
-        for (const submissionName in documentsMap) {
+        for (const submissionName in documentsMap) {       
             if (documentsMap.hasOwnProperty(submissionName)) {
                 const documentEntries = documentsMap[submissionName];
                 const urls = documentEntries.map(entry => {

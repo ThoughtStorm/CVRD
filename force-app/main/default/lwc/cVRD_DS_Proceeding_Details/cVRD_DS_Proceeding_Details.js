@@ -7,12 +7,16 @@ export default class CVRD_DS_Proceeding_Details extends LightningElement {
 
     @wire(getDetails, { ApplicationId: '$recordId' })
     wiredDocuments({ error, data }) {
-        if(data){
+        if(data && data != null && data != ''){
             this.details=data;
             console.log('data=>'+data);
         }else if (error) {
             this.error = error.body.message;
             console.log('error=>'+this.error);
+        }
+        else{
+            this.details = undefined;
+            this.errorMessage = 'No Meetings Scheduled Yet';
         }
     }
 
