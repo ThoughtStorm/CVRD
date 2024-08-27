@@ -49,8 +49,8 @@
           "componentAttributes" : {
             "recordId" : "{!recordId}"
           },
-          "componentName" : "forceCommunity:lwcRecordDetail",
-          "id" : "0819c2aa-3b56-4912-b574-045558a23d5c",
+          "componentName" : "forceCommunity:recordDetail",
+          "id" : "f7dd2275-b052-407a-a28d-91e45cb27d56",
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
