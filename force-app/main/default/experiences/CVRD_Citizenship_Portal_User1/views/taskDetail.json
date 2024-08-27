@@ -45,6 +45,16 @@
       "componentName" : "forceCommunity:tabLayout",
       "id" : "cdbb47aa-e4a1-4e72-a3b1-11f0a51a4156",
       "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "forceCommunity:recordDetail",
+          "id" : "f7dd2275-b052-407a-a28d-91e45cb27d56",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
         "id" : "716d0460-5344-4b18-866c-b0505f7afe11",
         "regionLabel" : "Details",
         "regionName" : "1",
