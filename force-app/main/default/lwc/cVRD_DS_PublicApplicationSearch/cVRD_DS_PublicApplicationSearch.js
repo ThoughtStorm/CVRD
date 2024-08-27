@@ -16,6 +16,8 @@ const columns = [
 
 export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
     @track details;
+    filterData;
+    area='none';
     recordData;
     @api area_val;
     @track columns = columns;
@@ -25,15 +27,32 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
     alldata;
     currentPage = 1;
     recordsearching=false;
-    
-
     pageData = [];
-    totalPages;
-
-    //used to Load the First Page. 
-    first = true;
-    //used to Load the Last Page. 
+    totalPages; 
+    first = true; 
     last = false;
+
+    get options() {
+        return [
+            { label: '--None--', value: 'none' },
+            { label: 'Agricultural Land Reserve', value: 'Agricultural Land Reserve' },
+            { label: 'Board of Variance', value: 'Board of Variance' },
+            { label: 'Cannabis Retail Licence', value: 'Cannabis Retail Licence' },
+            { label: 'Covenant Amendment/Discharge', value: 'Covenant Amendment/Discharge' },
+            { label: 'Crown Land Referrals', value: 'Crown Land Referrals' },
+            { label: 'Development Permit', value: 'Development Permit' },
+            { label: 'Development Variance Permit', value: 'Development Variance Permit' },
+            { label: 'Flood Management Bylaw Exemption', value: 'Flood Management Bylaw Exemption' },
+            { label: 'Liquor Licence Referrals', value: 'Liquor Licence Referrals' },
+            { label: 'Minimum Frontage Exception', value: 'Minimum Frontage Exception' },
+            { label: 'OCP, Zoning or Land Use Bylaw Amendment', value: 'OCP, Zoning or Land Use Bylaw Amendment' },
+            { label: 'Phased Development Agreement', value: 'Phased Development Agreement' },
+            { label: 'Strata Conversion', value: 'Strata Conversion' },
+            { label: 'Subdivision (Referral)', value: 'Subdivision (Referral)' },
+            { label: 'Telecommunication Antenna Structure', value: 'Telecommunication Antenna Structure' },
+            { label: 'Temporary Use Permit', value: 'Temporary Use Permit' }
+        ];
+    }
 
     connectedCallback() {
         getAppList({ electorialArea: this.area_val })
@@ -52,42 +71,40 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
 
                     });
                     this.details = res;
+                    console.log('detail Length->'+this.details.length);
                     this.alldata=[...this.details];
-                    //this.totalPages=Math.ceil((this.details.length-1)/10);
+                    this.filterData=[...this.details];
+                    console.log('filter Length->'+this.filterData.length);
                     this.updatePage();
                 }
                 else {
-                    console.log('else->res::' + res);
                     this.details = undefined;
                     this.errorMessage = 'No Records Found';
                 }
-
             })
             .catch((error) => {
                 this.error = error;
                 cosnole.log(this.error);
             }); 
     }
+
     updatePage() {
-        /*if(this.recordsearching){
-            this.recordData = datalist.slice((this.currentPage-1)*10, (this.currentPage-1)*10+10);
-            this.totalPages=Math.ceil((datalist.length-1)/10);
-        }
-        else{*/
         this.recordData = this.details.slice((this.currentPage-1)*10, (this.currentPage-1)*10+10);
         this.totalPages=Math.ceil((this.details.length-1)/10);
-        }
+    }
 
-    //}
-    doSorting(event) {
-        console.log('inside method doSorting');
-        this.sortBy = event.detail.fieldName;
+    doSorting(event) {      
+        this.sortBy = event.detail.fieldName; 
         this.sortDirection = event.detail.sortDirection;
         this.sortData(this.sortBy, this.sortDirection);
         this.updatePage();
     }
+
     sortData(fieldname, direction) {
-        console.log('inside method sortData');
+        if(fieldname=='AppLink'){
+            fieldname='Name';
+        }
+        
         let parseData = JSON.parse(JSON.stringify(this.details));
         // Return the value stored in the field
         let keyValue = (a) => {
@@ -102,8 +119,7 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
             // sorting values based on direction
             return isReverse * ((x > y) - (y > x));
         });
-        this.details = parseData;
-        
+        this.details = parseData;  
     }
 
     handleNext(){
@@ -138,6 +154,61 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
         this.refreshButtons();
     }
 
+    handleCombo(event){
+        this.area = event.detail.value;
+        if (this.area != 'none') {
+            this.details.splice(0, this.details.length);
+            this.alldata.forEach(data => {
+                if (this.area == data.MUSW__Type2__c) {
+                    this.details.push(data);
+                }
+            });
+        }
+        else if(this.area == 'none'){
+            this.details.splice(0, this.details.length);
+            this.details=[...this.alldata];
+        }
+        this.filterData=[...this.details];
+        this.updatePage();
+    }
+
+    handleSearch(event) {
+        let searchList;
+            searchList=[...this.filterData];
+  
+            const searchKey = event.detail.value.toUpperCase();
+            if (searchKey) {
+                if (this.alldata) {
+                    this.details.splice(0, this.details.length);
+                    searchList.forEach(data => {
+                        let valuesArray = Object.values(data);
+                        //for (let val of valuesArray) {
+                            let strVal = String(valuesArray[1]);
+                            //console.log('val->'+strVal);
+                            if (strVal) {
+                                if (strVal.toUpperCase().includes(searchKey)) {
+                                    this.details.push(data);
+                                    //break;
+                                }
+                            }
+                        //}
+                    });
+                    this.currentPage = 1;
+                    this.updatePage();
+                    this.totalPages = Math.ceil((this.details.length - 1) / 10);
+                    this.first = true;
+                    this.last = (this.currentPage == this.totalPages);
+                    this.refreshButtons();
+                }
+            }
+            else {
+                this.details.splice(0, this.details.length);
+                this.details = [...this.filterData];
+                this.updatePage();
+
+            }
+    }
+
     refreshButtons() {
         this.template.querySelectorAll('.icon_button').forEach(button => {
             button.classList.remove('icon_button_disabled');
@@ -149,40 +220,6 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
         if(this.first) {
             this.template.querySelector('[role=first]').classList.add('icon_button_disabled');
             this.template.querySelector('[role=previous]').classList.add('icon_button_disabled');
-        }
-    }
-
-    handleSearch(event){
-        const searchKey = event.detail.value.toUpperCase();
-        if(searchKey){
-            if(this.alldata){
-                this.details.splice(0, this.details.length);
-                console.log('length->'+this.alldata.length);
-                this.alldata.forEach(data => {
-                    let valuesArray = Object.values(data);
-                    for (let val of valuesArray) {
-                        let strVal = String(val);
-                        if (strVal) {
-                            if (strVal.toUpperCase().includes(searchKey)) {
-                                this.details.push(data);
-                                break;
-                            }
-                        }
-                    }
-                });
-                this.currentPage=1;
-                this.updatePage();
-                this.totalPages=Math.ceil((this.details.length-1)/10);
-                this.first = true;
-                this.last = (this.currentPage == this.totalPages);
-                this.refreshButtons();
-            }
-        }
-        else{
-            this.details.splice(0, this.details.length);
-            this.details=[...this.alldata];
-            this.updatePage();
-                
         }
     }
 }

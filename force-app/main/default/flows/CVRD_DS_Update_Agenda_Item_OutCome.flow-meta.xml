@@ -5,7 +5,7 @@
         <name>Check_Board_Meeting_Outcome</name>
         <label>Check Board Meeting Outcome</label>
         <locationX>182</locationX>
-        <locationY>566</locationY>
+        <locationY>1166</locationY>
         <defaultConnector>
             <targetReference>Success_Screen</targetReference>
         </defaultConnector>
@@ -93,6 +93,31 @@
             <label>Record Found</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Document_Uploaded</name>
+        <label>Document Uploaded</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Update_Outcome</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Upload_meeting_documents</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_on_content_version_Ids</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
     <dynamicChoiceSets>
         <name>OutComeChoiceList</name>
         <dataType>String</dataType>
@@ -118,6 +143,20 @@
     <interviewLabel>CVRD DS - Update Agenda Item OutCome {!$Flow.CurrentDateTime}</interviewLabel>
     <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD DS - Update Agenda Item OutCome</label>
+    <loops>
+        <name>Loop_on_content_version_Ids</name>
+        <label>Loop on content version Ids</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <collectionReference>ContentVersionIds</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Content_Distribution_Link</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Get_Content_DestributionLink</targetReference>
+        </noMoreValuesConnector>
+    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -137,6 +176,74 @@
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
+    <recordCreates>
+        <name>Content_Distribution_Link</name>
+        <label>Only One Content Distribution Link</label>
+        <locationX>138</locationX>
+        <locationY>674</locationY>
+        <connector>
+            <targetReference>Loop_on_content_version_Ids</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ContentVersionId</field>
+            <value>
+                <elementReference>Loop_on_content_version_Ids</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>Meeting Outcome Document</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesAllowOriginalDownload</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesAllowViewInBrowser</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesNotifyOnVisit</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RelatedRecordId</field>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ContentDistribution</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Content_DestributionLink</name>
+        <label>Get Content DestributionLink</label>
+        <locationX>50</locationX>
+        <locationY>866</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Outcome</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Content_Distribution_Link</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ContentDistribution</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordLookups>
         <name>Get_Outcome</name>
         <label>Get Outcome</label>
@@ -169,7 +276,7 @@
         <name>Update_Application_To_Review_Phase</name>
         <label>Update Application To Review Phase</label>
         <locationX>50</locationX>
-        <locationY>674</locationY>
+        <locationY>1274</locationY>
         <connector>
             <targetReference>Success_Screen</targetReference>
         </connector>
@@ -212,7 +319,7 @@
         <name>Update_Outcome</name>
         <label>Update Outcome</label>
         <locationX>182</locationX>
-        <locationY>458</locationY>
+        <locationY>1058</locationY>
         <connector>
             <targetReference>Check_Board_Meeting_Outcome</targetReference>
         </connector>
@@ -228,6 +335,12 @@
             <field>CVRD_DS_Outcome__c</field>
             <value>
                 <elementReference>Outcome</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Public_URL__c</field>
+            <value>
+                <elementReference>Get_Content_DestributionLink.DistributionPublicUrl</elementReference>
             </value>
         </inputAssignments>
         <object>MUSW__Proceeding_Agenda_Item__c</object>
@@ -257,7 +370,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Update_Outcome</targetReference>
+            <targetReference>Document_Uploaded</targetReference>
         </connector>
         <fields>
             <name>OutCome_Screen_Section1</name>
@@ -269,10 +382,68 @@
                     <name>Outcome</name>
                     <choiceReferences>OutComeChoiceList</choiceReferences>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>recordId.CVRD_DS_Outcome__c</elementReference>
+                    </defaultValue>
                     <fieldText>Outcome</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Upload_meeting_documents</name>
+                    <dataType>Boolean</dataType>
+                    <defaultValue>
+                        <booleanValue>false</booleanValue>
+                    </defaultValue>
+                    <fieldText>Upload meeting documents</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>UploadMeetingDocument</name>
+                    <extensionName>forceContent:fileUpload</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Upload Document</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>multiple</name>
+                        <value>
+                            <booleanValue>false</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordId</name>
+                        <value>
+                            <elementReference>recordId.Id</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <outputParameters>
+                        <assignToReference>ContentVersionIds</assignToReference>
+                        <name>contentVersionIds</name>
+                    </outputParameters>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Upload_meeting_documents</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>test</name>
+                    <fieldText>&lt;p&gt;{!ContentVersionIds}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -292,7 +463,7 @@
         <name>Success_Screen</name>
         <label>Success Screen</label>
         <locationX>182</locationX>
-        <locationY>866</locationY>
+        <locationY>1466</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -312,6 +483,27 @@
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <name>ContentDocumentIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ContentVersionIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>fileUploadName</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>recordId</name>
         <dataType>SObject</dataType>

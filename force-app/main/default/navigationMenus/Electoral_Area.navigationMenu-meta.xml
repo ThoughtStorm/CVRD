@@ -90,7 +90,7 @@
         </menuItemBranding>
         <position>9</position>
         <publiclyAvailable>true</publiclyAvailable>
-        <target>/open-search</target>
+        <target>/electoral-area-i</target>
         <type>InternalLink</type>
     </navigationMenuItem>
 </NavigationMenu>
