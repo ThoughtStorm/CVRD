@@ -1,0 +1,100 @@
+{
+  "distanceUnits": [{
+    "unit": "FEET",
+    "abbr": "ft"
+  }, {
+    "unit": "METERS",
+    "abbr": "m"
+  }, {
+    "unit": "YARDS",
+    "abbr": "yd"
+  }],
+  "showLegend": true,
+  "contextMenu": {
+    "ZoomTo": true,
+    "Transparency": true,
+    "EnableOrDisablePopup": true,
+    "MoveupOrMovedown": true,
+    "OpenAttributeTable": false,
+    "DescriptionOrShowItemDetailsOrDownload": true
+  },
+  "layerOptions": {
+    "USA_AZ_Phoenix_Schools": {
+      "display": true
+    }
+  },
+  "layers": [
+    {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/9",
+      "label": "CVRD Parcel",
+      "type": "feature",
+      "fieldInfos": [
+      {
+      "fieldName": "ParcelId",
+      "label": "PARCELID",
+      "visible": true
+      }, {
+      "fieldName": "PID",
+      "label": "PID",
+      "visible": true
+      }, {
+        "fieldName": "LegalDescription",
+        "label": "Legal Description",
+        "visible": true
+        }, {
+          "fieldName": "Muncipality",
+          "label": "Muncipality",
+          "visible": true
+          }
+      ]
+     },
+     {
+      "url": "https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/4",
+      "label": "CVRD Address",
+      "type": "feature",
+      "fieldInfos": [
+      {
+      "fieldName": "ROADNAME",
+      "label": "ROADNAME",
+      "visible": true
+      }, {
+      "fieldName": "ADDR_FULL",
+      "label": "ADDR_FULL",
+      "visible": true
+      }
+      ]
+     },
+     {
+      "url": "https://maps.cvrd.ca/mapservices/rest/services/Hosted/CivicAddress_LMS/FeatureServer/0",
+      "label": "CVRD Address",
+      "type": "feature",
+      "fieldInfos": [
+      {
+      "fieldName": "ROADNAME",
+      "label": "ROADNAME",
+      "visible": true
+      }, {
+      "fieldName": "ADDR_FULL",
+      "label": "ADDR_FULL",
+      "visible": true
+      }
+      ]
+     },
+    {
+      "url": "MUSW__Parcel__c",
+      "label": "BG Parcel",
+      "type": "basicgov",
+      "iconPath": "images/Favourite.png"
+    },
+    {
+      "url": "MUSW__Application2__c",
+      "label": "BG Application",
+      "type": "basicgov"
+    },
+    {
+      "url": "MUSW__Application_Location__c",
+      "label": "Property Information",
+      "type": "basicgov"
+    }   
+  ]
+}
