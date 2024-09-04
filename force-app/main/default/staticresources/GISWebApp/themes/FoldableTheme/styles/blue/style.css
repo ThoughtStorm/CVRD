@@ -1,0 +1,21 @@
+.jimu-main-background{
+  background-color: #124651;
+}
+.jimu-widget-header-controller .jimu-drop-menu{
+  background-color: #124651;
+}
+.jimu-header-more-popup .icon-node {
+	background-color: #124651;
+}
+.jimu-header-more-popup .close-inner {
+	background-color: #124651;
+}
+.jimu-on-screen-widget-panel>.jimu-panel-title,
+.jimu-foldable-panel>.jimu-panel-title,
+.jimu-title-panel>.title{
+  background-color: #124651;
+}
+
+.esriPopup .titlePane {
+  background-color: #124651;
+}
