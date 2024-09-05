@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>DataDotComClean</excludeButtons>
-    <excludeButtons>RequestUseSfdc</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
         <editHeading>true</editHeading>
-        <label>Contact Information</label>
+        <label>Account Information</label>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Title</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>Email</field>
+                <behavior>Edit</behavior>
+                <field>ParentId</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -29,36 +23,14 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MobilePhone</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Fax</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MUSW__DBA_Name__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Department</field>
+                <field>Website</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Account Information</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>AccountId</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns/>
-        <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -68,13 +40,13 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MailingAddress</field>
+                <field>BillingAddress</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>OtherAddress</field>
+                <field>ShippingAddress</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -117,7 +89,7 @@
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
-        <detailHeading>false</detailHeading>
+        <detailHeading>true</detailHeading>
         <editHeading>false</editHeading>
         <label>Custom Links</label>
         <layoutColumns>
@@ -125,7 +97,7 @@
                 <customLink>GoogleSearch</customLink>
             </layoutItems>
             <layoutItems>
-                <customLink>YahooWeather</customLink>
+                <customLink>HooversProfile</customLink>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -135,12 +107,36 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <customLink>SendGmail</customLink>
+                <customLink>GoogleNews</customLink>
             </layoutItems>
         </layoutColumns>
         <style>CustomLinks</style>
     </layoutSections>
+    <platformActionList>
+        <actionListContext>Record</actionListContext>
+        <platformActionListItems>
+            <actionName>NewContact</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>1</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Delete</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>2</sortOrder>
+        </platformActionListItems>
+    </platformActionList>
     <quickActionList>
+        <quickActionListItems>
+            <quickActionName>NewOpportunity</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>NewEvent</quickActionName>
+        </quickActionListItems>
         <quickActionListItems>
             <quickActionName>FeedItem.TextPost</quickActionName>
         </quickActionListItems>
@@ -151,13 +147,13 @@
             <quickActionName>NewTask</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
-            <quickActionName>LogACall</quickActionName>
+            <quickActionName>NewContact</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>NewCase</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
-            <quickActionName>NewEvent</quickActionName>
+            <quickActionName>LogACall</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>FeedItem.ContentNote</quickActionName>
@@ -178,16 +174,16 @@
             <quickActionName>SendEmail</quickActionName>
         </quickActionListItems>
     </quickActionList>
-    <relatedContent>
-        <relatedContentItems>
-            <layoutItem>
-                <behavior>Readonly</behavior>
-                <field>AccountId</field>
-            </layoutItem>
-        </relatedContentItems>
-    </relatedContent>
+    <relatedLists>
+        <fields>FULL_NAME</fields>
+        <fields>CONTACT.TITLE</fields>
+        <fields>CONTACT.EMAIL</fields>
+        <fields>CONTACT.PHONE1</fields>
+        <relatedList>RelatedContactList</relatedList>
+    </relatedLists>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
+        <fields>TASK.WHO_NAME</fields>
         <fields>TASK.WHAT_NAME</fields>
         <fields>ACTIVITY.TASK</fields>
         <fields>TASK.DUE_DATE</fields>
@@ -198,6 +194,7 @@
     </relatedLists>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
+        <fields>TASK.WHO_NAME</fields>
         <fields>TASK.WHAT_NAME</fields>
         <fields>ACTIVITY.TASK</fields>
         <fields>TASK.DUE_DATE</fields>
@@ -206,10 +203,18 @@
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>OPPORTUNITY.NAME</fields>
+        <fields>OPPORTUNITY.STAGE_NAME</fields>
+        <fields>OPPORTUNITY.AMOUNT</fields>
+        <fields>OPPORTUNITY.CLOSE_DATE</fields>
+        <relatedList>RelatedOpportunityList</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>CASES.CASE_NUMBER</fields>
+        <fields>NAME</fields>
         <fields>CASES.SUBJECT</fields>
         <fields>CASES.PRIORITY</fields>
-        <fields>CASES.CREATED_DATE</fields>
+        <fields>CASES.CREATED_DATE_DATE_ONLY</fields>
         <fields>CASES.STATUS</fields>
         <fields>OWNER_NAME</fields>
         <relatedList>RelatedCaseList</relatedList>
@@ -218,41 +223,24 @@
         <relatedList>RelatedContentNoteList</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <fields>NAME</fields>
-        <fields>MUSW__Type2__c</fields>
-        <fields>MUSW__Phase__c</fields>
-        <fields>MUSW__Status__c</fields>
-        <relatedList>MUSW__Application2__c.MUSW__Applicant__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <relatedList>RelatedFileList</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>ACTIVITY.SUBJECT</fields>
-        <fields>EMAIL_STATUS.CREATED_DATE</fields>
-        <fields>EMAIL_STATUS.FIRST_OPEN_DATE</fields>
-        <fields>EMAIL_STATUS.TIMES_OPENED</fields>
-        <fields>EMAIL_STATUS.LAST_OPEN_DATE</fields>
-        <relatedList>RelatedEmailStatusList</relatedList>
+        <fields>ACCOUNT.NAME</fields>
+        <fields>OPPORTUNITY.NAME</fields>
+        <fields>PARTNER.ROLE</fields>
+        <fields>ACCOUNT.PC_TITLE</fields>
+        <fields>ACCOUNT.PC_EMAIL</fields>
+        <relatedList>RelatedPartnerList</relatedList>
     </relatedLists>
-    <relatedLists>
-        <fields>CAMPAIGN.NAME</fields>
-        <fields>CAMPAIGN.START_DATE</fields>
-        <fields>CAMPAIGN.CAMPAIGN_TYPE</fields>
-        <fields>CM.STATUS</fields>
-        <fields>CM.RESPONDED</fields>
-        <fields>CM.LAST_UPDATE</fields>
-        <relatedList>RelatedCampaignList</relatedList>
-    </relatedLists>
-    <relatedObjects>AccountId</relatedObjects>
+    <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hHr00000cspfh</masterLabel>
+        <masterLabel>00hHr00000cspfi</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
