@@ -4,7 +4,7 @@
     <assignments>
         <name>Assign_Application_Record_Id</name>
         <label>Assign Application Record Id</label>
-        <locationX>468</locationX>
+        <locationX>633</locationX>
         <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>Application_Id</assignToReference>
@@ -27,7 +27,7 @@
     <assignments>
         <name>Assign_Proceeding_Record_Id</name>
         <label>Assign Proceeding Record Id</label>
-        <locationX>204</locationX>
+        <locationX>369</locationX>
         <locationY>458</locationY>
         <assignmentItems>
             <assignToReference>Proceeding_Id</assignToReference>
@@ -50,8 +50,8 @@
     <decisions>
         <name>Check_Board_Meeting_Outcome</name>
         <label>Check Board Meeting Outcome</label>
-        <locationX>182</locationX>
-        <locationY>1406</locationY>
+        <locationX>336</locationX>
+        <locationY>2414</locationY>
         <defaultConnector>
             <targetReference>SuccessScreen</targetReference>
         </defaultConnector>
@@ -117,7 +117,7 @@
     <decisions>
         <name>Check_Is_Application_Record_Empty</name>
         <label>Check Is Application Record Empty</label>
-        <locationX>336</locationX>
+        <locationX>501</locationX>
         <locationY>242</locationY>
         <defaultConnector>
             <targetReference>Get_Proceeding_Record</targetReference>
@@ -140,9 +140,34 @@
         </rules>
     </decisions>
     <decisions>
+        <name>check_outcome</name>
+        <label>check outcome</label>
+        <locationX>336</locationX>
+        <locationY>1406</locationY>
+        <defaultConnector>
+            <targetReference>Check_Board_Meeting_Outcome</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Outcome is Null</defaultConnectorLabel>
+        <rules>
+            <name>outcome_is_not_null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Outcome_1</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Upload_Screen</targetReference>
+            </connector>
+            <label>outcome is not null</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_OutCome_Available</name>
         <label>Check OutCome Available</label>
-        <locationX>336</locationX>
+        <locationX>501</locationX>
         <locationY>1082</locationY>
         <defaultConnector>
             <targetReference>ErrorScreen</targetReference>
@@ -162,6 +187,31 @@
                 <targetReference>Outcome_Screen</targetReference>
             </connector>
             <label>Available</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Document_Uploaded</name>
+        <label>Document Uploaded</label>
+        <locationX>182</locationX>
+        <locationY>1622</locationY>
+        <defaultConnector>
+            <targetReference>update_Agenda_Item_record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>contentVersionIds</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_on_content_version_Ids</targetReference>
+            </connector>
+            <label>Yes</label>
         </rules>
     </decisions>
     <dynamicChoiceSets>
@@ -200,7 +250,22 @@
         <expression>SUBSTITUTE(TEXT({!Get_Application_Record.MUSW__Type2__c}), &quot;_&quot;, &quot; &quot;)</expression>
     </formulas>
     <interviewLabel>CVRD DS - Create Proceeding Agenda Item {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD DS - Create Proceeding Agenda Item</label>
+    <loops>
+        <name>Loop_on_content_version_Ids</name>
+        <label>Loop on content version Ids</label>
+        <locationX>50</locationX>
+        <locationY>1730</locationY>
+        <collectionReference>contentVersionIds</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Only_One_Content_Distribution_Link</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Get_Content_DestributionLink</targetReference>
+        </noMoreValuesConnector>
+    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -223,10 +288,10 @@
     <recordCreates>
         <name>Create_ProceedingAgendaItem</name>
         <label>Create ProceedingAgendaItem</label>
-        <locationX>182</locationX>
+        <locationX>336</locationX>
         <locationY>1298</locationY>
         <connector>
-            <targetReference>Check_Board_Meeting_Outcome</targetReference>
+            <targetReference>check_outcome</targetReference>
         </connector>
         <inputAssignments>
             <field>CVRD_DS_Outcome__c</field>
@@ -253,11 +318,65 @@
             </value>
         </inputAssignments>
         <object>MUSW__Proceeding_Agenda_Item__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Only_One_Content_Distribution_Link</name>
+        <label>Only One Content Distribution Link</label>
+        <locationX>138</locationX>
+        <locationY>1838</locationY>
+        <connector>
+            <targetReference>Loop_on_content_version_Ids</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ContentVersionId</field>
+            <value>
+                <elementReference>Loop_on_content_version_Ids</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>Meeting Outcome Document</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesAllowOriginalDownload</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesAllowPDFDownload</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesAllowViewInBrowser</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PreferencesNotifyOnVisit</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RelatedRecordId</field>
+            <value>
+                <elementReference>Create_ProceedingAgendaItem</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ContentDistribution</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
         <name>Copy_1_of_Get_Application_Record</name>
         <label>Copy 1 of Get Application Record</label>
-        <locationX>336</locationX>
+        <locationX>501</locationX>
         <locationY>866</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -278,7 +397,7 @@
     <recordLookups>
         <name>Get_Application_Record</name>
         <label>Get Application Record</label>
-        <locationX>336</locationX>
+        <locationX>501</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -297,9 +416,30 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>Get_Content_DestributionLink</name>
+        <label>Get Content DestributionLink</label>
+        <locationX>50</locationX>
+        <locationY>2030</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>update_Agenda_Item_record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Only_One_Content_Distribution_Link</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ContentDistribution</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_Outcome</name>
         <label>Get Outcome</label>
-        <locationX>336</locationX>
+        <locationX>501</locationX>
         <locationY>974</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -327,7 +467,7 @@
     <recordLookups>
         <name>Get_Proceeding_Record</name>
         <label>Get Proceeding Record</label>
-        <locationX>468</locationX>
+        <locationX>633</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -348,7 +488,7 @@
     <recordLookups>
         <name>Get_Proceeding_Type</name>
         <label>Get Proceeding Type</label>
-        <locationX>336</locationX>
+        <locationX>501</locationX>
         <locationY>758</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -370,10 +510,34 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>update_Agenda_Item_record</name>
+        <label>update Agenda Item record</label>
+        <locationX>182</locationX>
+        <locationY>2222</locationY>
+        <connector>
+            <targetReference>Check_Board_Meeting_Outcome</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Create_ProceedingAgendaItem</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>CVRD_DS_Public_URL__c</field>
+            <value>
+                <elementReference>Get_Content_DestributionLink.DistributionPublicUrl</elementReference>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Proceeding_Agenda_Item__c</object>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_Application_To_Review_Phase</name>
         <label>Update Application To Review Phase</label>
-        <locationX>50</locationX>
-        <locationY>1514</locationY>
+        <locationX>204</locationX>
+        <locationY>2522</locationY>
         <connector>
             <targetReference>SuccessScreen</targetReference>
         </connector>
@@ -415,7 +579,7 @@
     <screens>
         <name>ErrorScreen</name>
         <label>ErrorScreen</label>
-        <locationX>490</locationX>
+        <locationX>666</locationX>
         <locationY>1190</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -431,7 +595,7 @@
     <screens>
         <name>Outcome_Screen</name>
         <label>Outcome Screen</label>
-        <locationX>182</locationX>
+        <locationX>336</locationX>
         <locationY>1190</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -505,7 +669,7 @@
     <screens>
         <name>Select_Application_Screen</name>
         <label>Select Application Screen</label>
-        <locationX>468</locationX>
+        <locationX>633</locationX>
         <locationY>458</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -585,7 +749,7 @@
     <screens>
         <name>Select_Proceeding_Screen</name>
         <label>Select Proceeding Screen</label>
-        <locationX>204</locationX>
+        <locationX>369</locationX>
         <locationY>350</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -665,8 +829,8 @@
     <screens>
         <name>SuccessScreen</name>
         <label>SuccessScreen</label>
-        <locationX>182</locationX>
-        <locationY>1706</locationY>
+        <locationX>336</locationX>
+        <locationY>2714</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -678,8 +842,51 @@
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
+    <screens>
+        <name>Upload_Screen</name>
+        <label>Upload Screen</label>
+        <locationX>182</locationX>
+        <locationY>1514</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Document_Uploaded</targetReference>
+        </connector>
+        <fields>
+            <name>UploadMeetingDoc</name>
+            <extensionName>forceContent:fileUpload</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Upload Meeting Document</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>multiple</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>recordId</name>
+                <value>
+                    <elementReference>Create_ProceedingAgendaItem</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <outputParameters>
+                <assignToReference>contentVersionIds</assignToReference>
+                <name>contentVersionIds</name>
+            </outputParameters>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
     <start>
-        <locationX>210</locationX>
+        <locationX>375</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Application_Record</targetReference>
@@ -690,6 +897,13 @@
         <name>Application_Id</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>contentVersionIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
     </variables>

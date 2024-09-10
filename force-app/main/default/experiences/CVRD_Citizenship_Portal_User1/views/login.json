@@ -13,27 +13,11 @@
         "passwordLabel" : "Password",
         "selfRegisterLabel" : "Register",
         "selfRegisterUrl" : "/SelfRegister",
+        "startUrl" : "",
         "usernameLabel" : "Username"
       },
-      "componentName" : "salesforceIdentity:loginForm2",
-      "id" : "039c0777-c5b0-49ad-a79e-a88e5f2fe895",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    }, {
-      "componentAttributes" : {
-        "enableServerSideVerification" : true,
-        "frameTitle" : "",
-        "isHuman" : false,
-        "originPageURL" : "https://cvrd--qa.sandbox.my.site.com/",
-        "required" : true,
-        "requiredMessage" : "",
-        "requiredOnce" : false,
-        "secretKey" : "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe",
-        "siteKey" : "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-      },
-      "componentName" : "c:googleRecaptcha",
-      "id" : "80a3e4d2-3f91-46da-ab46-2da43e985a49",
+      "componentName" : "c:loginForm",
+      "id" : "d613aafe-534e-41fd-a0bd-3a5b8417dd6f",
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
