@@ -65,6 +65,11 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>false</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Application_Number_redirect__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_DS_Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1277,15 +1282,6 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>MUSW__Application2__c</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Document</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
