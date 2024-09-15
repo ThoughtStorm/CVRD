@@ -9,7 +9,6 @@ export default class CVRD_DS_Proceeding_Details extends LightningElement {
     wiredDocuments({ error, data }) {
         if(data && data != null && data != ''){
             this.details=data;
-            console.log('data=>'+data);
         }else if (error) {
             this.error = error.body.message;
             console.log('error=>'+this.error);

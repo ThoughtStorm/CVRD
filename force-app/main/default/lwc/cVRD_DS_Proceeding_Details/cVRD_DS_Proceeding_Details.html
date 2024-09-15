@@ -5,7 +5,7 @@
                 <template for:each={details} for:item="key">
                     <lightning-card key={key.id} title={key.MUSW__Proceeding__r.MUSW__Type__c}>
                         <p class="slds-p-horizontal_small">
-                            <b>Scheduled Date: </b>
+                            <b>Date: </b>
                             <lightning-formatted-date-time value={key.MUSW__Proceeding__r.MUSW__Scheduled_Date__c}
                                 year="numeric" month="short" day="2-digit" weekday="long" hour="2-digit"
                                 minute="2-digit"></lightning-formatted-date-time>
@@ -16,10 +16,10 @@
                                     href="https://www.cvrd.ca/993/Agendas-Minutes-Video">Agendas/Minutes/Video |
                                     Cowichan Valley Regional District</a></u>
                             <br/>
-                            <b>Meeting Document :</b> <template if:true={key.CVRD_DS_Public_URL__c}> <u><a
+                            <b>Minutes :</b> <template if:true={key.CVRD_DS_Public_URL__c}> <u><a
                                         href={key.CVRD_DS_Public_URL__c} target="_blank">Click
                                         here</a></u></template><template if:false={key.CVRD_DS_Public_URL__c}> Waiting
-                                for Meeting Document to upload</template>
+                                for Minutes to upload</template>
                         </p>
                     </lightning-card>
                 </template>
