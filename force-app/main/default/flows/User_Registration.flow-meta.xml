@@ -15,7 +15,6 @@
             </value>
         </inputParameters>
         <nameSegment>clariti:flowNavigation</nameSegment>
-        <offset>0</offset>
         <storeOutputAutomatically>true</storeOutputAutomatically>
         <versionSegment>1</versionSegment>
     </actionCalls>
@@ -59,7 +58,6 @@
             </value>
         </inputParameters>
         <nameSegment>clariti__SelfRegisterAction</nameSegment>
-        <offset>0</offset>
         <outputParameters>
             <assignToReference>User.Id</assignToReference>
             <name>userId</name>
