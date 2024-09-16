@@ -1,0 +1,20 @@
+<!--<template>
+    <lightning-card hide-header="true">
+        <div class="slds-p-horizontal_small">
+            <lightning-input type="checkbox" label="I" value={subject} onchange={handleSubjectChange} ></lightning-input>
+        </div>
+    </lightning-card>
+
+</template>-->
+<template>
+    <lightning-card hide-header="true">
+        <div  class="sfdc">
+            <div style="float:left;">
+                <lightning-input type="checkbox" label="I am not a Robot" value={subject} onchange={handleSubjectChange}></lightning-input>
+            </div>
+            <div style="float:right;width:14%;height:55;margin-top: -12px;">
+                <img src={recaptchaPhotoUrl} alt="User avatar" style="max-width: 100%; max-height: 100%;"/>
+            </div>
+        </div>
+    </lightning-card>
+</template>
