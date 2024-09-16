@@ -68,6 +68,26 @@
                 <default>false</default>
                 <label>Denied</label>
             </value>
+            <value>
+                <fullName>CVRD Referral Response Sent to MOTI</fullName>
+                <default>false</default>
+                <label>CVRD Referral Response Sent to MOTI</label>
+            </value>
+            <value>
+                <fullName>PLR Issued by MOTI</fullName>
+                <default>false</default>
+                <label>PLR Issued by MOTI</label>
+            </value>
+            <value>
+                <fullName>CVRD Conditions Satisfied</fullName>
+                <default>false</default>
+                <label>CVRD Conditions Satisfied</label>
+            </value>
+            <value>
+                <fullName>Updated CVRD Referral Response Sent to MOTI</fullName>
+                <default>false</default>
+                <label>Updated CVRD Referral Response Sent to MOTI</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -83,14 +103,12 @@
             <controllingFieldValue>Application</controllingFieldValue>
             <controllingFieldValue>Review</controllingFieldValue>
             <controllingFieldValue>Approval</controllingFieldValue>
-            <controllingFieldValue>Close Out</controllingFieldValue>
             <controllingFieldValue>Issue</controllingFieldValue>
             <valueName>In Progress</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
             <controllingFieldValue>Review</controllingFieldValue>
-            <controllingFieldValue>Close Out</controllingFieldValue>
             <valueName>On Hold</valueName>
         </valueSettings>
         <valueSettings>
@@ -103,20 +121,28 @@
             <controllingFieldValue>Review</controllingFieldValue>
             <controllingFieldValue>Approval</controllingFieldValue>
             <controllingFieldValue>Appeal</controllingFieldValue>
-            <controllingFieldValue>Close Out</controllingFieldValue>
             <controllingFieldValue>Issue</controllingFieldValue>
             <valueName>Completed</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
-            <controllingFieldValue>Review</controllingFieldValue>
-            <controllingFieldValue>Close Out</controllingFieldValue>
-            <controllingFieldValue>Issue</controllingFieldValue>
             <valueName>Canceled</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Review</controllingFieldValue>
-            <valueName>Referred Back From Meeting</valueName>
+            <valueName>CVRD Referral Response Sent to MOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>PLR Issued by MOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>CVRD Conditions Satisfied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>Updated CVRD Referral Response Sent to MOTI</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Close Out</controllingFieldValue>

@@ -129,7 +129,7 @@
         </rules>
         <rules>
             <name>CO_CFO_File_Uploaded</name>
-            <conditionLogic>(1 AND 2 AND 3 AND 4 AND 8 ) OR (5 AND 6 AND 7 )</conditionLogic>
+            <conditionLogic>(1 AND 2 AND 3 AND 4 AND 5 )</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.CVRD_DS_CO_CFO_File_Uploaded__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -156,27 +156,6 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Approved</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Subdivision_Referral</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Review</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Completed</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
