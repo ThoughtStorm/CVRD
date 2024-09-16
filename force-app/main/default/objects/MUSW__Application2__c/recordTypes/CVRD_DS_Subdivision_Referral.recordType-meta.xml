@@ -418,10 +418,6 @@
     <picklistValues>
         <picklist>MUSW__Phase__c</picklist>
         <values>
-            <fullName>Appeal</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Application</fullName>
             <default>false</default>
         </values>
@@ -438,10 +434,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Report Approval</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Review</fullName>
             <default>true</default>
         </values>
@@ -454,6 +446,14 @@
         </values>
         <values>
             <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD Conditions Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD Referral Response Sent to MOTI</fullName>
             <default>false</default>
         </values>
         <values>
@@ -481,6 +481,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>PLR Issued by MOTI</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Pending</fullName>
             <default>true</default>
         </values>
@@ -490,6 +494,10 @@
         </values>
         <values>
             <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Updated CVRD Referral Response Sent to MOTI</fullName>
             <default>false</default>
         </values>
     </picklistValues>

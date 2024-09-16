@@ -65,10 +65,21 @@
                         <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Confirm_and_Proceed</value>
                             <visibilityRule>
+                                <booleanFilter>(1 OR (2 AND 3))</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Phase__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Issue</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Subdivision_Referral</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Review</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -260,8 +271,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.CVRD_Application_Created_Year__c</fieldItem>
-                <identifier>RecordCVRD_Application_Created_Year_cField</identifier>
+                <fieldItem>Record.CVRD_Application_Created_Date__c</fieldItem>
+                <identifier>RecordCVRD_Application_Created_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -334,6 +345,30 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.MUSW__Status__c</fieldItem>
                 <identifier>RecordMUSW_Status_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Subdivision_Referral</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.MUSW__Status__c</fieldItem>
+                <identifier>RecordMUSW_Status_cField2</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Subdivision_Referral</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
