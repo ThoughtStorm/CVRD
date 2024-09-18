@@ -1342,10 +1342,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CVRD_DS_Get_Required_Submissions</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>CVRD_DS_PublicSearchController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1447,6 +1443,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MUSW__AbstractFormulaEvaluationService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AbstractSchedulable</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1650,6 +1650,70 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__AssignResourceAction</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignResourceActionTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentRepository</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentRepositoryTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceRequest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceResponse</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceRestResource</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceRestResourceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceSetting</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceSettingTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceSettingTrigHndlr</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceSettingTrigHndlrTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceTransferDetail</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AssignmentServiceTransferDetailTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__Associate</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1675,6 +1739,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MUSW__AutoApprovalActionTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AutoAssignmentSchedulable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__AutoAssignmentSchedulableTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -2342,6 +2414,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__CustomNotificationUtilTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__DateUtil</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -2486,6 +2562,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__ExternalAPIManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ExternalAPIManagerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__ExternalObjPushTrigHndlr</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -2571,6 +2655,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MUSW__FieldUIFormatUtilTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__FieldValueConverter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__FieldValueConverterTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -2866,6 +2958,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__GenericSchedulerController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__GenericSchedulerControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__GeolocationService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -2946,6 +3046,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__IConverter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__ICreateRecordFromTemplateDelegate</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -2967,6 +3071,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MUSW__IGISAuthentication</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__IListViewBoardUIGroupsProvider</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3166,6 +3274,18 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__ListUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListUtilTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardConstants</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__ListViewBoardController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3174,11 +3294,79 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__ListViewBoardDataService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardDataServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardDateGroupProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardDateGroupProviderTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardGroupingService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardGroupingServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardOwnerGroupProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardOwnerGroupProviderTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardSetting</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__ListViewBoardSettingDynamicPicklist</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__ListViewBoardSettingTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardStateManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardStateManagerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardSummary</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardSummaryTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardSwimlaneGroupProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewBoardSwimlaneGroupProviderTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__ListViewCalloutMockGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewConstants</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3195,6 +3383,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MUSW__ListViewServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewUIRecord</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ListViewUIRecordGroup</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3438,6 +3634,22 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__OwnerIdToOwnerNameConverter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__OwnerIdToOwnerNameConverterTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__OwnerRepository</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__OwnerRepositoryTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__PageDefaultsController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3566,6 +3778,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__QueryBuilder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__QueryBuilderTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__QueryGenerator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3591,14 +3811,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MUSW__RankingSetting</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>MUSW__ReceiptAmountTrigHndlr</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>MUSW__ReceiptAmountTrigHndlrTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3746,6 +3958,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__ResourceAbsenceTrigHndlr</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__ResourceAbsenceTrigHndlrTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__RestSettingMarshaller</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3791,6 +4011,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MUSW__RollupSummaryMeta</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__Runnable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__RunnableResult</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3866,6 +4094,18 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MUSW__SalesforceAuthDetail</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__SchedulableFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__SchedulableFactoryTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MUSW__ScheduleViolationsAction</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3915,6 +4155,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MUSW__SequenceNumberUtilsTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__SerializationUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__SerializationUtilTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3975,6 +4223,22 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MUSW__SubmissionsManageController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__SwimlaneFieldValueToLabelConverter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__SwimlaneFieldValueToLabelConverterTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__SwimlaneGroupProviderFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MUSW__SwimlaneGroupProviderFactoryTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -4538,10 +4802,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>TestclassDoNotUse</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>clariti__AccountCreditController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -4640,6 +4900,14 @@
     <classAccesses>
         <apexClass>clariti__CE_SeedDataServiceTest</apexClass>
         <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>clariti__CE_Site</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>clariti__CE_SiteTest</apexClass>
+        <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>clariti__CE_StaticResourceUtility</apexClass>
@@ -5290,14 +5558,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>clariti__FeeDeleteTrigHndlr</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__FeeDeleteTrigHndlrTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>clariti__FieldDescriptor</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -5347,14 +5607,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>clariti__FileWebCalloutServiceTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__FinancialsDefaultValueSettingsSelector</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>clariti__FinancialsFeatureSettingsSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -13361,7 +13613,7 @@
         <apexClass>sf_devops__fflib_VerificationMode</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <custom>false</custom>
+    <custom>true</custom>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
         <name>BGBK__Payment_Collection_Type_Tier__mdt</name>
@@ -15713,6 +15965,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CommSubscription.CommunicationSubscriptionCode</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CommSubscription.DataUsePurposeId</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -16962,6 +17219,16 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Application2__c.CVRD_Address2__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Application2__c.CVRD_Address_3__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_Adoption_Date__c</field>
         <readable>true</readable>
@@ -16990,6 +17257,11 @@
         <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DSCommercialOrIndustrial_Purposes__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Address_2__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -17025,6 +17297,11 @@
         <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_Description__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Email__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -17065,6 +17342,16 @@
         <editable>true</editable>
         <field>MUSW__Application2__c.CVRD_DS_Non_Exempted_DPAs__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Parcel_2__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Parcel_3__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -17544,6 +17831,66 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Assessment__c.MUSW__Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Availability_Date_Field_API_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Estimated_Hours_Field_API_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__List_View_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Object_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Preferred_Date_Field_API_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Sort_Field_API_Name_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Sort_Field_API_Name_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Sort_Field_API_Name_3__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Sort_Order_Field_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Sort_Order_Field_2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Assignment_Service_Setting__c.MUSW__Sort_Order_Field_3__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -19168,6 +19515,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__File__c.MUSW__ObjectId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__File__c.MUSW__OwnerName__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -19388,6 +19740,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Estimated_Hours__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Inspection__c.MUSW__Geolocation__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -19443,12 +19800,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Region__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Inspection__c.MUSW__Requested_End_DateTime__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Inspection__c.MUSW__Requested_Start_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Required_Skills__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Inspection__c.MUSW__Resource__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -19832,6 +20204,31 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__List_View_Board_Setting__mdt.MUSW__Default_Sort_Field_API_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__List_View_Board_Setting__mdt.MUSW__Default_Sort_Order__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__List_View_Board_Setting__mdt.MUSW__GIS_Map_Setting__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__List_View_Board_Setting__mdt.MUSW__Geolocation_Field_API_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__List_View_Board_Setting__mdt.MUSW__Swimlane_Field_API_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Location__c.MUSW__Address__c</field>
         <readable>false</readable>
@@ -20108,6 +20505,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Master_Inspection_List__c.MUSW__Estimated_Hours__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Master_Inspection_List__c.MUSW__Filter_Mapping__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -20179,6 +20581,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Master_Inspection_List__c.MUSW__Queue_Assignment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Master_Inspection_List__c.MUSW__Required_Skills__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -20853,6 +21260,101 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Assessor_Owner_Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Assessor_Owner_City__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Assessor_Owner_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Assessor_Owner_Post_Zip_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Assessor_Owner_State__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Assessor_Owner_Street__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Block_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Building_Floor_Area__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__City__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Current_Land_Use__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Date_Last_Sold__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__District__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Fire_Zone__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Flood_Zone__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Geolocation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Historic__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Improvement_Value__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Latitude__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MUSW__Parcel__c.MUSW__Legal_Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>MUSW__Parcel__c.MUSW__Legal_End_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -20924,6 +21426,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Parcel__c.MUSW__Primary_Zoning__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Parcel__c.MUSW__Region__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -21723,6 +22230,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Public_URL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Resolution__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -22198,6 +22710,81 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Resource_Absence__c.MUSW__Absence_End_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource_Absence__c.MUSW__Absence_Start_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource_Absence__c.MUSW__Is_All_Day_Absence__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource_Availability__c.MUSW__Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource_Availability__c.MUSW__Day_of_the_Week__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource_Availability__c.MUSW__Working_Hours__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource_Skill__c.MUSW__Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource_Skill__c.MUSW__Skill__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource__c.MUSW__Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource__c.MUSW__Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource__c.MUSW__External__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource__c.MUSW__First_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource__c.MUSW__Last_Assigned__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource__c.MUSW__Last_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Resource__c.MUSW__User__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Review_Template__c.CVRD_DS_Internal_Referral_Division__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -22224,6 +22811,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Review_Template__c.MUSW__Due_in_Days__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review_Template__c.MUSW__Estimated_Hours__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -22293,6 +22885,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Review_Template__c.MUSW__Required_Skills__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Review_Template__c.MUSW__Review_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -22353,6 +22950,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Review__c.MUSW__Estimated_Hours__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Review__c.MUSW__License2__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -22372,8 +22974,23 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review__c.MUSW__Region__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>MUSW__Review__c.MUSW__Related_To__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review__c.MUSW__Required_Skills__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Review__c.MUSW__Resource__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -22464,6 +23081,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Sequence_Range__c.MUSW__Track_No__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Submission__c.CVRD_DS_Publicly_Available__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -24268,16 +24890,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>clariti__CartSettings__mdt.clariti__AllowOverpayments__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__CartSettings__mdt.clariti__AllowPartialPayments__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>clariti__Cart__c.clariti__Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -24354,36 +24966,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>clariti__CashShortBalance__e.clariti__CashierSessionId__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>clariti__CashTray__c.clariti__CashBalance__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>clariti__CashTray__c.clariti__CheckBalance__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>clariti__CashTray__c.clariti__Location__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>clariti__CashTray__c.clariti__Status__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>clariti__CashTray__c.clariti__ThresholdBalance__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>clariti__CashTray__c.clariti__TotalBalance__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -24973,21 +25555,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Public_URL__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Application2__c.CVRD_DS_Application_Number_redirect__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>MUSW__Submission__c.CVRD_DS_Publicly_Available__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>clariti__NotificationMessage__e.clariti__Mode__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -25074,46 +25641,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>clariti__PayableObjectSearchSettings__mdt.clariti__SearchResultsFieldSetName__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__PaymentAllocation__c.clariti__AllocationAmount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__PaymentAllocation__c.clariti__CartItem__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__PaymentAllocation__c.clariti__Fee__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__PaymentAllocation__c.clariti__InvoiceItem__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__PaymentAllocation__c.clariti__ParentRecordId__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__PaymentAllocation__c.clariti__SourceDeposit__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__PaymentAllocation__c.clariti__TargetDeposit__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>clariti__PaymentAllocation__c.clariti__TransactionDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -26126,11 +26653,11 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>CVRD_DS_Ledger_Account_Amount_Update_Schedule</flow>
+        <flow>CVRD_DS_Milestone_Update_Application_Phase_and_Status</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>CVRD_DS_Milestone_Update_Application_Phase_and_Status</flow>
+        <flow>CVRD_DS_Public_Link</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -26159,10 +26686,6 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Complaint_Update_Parcel_Info_on_Address_Selection</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>Generate_Test_Flow</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -26307,10 +26830,6 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Submit_Complaint</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>TEST_Planner_Review</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -26877,6 +27396,9 @@
         <layout>MUSW__Assessment__c-MUSW__Assessment Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>MUSW__Assignment_Service_Setting__c-MUSW__Assignment Service Setting Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>MUSW__Attestation_Consent__c-MUSW__Attestation Consent Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -27253,6 +27775,9 @@
         <layout>MUSW__Reference__c-MUSW__Reference Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>MUSW__Region__c-MUSW__Region Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>MUSW__Report_Trigger__c-MUSW__Report Trigger Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -27261,6 +27786,21 @@
     <layoutAssignments>
         <layout>MUSW__Request__c-MUSW__Request Permit Service Request</layout>
         <recordType>MUSW__Request__c.MUSW__Permit_Service_Request</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Resource_Absence__c-MUSW__Resource Absence Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Resource_Availability_Region__c-MUSW__Resource Availability Region Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Resource_Availability__c-MUSW__Resource Availability Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Resource_Skill__c-MUSW__Resource Skill Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Resource__c-MUSW__Resource Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Review_Template__c-MUSW__Review Template Application Review</layout>
@@ -27952,6 +28492,15 @@
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Assignment_Service_Setting__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
@@ -28105,6 +28654,60 @@
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Region__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Resource_Absence__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Resource_Availability_Region__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Resource_Availability__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Resource_Skill__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MUSW__Resource__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
@@ -28245,15 +28848,6 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>Seller</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>SocialPersona</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -28449,10 +29043,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>BandwidthExceeded</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>CVRD_Application_PDF_Generator</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -28825,7 +29415,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>BGCK__Question_Type__c.BGCK__Text_Area</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -28861,7 +29450,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -28947,7 +29535,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Condition__c.MUSW__All</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -29088,7 +29675,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Request__c.MUSW__Permit_Service_Request</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -29129,7 +29715,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>MUSW__Work_Item__c.MUSW__All</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -29232,10 +29817,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>MUSW__External_Object_Sync_Manager</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>MUSW__Fee__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -29454,6 +30035,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ExportReport</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ImportPersonal</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
