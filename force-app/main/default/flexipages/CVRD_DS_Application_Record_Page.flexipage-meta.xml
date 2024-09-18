@@ -132,6 +132,9 @@
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_New_Deposit</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -1236,9 +1239,9 @@
                 <identifier>flexipage_fieldSection7</identifier>
                 <visibilityRule>
                     <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <leftValue>{!Record.MUSW__Phase__c}</leftValue>
                         <operator>NE</operator>
-                        <rightValue>Subdivision_Referral</rightValue>
+                        <rightValue>Application</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
@@ -1939,13 +1942,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>Subdivision_Referral</rightValue>
-                    </criteria>
-                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <itemInstances>
