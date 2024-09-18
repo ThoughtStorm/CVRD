@@ -49,6 +49,56 @@
       ]
      },
      {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/77",
+      "label": "CVRD Roads",
+      "type": "feature"
+     },
+     {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/48",
+      "label": "CVRD Sewer Systems",
+      "type": "feature"
+     },
+     {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/49",
+      "label": "CVRD Water Systems",
+      "type": "feature"
+     },
+     {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/17",
+      "label": "CVRD Parks",
+      "type": "feature"
+     },
+     {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/50",
+      "label": "CVRD Street Lighting",
+      "type": "feature"
+     },
+     {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/64",
+      "label": "CVRD Streams",
+      "type": "feature"
+     },
+     {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/63",
+      "label": "CVRD Main Rivers",
+      "type": "feature"
+     },
+     {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/62",
+      "label": "CVRD Lakes",
+      "type": "feature"
+     },
+     {
+      "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/47",
+      "label": "CVRD Drainage Service",
+      "type": "feature"
+     },
+     {
+     "url":"https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/14",
+      "label": "CVRD Highways",
+      "type": "feature"
+     },
+     {
       "url": "https://maps.cvrd.ca/mapservices/rest/services/CVRD/MapServer/4",
       "label": "CVRD Address",
       "type": "feature",
@@ -66,16 +116,16 @@
      },
      {
       "url": "https://maps.cvrd.ca/mapservices/rest/services/Hosted/CivicAddress_LMS/FeatureServer/0",
-      "label": "CVRD Address",
+      "label": "CVRD New Address",
       "type": "feature",
       "fieldInfos": [
       {
-      "fieldName": "ROADNAME",
-      "label": "ROADNAME",
+      "fieldName": "road_name",
+      "label": "road_name",
       "visible": true
       }, {
-      "fieldName": "ADDR_FULL",
-      "label": "ADDR_FULL",
+      "fieldName": "address_full",
+      "label": "address_full",
       "visible": true
       }
       ]
@@ -85,6 +135,11 @@
       "label": "BG Parcel",
       "type": "basicgov",
       "iconPath": "images/Favourite.png"
+    },
+    {
+      "url": "MUSW__Address__c",
+      "label": "BG Address",
+      "type": "basicgov"
     },
     {
       "url": "MUSW__Application2__c",
