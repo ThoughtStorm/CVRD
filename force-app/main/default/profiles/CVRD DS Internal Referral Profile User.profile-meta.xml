@@ -581,11 +581,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
