@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CVRD</label>
+    <protected>false</protected>
+    <values>
+        <field>MUSW__Basemap_Type__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MUSW__Basemap_Url__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MUSW__Center_Point_Latitude__c</field>
+        <value xsi:type="xsd:double">48.79</value>
+    </values>
+    <values>
+        <field>MUSW__Center_Point_Longitude__c</field>
+        <value xsi:type="xsd:double">-123.71</value>
+    </values>
+    <values>
+        <field>MUSW__Public_Access__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>MUSW__Rest_Settings_Record_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MUSW__Route_Url__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MUSW__Webmap_Id__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MUSW__Zoom_Level__c</field>
+        <value xsi:type="xsd:double">12.0</value>
+    </values>
+</CustomMetadata>

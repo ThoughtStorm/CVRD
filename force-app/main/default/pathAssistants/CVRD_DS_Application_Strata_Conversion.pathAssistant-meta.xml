@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>MUSW__Application2__c</entityName>
+    <fieldName>MUSW__Phase__c</fieldName>
+    <masterLabel>Application Strata Conversion</masterLabel>
+    <recordTypeName>CVRD_DS_Strata_Conversion</recordTypeName>
+</PathAssistant>

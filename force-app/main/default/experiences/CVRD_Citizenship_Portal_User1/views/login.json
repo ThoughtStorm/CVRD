@@ -1,0 +1,69 @@
+{
+  "appPageId" : "08761b9f-7186-4ab1-a1b0-d2969112a7e8",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "493aa989-6c91-4e28-bc23-240edfdfe954",
+  "label" : "Login",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "forgotPasswordLabel" : "Forgot password",
+        "forgotPasswordUrl" : "/ForgotPassword",
+        "loginButtonLabel" : "Log in",
+        "passwordLabel" : "Password",
+        "selfRegisterLabel" : "Register",
+        "selfRegisterUrl" : "/SelfRegister",
+        "startUrl" : "",
+        "usernameLabel" : "Username"
+      },
+      "componentName" : "c:loginForm",
+      "id" : "d613aafe-534e-41fd-a0bd-3a5b8417dd6f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ab34768a-35e3-41ee-bc44-0df38957c1b3",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Login"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "f2998657-6639-4e9c-9bf4-f9ce2ca15500",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dcb736fb-76a7-4c6b-8882-f969be701ea7",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h5><br></h5><p><strong style=\"font-size: 28px;\">Welcome to The Cowichan Valley Regional District</strong></p><p><span style=\"font-size: 14px;\">Enter your username and password below to Log In. If you haven't registered before, you may do so by clicking </span><a href=\"SelfRegister\" rel=\"noopener noreferrer\" target=\"_self\" style=\"font-size: 14px;\"><strong>Register</strong></a><span style=\"font-size: 14px;\">. If you are having trouble logging in, try resetting your password by clicking </span><a href=\"ForgotPassword\" rel=\"noopener noreferrer\" target=\"_self\" style=\"font-size: 14px;\"><strong>Forgot Password</strong>.</a></p><p>&nbsp;</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "45ce481c-e798-48ea-93c3-f5b9487a121e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8174e2af-8491-4188-ab7a-1e4388fbefc5",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "c4cb4b8c-4faa-45e0-9b76-c7bde3f50863",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "b5431a4a-0220-439c-8c21-78f41ef57cb6",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "ai1SdTSszANzYNZJlXrXrQHO6i3lQa",
+  "type" : "view",
+  "viewType" : "login-home"
+}

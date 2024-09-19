@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Application_Condition</fullName>
+    <active>true</active>
+    <label>Application - Condition</label>
+    <picklistValues>
+        <picklist>MUSW__Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Type__c</picklist>
+        <values>
+            <fullName>Aesthetics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Administrative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geology and Soils</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hazards and Hazardous Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hydrology and Water Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation %2F Traffic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Application_DP_Sub_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Application DP Sub Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amendment/Extension(DPA 1-13)</fullName>
+                <default>false</default>
+                <label>Amendment/Extension(DPA 1-13)</label>
+            </value>
+            <value>
+                <fullName>Conservation/GHG reduction(DPA 13)</fullName>
+                <default>false</default>
+                <label>Conservation/GHG reduction(DPA 13)</label>
+            </value>
+            <value>
+                <fullName>Agricultural(DPA 8)</fullName>
+                <default>false</default>
+                <label>Agricultural(DPA 8)</label>
+            </value>
+            <value>
+                <fullName>Form and Character (DPA 9-12)</fullName>
+                <default>false</default>
+                <label>Form and Character (DPA 9-12)</label>
+            </value>
+            <value>
+                <fullName>Form and Character - Signs(DPA 9-12)</fullName>
+                <default>false</default>
+                <label>Form and Character - Signs(DPA 9-12)</label>
+            </value>
+            <value>
+                <fullName>Environmental (DPA 1-4)</fullName>
+                <default>false</default>
+                <label>Environmental (DPA 1-4)</label>
+            </value>
+            <value>
+                <fullName>Hazard (DPA 5-7)</fullName>
+                <default>false</default>
+                <label>Hazard (DPA 5-7)</label>
+            </value>
+            <value>
+                <fullName>Environmental and Hazard(DPA 1-7)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Environmental and Hazard(DPA 1-7)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

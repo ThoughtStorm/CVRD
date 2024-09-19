@@ -1,0 +1,88 @@
+<template>
+	<template if:false={disabledShow}>
+	<article class="slds-card">
+		<div class="slds-card__body slds-card__body_inner">
+			<table class="slds-table slds-table_cell-buffer"
+				aria-label=" Example headless table of Opportunities with no borders ">
+				<thead>
+					<tr class="slds-line-height_reset">
+						<th class="" scope="col">
+							<div class="slds-truncate" title="Development Permit Area">Development Permit Area</div>
+						</th>
+						<th class="" scope="col">
+							<div class="slds-truncate" title="DPA Exemption Applicable">DPA Exemption Applicable <a href={DPAExempturl} target="_blank"><lightning-icon size="xx-small" icon-name="utility:info" alternative-text="Help Text" title="Help Text"></lightning-icon></a></div>
+						</th>
+						<th class="" scope="col">
+							<div class="slds-truncate" title="Explanation">
+								<span class="explanation-text">Explanation</span>
+								<span style="position:relative; top:-3px;"><lightning-helptext content="50 charecter limit"></lightning-helptext> </span>
+							</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<template for:each={CommentData} for:item="item">
+						<tr key={item.id} class="slds-hint-parent">
+							<td data-label={item.Name}>
+								<div class="slds-truncate" title={item.Name}>{item.Name}</div>
+							</td>
+							<td data-label="Exempt">
+								<lightning-input type="checkbox" onchange={handleExemptionChange} value={item.Exempt}
+									checked={item.Exempt} data-id={item.id}></lightning-input>
+							</td>
+							<td data-label="Explanation">
+								<lightning-input type="text" onchange={handleCommentValueChange} name={item.name}
+									value={item.Explanation} label="Explanation" required={item.Exempt} data-id={item.id}
+									disabled={item.commentEnabled}></lightning-input>
+							</td>
+						</tr>
+					</template>
+				</tbody>
+			</table>
+		</div>
+	</article>
+	</template>
+	<template if:true={disabledShow}>
+		<article class="slds-card">
+			<div class="slds-card__body slds-card__body_inner">
+				<table class="slds-table slds-table_cell-buffer"
+					aria-label=" Example headless table of Opportunities with no borders ">
+					<thead>
+						<tr class="slds-line-height_reset">
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Development Permit Area">Development Permit Area</div>
+							</th>
+							<th class="" scope="col">
+								<div class="slds-truncate" title="DPA Exemption Applicable">DPA Exemption Applicable <a href="http://www.google.com" target="_blank"><lightning-icon size="xx-small" icon-name="utility:info" alternative-text="Help Text" title="Help Text"></lightning-icon></a></div>
+							</th>
+							<th class="" scope="col">
+								<div class="slds-truncate" title="Explanation">
+								<span class="explanation-text">Explanation</span>
+								<span style="position:relative; top:-3px;"><lightning-helptext content="50 charecter limit"></lightning-helptext> </span>
+							</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<template for:each={CommentData} for:item="item">
+							<tr key={item.id} class="slds-hint-parent">
+								<td data-label={item.Name}>
+									<div class="slds-truncate" title={item.Name}>{item.Name}</div>
+								</td>
+								<td data-label="Exempt">
+									<lightning-input disabled type="checkbox" onchange={handleExemptionChange}
+										value={item.Exempt} checked={item.Exempt} data-id={item.id}></lightning-input>
+								</td>
+								<td data-label="Explanation">
+									<lightning-input type="text" onchange={handleCommentValueChange} name={item.name}
+										value={item.Explanation} label="Explanation" required={item.Exempt} data-id={item.id}
+										disabled></lightning-input>
+								</td>
+							</tr>
+						</template>
+					</tbody>
+				</table>
+			</div>
+		</article>
+	</template>
+</template>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Update_Completed_Approval</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>sahana.ky+cvrd@thoughtstorm.ca</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>DM Approval</label>
+        <name>DM_Approval</name>
+        <rejectionActions>
+            <action>
+                <name>Update_Application_Phase_to_Review</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Application_Status_to_Pending</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Update_Application_Status_to_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_to_Board_Approval_CO_CFO_approval</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>yogesh.digambar+cvrd@thoughtstorm.ca</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>notEqual</operation>
+                <value>Subdivision_Referral,Crown_Land_Referrals</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>GM Approval</label>
+        <name>GM_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Update_Application_Phase_to_Review</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Application_Status_to_Pending</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND ( ( 5 OR 6 OR 7) OR 8)</booleanFilter>
+        <criteriaItems>
+            <field>MUSW__Application2__c.MUSW__Phase__c</field>
+            <operation>equals</operation>
+            <value>Report Approval</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.MUSW__Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.RecordType</field>
+            <operation>notEqual</operation>
+            <value>Crown Land Referrals</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.RecordType</field>
+            <operation>notEqual</operation>
+            <value>Subdivision (Referral)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+            <operation>equals</operation>
+            <value>Amendment,Non-farm Use,Subdivision,ALC Exclusion,New,Renewal,OCP Amendment,Zoning Amendment,Land Use Bylaw Amendment,Cannabis Retail Licence (Board),Board - New,Board - Extension</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+            <operation>equals</operation>
+            <value>Liquor Licence Referral (Board)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
+            <operation>equals</operation>
+            <value>Non - Adhering Residential Use,Combined OCP Amendment and Zoning Bylaw Amendment,Amendment or Discharge,Registration Amendment or Discharge</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>MUSW__Application2__c.MUSW__Type2__c</field>
+            <operation>equals</operation>
+            <value>Flood_Management_Bylaw_Exemption,Minimum_Frontage_Exception,Telecommunication_Antenna_Structure,Strata_Conversion</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>CVRD DS Application Board Approval V2</label>
+    <processOrder>2</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

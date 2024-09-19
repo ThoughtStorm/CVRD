@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>CVRD Citizenship Portal User</container>
+    <containerType>Network</containerType>
+    <label>Electoral Area</label>
+    <navigationMenuItem>
+        <label>Electoral Area &quot;A&quot; | Mill Bay/Malahat</label>
+        <menuItemBranding>
+            <tileImage>ElectoralAreaA</tileImage>
+        </menuItemBranding>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/open-search</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Electoral Area &quot;B&quot; | Shawnigan Lake</label>
+        <menuItemBranding>
+            <tileImage>ElectoralAreaB</tileImage>
+        </menuItemBranding>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/electoral-area-b</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Electoral Area &quot;C&quot; | Cobble Hill</label>
+        <menuItemBranding>
+            <tileImage>ElectoralAreaC</tileImage>
+        </menuItemBranding>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/electoral-area-c</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Electoral Area &quot;D&quot; | Cowichan Bay</label>
+        <menuItemBranding>
+            <tileImage>ElectoralAreaD</tileImage>
+        </menuItemBranding>
+        <position>4</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/electoral-area-d</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Electoral Area &quot;E&quot; | Cowichan Station/Sahtlam/Glen</label>
+        <menuItemBranding>
+            <tileImage>ElectoralAreaE</tileImage>
+        </menuItemBranding>
+        <position>5</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/electoral-area-e</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Electoral Area &quot;F&quot; | Cowichan Lake South/Skutz Fal</label>
+        <menuItemBranding>
+            <tileImage>ElectoralAreaF</tileImage>
+        </menuItemBranding>
+        <position>6</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/electoral-area-f</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Electoral Area &quot;G&quot; | Saltair/Gulf Islands</label>
+        <menuItemBranding>
+            <tileImage>ElectoralAreaG</tileImage>
+        </menuItemBranding>
+        <position>7</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/electoral-area-g</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Electoral Area &quot;H&quot; | North Oyster / Diamond</label>
+        <menuItemBranding>
+            <tileImage>ElectoralAreaH</tileImage>
+        </menuItemBranding>
+        <position>8</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/electoral-area-h</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Electoral Area &quot;I&quot; | Youbou / Meade Creek</label>
+        <menuItemBranding>
+            <tileImage>ElectoralAreaI</tileImage>
+        </menuItemBranding>
+        <position>9</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/electoral-area-i</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

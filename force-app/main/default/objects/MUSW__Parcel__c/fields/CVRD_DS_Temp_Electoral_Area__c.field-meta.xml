@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Temp_Electoral_Area__c</fullName>
+    <defaultValue>&quot;N/A&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Temp Electoral Area</label>
+    <length>30</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

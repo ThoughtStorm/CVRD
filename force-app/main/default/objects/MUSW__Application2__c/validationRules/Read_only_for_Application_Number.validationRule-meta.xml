@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Read_only_for_Application_Number</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        $Profile.Name = &apos;CVRD Community Login User&apos;,
+        $Profile.Name = &apos;CVRD Citizen Login User&apos;
+    ),
+    ISCHANGED(Name)
+)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>You Can&apos;t Edit the Application Number.</errorMessage>
+</ValidationRule>

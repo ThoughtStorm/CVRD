@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MUSW__Type__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Public Hearing</fullName>
+                <default>false</default>
+                <label>Public Hearing</label>
+            </value>
+            <value>
+                <fullName>Public Information Meeting</fullName>
+                <default>false</default>
+                <label>Public Information Meeting</label>
+            </value>
+            <value>
+                <fullName>Advisory Planning Commission</fullName>
+                <default>false</default>
+                <label>Advisory Planning Commission</label>
+            </value>
+            <value>
+                <fullName>Community Parks Advisory Commission</fullName>
+                <default>false</default>
+                <label>Community Parks Advisory Commission</label>
+            </value>
+            <value>
+                <fullName>Board of Variance</fullName>
+                <default>false</default>
+                <label>Board of Variance</label>
+            </value>
+            <value>
+                <fullName>Board Meeting</fullName>
+                <default>false</default>
+                <label>Board Meeting</label>
+            </value>
+            <value>
+                <fullName>EASC Meeting</fullName>
+                <default>false</default>
+                <label>EASC Meeting</label>
+            </value>
+            <value>
+                <fullName>Special EASC Meeting</fullName>
+                <default>false</default>
+                <label>Special EASC Meeting</label>
+            </value>
+            <value>
+                <fullName>BOV</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BOV</label>
+            </value>
+            <value>
+                <fullName>Board Approval</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Board Approval</label>
+            </value>
+            <value>
+                <fullName>Board Of Variance Hearing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Board Of Variance Hearing</label>
+            </value>
+            <value>
+                <fullName>Bylaw Reading</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bylaw Reading</label>
+            </value>
+            <value>
+                <fullName>Bylaw Reading 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bylaw Reading 2</label>
+            </value>
+            <value>
+                <fullName>Bylaw Reading 3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bylaw Reading 3</label>
+            </value>
+            <value>
+                <fullName>Hearing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hearing</label>
+            </value>
+            <value>
+                <fullName>Judicial</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Judicial</label>
+            </value>
+            <value>
+                <fullName>Moti Feedback</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Moti Feedback</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MUSW__Application_Fee</fullName>
+    <active>true</active>
+    <label>Application Fee</label>
+    <picklistValues>
+        <picklist>CVRD_DS_Application_DP_Sub_Type__c</picklist>
+        <values>
+            <fullName>Agricultural%28DPA 8%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment%2FExtension%28DPA 1-13%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservation%2FGHG reduction%28DPA 13%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental %28DPA 1-4%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character %28DPA 9-12%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character - Signs%28DPA 9-12%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hazard %28DPA 5-7%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CVRD_DS_Application_Sub_Type__c</picklist>
+        <values>
+            <fullName>ALC Exclusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agricultural</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquor Licence Referral (Board)</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment or Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment%2FExtension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board - Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board - New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannabis Retail Licence (delegated)</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change to hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Combined OCP Amendment and Zoning Bylaw Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conservation%2FGHG reduction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delegated - Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delegated - New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental and Hazard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form and Character - Signs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Increase to Capacity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Land Use Bylaw Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquor Licence Referral %28delegated%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lounge Endorsment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Licence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Outdoor Patio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non - Adhering Residential Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-farm Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCP Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration Amendment or Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relocate Licence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannabis Retail Licence (Board)</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Event Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Event Permit - 150 %2B attendees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subdivision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoning Amendment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Application_Phases__c</picklist>
+        <values>
+            <fullName>Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Report Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Application_Statuses__c</picklist>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred Back From Meeting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Application_Types__c</picklist>
+        <values>
+            <fullName>Agricultural_Land_Reserve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board_of_Variance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannabis Retail Licence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covenant_Amendment%2FDischarge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crown_Land_Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development_Variance_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flood_Management_Bylaw_Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquor Licence Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minimum_Frontage_Exception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCP_Zoning_or_Land_Use_Bylaw_Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phased_Development_Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strata_Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subdivision_Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunication_Antenna_Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary_Use_Permit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Complaint_Statuses__c</picklist>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Complaint_Types__c</picklist>
+        <values>
+            <fullName>Fire and Life Safety</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Fee_Calculation_Type__c</picklist>
+        <values>
+            <fullName>Flat Fee</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Multiplier Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier Fee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__License_Phases__c</picklist>
+        <values>
+            <fullName>Application</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__License_Statuses__c</picklist>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__License_Types__c</picklist>
+        <values>
+            <fullName>Restaurant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Object_Record_Types__c</picklist>
+        <values>
+            <fullName>CVRD_DS_Agricultural_Land_Reserve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Board_of_Variance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Cannabis_License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Covenant_Amendment_or_Discharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Crown_Land_Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Development_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Development_Variance_Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Flood_Management_Bylaw_Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Liquor_Cannabis_Licence_Referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Minimum_Frontage_Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Phased_Development_Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Strata_Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Subdivision_Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Telecommunication_Antenna_Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVRD_DS_Temporary_Use_Permit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Object_Types__c</picklist>
+        <values>
+            <fullName>MUSW%5F%5FApplication2%5F%5Fc</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Permit_Phases__c</picklist>
+        <values>
+            <fullName>Application</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Permit_Statuses__c</picklist>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Permit_Types__c</picklist>
+        <values>
+            <fullName>Building</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Permit_Work_Types__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Project_Statuses__c</picklist>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Subtype__c</picklist>
+        <values>
+            <fullName>Void Receipt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MUSW__Type__c</picklist>
+        <values>
+            <fullName>Additional Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administrative Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertising Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Opening Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Deposit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

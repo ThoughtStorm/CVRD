@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Outcome__c</fullName>
+    <label>Outcome</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adopted</fullName>
+                <default>false</default>
+                <label>Adopted</label>
+            </value>
+            <value>
+                <fullName>Adoption recommended</fullName>
+                <default>false</default>
+                <label>Adoption recommended</label>
+            </value>
+            <value>
+                <fullName>Advance to ALC with comments</fullName>
+                <default>false</default>
+                <label>Advance to ALC with comments</label>
+            </value>
+            <value>
+                <fullName>Advance to ALC with comments recommended</fullName>
+                <default>false</default>
+                <label>Advance to ALC with comments recommended</label>
+            </value>
+            <value>
+                <fullName>Advance to ALC with no comments</fullName>
+                <default>false</default>
+                <label>Advance to ALC with no comments</label>
+            </value>
+            <value>
+                <fullName>Advance to ALC with no comments recommended</fullName>
+                <default>false</default>
+                <label>Advance to ALC with no comments recommended</label>
+            </value>
+            <value>
+                <fullName>Advance to ALC with support</fullName>
+                <default>false</default>
+                <label>Advance to ALC with support</label>
+            </value>
+            <value>
+                <fullName>Advance to ALC with support recommended</fullName>
+                <default>false</default>
+                <label>Advance to ALC with support recommended</label>
+            </value>
+            <value>
+                <fullName>Advance to ALC without support</fullName>
+                <default>false</default>
+                <label>Advance to ALC without support</label>
+            </value>
+            <value>
+                <fullName>Advance to ALC without support recommended</fullName>
+                <default>false</default>
+                <label>Advance to ALC without support recommended</label>
+            </value>
+            <value>
+                <fullName>Advance with public hearing</fullName>
+                <default>false</default>
+                <label>Advance with public hearing</label>
+            </value>
+            <value>
+                <fullName>Advance with public hearing recommended</fullName>
+                <default>false</default>
+                <label>Advance with public hearing recommended</label>
+            </value>
+            <value>
+                <fullName>Advance without public hearing</fullName>
+                <default>false</default>
+                <label>Advance without public hearing</label>
+            </value>
+            <value>
+                <fullName>Advance without public hearing recommended</fullName>
+                <default>false</default>
+                <label>Advance without public hearing recommended</label>
+            </value>
+            <value>
+                <fullName>Advance without referrals recommended</fullName>
+                <default>false</default>
+                <label>Advance without referrals recommended</label>
+            </value>
+            <value>
+                <fullName>Advanced without referrals</fullName>
+                <default>false</default>
+                <label>Advanced without referrals</label>
+            </value>
+            <value>
+                <fullName>Approval recommended</fullName>
+                <default>false</default>
+                <label>Approval recommended</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Cash-in-lieu approved</fullName>
+                <default>false</default>
+                <label>Cash-in-lieu approved</label>
+            </value>
+            <value>
+                <fullName>Cash-in-lieu recommended</fullName>
+                <default>false</default>
+                <label>Cash-in-lieu recommended</label>
+            </value>
+            <value>
+                <fullName>Combination of cash-in-lieu &amp; parkland dedication approved</fullName>
+                <default>false</default>
+                <label>Combination of cash-in-lieu &amp; parkland dedication approved</label>
+            </value>
+            <value>
+                <fullName>Combination of cash-in-lieu &amp; parkland dedication recommended</fullName>
+                <default>false</default>
+                <label>Combination of cash-in-lieu &amp; parkland dedication recommended</label>
+            </value>
+            <value>
+                <fullName>Comments approved [after public engagement if opted in]</fullName>
+                <default>false</default>
+                <label>Comments approved [after public engagement if opted in]</label>
+            </value>
+            <value>
+                <fullName>Comments recommended [after public engagement]</fullName>
+                <default>false</default>
+                <label>Comments recommended [after public engagement]</label>
+            </value>
+            <value>
+                <fullName>Conditional Statement of Concurrence  recommended</fullName>
+                <default>false</default>
+                <label>Conditional Statement of Concurrence  recommended</label>
+            </value>
+            <value>
+                <fullName>Denial recommended</fullName>
+                <default>false</default>
+                <label>Denial recommended</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Denied - hardship</fullName>
+                <default>false</default>
+                <label>Denied - hardship</label>
+            </value>
+            <value>
+                <fullName>Denied - no hardship</fullName>
+                <default>false</default>
+                <label>Denied - no hardship</label>
+            </value>
+            <value>
+                <fullName>Do no request exclusion</fullName>
+                <default>false</default>
+                <label>Do no request exclusion</label>
+            </value>
+            <value>
+                <fullName>Do not request exclusion recommended</fullName>
+                <default>false</default>
+                <label>Do not request exclusion recommended</label>
+            </value>
+            <value>
+                <fullName>External referrals recommended</fullName>
+                <default>false</default>
+                <label>External referrals recommended</label>
+            </value>
+            <value>
+                <fullName>First reading</fullName>
+                <default>false</default>
+                <label>First reading</label>
+            </value>
+            <value>
+                <fullName>First reading recommended</fullName>
+                <default>false</default>
+                <label>First reading recommended</label>
+            </value>
+            <value>
+                <fullName>Issue Conditional Statement of Concurrence</fullName>
+                <default>false</default>
+                <label>Issue Conditional Statement of Concurrence</label>
+            </value>
+            <value>
+                <fullName>Issue statement of non-concurrence</fullName>
+                <default>false</default>
+                <label>Issue statement of non-concurrence</label>
+            </value>
+            <value>
+                <fullName>Issue Un-conditional Statement of Concurrence</fullName>
+                <default>false</default>
+                <label>Issue Un-conditional Statement of Concurrence</label>
+            </value>
+            <value>
+                <fullName>Meeting Held</fullName>
+                <default>false</default>
+                <label>Meeting Held</label>
+            </value>
+            <value>
+                <fullName>Opt-in to provide comments</fullName>
+                <default>false</default>
+                <label>Opt-in to provide comments</label>
+            </value>
+            <value>
+                <fullName>Opt-in to provide comments recommended</fullName>
+                <default>false</default>
+                <label>Opt-in to provide comments recommended</label>
+            </value>
+            <value>
+                <fullName>Opt-out to provide comments</fullName>
+                <default>false</default>
+                <label>Opt-out to provide comments</label>
+            </value>
+            <value>
+                <fullName>Opt-out to provide comments recommended</fullName>
+                <default>false</default>
+                <label>Opt-out to provide comments recommended</label>
+            </value>
+            <value>
+                <fullName>Parkland dedication approved</fullName>
+                <default>false</default>
+                <label>Parkland dedication approved</label>
+            </value>
+            <value>
+                <fullName>Parkland dedication recommended</fullName>
+                <default>false</default>
+                <label>Parkland dedication recommended</label>
+            </value>
+            <value>
+                <fullName>Provided Comments</fullName>
+                <default>false</default>
+                <label>Provided Comments</label>
+            </value>
+            <value>
+                <fullName>Recommends cash-in-lieu</fullName>
+                <default>false</default>
+                <label>Recommends cash-in-lieu</label>
+            </value>
+            <value>
+                <fullName>Recommends combination of cash-in-lieu &amp; parkland dedication</fullName>
+                <default>false</default>
+                <label>Recommends combination of cash-in-lieu &amp; parkland dedication</label>
+            </value>
+            <value>
+                <fullName>Recommends parkland dedication</fullName>
+                <default>false</default>
+                <label>Recommends parkland dedication</label>
+            </value>
+            <value>
+                <fullName>Referall to staff for additional information recommended</fullName>
+                <default>false</default>
+                <label>Referall to staff for additional information recommended</label>
+            </value>
+            <value>
+                <fullName>Referral to staff recommended</fullName>
+                <default>false</default>
+                <label>Referral to staff recommended</label>
+            </value>
+            <value>
+                <fullName>Referred back to staff</fullName>
+                <default>false</default>
+                <label>Referred back to staff</label>
+            </value>
+            <value>
+                <fullName>Referred to external agencies</fullName>
+                <default>false</default>
+                <label>Referred to external agencies</label>
+            </value>
+            <value>
+                <fullName>Referred to staff for additional information</fullName>
+                <default>false</default>
+                <label>Referred to staff for additional information</label>
+            </value>
+            <value>
+                <fullName>Request exclusion</fullName>
+                <default>false</default>
+                <label>Request exclusion</label>
+            </value>
+            <value>
+                <fullName>Request exclusion recommended</fullName>
+                <default>false</default>
+                <label>Request exclusion recommended</label>
+            </value>
+            <value>
+                <fullName>Second Reading</fullName>
+                <default>false</default>
+                <label>Second Reading</label>
+            </value>
+            <value>
+                <fullName>Second Reading recommended</fullName>
+                <default>false</default>
+                <label>Second Reading recommended</label>
+            </value>
+            <value>
+                <fullName>Statement of non-concurrence recommended</fullName>
+                <default>false</default>
+                <label>Statement of non-concurrence recommended</label>
+            </value>
+            <value>
+                <fullName>Third Reading</fullName>
+                <default>false</default>
+                <label>Third Reading</label>
+            </value>
+            <value>
+                <fullName>Third Reading recommended</fullName>
+                <default>false</default>
+                <label>Third Reading recommended</label>
+            </value>
+            <value>
+                <fullName>Un-conditional Statement of Concurrence Recommended</fullName>
+                <default>false</default>
+                <label>Un-conditional Statement of Concurrence Recommended</label>
+            </value>
+            <value>
+                <fullName>Advance the Application</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Advance the Application</label>
+            </value>
+            <value>
+                <fullName>Corrections Required on Application</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Corrections Required on Application</label>
+            </value>
+            <value>
+                <fullName>Decides to Advance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Decides to Advance</label>
+            </value>
+            <value>
+                <fullName>Decides to Deny</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Decides to Deny</label>
+            </value>
+            <value>
+                <fullName>Decides to Seek External</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Decides to Seek External</label>
+            </value>
+            <value>
+                <fullName>Deny the Application</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Deny the Application</label>
+            </value>
+            <value>
+                <fullName>To Be Discussed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>To Be Discussed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,79 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "1e0f4257-4054-484a-95d5-c7e1090d39f9",
+  "label" : "Permit Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a51e6840-2d5d-4197-aece-f9c3a48e8f4e",
+          "columns" : [ {
+            "UUID" : "1b7c3f3d-430b-48cf-91d4-b23b45e3dade",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a51e6840-2d5d-4197-aece-f9c3a48e8f4e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1>Permit Applications</h1><p><br></p><p>You can start a new application by clicking the \"Start New Application\" button below. At any time, you may click the \"Pause\" button to suspend your Permit application and finish at a later date. To access your paused applications, go to \"My Paused Applications.\"</p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "446c1779-7850-47b3-9501-4dfe86b885e1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "flowName" : "clariti__Permit_Application_Intake"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "72663849-f7cb-4a64-b837-ad2e3c49d807",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1b7c3f3d-430b-48cf-91d4-b23b45e3dade",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7d8c3dd2-5575-488a-b333-d31cccc0a290",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Permit Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "64bf5cf5-0faf-4930-9910-d106494216f4",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d827a4e9-69ae-479f-bb9d-936157e13f2b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Permit Applications"
+}
