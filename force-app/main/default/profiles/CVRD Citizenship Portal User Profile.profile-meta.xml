@@ -95,6 +95,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>MUSW__Application2__c.CVRD_DS_create_Public_Notice__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>MUSW__Application2__c.CVRD_DS_Application_Number_redirect__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1659,6 +1664,10 @@
         <tab>MUSW__Review__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Create_Public_Notice</flow>
+    </flowAccesses>
     <userLicense>Guest User License</userLicense>
     <userPermissions>
         <enabled>true</enabled>

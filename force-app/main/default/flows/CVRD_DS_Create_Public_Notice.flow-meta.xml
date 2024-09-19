@@ -4,7 +4,7 @@
         <name>Redirect_to_public_detail_page</name>
         <label>Redirect to public detail page</label>
         <locationX>176</locationX>
-        <locationY>782</locationY>
+        <locationY>674</locationY>
         <actionName>clariti:flowNavigation</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -79,7 +79,7 @@
     <formulas>
         <name>outputUrl</name>
         <dataType>String</dataType>
-        <expression>&apos;https://cvrd--dev1.sandbox.my.site.com/CVRDCitizenshipPortal/s/open-application-details?id=&apos;&amp;{!recordId}</expression>
+        <expression>&apos;https://cvrd--qa.sandbox.my.site.com/CVRDCitizenshipPortal/s/open-application-details?id=&apos;&amp;{!recordId}</expression>
     </formulas>
     <interviewLabel>Create Public Notice {!$Flow.CurrentDateTime}</interviewLabel>
     <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
@@ -252,25 +252,6 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
-        <name>cresyrf</name>
-        <label>cresyrf</label>
-        <locationX>176</locationX>
-        <locationY>674</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
-        <connector>
-            <targetReference>Redirect_to_public_detail_page</targetReference>
-        </connector>
-        <fields>
-            <name>asd</name>
-            <fieldText>&lt;p&gt;{!Create_public_notice_record}&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
         <name>Success</name>
         <label>Success</label>
         <locationX>176</locationX>
@@ -279,7 +260,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>cresyrf</targetReference>
+            <targetReference>Redirect_to_public_detail_page</targetReference>
         </connector>
         <fields>
             <name>SuccessScreenMessage</name>
@@ -297,7 +278,7 @@
             <targetReference>Get_Application_Record</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>Appname</name>
         <dataType>String</dataType>
