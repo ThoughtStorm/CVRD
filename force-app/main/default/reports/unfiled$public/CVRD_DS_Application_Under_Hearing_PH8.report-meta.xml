@@ -48,7 +48,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Hearing</value>
+            <value>Approval</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
