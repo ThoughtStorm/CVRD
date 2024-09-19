@@ -339,13 +339,6 @@
         <relatedList>clariti__Deposit__c.clariti__Application2__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <fields>clariti__Type__c</fields>
-        <fields>clariti__RequiredAmount__c</fields>
-        <fields>clariti__Status__c</fields>
-        <relatedList>clariti__Deposit__c.clariti__Application2__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
