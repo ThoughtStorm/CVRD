@@ -254,7 +254,7 @@
             <default>true</default>
         </values>
         <values>
-            <fullName>Closed</fullName>
+            <fullName>Close Out</fullName>
             <default>false</default>
         </values>
         <values>
