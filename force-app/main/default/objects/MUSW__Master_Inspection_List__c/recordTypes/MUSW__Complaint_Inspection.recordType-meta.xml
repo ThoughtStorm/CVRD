@@ -10,7 +10,7 @@
             <default>true</default>
         </values>
         <values>
-            <fullName>Closed</fullName>
+            <fullName>Close Out</fullName>
             <default>false</default>
         </values>
         <values>
@@ -40,7 +40,7 @@
     <picklistValues>
         <picklist>MUSW__Application_Types__c</picklist>
         <values>
-            <fullName>Development Permit %28DP%29</fullName>
+            <fullName>Development_Permit</fullName>
             <default>false</default>
         </values>
     </picklistValues>
