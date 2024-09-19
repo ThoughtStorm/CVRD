@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>AddressCount</name>
+        <label>AddressCount</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>countofAddress</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>getAddress</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>checkAddressCount</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>Check_Logged_User_License</name>
         <label>Check Logged User</label>
         <locationX>182</locationX>
-        <locationY>323</locationY>
+        <locationY>1031</locationY>
         <defaultConnectorLabel>Community</defaultConnectorLabel>
         <rules>
             <name>Internal_License</name>
@@ -23,9 +39,48 @@
             <label>Internal License</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>checkAddressCount</name>
+        <label>checkAddressCount</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Check_Logged_User_License</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SingleAddress</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>countofAddress</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AddressLoop</targetReference>
+            </connector>
+            <label>SingleAddress</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD DS {!$Flow.CurrentDateTime}</interviewLabel>
     <label>CVRD DS Create Application Location Record</label>
+    <loops>
+        <name>AddressLoop</name>
+        <label>AddressLoop</label>
+        <locationX>74</locationX>
+        <locationY>647</locationY>
+        <collectionReference>getAddress</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>updateApplication</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Check_Logged_User_License</targetReference>
+        </noMoreValuesConnector>
+    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -49,7 +104,7 @@
         <name>Create_Application_Location_Record</name>
         <label>Create Application Location Record</label>
         <locationX>50</locationX>
-        <locationY>431</locationY>
+        <locationY>1139</locationY>
         <inputAssignments>
             <field>MUSW__Address__c</field>
             <value>
@@ -71,11 +126,60 @@
         <object>MUSW__Application_Location__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordLookups>
+        <name>getAddress</name>
+        <label>getAddress</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>AddressCount</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MUSW__Parcel__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.MUSW__Parcel__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>MUSW__Address__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>updateApplication</name>
+        <label>updateApplication</label>
+        <locationX>162</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>AddressLoop</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>MUSW__Address__c</field>
+            <value>
+                <elementReference>AddressLoop.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Geolocation__Latitude__s</field>
+            <value>
+                <elementReference>AddressLoop.MUSW__Geolocation__Latitude__s</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Geolocation__Longitude__s</field>
+            <value>
+                <elementReference>AddressLoop.MUSW__Geolocation__Longitude__s</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Check_Logged_User_License</targetReference>
+            <targetReference>getAddress</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -90,4 +194,23 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <variables>
+        <name>AddressOnes</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>MUSW__Address__c</objectType>
+    </variables>
+    <variables>
+        <name>countofAddress</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
 </Flow>
