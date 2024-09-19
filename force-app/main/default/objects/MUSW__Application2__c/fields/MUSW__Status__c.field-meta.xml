@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MUSW__Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The current status of the application. This picklist can be defined according to the client&apos;s business processes.</description>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>MUSW__Phase__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending</fullName>
+                <default>true</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Additional Information Required</fullName>
+                <default>false</default>
+                <label>Additional Information Required</label>
+            </value>
+            <value>
+                <fullName>Initiated</fullName>
+                <default>false</default>
+                <label>Initiated</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Referred Back From Meeting</fullName>
+                <default>false</default>
+                <label>Referred Back From Meeting</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>CVRD Referral Response Sent to MOTI</fullName>
+                <default>false</default>
+                <label>CVRD Referral Response Sent to MOTI</label>
+            </value>
+            <value>
+                <fullName>PLR Issued by MOTI</fullName>
+                <default>false</default>
+                <label>PLR Issued by MOTI</label>
+            </value>
+            <value>
+                <fullName>CVRD Conditions Satisfied</fullName>
+                <default>false</default>
+                <label>CVRD Conditions Satisfied</label>
+            </value>
+            <value>
+                <fullName>Updated CVRD Referral Response Sent to MOTI</fullName>
+                <default>false</default>
+                <label>Updated CVRD Referral Response Sent to MOTI</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Appeal</controllingFieldValue>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <controllingFieldValue>Issue</controllingFieldValue>
+            <controllingFieldValue>Report Approval</controllingFieldValue>
+            <valueName>Pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Issue</controllingFieldValue>
+            <valueName>In Progress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>On Hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>Additional Information Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Approval</controllingFieldValue>
+            <controllingFieldValue>Appeal</controllingFieldValue>
+            <controllingFieldValue>Issue</controllingFieldValue>
+            <valueName>Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <valueName>Canceled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>CVRD Referral Response Sent to MOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>PLR Issued by MOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>CVRD Conditions Satisfied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <valueName>Updated CVRD Referral Response Sent to MOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <controllingFieldValue>Report Approval</controllingFieldValue>
+            <valueName>Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <controllingFieldValue>Report Approval</controllingFieldValue>
+            <valueName>Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Close Out</controllingFieldValue>
+            <valueName>Denied</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

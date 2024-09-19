@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-section slds-is-open">
+        <lightning-card title="Meetings">
+            <template if:true={details}>
+                <template for:each={details} for:item="key">
+                    <lightning-card key={key.id} title={key.MUSW__Proceeding__r.MUSW__Type__c}>
+                        <p class="slds-p-horizontal_small">
+                            <b>Date: </b>
+                            <lightning-formatted-date-time value={key.MUSW__Proceeding__r.MUSW__Scheduled_Date__c}
+                                year="numeric" month="short" day="2-digit" weekday="long" hour="2-digit"
+                                minute="2-digit"></lightning-formatted-date-time>
+                            <br/>
+                            <b>Outcome: </b>{key.CVRD_DS_Outcome__c}
+                            <br/>
+                            <b>Meeting Information : </b><u><a
+                                    href="https://www.cvrd.ca/993/Agendas-Minutes-Video">Agendas/Minutes/Video |
+                                    Cowichan Valley Regional District</a></u>
+                            <br/>
+                            <b>Minutes :</b> <template if:true={key.CVRD_DS_Public_URL__c}> <u><a
+                                        href={key.CVRD_DS_Public_URL__c} target="_blank">Click
+                                        here</a></u></template><template if:false={key.CVRD_DS_Public_URL__c}> Waiting
+                                for Minutes to upload</template>
+                        </p>
+                    </lightning-card>
+                </template>
+            </template>
+            <template if:false={details}>
+                <div class="slds-p-left_small"><h3>{errorMessage}</h3></div>
+                
+            </template>
+        </lightning-card>
+    </div>
+</template>

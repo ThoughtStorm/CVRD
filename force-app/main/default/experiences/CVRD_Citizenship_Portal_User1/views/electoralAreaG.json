@@ -1,0 +1,70 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "02a5a95e-4251-4723-88b9-780168cae258",
+  "label" : "Electoral Area - G",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e42f7c39-f813-4a1c-9596-b83a62008049",
+          "columns" : [ {
+            "UUID" : "320eb1c7-1faf-4fe0-b719-f002d6fa1aad",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e42f7c39-f813-4a1c-9596-b83a62008049",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "area_val" : "G"
+          },
+          "componentName" : "c:cVRD_DS_PublicApplicationSearch",
+          "id" : "3e66da94-d9fa-4fb4-af1d-76ae3440770c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "320eb1c7-1faf-4fe0-b719-f002d6fa1aad",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2a507e10-10d4-43ff-83d8-3211743f02e9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Electoral Area - G"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "133aa153-a195-4fdf-887f-53d3ac361a34",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f7f4dd48-ce25-4359-aa98-077d76885ca8",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-electoral-area-g"
+}

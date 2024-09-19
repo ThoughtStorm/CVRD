@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <choices>
+        <name>OutcomeApprovedChoiceSet</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Proceed with Approval&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Proceed with Approval</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>OutComeDeniedChoiceSet</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Close with Denial&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Close with Denial</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Check_Hearing_is_Approved</name>
+        <label>Check Hearing is Approved</label>
+        <locationX>182</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Update_Application_to_CloseOutRejection</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Denied</defaultConnectorLabel>
+        <rules>
+            <name>Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Board_Approval_Final_Outcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Proceed with Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Application_to_Issue</targetReference>
+            </connector>
+            <label>Approved</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>CVRD DS Application - Complete Hearing Phase {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CVRD DS Application - Complete Hearing Phase</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_Application_to_CloseOutRejection</name>
+        <label>Update Application to CloseOutRejection</label>
+        <locationX>314</locationX>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>SUccess_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MUSW__Phase__c</field>
+            <value>
+                <stringValue>Close Out</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Denied</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Application2__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Application_to_Issue</name>
+        <label>Update Application to Issue</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>SUccess_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MUSW__Phase__c</field>
+            <value>
+                <stringValue>Issue</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Application2__c</object>
+    </recordUpdates>
+    <screens>
+        <name>Declaration_Screen</name>
+        <label>Declaration Screen</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Check_Hearing_is_Approved</targetReference>
+        </connector>
+        <fields>
+            <name>DeclartionCheckBox</name>
+            <dataType>Boolean</dataType>
+            <fieldText>By confirming, you will complete the approval phase. Please note that once confirmed, the approval phase cannot be revisited.</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(208, 19, 19);&quot;&gt;Please agree to the terms by checking the box above.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                <formulaExpression>IF({!DeclartionCheckBox}=TRUE,TRUE,FALSE)</formulaExpression>
+            </validationRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>OutCome_Screen</name>
+        <label>OutCome Screen</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Declaration_Screen</targetReference>
+        </connector>
+        <fields>
+            <name>Board_Approval_Final_Outcome</name>
+            <choiceReferences>OutcomeApprovedChoiceSet</choiceReferences>
+            <choiceReferences>OutComeDeniedChoiceSet</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Approval Final Outcome</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>SUccess_Screen</name>
+        <label>SUccess Screen</label>
+        <locationX>182</locationX>
+        <locationY>650</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>DisplaySuceessMessage</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(25, 141, 32); background-color: rgb(255, 255, 255);&quot;&gt;Approval is Completed!&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>OutCome_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>MUSW__Application2__c</objectType>
+    </variables>
+</Flow>

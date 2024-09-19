@@ -1,0 +1,72 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "823e4699-5a15-4fe3-8a74-a5ad3cec457d",
+  "label" : "Open Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 20px;\">Electoral Areas</strong></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "66454e09-2799-4c01-8a21-ff47e18c5ec6",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8ebcf76f-5fc9-4cd4-9318-00e99138ceaf",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerBackgroundColor" : "rgb(252, 252, 252)",
+        "bannerPosition" : "bottom",
+        "bannerSizePercent" : 15,
+        "borderRadius" : 0,
+        "boxShadow" : false,
+        "haveBanner" : false,
+        "iconBackgroundColor" : "rgb(255,255,255)",
+        "iconSize" : "large",
+        "noImageColor" : "rgb(66, 57, 57)",
+        "overlay" : "rgba(0,0,0,0.01)",
+        "templateType" : "icon",
+        "tileMenuEditor" : "Electoral_Area",
+        "titleColor" : "rgb(0, 0, 0)",
+        "titleFontSize" : "medium",
+        "titleHorizontalAlign" : "center"
+      },
+      "componentName" : "community_navigation:tileMenu",
+      "id" : "50425654-b252-4c37-bf15-0125f7a49f37",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "be839a15-2d8f-4184-8db6-104e15dc8bfe",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "4e070c35-00a2-4eb0-9b0f-aad3fdd4372e",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Open Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0480d325-dfda-4148-986a-5e5ec58bbd88",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "749aa092-a66b-4ef0-b03e-8c8e9952bcf4",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-open-applications"
+}

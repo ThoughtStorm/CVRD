@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CVRD_DS_Application_Journey_flow_record_creation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CVRD DS Application Journey flow record creation</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>CVRD_DS_DPA_Exemption_Applicable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CVRD_DS_DPA_Exemption_Applicable</shortDescription>
+        <value>http://cvrd.ca/documentcenter/view/108344</value>
+    </labels>
+    <labels>
+        <fullName>CVRD_DS_Instagram_Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CVRD_DS_Instagram_Link</shortDescription>
+        <value>https://www.instagram.com/cvrdlanduse/</value>
+    </labels>
+    <labels>
+        <fullName>CVRD_DS_Portal_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CVRD DS Portal URL</shortDescription>
+        <value>https://cvrd--dev1.sandbox.my.site.com/CVRDCitizenshipPortal/s/</value>
+    </labels>
+</CustomLabels>

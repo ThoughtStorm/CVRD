@@ -1,0 +1,78 @@
+<template>
+	<lightning-card>
+		<div class="slds-page-header slds-page-header_related-list">
+			<div class="slds-page-header__row slds-grid slds-wrap">
+				<div class="slds-page-header__col-title">
+					<div class="slds-media">
+						<div class="slds-media__body">
+							<div class="slds-page-header__name">
+								<div class="slds-page-header__name-title">
+									<h1>
+										<span class="slds-page-header__title">Electoral Area '{area_val}' Applications</span>
+									</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slds-size_1-of-6">
+					<template if:true={recordData}>
+						<lightning-combobox name="ElectorialArea" label="Application Type" value={area}
+							placeholder="--Select Application Type--" options={options} onchange={handleCombo}>
+						</lightning-combobox>
+					</template>
+				</div>
+				<div class="slds-size_1-of-6 slds-m-left_x-small">
+					<template if:true={recordData}>
+						<lightning-input type="search" label="Search Application Number" onchange={handleSearch}>
+						</lightning-input>
+					</template>
+				</div>
+			</div>
+		</div>
+		<div class="slds-m-around_medium">
+			<template if:true={recordData}>
+				<lightning-datatable key-field="id" data={recordData} columns={columns} hide-checkbox-column="true"
+					show-row-number-column="true" sorted-by={sortBy} sorted-direction={sortDirection}
+					onsort={doSorting}>
+				</lightning-datatable>
+			</template>
+			<template if:false={recordData}>
+				<div class="slds-text-heading_small">{errorMessage}</div>
+			</template>
+			<template if:true={error}>
+				{error}
+			</template>
+		</div>
+		<p slot="footer">
+			<template if:true={recordData}>
+				<div style="background: rgb(243, 243, 243);height:50px;margin-top:5px;">
+					<div class="slds-grid" style="height:4em;float: right;">
+						<button class="slds-button slds-button_icon icon_button icon_button_disabled" title="First" role="first" onclick={handleFirst} disabled={first}>
+                            <svg viewBox="0 0 1024 1024" class="icon">
+                                <g><path d="M1024 1024 256 512 1024 0Z"  /><path d="M0 128l256 0 0 768-256 0 0-768Z"  /></g>
+                            </svg>  
+                        </button>
+						<button class="slds-button slds-button_icon icon_button icon_button_disabled" title="Previous" role="previous" onclick={handlePrevious} disabled={first}>
+                            <svg viewBox="0 0 1024 1024" class="icon">
+                                <g><path d="M1024 1024 256 512 1024 0Z"  /></g>
+                            </svg>
+                        </button>
+						<span class="vcenter currentpage">{currentPage}</span>
+						<span class="vcenter" style="font-weight: 500;">&nbsp;/&nbsp;{totalPages}</span>
+						<button class="slds-button slds-button_icon icon_button" title="Next" role="next" onclick={handleNext} disabled={last}>
+                            <svg viewBox="0 0 1024 1024" class="icon">
+                                <g><path d="M0 0 768 512 0 1024Z"  /></g>
+                            </svg>
+                        </button>
+						<button class="slds-button slds-button_icon icon_button" title="Last" role="last" onclick={handleLast} disabled={last}>
+                            <svg viewBox="0 0 1024 1024" class="icon">
+                                <g><path d="M0 0 768 512 0 1024Z"  /><path d="M768 128l256 0 0 768-256 0 0-768Z"  /></g>
+                            </svg>
+                        </button>
+					</div>
+				</div>
+			</template>
+		</p>
+	</lightning-card>
+</template>

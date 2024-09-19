@@ -1,0 +1,115 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "bea02fc8-82c8-4369-a51e-b0d155fb85e2",
+  "label" : "Enquiry Page",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "01750605-d5ff-4fe8-8ef1-bbd42f9ed1c8",
+          "columns" : [ {
+            "UUID" : "5e2af51b-bc01-4f2e-80b4-4498deb2e59e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "01750605-d5ff-4fe8-8ef1-bbd42f9ed1c8",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "a21e29c2-bc4b-4403-974d-e90c7e4dff39",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "26ace299-06a9-4e43-a497-ee23d46a37d8",
+                "allowGuestUser" : true,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "Complaint"
+              }, {
+                "UUID" : "839658be-51f2-4cb4-a851-c2ddcea1f70e",
+                "allowGuestUser" : true,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Support Information"
+              }, {
+                "UUID" : "d0e1e60a-8885-4683-8e39-b3bf188fb000",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "3",
+                "tabName" : "Tab 3"
+              } ],
+              "useOverflowMenu" : true
+            }
+          },
+          "componentName" : "forceCommunity:tabLayout",
+          "id" : "a21e29c2-bc4b-4403-974d-e90c7e4dff39",
+          "regions" : [ {
+            "id" : "26ace299-06a9-4e43-a497-ee23d46a37d8",
+            "regionLabel" : "Complaint",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "id" : "839658be-51f2-4cb4-a851-c2ddcea1f70e",
+            "regionLabel" : "Support Information",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "id" : "d0e1e60a-8885-4683-8e39-b3bf188fb000",
+            "regionLabel" : "Tab 3",
+            "regionName" : "3",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5e2af51b-bc01-4f2e-80b4-4498deb2e59e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ea329c19-294a-4b2c-b212-64dbb370f9de",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Enquiry Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "589e06b2-4d7f-4dc1-bead-8d3d5e0fb861",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "39b78617-66d6-4d0b-890c-d92bad84661f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-enquiry-page"
+}
