@@ -63,7 +63,7 @@
     <navigationMenuItem>
         <label>Submit a Development Enquiry</label>
         <position>6</position>
-        <publiclyAvailable>true</publiclyAvailable>
+        <publiclyAvailable>false</publiclyAvailable>
         <target>/open-search</target>
         <type>InternalLink</type>
     </navigationMenuItem>

@@ -14,13 +14,13 @@
         <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <label>Submit a Development Enquiry</label>
+        <label>Search for a Development Application</label>
         <menuItemBranding>
             <tileImage>REPORT_AN_ISSUE</tileImage>
         </menuItemBranding>
         <position>2</position>
-        <publiclyAvailable>true</publiclyAvailable>
-        <target>/enquiry-page</target>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/open-applications</target>
         <type>InternalLink</type>
     </navigationMenuItem>
 </NavigationMenu>

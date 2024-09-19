@@ -2,40 +2,41 @@
   "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
   "componentName" : "siteforce:dynamicLayout",
   "dataProviders" : [ ],
-  "id" : "e3483107-dace-4b28-bc12-9a55fff48ecb",
-  "label" : "External Agency HomePage",
+  "id" : "d9797204-bdef-4848-b16d-9989d1d03608",
+  "label" : "Public Notification",
   "regions" : [ {
     "components" : [ {
       "componentAttributes" : {
-        "background" : "background: rgba(0,0,0,0) url(/sfsites/c/file-asset/CVRD_11?v=1) center center /cover",
-        "backgroundOverlay" : "rgba(255, 255, 255, 0.2)",
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
         "contentAreaWidth" : 100,
         "sectionConfig" : {
-          "UUID" : "131229a1-fba1-49c3-9f2d-2410fd9e65af",
+          "UUID" : "cecc16c8-4f9b-414b-b93c-0d02b487dced",
           "columns" : [ {
-            "UUID" : "9cc6e5d0-f581-43ba-bef1-26f0fb98ab1f",
+            "UUID" : "c1f62a71-79a0-4a83-bdb0-82ee83a37cab",
             "columnKey" : "1",
             "columnName" : "Column 1",
             "columnWidth" : "12",
             "seedComponents" : [ ]
           } ]
         },
-        "sectionHeight" : 400
+        "sectionHeight" : 300
       },
       "componentName" : "forceCommunity:section",
-      "id" : "131229a1-fba1-49c3-9f2d-2410fd9e65af",
+      "id" : "cecc16c8-4f9b-414b-b93c-0d02b487dced",
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : {
-            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">﻿Welcome to the Cowichan Valley </strong></h1><h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">Regional District</strong></h1>"
+            "flowArguments" : "[{\"label\":\"Appname\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!Appname}\"},{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"value\":\"{!recordId}\"}]",
+            "flowName" : "CVRD_DS_Create_Public_Notice"
           },
-          "componentName" : "forceCommunity:richTextInline",
-          "id" : "e45eedb4-b9dc-4e72-b9ae-086e2939af26",
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "12f08685-c27d-45ba-bf7c-c966393d7c15",
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
         } ],
-        "id" : "9cc6e5d0-f581-43ba-bef1-26f0fb98ab1f",
+        "id" : "c1f62a71-79a0-4a83-bdb0-82ee83a37cab",
         "regionLabel" : "Column 1",
         "regionName" : "1",
         "renditionMap" : { },
@@ -45,7 +46,7 @@
       "renditionMap" : { },
       "type" : "component"
     } ],
-    "id" : "0cc6d1fa-6768-4aaf-ba80-2e58ec787c1e",
+    "id" : "a15a980e-e04c-4dd2-bf27-16bd85f10b18",
     "regionName" : "content",
     "type" : "region"
   }, {
@@ -53,18 +54,18 @@
       "componentAttributes" : {
         "customHeadTags" : "",
         "description" : "",
-        "title" : "Home"
+        "title" : "Public Notification"
       },
       "componentName" : "forceCommunity:seoAssistant",
-      "id" : "baa550ea-302a-48a7-bbd9-e776f30ab799",
+      "id" : "f15712a0-15a5-4d2d-ac60-6107ee9857b7",
       "renditionMap" : { },
       "type" : "component"
     } ],
-    "id" : "9d574f42-918a-48a7-bc2a-013387c87706",
+    "id" : "5e2448c0-b721-4ca1-bca0-27d73c3cfafb",
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
   } ],
-  "themeLayoutType" : "KGZeAhyfkzI1wDO3rbpha9UyJUBlwH",
+  "themeLayoutType" : "Inner",
   "type" : "view",
-  "viewType" : "home"
+  "viewType" : "custom-public-notification"
 }

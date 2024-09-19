@@ -2,8 +2,8 @@
   "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
   "componentName" : "siteforce:dynamicLayout",
   "dataProviders" : [ ],
-  "id" : "e3483107-dace-4b28-bc12-9a55fff48ecb",
-  "label" : "External Agency HomePage",
+  "id" : "4b5fd483-97f6-464f-ab0c-96ccacc6ffdd",
+  "label" : "External Agency Home Page",
   "regions" : [ {
     "components" : [ {
       "componentAttributes" : {
@@ -11,9 +11,9 @@
         "backgroundOverlay" : "rgba(255, 255, 255, 0.2)",
         "contentAreaWidth" : 100,
         "sectionConfig" : {
-          "UUID" : "131229a1-fba1-49c3-9f2d-2410fd9e65af",
+          "UUID" : "6b2df41c-45e9-4f56-95f6-15c476ae8b32",
           "columns" : [ {
-            "UUID" : "9cc6e5d0-f581-43ba-bef1-26f0fb98ab1f",
+            "UUID" : "bd8d9174-b2bc-4c6e-a073-526ac214a359",
             "columnKey" : "1",
             "columnName" : "Column 1",
             "columnWidth" : "12",
@@ -23,19 +23,28 @@
         "sectionHeight" : 400
       },
       "componentName" : "forceCommunity:section",
-      "id" : "131229a1-fba1-49c3-9f2d-2410fd9e65af",
+      "id" : "6b2df41c-45e9-4f56-95f6-15c476ae8b32",
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : {
-            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">﻿Welcome to the Cowichan Valley </strong></h1><h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">Regional District</strong></h1>"
+            "richTextValue" : "<p>Welcome to the Cowichan Valley Regional District</p>"
           },
           "componentName" : "forceCommunity:richTextInline",
-          "id" : "e45eedb4-b9dc-4e72-b9ae-086e2939af26",
+          "id" : "d5fc9c24-e608-4ee8-a71d-435170a67d35",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">Welcome to the Cowichan Valley</strong></h1><h1 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\"> Regional District</strong></h1>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "4f74cc33-5f4a-4e6a-9ce5-d03e16115b95",
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
         } ],
-        "id" : "9cc6e5d0-f581-43ba-bef1-26f0fb98ab1f",
+        "id" : "bd8d9174-b2bc-4c6e-a073-526ac214a359",
         "regionLabel" : "Column 1",
         "regionName" : "1",
         "renditionMap" : { },
@@ -45,7 +54,7 @@
       "renditionMap" : { },
       "type" : "component"
     } ],
-    "id" : "0cc6d1fa-6768-4aaf-ba80-2e58ec787c1e",
+    "id" : "e6861518-8a5c-46d6-9fb1-7a9cb57d4fb8",
     "regionName" : "content",
     "type" : "region"
   }, {
@@ -53,18 +62,18 @@
       "componentAttributes" : {
         "customHeadTags" : "",
         "description" : "",
-        "title" : "Home"
+        "title" : "External Agency Home Page"
       },
       "componentName" : "forceCommunity:seoAssistant",
-      "id" : "baa550ea-302a-48a7-bbd9-e776f30ab799",
+      "id" : "9493dd9e-249e-46b6-aba9-d463d493ec5f",
       "renditionMap" : { },
       "type" : "component"
     } ],
-    "id" : "9d574f42-918a-48a7-bc2a-013387c87706",
+    "id" : "fe149351-4d0f-4691-925f-7f3b86136f76",
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
   } ],
-  "themeLayoutType" : "Inner",
+  "themeLayoutType" : "k9mHrZ7HEWjPthrkdvwt9WiLd56RDq",
   "type" : "view",
-  "viewType" : "home"
+  "viewType" : "custom-external-agency-home-page"
 }
