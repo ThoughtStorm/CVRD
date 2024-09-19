@@ -1664,6 +1664,10 @@
         <tab>MUSW__Review__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Create_Public_Notice</flow>
+    </flowAccesses>
     <userLicense>Guest User License</userLicense>
     <userPermissions>
         <enabled>true</enabled>

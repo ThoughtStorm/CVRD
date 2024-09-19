@@ -744,74 +744,78 @@
         <recordType>MUSW__Condition__c.MUSW__Comment</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Board of Variance Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Covenant Amendment or Discharge Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-Crown Land Referrals Application Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-Development Permit %28DP%29 Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Development Permit %28DP%29 Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Development Permit %28DP%29 Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Development Permit %28DP%29 Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-Development Variance Permit %28DVP%29 Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Flood Management Bylaw Exemption Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Land Use Contract Amendment or Discharge Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Land_Use_Contract_Amendment_or_Discharge</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Liquor%2FCannabis Licence Referrals Application Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-MUSW__Application Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-Minimum Frontage Exemption Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-OCP%2C Zoning or Land Use Bylaw Amendment Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Phased Development Agreement Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Subdivision %28Referral%29 Application Layout</layout>
+        <layout>MUSW__Application2__c-Strata Conversion</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Telecommunication Antanna Structure Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Temporary Use Permit %28TUP%29 Layout</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
     </layoutAssignments>
     <layoutAssignments>
