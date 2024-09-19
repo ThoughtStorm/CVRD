@@ -27438,10 +27438,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
-        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
     </layoutAssignments>
     <layoutAssignments>
