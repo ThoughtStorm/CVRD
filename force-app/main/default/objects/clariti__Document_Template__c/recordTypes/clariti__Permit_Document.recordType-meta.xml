@@ -20,7 +20,7 @@
     <picklistValues>
         <picklist>clariti__Application_Types__c</picklist>
         <values>
-            <fullName>Development Permit %28DP%29</fullName>
+            <fullName>Development_Permit</fullName>
             <default>false</default>
         </values>
     </picklistValues>
