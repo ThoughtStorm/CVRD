@@ -26748,6 +26748,10 @@
         <enabled>true</enabled>
         <flow>CVRD_DS_Application_Reconsideration_Letter</flow>
     </flowAccesses>
+     <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Application_Create_Deposit</flow>
+    </flowAccesses>
     <flowAccesses>
         <enabled>true</enabled>
         <flow>CVRD_DS_Application_Upload_Decision_File</flow>
