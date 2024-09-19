@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "d9797204-bdef-4848-b16d-9989d1d03608",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Public_Notification__c",
+  "id" : "cc2d73f0-1afc-47c0-ac89-2ef3df2da1bb",
+  "label" : "Public Notification",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-public-notification",
+  "type" : "route",
+  "urlPrefix" : "public-notification"
+}

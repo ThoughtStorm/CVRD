@@ -22,62 +22,70 @@
     "components" : [ {
       "componentAttributes" : {
         "tabsetConfig" : {
-          "UUID" : "6d549517-4c3e-4ec7-a57a-1db99665341d",
+          "UUID" : "cfda13ee-42c3-4996-b3d4-c6f8e2f168e6",
           "activeTab" : "",
           "tabs" : [ {
-            "UUID" : "0a955781-cdd3-4794-9902-bf297bb7a5f7",
+            "UUID" : "a60d1496-5641-4e68-9e31-0e6c91263f23",
             "allowGuestUser" : false,
             "locked" : false,
             "seedComponents" : [ ],
             "tabKey" : "1",
             "tabName" : "Details"
           }, {
-            "UUID" : "15235617-c35f-44d0-945a-1b3d4bbe1678",
+            "UUID" : "45b2c5a0-32bc-44fb-bf68-46b62e97103c",
             "allowGuestUser" : false,
             "locked" : false,
             "seedComponents" : [ ],
             "tabKey" : "2",
-            "tabName" : "Submission Requests"
+            "tabName" : "Required Documents"
           }, {
-            "UUID" : "e1410a9d-7644-4325-8611-be4ed857ce3e",
+            "UUID" : "a46db095-1713-4e73-9fe6-c4372bf3409d",
             "allowGuestUser" : false,
             "locked" : false,
             "seedComponents" : [ ],
-            "tabKey" : "4f5c2",
+            "tabKey" : "d9688",
             "tabName" : "DPA Exemption"
           }, {
-            "UUID" : "3c5dda1a-dd87-43a7-a7ca-d6fb42fece24",
+            "UUID" : "62512b19-330d-4ec4-85cd-24cc030893e2",
             "allowGuestUser" : false,
             "locked" : false,
             "seedComponents" : [ ],
-            "tabKey" : "513eb",
+            "tabKey" : "3",
             "tabName" : "Property Information"
           }, {
-            "UUID" : "2fcf1746-6149-458a-9983-9ba4d6b070c1",
+            "UUID" : "8a7ba7f0-3b13-475e-a2aa-389541006ad0",
             "allowGuestUser" : false,
             "locked" : false,
             "seedComponents" : [ ],
-            "tabKey" : "694fe",
+            "tabKey" : "1f9f0",
             "tabName" : "Owner Information"
+          }, {
+            "UUID" : "fa676268-065c-46a7-8e78-71ad098509b3",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ ],
+            "tabKey" : "95c78",
+            "tabName" : "Fee Information"
           } ],
-          "useOverflowMenu" : false
+          "useOverflowMenu" : true
         }
       },
-      "componentName" : "forceCommunity:tabset",
-      "id" : "6d549517-4c3e-4ec7-a57a-1db99665341d",
+      "componentName" : "forceCommunity:tabLayout",
+      "id" : "cfda13ee-42c3-4996-b3d4-c6f8e2f168e6",
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : {
-            "allowEdit" : false,
+            "allowEdit" : true,
             "objectType" : "MUSW__Application2__c",
             "recordId" : "{!recordId}"
           },
           "componentName" : "clariti:recordDetail",
-          "id" : "fe4fa465-2fd1-4af9-bbfa-6e43bb4e4759",
+          "id" : "09854dc0-ebe9-492f-bb98-8525efc5ec05",
+          "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
         } ],
-        "id" : "0a955781-cdd3-4794-9902-bf297bb7a5f7",
+        "id" : "a60d1496-5641-4e68-9e31-0e6c91263f23",
         "regionLabel" : "Details",
         "regionName" : "1",
         "renditionMap" : { },
@@ -90,12 +98,13 @@
             "width" : "MEDIUM"
           },
           "componentName" : "forceCommunity:responsiveRelatedListSingle",
-          "id" : "f917eaa7-c47c-4904-838d-99df7179fdf4",
+          "id" : "b6d905d4-a4fa-45b4-a099-fb71c1b0b7b8",
+          "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
         } ],
-        "id" : "15235617-c35f-44d0-945a-1b3d4bbe1678",
-        "regionLabel" : "Submission Requests",
+        "id" : "45b2c5a0-32bc-44fb-bf68-46b62e97103c",
+        "regionLabel" : "Required Documents",
         "regionName" : "2",
         "renditionMap" : { },
         "type" : "region"
@@ -107,13 +116,14 @@
             "width" : "MEDIUM"
           },
           "componentName" : "forceCommunity:responsiveRelatedListSingle",
-          "id" : "446e73b8-e6c2-453e-a0ac-d55ea942010a",
+          "id" : "c94f5b69-3928-43fa-b458-3e506e180817",
+          "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
         } ],
-        "id" : "e1410a9d-7644-4325-8611-be4ed857ce3e",
+        "id" : "a46db095-1713-4e73-9fe6-c4372bf3409d",
         "regionLabel" : "DPA Exemption",
-        "regionName" : "4f5c2",
+        "regionName" : "d9688",
         "renditionMap" : { },
         "type" : "region"
       }, {
@@ -124,30 +134,50 @@
             "width" : "MEDIUM"
           },
           "componentName" : "forceCommunity:responsiveRelatedListSingle",
-          "id" : "936eb16b-9da4-438d-96ff-00391c984d7f",
+          "id" : "a7e91708-f081-49d4-b4a7-5030cde3463e",
+          "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
         } ],
-        "id" : "3c5dda1a-dd87-43a7-a7ca-d6fb42fece24",
+        "id" : "62512b19-330d-4ec4-85cd-24cc030893e2",
         "regionLabel" : "Property Information",
-        "regionName" : "513eb",
+        "regionName" : "3",
         "renditionMap" : { },
         "type" : "region"
       }, {
         "components" : [ {
           "componentAttributes" : {
-            "relatedListApiName" : "MUSW__Application_Contacts__r",
+            "relatedListApiName" : "MUSW__Contacts__r",
             "relatedListComponentOverride" : "GRID",
             "width" : "MEDIUM"
           },
           "componentName" : "forceCommunity:responsiveRelatedListSingle",
-          "id" : "72b59520-ea0d-4119-a45c-6423915ec019",
+          "id" : "dbdc7390-a553-4c74-ba2a-50a2b64e12d8",
+          "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
         } ],
-        "id" : "2fcf1746-6149-458a-9983-9ba4d6b070c1",
+        "id" : "8a7ba7f0-3b13-475e-a2aa-389541006ad0",
         "regionLabel" : "Owner Information",
-        "regionName" : "694fe",
+        "regionName" : "1f9f0",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "relatedListApiName" : "MUSW__Fees__r",
+            "relatedListComponentOverride" : "GRID",
+            "width" : "MEDIUM"
+          },
+          "componentName" : "forceCommunity:responsiveRelatedListSingle",
+          "id" : "6d04e4f0-a067-4b99-8625-51708f111d69",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "fa676268-065c-46a7-8e78-71ad098509b3",
+        "regionLabel" : "Fee Information",
+        "regionName" : "95c78",
         "renditionMap" : { },
         "type" : "region"
       } ],

@@ -4,7 +4,7 @@
     <containerType>Network</containerType>
     <label>Citizen Menu</label>
     <navigationMenuItem>
-        <label>Planning</label>
+        <label>Development Applications</label>
         <position>1</position>
         <publiclyAvailable>false</publiclyAvailable>
         <subMenu>
@@ -33,40 +33,45 @@
         <type>MenuLabel</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <label>Permits</label>
+        <label>Building Permits</label>
         <position>2</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <type>MenuLabel</type>
+        <target>/error</target>
+        <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <label>Complaints</label>
+        <label>Bylaw Complaints</label>
         <position>3</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <type>MenuLabel</type>
+        <target>/error</target>
+        <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <label>Licenses</label>
+        <label>Dog Licenses</label>
         <position>4</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <type>MenuLabel</type>
+        <target>/error</target>
+        <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
         <label>Invoices and Receipts</label>
         <position>5</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <type>MenuLabel</type>
+        <target>/error</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Search for a Development Application</label>
+        <position>6</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/open-applications</target>
+        <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
         <label>Submit a Development Enquiry</label>
-        <position>6</position>
-        <publiclyAvailable>false</publiclyAvailable>
-        <type>MenuLabel</type>
-    </navigationMenuItem>
-    <navigationMenuItem>
-        <label>Active Applications</label>
         <position>7</position>
-        <publiclyAvailable>true</publiclyAvailable>
-        <target>/open-applications</target>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/my-inspections</target>
         <type>InternalLink</type>
     </navigationMenuItem>
 </NavigationMenu>
