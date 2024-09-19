@@ -132,6 +132,16 @@
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
+                        <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_Initiate_Public_Notice</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Review</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -152,7 +162,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>numVisibleActions</name>
-                    <value>4</value>
+                    <value>10</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
                 <identifier>force_highlightsPanel</identifier>
@@ -215,6 +225,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.CVRD_DS_Related_Application__c</fieldItem>
                 <identifier>RecordCVRD_DS_Related_Application_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CVRD_DS_Available_for_Public_Notice__c</fieldItem>
+                <identifier>RecordCVRD_DS_Available_for_Public_Notice__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-ae28da3e-8850-4a55-a644-3d732016e464</name>
