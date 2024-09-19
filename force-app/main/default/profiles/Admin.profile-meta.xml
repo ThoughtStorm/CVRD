@@ -125,7 +125,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>MUSW__Proceeding2__c.CVRD_DS_Public_URL__c</field>
+        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Public_URL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
