@@ -1325,7 +1325,7 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
-        <allowEdit>false</allowEdit>
+        <allowCreate>false</allowCreate>
         <allowRead>true</allowRead>
         <object>Document</object>
     </objectPermissions>
