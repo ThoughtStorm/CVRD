@@ -332,7 +332,7 @@
             "componentAttributes" : {
               "navAlignment" : "left",
               "navItemThreshold" : 4,
-              "navigationMenuEditorRefresh" : ""
+              "navigationMenuEditorRefresh" : "Citizen_Menu"
             },
             "componentName" : "forceCommunity:themeNav",
             "id" : "97309d26-4bdd-4fae-863a-ef0dc7a8210b",
@@ -410,7 +410,7 @@
           "heroWidth" : 1440,
           "showCaption" : false,
           "showSubtitle" : false,
-          "showTitle" : true,
+          "showTitle" : false,
           "subtitleText" : "We specialize in the construction of unique and exclusive properties.  We deliver outstanding quality and design for leading architects and private clients around the world.",
           "subtitleTextColor" : "rgba(0, 0, 0, 0.8)",
           "subtitleTextShadowColor" : "rgba(0, 0, 0, 0)",
