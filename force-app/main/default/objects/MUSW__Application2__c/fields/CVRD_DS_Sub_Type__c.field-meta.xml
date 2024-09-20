@@ -100,7 +100,6 @@
             <valueName>Non - Adhering Residential Use</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
             <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
             <valueName>Amendment</valueName>
         </valueSettings>
@@ -110,6 +109,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
             <valueName>New</valueName>
         </valueSettings>
         <valueSettings>
