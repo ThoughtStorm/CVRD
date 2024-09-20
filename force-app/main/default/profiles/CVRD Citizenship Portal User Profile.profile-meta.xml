@@ -44,7 +44,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>LightningLoginFormController</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>LightningLoginFormControllerTest</apexClass>
