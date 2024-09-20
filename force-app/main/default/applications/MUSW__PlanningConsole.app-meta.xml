@@ -1,0 +1,3628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MUSW__Account_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MUSW__Account_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Contact_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Contact_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MUSW__Event_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Event</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MUSW__Event_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Event</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MUSW__Task_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MUSW__Task_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MUSW__User_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>User</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MUSW__User_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>User</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>MUSW__Planning_Home_Page_Default</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#124654</headerColor>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Effectively manage planning and zoning applications with transparency to better your community and fast-track permits.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Planning Console</label>
+    <navType>Console</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Inspection_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Inspection__c</pageOrSobjectType>
+        <recordType>MUSW__Inspection__c.CVRD_DS_Application_Inspection</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Inspection_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Inspection__c</pageOrSobjectType>
+        <recordType>MUSW__Inspection__c.CVRD_DS_Application_Inspection</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Inspection_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Inspection__c</pageOrSobjectType>
+        <recordType>MUSW__Inspection__c.CVRD_DS_Application_Inspection</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Inspection_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Inspection__c</pageOrSobjectType>
+        <recordType>MUSW__Inspection__c.CVRD_DS_Application_Inspection</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Inspection_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Inspection__c</pageOrSobjectType>
+        <recordType>MUSW__Inspection__c.CVRD_DS_Application_Inspection</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Inspection_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Inspection__c</pageOrSobjectType>
+        <recordType>MUSW__Inspection__c.CVRD_DS_Application_Inspection</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antanna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Application_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Planning_Home_Page_StaffMember</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Cannabis_License</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Covenant_Amendment_or_Discharge</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Crown_Land_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Development_Variance_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Flood_Management_Bylaw_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Liquor_Cannabis_Licence_Referrals</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Minimum_Frontage_Exemption</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_OCP_Zoning_or_Land_Use_Bylaw_Amendment</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Community Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Subdivision_Referral</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Telecommunication_Antenna_Structure</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD Citizen Login User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS External Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CVRD_DS_Application_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>MUSW__Application2__c</pageOrSobjectType>
+        <recordType>MUSW__Application2__c.CVRD_DS_Temporary_Use_Permit</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD GM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Staff</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Internal Referral Profile User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Salesforce Platform User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DS Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>CVRD DM</profile>
+    </profileActionOverrides>
+    <subscriberTabs>MUSW__Condition__c</subscriberTabs>
+    <subscriberTabs>MUSW__Proceeding2__c</subscriberTabs>
+    <tabs>standard-home</tabs>
+    <tabs>MUSW__Application2__c</tabs>
+    <tabs>MUSW__Review__c</tabs>
+    <tabs>MUSW__Parcel__c</tabs>
+    <tabs>MUSW__Address__c</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>MUSW__Project2__c</tabs>
+    <tabs>standard-Event</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-report</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>MUSW__Planning_Console_UtilityBar</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>MUSW__Address__c</tab>
+        </mappings>
+        <mappings>
+            <tab>MUSW__Application2__c</tab>
+        </mappings>
+        <mappings>
+            <tab>MUSW__Parcel__c</tab>
+        </mappings>
+        <mappings>
+            <tab>MUSW__Project2__c</tab>
+        </mappings>
+        <mappings>
+            <tab>MUSW__Review__c</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Account</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Contact</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Event</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Task</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-home</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-report</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>
