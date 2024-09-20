@@ -385,6 +385,10 @@
             <assignToReference>AddNewApplicationContactRecord.CVRD_DS_Owner_Postal_Code__c</assignToReference>
             <operator>Assign</operator>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>EmailAddOwner.value</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
         <connector>
             <isGoTo>true</isGoTo>
             <targetReference>Is_Agent</targetReference>
@@ -1526,6 +1530,12 @@
                             <booleanValue>true</booleanValue>
                         </value>
                     </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <elementReference>EmailAddOwner.value</elementReference>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -1543,10 +1553,6 @@
                     <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
-                    <validationRule>
-                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgba(9, 30, 66, 0.06); font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; color: rgb(250, 8, 8);&quot;&gt;Please enter a 10-digit phone number with no spaces or hyphens&lt;/span&gt;&lt;/p&gt;</errorMessage>
-                        <formulaExpression>AND(NOT(CONTAINS({!PhoneAddOwner.value}, &apos;-&apos;)), LEN({!PhoneAddOwner.value})=10 )</formulaExpression>
-                    </validationRule>
                 </fields>
                 <fields>
                     <name>Add_Owner_Business_Name</name>
