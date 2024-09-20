@@ -804,7 +804,7 @@
         <recordType>MUSW__Application2__c.CVRD_DS_Phased_Development_Agreement</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Application2__c-Strata Conversion</layout>
+        <layout>MUSW__Application2__c-CVRD DS APplication Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Strata_Conversion</recordType>
     </layoutAssignments>
     <layoutAssignments>
