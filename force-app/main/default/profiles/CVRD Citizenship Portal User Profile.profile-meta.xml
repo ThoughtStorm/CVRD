@@ -1666,6 +1666,10 @@
     </tabVisibilities>
     <flowAccesses>
         <enabled>true</enabled>
+        <flow>User_Registration</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
         <flow>CVRD_DS_Create_Public_Notice</flow>
     </flowAccesses>
     <userLicense>Guest User License</userLicense>
