@@ -2265,7 +2265,7 @@
                     <defaultValue>
                         <elementReference>$User.PostalCode</elementReference>
                     </defaultValue>
-                    <fieldText>Postal_Code</fieldText>
+                    <fieldText>Postal Code</fieldText>
                     <fieldType>InputField</fieldType>
                     <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
