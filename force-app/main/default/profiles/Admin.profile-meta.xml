@@ -43,6 +43,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>CVRD_DS_Proceeding_OutcomeMapping__mdt</name>
+    </customMetadataTypeAccesses>
     <fieldPermissions>
         <editable>false</editable>
         <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_AR_Ledger_Account_Name__c</field>
@@ -57,6 +61,21 @@
         <editable>false</editable>
         <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_Application_Type__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CVRD_DS_Proceeding_OutcomeMapping__mdt.CVRD_DS_ApplicationType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CVRD_DS_Proceeding_OutcomeMapping__mdt.CVRD_DS_OutcomeValue__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CVRD_DS_Proceeding_OutcomeMapping__mdt.CVRD_DS_ProceedingType__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -733,6 +752,14 @@
         <field>MUSW__Review__c.CVRD_DS_Internal_Referral_Division__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Update_Agenda_Item_OutCome</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Create_Proceeding_Agenda_Item</flow>
+    </flowAccesses>
     <layoutAssignments>
         <layout>MUSW__Condition__c-Application Condition Layout</layout>
         <recordType>MUSW__Condition__c.CVRD_DS_Application_Condition</recordType>
