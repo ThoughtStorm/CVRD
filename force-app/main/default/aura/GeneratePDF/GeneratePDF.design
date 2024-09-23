@@ -1,3 +1,4 @@
 <design:component>
 	<design:attribute name="RecordId" label="RecordId" description="Please add recordId" /> 
+    <design:attribute name="url" label="URL" description="Please add URL" /> 
 </design:component>
