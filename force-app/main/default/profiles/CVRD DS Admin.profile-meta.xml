@@ -7283,6 +7283,10 @@
     </customMetadataTypeAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
+        <name>CVRD_DS_Proceeding_OutcomeMapping__mdt</name>
+    </customMetadataTypeAccesses>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
         <name>clariti__Record_Detail_Page_Layout_Mapping__mdt</name>
     </customMetadataTypeAccesses>
     <customPermissions>
@@ -9199,19 +9203,19 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CVRD_DS_Proceeding_OutcomeMapping__mdt.CVRD_DS_ApplicationType__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CVRD_DS_Proceeding_OutcomeMapping__mdt.CVRD_DS_OutcomeValue__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CVRD_DS_Proceeding_OutcomeMapping__mdt.CVRD_DS_ProceedingType__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>

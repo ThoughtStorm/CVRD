@@ -245,6 +245,7 @@
         </inputAssignments>
         <object>MUSW__Application2__c</object>
     </recordUpdates>
+    <runInMode>SystemModeWithSharing</runInMode>
     <screens>
         <name>ErrorScreen</name>
         <label>ErrorScreen</label>
