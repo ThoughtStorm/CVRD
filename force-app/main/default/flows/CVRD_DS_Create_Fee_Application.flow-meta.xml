@@ -71,11 +71,32 @@
         <nameSegment>MUSW__CreateFeesAction</nameSegment>
         <versionSegment>1</versionSegment>
     </actionCalls>
+    <actionCalls>
+        <name>Create_Fees_for_internal_applications_on_update</name>
+        <label>Create Fees for internal applications on update</label>
+        <locationX>974</locationX>
+        <locationY>839</locationY>
+        <actionName>MUSW__CreateFeesAction</actionName>
+        <actionType>apex</actionType>
+        <dataTypeMappings>
+            <typeName>T__relatedRecord</typeName>
+            <typeValue>MUSW__Application2__c</typeValue>
+        </dataTypeMappings>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>relatedRecord</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>MUSW__CreateFeesAction</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
     <apiVersion>58.0</apiVersion>
     <decisions>
         <name>Evaluate_Create_fee</name>
         <label>Evaluate Create fee</label>
-        <locationX>446</locationX>
+        <locationX>666</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -139,7 +160,7 @@
             <label>Create Fee for other Applications</label>
         </rules>
         <rules>
-            <name>Internal_Application_Fee_creation</name>
+            <name>Internal_Application_Fee_on_record_creation</name>
             <conditionLogic>(1 OR 2 OR 3 OR 4) AND 5 AND 6 AND 7</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
@@ -193,7 +214,75 @@
             <connector>
                 <targetReference>Create_Fees_for_internal_applications</targetReference>
             </connector>
-            <label>Internal Application Fee creation</label>
+            <label>Internal Application Fee on record creation</label>
+        </rules>
+        <rules>
+            <name>Record_subtype_Update_for_internal_fee_record_creation</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Sub_Type__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Agricultural_Land_Reserve</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Subdivision_Referral</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Crown_Land_Referrals</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Liquor Licence Referrals</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_fee_records</targetReference>
+            </connector>
+            <label>Record subtype Update for internal fee record creation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Evaluate_fee_records</name>
+        <label>Evaluate fee records</label>
+        <locationX>974</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Create_Fees_for_internal_applications_on_update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Fee records Not Found</defaultConnectorLabel>
+        <rules>
+            <name>Fee_records_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_fee_records</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_existing_fee_records_from_application_record</targetReference>
+            </connector>
+            <label>Fee records Found</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -219,6 +308,16 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_existing_fee_records_from_application_record</name>
+        <label>Delete existing fee records from application record</label>
+        <locationX>842</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Create_Fees_for_internal_applications_on_update</targetReference>
+        </connector>
+        <inputReference>Get_fee_records</inputReference>
+    </recordDeletes>
     <recordLookups>
         <name>Get_DP_fee_template_records</name>
         <label>Get DP fee template records</label>
@@ -254,8 +353,36 @@
         <object>MUSW__Master_Fee_List__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Get_fee_records</name>
+        <label>Get fee records</label>
+        <locationX>974</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Evaluate_fee_records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MUSW__Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Application Fee</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MUSW__Application2__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>MUSW__Fee__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <start>
-        <locationX>320</locationX>
+        <locationX>540</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Evaluate_Create_fee</targetReference>
