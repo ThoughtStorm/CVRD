@@ -123,9 +123,6 @@
                             <value>MUSW__Application2__c.clariti__PayOutstandingItems</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>MUSW__Application2__c.CVRD_DS_New_Deposit</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>MUSW__Application2__c.Create_Agenda_Item</value>
                             <visibilityRule>
                                 <criteria>
