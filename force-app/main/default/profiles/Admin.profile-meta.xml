@@ -154,6 +154,21 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Outcome__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Proceeding_Agenda_Item__c.CVRD_DS_Resolution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_DS_Review_Outcome__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Proceeding2__c.CVRD_DS_Application__c</field>
         <readable>true</readable>
     </fieldPermissions>

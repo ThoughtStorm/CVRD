@@ -20,6 +20,24 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override for Account by Lightning App Builder during activation.</comment>
+        <content>Proceeding_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>MUSW__Proceeding2__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override for Account by Lightning App Builder during activation.</comment>
+        <content>Permit_Coordinator_Review_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>MUSW__Review__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>MUSW__Account_Record_Page</content>
         <formFactor>Small</formFactor>
