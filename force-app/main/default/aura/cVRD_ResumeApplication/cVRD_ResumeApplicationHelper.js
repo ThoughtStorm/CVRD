@@ -11,12 +11,15 @@
                 var recordRelations = response.getReturnValue();
                 var interviews = [];
                 for (var i = 0; i < recordRelations.length; i++) {
+                    var InterviewLabel = recordRelations[i].InterviewLabel.replace(/_/g, " ");
+                    var CurrentElement = recordRelations[i].CurrentElement.replace(/_/g, " ");
+                    //alert(CurrentElement);
                     interviews.push(
                         {
                             Id: recordRelations[i].Id,
-                            InterviewLabel: recordRelations[i].InterviewLabel,
+                            InterviewLabel: InterviewLabel,
                             PauseLabel: recordRelations[i].PauseLabel,
-                            CurrentElement: recordRelations[i].CurrentElement,
+                            CurrentElement: CurrentElement,
                             PausedDate: recordRelations[i].LastModifiedDate,
                             PausedBy: recordRelations[i].Owner.Name
                         });

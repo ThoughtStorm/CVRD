@@ -123,6 +123,9 @@
                             <value>MUSW__Application2__c.clariti__PayOutstandingItems</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>MUSW__Application2__c.CVRD_DS_New_Deposit</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>MUSW__Application2__c.Create_Agenda_Item</value>
                             <visibilityRule>
                                 <criteria>
@@ -347,7 +350,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.CVRD_DS_Planner__c</fieldItem>
                 <identifier>RecordCVRD_DS_Planner_cField</identifier>

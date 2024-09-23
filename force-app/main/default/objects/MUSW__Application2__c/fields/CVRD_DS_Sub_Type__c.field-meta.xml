@@ -119,10 +119,6 @@
             <valueName>Cannabis Retail Licence (delegated)</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
-            <valueName>Cannabis Referral License</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
             <valueName>Liquor Licence Referral (delegated)</valueName>
         </valueSettings>
