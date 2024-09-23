@@ -13,7 +13,7 @@ export default class cVRD_Override_Flow_Buttons extends NavigationMixin(Lightnin
             this[NavigationMixin.Navigate]({
                 type: 'standard__webPage',
                 attributes: {
-                    url: 'https://cvrd--qa.sandbox.my.site.com/CVRDCitizenshipPortal/s/'
+                    url: 'https://cvrd--dstraining.sandbox.my.site.com/CVRDCitizenshipPortal/s/'
                 }
             },
             true // Replaces the current page in your browser history with the URL

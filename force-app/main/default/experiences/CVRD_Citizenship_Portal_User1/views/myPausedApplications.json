@@ -71,25 +71,6 @@
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"
-        }, {
-          "componentAttributes" : {
-            "deleteButtonText" : "Delete",
-            "pageSize" : 10,
-            "resumeButtonAlign" : "right",
-            "resumeButtonLabel" : "Resume",
-            "showDeleteButton" : true,
-            "showNumberInTitle" : true,
-            "showOwnerName" : true,
-            "showPauseReason" : true,
-            "showPauseStep" : true,
-            "showPauseTime" : true,
-            "title" : "Paused Flows"
-          },
-          "componentName" : "forceCommunity:pausedInterviewCard",
-          "id" : "48b77dfa-fd05-45ca-a72c-c8e6bcaa0ef2",
-          "renderPriority" : "NEUTRAL",
-          "renditionMap" : { },
-          "type" : "component"
         } ],
         "id" : "fdd26a8c-8dff-4f0f-8941-589ce2cae1d2",
         "regionLabel" : "Column 1",

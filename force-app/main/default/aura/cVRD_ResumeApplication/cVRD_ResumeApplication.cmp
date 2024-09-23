@@ -13,7 +13,7 @@
     <lightning:overlayLibrary aura:id="overlayLib" />
     <lightning:card iconName="standard:flow" class="slds-card_boundary">
         <aura:set attribute="title">
-            <span class="slds-card__header-link">Paused Flow Interviews</span>
+            <span class="slds-card__header-link">Paused Applications</span>
         </aura:set>
         <aura:set attribute="actions">
             <lightning:buttonIcon iconName="utility:refresh" onclick="{!c.init}" 
@@ -23,10 +23,10 @@
         slds-table_fixed-layout">
        <thead>
           <tr class="slds-text-heading--label">
-             <th scope="col"><div class="slds-truncate">Interview Label</div></th>
+             <th scope="col"><div class="slds-truncate">Application Name</div></th>
              <th scope="col"><div class="slds-truncate">Pause Reason</div></th>
              <th scope="col"><div class="slds-truncate">Paused Date</div></th> 
-             <th scope="col"><div class="slds-truncate">Current Element</div></th>
+             <th scope="col"><div class="slds-truncate">Current Page</div></th>
              <th scope="col"><div class="slds-truncate">Owner</div></th>
              <th scope="col" style="width: 3.25rem;"><div class="slds-truncate"/>
                  <div class="slds-th__action">

@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>MUSW__Completed_Action__c</fullName>
     <deprecated>false</deprecated>
+    <externalId>false</externalId>
     <label>Completed Action</label>
     <required>false</required>
     <trackFeedHistory>true</trackFeedHistory>
@@ -9,7 +10,28 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
+        <controllingField>MUSW__Type__c</controllingField>
         <restricted>true</restricted>
         <valueSetName>MUSW__Review_Completed_Actions</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Planner Review</controllingFieldValue>
+            <controllingFieldValue>Preliminary Review</controllingFieldValue>
+            <controllingFieldValue>Appeal Review</controllingFieldValue>
+            <valueName>Corrections Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Planner Review</controllingFieldValue>
+            <controllingFieldValue>Appeal Review</controllingFieldValue>
+            <valueName>Denial Recommended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Planner Review</controllingFieldValue>
+            <controllingFieldValue>Appeal Review</controllingFieldValue>
+            <valueName>Approval Recommended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Preliminary Review</controllingFieldValue>
+            <valueName>Approved</valueName>
+        </valueSettings>
     </valueSet>
 </CustomField>

@@ -216,6 +216,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Renewal</fullName>
             <default>false</default>
         </values>
