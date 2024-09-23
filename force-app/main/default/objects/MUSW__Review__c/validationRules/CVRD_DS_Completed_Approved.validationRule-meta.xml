@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Completed_Approved</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Profile.Name !=&apos;System Administrator&apos; &amp;&amp; ISPICKVAL(MUSW__Type__c, &apos;Preliminary Review&apos;)   &amp;&amp;  ISPICKVAL( MUSW__Status__c , &apos;Completed&apos;) &amp;&amp;   ISPICKVAL( PRIORVALUE(MUSW__Completed_Action__c) , &apos;Approved&apos;) &amp;&amp; ISCHANGED(MUSW__Completed_Action__c)</errorConditionFormula>
+    <errorDisplayField>MUSW__Completed_Action__c</errorDisplayField>
+    <errorMessage>Preliminary Review action cannot be changed once approved please contact system admin</errorMessage>
+</ValidationRule>
