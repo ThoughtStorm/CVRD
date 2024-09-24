@@ -39,6 +39,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ActivitiesAccess</name>
+        </userPermissions>
+        <userPermissions>
+        <enabled>true</enabled>
+        <name>EditTask</name>
+        </userPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.Agent_Authorization__c</field>
@@ -488,13 +496,13 @@
         <layout>MUSW__Review__c-Application - Review Layout</layout>
     </layoutAssignments>
     <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
+        <modifyAllRecords>false</modifyAllRecords>
         <object>MUSW__Application2__c</object>
-        <viewAllRecords>true</viewAllRecords>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
