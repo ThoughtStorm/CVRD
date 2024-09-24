@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Create_Initial_Submissions</name>
+        <label>Create Initial Submissions</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <actionName>MUSW__CreateInitialSubmissionsAction</actionName>
+        <actionType>apex</actionType>
+        <dataTypeMappings>
+            <typeName>T__relatedRecord</typeName>
+            <typeValue>MUSW__Application2__c</typeValue>
+        </dataTypeMappings>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>relatedRecord</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>MUSW__CreateInitialSubmissionsAction</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
         <name>Create_Submission_Custom</name>
         <label>Create Submission Custom</label>
         <locationX>50</locationX>
@@ -18,255 +39,29 @@
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>58.0</apiVersion>
-    <assignments>
-        <name>add_Current_DPA_Type</name>
-        <label>add Current DPA Type</label>
-        <locationX>930</locationX>
-        <locationY>971</locationY>
-        <assignmentItems>
-            <assignToReference>SplitSelectedDPATypes</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>currentDPAType</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>counter</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <numberValue>1.0</numberValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Assign_Selected_DPA_Types</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>add_matching_submission_template</name>
-        <label>add matching submission template</label>
-        <locationX>754</locationX>
-        <locationY>1295</locationY>
-        <assignmentItems>
-            <assignToReference>MatchingSubmissionTemplates</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>filter_DPA</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>loop_selected_DPA_Types</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Add_Submission</name>
-        <label>Add Submission</label>
-        <locationX>754</locationX>
-        <locationY>1787</locationY>
-        <assignmentItems>
-            <assignToReference>applicableSubmissions</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>matchingSubmission</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>matching_submission_templates</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>assign_current_DPA_Type</name>
-        <label>assign current DPA Type</label>
-        <locationX>930</locationX>
-        <locationY>863</locationY>
-        <assignmentItems>
-            <assignToReference>currentDPAType</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>NextDPAType</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>SelectedDPATypes</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>trimSelectedDPATypes</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>add_Current_DPA_Type</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Selected_DPA_Types</name>
-        <label>Assign Selected DPA Types</label>
-        <locationX>798</locationX>
-        <locationY>647</locationY>
-        <assignmentItems>
-            <assignToReference>SelectedDPATypes</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Get_Application.CVRD_DS_Selected_DPAs__c</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Check_DPA_Types</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Submission</name>
-        <label>Assign Submission</label>
-        <locationX>754</locationX>
-        <locationY>1679</locationY>
-        <assignmentItems>
-            <assignToReference>matchingSubmission.MUSW__Description__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>matching_submission_templates.MUSW__Submission_Description__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>matchingSubmission.MUSW__Application2__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Get_Application.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>matchingSubmission.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>matching_submission_templates.MUSW__Submission_Name__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>matchingSubmission.MUSW__Required__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>matching_submission_templates.MUSW__Required__c</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Add_Submission</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Copy_1_of_add_matching_submission_template</name>
-        <label>Copy 1 of add matching submission template</label>
-        <locationX>754</locationX>
-        <locationY>1187</locationY>
-        <assignmentItems>
-            <assignToReference>MatchingSubmissionTemplates</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>filter_DPA</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>add_matching_submission_template</targetReference>
-        </connector>
-    </assignments>
-    <collectionProcessors>
-        <name>filter_DPA</name>
-        <elementSubtype>FilterCollectionProcessor</elementSubtype>
-        <label>filter DPA</label>
-        <locationX>886</locationX>
-        <locationY>971</locationY>
-        <assignNextValueToReference>currentItem_filter_DPA</assignNextValueToReference>
-        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
-        <collectionReference>SubmissionTemplates</collectionReference>
-        <conditionLogic>and</conditionLogic>
-        <conditions>
-            <leftValueReference>currentItem_filter_DPA.CVRD_DS_DPA_Types__c</leftValueReference>
-            <operator>Contains</operator>
-            <rightValue>
-                <elementReference>loop_selected_DPA_Types</elementReference>
-            </rightValue>
-        </conditions>
-        <connector>
-            <targetReference>matching_DPA</targetReference>
-        </connector>
-    </collectionProcessors>
     <decisions>
-        <name>Check_DPA_Types</name>
-        <label>Check DPA Types</label>
-        <locationX>798</locationX>
-        <locationY>755</locationY>
-        <defaultConnector>
-            <targetReference>assign_current_DPA_Type</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>is_blank</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>SelectedDPATypes</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>counter</leftValueReference>
-                <operator>GreaterThan</operator>
-                <rightValue>
-                    <numberValue>1.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>loop_selected_DPA_Types</targetReference>
-            </connector>
-            <label>is blank?</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>matching_DPA</name>
-        <label>matching DPA?</label>
-        <locationX>886</locationX>
-        <locationY>1079</locationY>
-        <defaultConnector>
-            <targetReference>loop_selected_DPA_Types</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>found_matching_DPA</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>filter_DPA</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Copy_1_of_add_matching_submission_template</targetReference>
-            </connector>
-            <label>found matching DPA</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>method_calling_check</name>
-        <label>method calling</label>
-        <locationX>424</locationX>
+        <name>Development_Permit_Applications</name>
+        <label>Evaluate Development Permit Applications</label>
+        <locationX>182</locationX>
         <locationY>323</locationY>
         <defaultConnector>
-            <targetReference>Get_Application</targetReference>
+            <targetReference>Create_Initial_Submissions</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>call_action</name>
+            <name>Development_permit_exist</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>method_calling</leftValueReference>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>action</stringValue>
+                    <stringValue>Development_Permit</stringValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>Create_Submission_Custom</targetReference>
             </connector>
-            <label>call action</label>
+            <label>Development permit exist</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -282,34 +77,6 @@
     </formulas>
     <interviewLabel>Application - Create Submissions {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Application - Create Submissions</label>
-    <loops>
-        <name>loop_selected_DPA_Types</name>
-        <label>loop selected DPA Types</label>
-        <locationX>666</locationX>
-        <locationY>863</locationY>
-        <collectionReference>SplitSelectedDPATypes</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>filter_DPA</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>matching_submission_templates</targetReference>
-        </noMoreValuesConnector>
-    </loops>
-    <loops>
-        <name>matching_submission_templates</name>
-        <label>matching submission templates</label>
-        <locationX>666</locationX>
-        <locationY>1571</locationY>
-        <collectionReference>MatchingSubmissionTemplates</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>Assign_Submission</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>create_Submissions</targetReference>
-        </noMoreValuesConnector>
-    </loops>
     <overriddenFlow>clariti__Application_Create_Submissions</overriddenFlow>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -330,75 +97,11 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordCreates>
-        <name>create_Submissions</name>
-        <label>create Submissions</label>
-        <locationX>666</locationX>
-        <locationY>1979</locationY>
-        <inputReference>applicableSubmissions</inputReference>
-    </recordCreates>
-    <recordLookups>
-        <name>Get_Application</name>
-        <label>Get Application</label>
-        <locationX>798</locationX>
-        <locationY>431</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Get_Submission_Template</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>MUSW__Application2__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_Submission_Template</name>
-        <label>Get Submission Template</label>
-        <locationX>798</locationX>
-        <locationY>539</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Assign_Selected_DPA_Types</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>MUSW__Application_Types__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Get_Application.MUSW__Type2__c</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Application_Phases__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Get_Application.MUSW__Phase__c</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>MUSW__Application_Statuses__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Get_Application.MUSW__Status__c</elementReference>
-            </value>
-        </filters>
-        <object>MUSW__Master_Submission_List__c</object>
-        <outputReference>SubmissionTemplates</outputReference>
-        <queriedFields>Id</queriedFields>
-        <queriedFields>CVRD_DS_DPA_Types__c</queriedFields>
-    </recordLookups>
     <start>
-        <locationX>298</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>method_calling_check</targetReference>
+            <targetReference>Development_Permit_Applications</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
