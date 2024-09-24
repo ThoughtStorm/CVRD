@@ -48,6 +48,11 @@
         <name>CVRD_DS_Proceeding_OutcomeMapping__mdt</name>
     </customMetadataTypeAccesses>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>MUSW__Milestone__c.EPR_Integration__c</field>
+        <readable>true</readable>
+        </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>CVRD_DS_Ledger_Account_Detail__mdt.CVRD_DS_AR_Ledger_Account_Name__c</field>
         <readable>false</readable>
