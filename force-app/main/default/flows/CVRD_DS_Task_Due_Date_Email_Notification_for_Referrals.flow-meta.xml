@@ -215,12 +215,12 @@
     <formulas>
         <name>internalLink</name>
         <dataType>String</dataType>
-        <expression>&apos;https://cvrd--qa.sandbox.lightning.force.com/&apos; &amp; {!$Record.Id}</expression>
+        <expression>{!$Label.CVRD_DS_Internal_Referral_Link}&amp;&quot;/&quot;&amp;{!$Record.Id}</expression>
     </formulas>
     <formulas>
         <name>partnerPortalLink</name>
         <dataType>String</dataType>
-        <expression>&apos;https://cvrd--qa.sandbox.my.site.com/CVRDCitizenshipPortal/&apos; &amp; {!$Record.Id}</expression>
+        <expression>{!$Label.CVRD_DS_Portal_URL}&amp;&quot;/&quot;&amp;{!$Record.Id}</expression>
     </formulas>
     <formulas>
         <name>RelatedTaskLink</name>
