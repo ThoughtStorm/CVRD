@@ -347,7 +347,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.CVRD_DS_Planner__c</fieldItem>
                 <identifier>RecordCVRD_DS_Planner_cField</identifier>
