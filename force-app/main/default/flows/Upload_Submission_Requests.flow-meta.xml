@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Redirect_To_Record_Detail_Page</name>
         <label>Redirect To Record Detail Page</label>
-        <locationX>314</locationX>
-        <locationY>1298</locationY>
+        <locationX>655</locationX>
+        <locationY>1658</locationY>
         <actionName>clariti:flowNavigation</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -18,11 +18,11 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
         <versionSegment>1</versionSegment>
     </actionCalls>
-    <apiVersion>61.0</apiVersion>
+    <apiVersion>56.0</apiVersion>
     <assignments>
         <name>ApplicationIDCollector</name>
         <label>ApplicationIDCollector</label>
-        <locationX>842</locationX>
+        <locationX>787</locationX>
         <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>ApplicationRecords</assignToReference>
@@ -38,7 +38,7 @@
     <assignments>
         <name>Assign_Application_ID_to_Record_ID</name>
         <label>Assign Application ID to Record ID</label>
-        <locationX>842</locationX>
+        <locationX>787</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -54,7 +54,7 @@
     <assignments>
         <name>Assign_License_ID_to_Record_ID</name>
         <label>Assign License ID to Record ID</label>
-        <locationX>578</locationX>
+        <locationX>523</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -70,7 +70,7 @@
     <assignments>
         <name>Assign_Permit_ID_to_Record_ID</name>
         <label>Assign Permit ID to Record ID</label>
-        <locationX>314</locationX>
+        <locationX>259</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Record_Id</assignToReference>
@@ -100,7 +100,7 @@
     <decisions>
         <name>Evaluate_Button_Bar_Value</name>
         <label>Evaluate Button Bar Value</label>
-        <locationX>578</locationX>
+        <locationX>534</locationX>
         <locationY>1190</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -134,7 +134,7 @@
     <decisions>
         <name>Evaluate_Record_ID</name>
         <label>Evaluate Record ID</label>
-        <locationX>710</locationX>
+        <locationX>655</locationX>
         <locationY>134</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -207,7 +207,7 @@
     <decisions>
         <name>Evaluate_Required_Submission_pending</name>
         <label>Evaluate Required Submission pending</label>
-        <locationX>314</locationX>
+        <locationX>292</locationX>
         <locationY>974</locationY>
         <defaultConnector>
             <targetReference>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</targetReference>
@@ -232,7 +232,7 @@
     <decisions>
         <name>Evaluate_Submissions_Pending</name>
         <label>Evaluate Submissions Pending</label>
-        <locationX>710</locationX>
+        <locationX>655</locationX>
         <locationY>758</locationY>
         <defaultConnector>
             <targetReference>No_Pending_Submissions</targetReference>
@@ -279,7 +279,7 @@
     <recordLookups>
         <name>Copy_1_of_Get_Pending_Submissions</name>
         <label>Copy 1 of Get Pending Submissions</label>
-        <locationX>842</locationX>
+        <locationX>787</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -309,7 +309,7 @@
     <recordLookups>
         <name>Copy_2_of_Get_Pending_Submissions</name>
         <label>Copy 2 of Get Pending Submissions</label>
-        <locationX>578</locationX>
+        <locationX>523</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -339,7 +339,7 @@
     <recordLookups>
         <name>Copy_3_of_Get_Pending_Submissions</name>
         <label>Copy 3 of Get Pending Submissions</label>
-        <locationX>314</locationX>
+        <locationX>259</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -369,7 +369,7 @@
     <recordLookups>
         <name>Get_Application_Name</name>
         <label>Get Application Name</label>
-        <locationX>842</locationX>
+        <locationX>787</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -392,7 +392,7 @@
     <recordLookups>
         <name>Get_License_Name</name>
         <label>Get License Name</label>
-        <locationX>578</locationX>
+        <locationX>523</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -415,7 +415,7 @@
     <recordLookups>
         <name>Get_Permit_Name</name>
         <label>Get Permit Name</label>
-        <locationX>314</locationX>
+        <locationX>259</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -440,7 +440,7 @@
         <description>(all satisfied / no fees)</description>
         <name>No_Pending_Submission_Requests_And_No_Pending_Fees_Confirmation</name>
         <label>Pending Submission Requests Uploaded (all satisfied / no fees)</label>
-        <locationX>578</locationX>
+        <locationX>534</locationX>
         <locationY>1082</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -560,11 +560,14 @@
     <screens>
         <name>No_Pending_Submissions</name>
         <label>No Pending Submissions</label>
-        <locationX>1106</locationX>
+        <locationX>1018</locationX>
         <locationY>866</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Redirect_To_Record_Detail_Page</targetReference>
+        </connector>
         <fields>
             <name>No_Pending_Submissions_Display_Text</name>
             <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 28px;&quot;&gt;Submission Requests&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;You have no pending submission requests for &lt;u style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!Get_Permit_Name.Name}{!Get_Application_Name.Name}{!Get_License_Name.Name}&lt;/u&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</fieldText>
@@ -747,7 +750,7 @@
     <screens>
         <name>Pending_Submissions_Screen</name>
         <label>Pending Submissions Screen</label>
-        <locationX>314</locationX>
+        <locationX>292</locationX>
         <locationY>866</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -792,7 +795,7 @@
     </screens>
     <sourceTemplate>clariti__Upload_Submission_Requests</sourceTemplate>
     <start>
-        <locationX>584</locationX>
+        <locationX>529</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Evaluate_Record_ID</targetReference>
