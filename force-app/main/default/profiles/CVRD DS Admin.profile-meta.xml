@@ -20441,15 +20441,7 @@
         <recordType>MUSW__Condition__c.CVRD_DS_Application_Condition</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
-        <recordType>MUSW__Condition__c.MUSW__All</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>MUSW__Condition__c-MUSW__Condition Layout</layout>
-        <recordType>MUSW__Condition__c.MUSW__Comment</recordType>
+        <layout>MUSW__Condition__c-Application Condition Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Credential__c-MUSW__Credential Layout</layout>

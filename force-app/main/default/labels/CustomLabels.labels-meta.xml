@@ -26,6 +26,13 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>CVRD DS Portal URL</shortDescription>
-        <value>https://cvrd--dev1.sandbox.my.site.com/CVRDCitizenshipPortal/s/</value>
+        <value>https://cvrd--qa.sandbox.my.site.com/CVRDCitizenshipPortal</value>
+    </labels>
+    <labels>
+        <fullName>CVRD_DS_Internal_Referral_Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CVRD DS Internal Referral Link</shortDescription>
+        <value>https://cvrd--qa.sandbox.lightning.force.com</value>
     </labels>
 </CustomLabels>
