@@ -4,7 +4,7 @@
     <decisions>
         <name>Evaluate_application_Status</name>
         <label>Evaluate application Status</label>
-        <locationX>578</locationX>
+        <locationX>446</locationX>
         <locationY>242</locationY>
         <defaultConnector>
             <targetReference>Error_Message_screen</targetReference>
@@ -49,13 +49,6 @@
                     <numberValue>0.0</numberValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>Application_Record.CVRD_DS_Planner__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Update_Application_Status</targetReference>
             </connector>
@@ -76,24 +69,10 @@
             </connector>
             <label>Fee pending</label>
         </rules>
-        <rules>
-            <name>Planner_is_Null</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Application_Record.CVRD_DS_Planner__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Copy_1_of_Copy_2_of_Error_Message_screen</targetReference>
-            </connector>
-            <label>Planner is Null</label>
-        </rules>
     </decisions>
     <environments>Default</environments>
     <interviewLabel>CVRD_DS_Confirm_and_create_Application {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>CVRD_DS_Confirm_and_create_Application</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -117,7 +96,7 @@
     <recordLookups>
         <name>Get_Application_record</name>
         <label>Get Application record</label>
-        <locationX>578</locationX>
+        <locationX>446</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -169,32 +148,9 @@
                 <stringValue>Pending</stringValue>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <elementReference>Application_Record.CVRD_DS_Planner__r.Id</elementReference>
-            </value>
-        </inputAssignments>
         <object>MUSW__Application2__c</object>
     </recordUpdates>
     <runInMode>SystemModeWithSharing</runInMode>
-    <screens>
-        <name>Copy_1_of_Copy_2_of_Error_Message_screen</name>
-        <label>Copy 1 of Copy 2 of Error Message screen</label>
-        <locationX>842</locationX>
-        <locationY>350</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <fields>
-            <name>Copy_1_of_Copy_2_of_PhaseErrorMessage</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(244, 8, 8); font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;Please assign Planner for the application.&lt;/strong&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <nextOrFinishButtonLabel>Done</nextOrFinishButtonLabel>
-        <showFooter>true</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
     <screens>
         <name>Copy_1_of_Error_Message_screen</name>
         <label>Copy 1 of Error Message screen</label>
@@ -232,7 +188,7 @@
     <screens>
         <name>Error_Message_screen</name>
         <label>Error Message screen</label>
-        <locationX>1106</locationX>
+        <locationX>842</locationX>
         <locationY>350</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -263,7 +219,7 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>452</locationX>
+        <locationX>320</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Application_record</targetReference>

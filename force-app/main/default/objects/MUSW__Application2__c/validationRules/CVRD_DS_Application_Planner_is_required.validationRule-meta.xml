@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Application_Planner_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(MUSW__Type2__c, &quot;Subdivision_Referral&quot;),
+    ISPICKVAL(MUSW__Phase__c, &quot;Review&quot;),
+    ISPICKVAL(MUSW__Status__c, &quot;Completed&quot;),
+    ISBLANK(CVRD_DS_Planner__c)
+)</errorConditionFormula>
+    <errorMessage>Planner is needed to Complete the Review!</errorMessage>
+</ValidationRule>
