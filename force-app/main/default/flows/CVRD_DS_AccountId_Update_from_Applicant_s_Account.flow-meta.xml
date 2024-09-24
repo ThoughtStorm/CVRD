@@ -1,43 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>59.0</apiVersion>
+    <apiVersion>62.0</apiVersion>
     <decisions>
         <name>Application_creation_check</name>
         <label>Application creation check</label>
         <locationX>182</locationX>
-        <locationY>431</locationY>
+        <locationY>623</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Internal_application_Check</name>
-            <conditionLogic>((1 OR 2 OR 3 OR 4) AND 5 )</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Agricultural_Land_Reserve</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Subdivision_Referral</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Crown_Land_Referrals</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Liquor Licence Referrals</stringValue>
-                </rightValue>
-            </conditions>
+            <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.CVRD_DS_Planner__c</leftValueReference>
                 <operator>IsNull</operator>
@@ -45,10 +17,42 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.CVRD_DS_Planner__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>update_Owner_with_Planner</targetReference>
             </connector>
             <label>Internal application Check</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_If_Application_is_created</name>
+        <label>Check If Application is created</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Application_creation_check</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Created</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.MUSW__Applicant__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Applicants_account_id_on_Application</targetReference>
+            </connector>
+            <label>Created</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -76,8 +80,8 @@
     <recordUpdates>
         <name>Update_Applicants_account_id_on_Application</name>
         <label>Update Applicants account id on Application</label>
-        <locationX>182</locationX>
-        <locationY>323</locationY>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
         <connector>
             <targetReference>Application_creation_check</targetReference>
         </connector>
@@ -93,7 +97,7 @@
         <name>update_Owner_with_Planner</name>
         <label>update Owner with Planner</label>
         <locationX>50</locationX>
-        <locationY>539</locationY>
+        <locationY>731</locationY>
         <inputAssignments>
             <field>OwnerId</field>
             <value>
@@ -106,10 +110,10 @@
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Applicants_account_id_on_Application</targetReference>
+            <targetReference>Check_If_Application_is_created</targetReference>
         </connector>
         <object>MUSW__Application2__c</object>
-        <recordTriggerType>Create</recordTriggerType>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
