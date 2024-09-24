@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>TUP EASC V4</label>
+    <protected>false</protected>
+    <values>
+        <field>CVRD_DS_ApplicationType__c</field>
+        <value xsi:type="xsd:string">Temporary_Use_Permit</value>
+    </values>
+    <values>
+        <field>CVRD_DS_OutcomeValue__c</field>
+        <value xsi:type="xsd:string">Referall to staff for additional information recommended</value>
+    </values>
+    <values>
+        <field>CVRD_DS_ProceedingType__c</field>
+        <value xsi:type="xsd:string">EASC Meeting</value>
+    </values>
+</CustomMetadata>

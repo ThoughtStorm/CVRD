@@ -6,7 +6,7 @@
     OR(
         ISPICKVAL(MUSW__Status__c, &quot;On Hold&quot;),
         ISPICKVAL(MUSW__Status__c, &quot;Additional Information Required&quot;),
-        ISPICKVAL(MUSW__Completed_Action__c, &quot;Corrections Required	&quot;)
+        ISPICKVAL(MUSW__Completed_Action__c, &quot;Corrections Required&quot;)
     ),
     ISBLANK(CVRD_DS_Comments__c)
 )</errorConditionFormula>

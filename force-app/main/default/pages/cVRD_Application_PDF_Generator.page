@@ -23,7 +23,7 @@
         <div style="width:100%;">
             <div style="margin-bottom:10px height:60px; float:left;">
                 <div style="width:50%;float:left;">
-                    <apex:image url="{! URLFOR($Resource.CVRD_Logo)}" style="height:50px" alt="CVRD Logo"/>
+                    <apex:image url="{! URLFOR($Resource.CVRD_HD_Logo1)}" style="height:50px" alt="CVRD Logo"/>
                 </div>
                 <div style="width:50%; float:right;">
                     <div style="float:right;">Development Services</div>
