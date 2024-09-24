@@ -41,7 +41,7 @@
                     var toastEvent = $A.get("e.force:showToast");
                     toastEvent.setParams({
                         "title": "Success!",
-                        "message": "Application Resume successfully.",
+                        "message": "Application Resumed Successfully.",
                         "type": 'success',
                         "mode": 'pester'
                     });

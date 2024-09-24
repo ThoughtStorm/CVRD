@@ -2226,10 +2226,7 @@
                 <fields>
                     <name>Mailing_Address</name>
                     <defaultValue>
-                        <stringValue>{!$User.Street}
-{!$User.City}
-{!$User.State}
-{!$User.CountryCode}</stringValue>
+                        <stringValue>{!$User.Street}</stringValue>
                     </defaultValue>
                     <fieldText>Mailing Address</fieldText>
                     <fieldType>LargeTextArea</fieldType>
