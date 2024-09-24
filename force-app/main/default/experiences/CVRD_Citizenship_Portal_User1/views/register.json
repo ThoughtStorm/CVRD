@@ -7,7 +7,7 @@
   "regions" : [ {
     "components" : [ {
       "componentAttributes" : {
-        "richTextValue" : "<p><strong style=\"font-size: 28px;\">Self Registration Page</strong></p>"
+        "richTextValue" : "<p><strong style=\"font-size: 28px;\">Registration</strong></p>"
       },
       "componentName" : "forceCommunity:richTextInline",
       "id" : "41947fea-d6c6-4cc8-8d97-a9e406e5e668",
