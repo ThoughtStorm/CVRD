@@ -39,14 +39,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ActivitiesAccess</name>
-        </userPermissions>
-        <userPermissions>
-        <enabled>true</enabled>
-        <name>EditTask</name>
-        </userPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>MUSW__Application2__c.Agent_Authorization__c</field>
@@ -765,4 +757,12 @@
         <enabled>true</enabled>
         <name>ShareFilesWithNetworks</name>
     </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ActivitiesAccess</name>
+        </userPermissions>
+        <userPermissions>
+        <enabled>true</enabled>
+        <name>EditTask</name>
+        </userPermissions>
 </Profile>
