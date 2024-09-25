@@ -4,6 +4,15 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <label>Planner</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>User.Title</field>
+            <operation>equals</operation>
+            <value>Planner</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>User</referenceTo>
     <relationshipName>Applications</relationshipName>
     <required>false</required>

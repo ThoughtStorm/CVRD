@@ -3,7 +3,7 @@
     <fullName>CVRD_DS_create_Public_Notice__c</fullName>
     <externalId>false</externalId>
     <formula>IF(  CVRD_DS_Available_for_Public_Notice__c ,  HYPERLINK(&apos;/s/public-notification?recordId=&apos;&amp;Id&amp;&apos;&amp;Appname=&apos;&amp;Name, &apos;CLICK HERE&apos;,&apos;_blank&apos;) , &apos;This application is not available for public comments&apos;)</formula>
-    <label>Submit response to public notice</label>
+    <label>Submit Response to Public Notice</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
