@@ -3,23 +3,10 @@
     <aura:attribute name="showPDFButton" type="boolean" default="true"/>
     <aura:attribute name="iframeUrl" type="String" />
     <aura:attribute name="RecordId" type="MUSW__Application2__c[]" />
-    <aura:attribute name="url" type="string" />
-    <aura:handler name ="init" value ="{!this}" action ="{!c.doInit}"/>
      
     <aura:if isTrue="{!v.showPDFButton}">
     	<lightning:button variant="brand" label="Download a copy of your Application" onclick="{! c.handleClick }"></lightning:button>
     </aura:if>
     <br/><br/>
-    <!--<aura:if isTrue="{!v.boolShowSpinner}">
-        <iframe src="{!v.iframeUrl}"
-            width="100%"
-            height="1000px"
-            style="{!v.style}"
-            frameBorder="{!v.frameBorder}"
-            sandbox="{!v.sandbox}"
-            scrolling="{!v.scrolling}"/>
-    </aura:if>-->
-    
-    
 	
 </aura:component>

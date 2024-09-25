@@ -101,6 +101,15 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override for Account by Lightning App Builder during activation.</comment>
+        <content>Deposit_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>clariti__Deposit__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>MUSW__User_Record_Page</content>
         <formFactor>Large</formFactor>
@@ -180,6 +189,7 @@
     </profileActionOverrides>
     <subscriberTabs>MUSW__Condition__c</subscriberTabs>
     <subscriberTabs>MUSW__Proceeding2__c</subscriberTabs>
+    <subscriberTabs>clariti__Deposit__c</subscriberTabs>
     <tabs>standard-home</tabs>
     <tabs>MUSW__Application2__c</tabs>
     <tabs>MUSW__Review__c</tabs>

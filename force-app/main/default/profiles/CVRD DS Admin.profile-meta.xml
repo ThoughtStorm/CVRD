@@ -18534,6 +18534,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>clariti__Deposit__c.CVRD_DS_Date_of_Schedule__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>clariti__Deposit__c.CVRD_DS_Details__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>clariti__Deposit__c.clariti__APLedgerAccountName__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -19502,6 +19512,10 @@
         <field>clariti__Tier_Item__c.clariti__Tier__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Application_Create_Deposit</flow>
+    </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Account_Business_Registration</flow>
@@ -20977,7 +20991,7 @@
         <layout>clariti__Combined_Document__c-clariti__Combined Document Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>clariti__Deposit__c-clariti__Deposit Layout</layout>
+        <layout>clariti__Deposit__c-CVRD DS Deposit Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>clariti__Document_Template__c-clariti__Document Template Application Document</layout>

@@ -144,6 +144,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>clariti__Deposit__c.CVRD_DS_Date_of_Schedule__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>clariti__Deposit__c.CVRD_DS_Details__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Case.CVRD_DS_Application__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -784,6 +794,10 @@
     </fieldPermissions>
     <flowAccesses>
         <enabled>true</enabled>
+        <flow>CVRD_DS_Application_Create_Deposit</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
         <flow>CVRD_DS_Update_Agenda_Item_OutCome</flow>
     </flowAccesses>
     <flowAccesses>
@@ -794,6 +808,9 @@
         <enabled>true</enabled>
         <flow>CVRD_DS_Create_Proceeding_Agenda_Item</flow>
     </flowAccesses>
+    <layoutAssignments>
+        <layout>clariti__Deposit__c-CVRD DS Deposit Layout</layout>
+    </layoutAssignments>
     <layoutAssignments>
         <layout>MUSW__Condition__c-Application Condition Layout</layout>
         <recordType>MUSW__Condition__c.CVRD_DS_Application_Condition</recordType>
