@@ -19,6 +19,10 @@
     "regionName" : "header",
     "type" : "region"
   }, {
+    "id" : "1c629300-027f-48a8-8f5f-c3a281d2a792",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
     "id" : "55316d9f-a304-4b60-8b7f-73d7ca07960e",
     "regionName" : "footer",
     "type" : "region"
