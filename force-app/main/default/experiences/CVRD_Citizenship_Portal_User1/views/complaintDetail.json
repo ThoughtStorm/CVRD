@@ -19,18 +19,6 @@
     "regionName" : "header",
     "type" : "region"
   }, {
-    "components" : [ {
-      "componentAttributes" : {
-        "allowEdit" : false,
-        "objectType" : "MUSW__Complaint2__c",
-        "recordId" : "{!recordId}"
-      },
-      "componentName" : "clariti:recordDetail",
-      "id" : "29eb9b6a-974a-4c70-be7b-9187e017cf7d",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    } ],
     "id" : "1c629300-027f-48a8-8f5f-c3a281d2a792",
     "regionName" : "content",
     "type" : "region"

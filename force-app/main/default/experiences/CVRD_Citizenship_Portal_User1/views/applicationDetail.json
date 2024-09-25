@@ -147,7 +147,7 @@
       }, {
         "components" : [ {
           "componentAttributes" : {
-            "relatedListApiName" : "MUSW__Contacts__r",
+            "relatedListApiName" : "MUSW__Application_Contacts__r",
             "relatedListComponentOverride" : "GRID",
             "width" : "MEDIUM"
           },

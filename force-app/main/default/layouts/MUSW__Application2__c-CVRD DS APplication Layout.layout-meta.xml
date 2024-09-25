@@ -350,7 +350,12 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>MUSW__Required__c</fields>
+        <fields>MUSW__Status__c</fields>
+        <fields>CVRD_DS_Publicly_Available__c</fields>
         <relatedList>MUSW__Submission__c.MUSW__Application2__c</relatedList>
+        <sortField>MUSW__Required__c</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
@@ -403,7 +408,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hSv000001BqVl</masterLabel>
+        <masterLabel>00hAs0000033GrN</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

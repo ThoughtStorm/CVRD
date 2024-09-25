@@ -16768,7 +16768,7 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>MUSW__Inspection__c.MUSW__Code_Enforcement_Inspection</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>MUSW__Inspection__c.MUSW__Permit_Inspection</recordType>

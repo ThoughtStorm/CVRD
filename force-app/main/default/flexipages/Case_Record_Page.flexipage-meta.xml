@@ -27,8 +27,8 @@
                     <name>uiBehavior</name>
                     <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Description</fieldItem>
-                <identifier>RecordDescriptionField</identifier>
+                <fieldItem>Record.CVRD_DS_Public_Comment__c</fieldItem>
+                <identifier>RecordCVRD_DS_Public_Comment__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-b1e3e094-c09f-428b-a30e-5be0458ac382</name>
