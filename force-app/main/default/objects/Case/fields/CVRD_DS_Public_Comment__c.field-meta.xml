@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CVRD_DS_Public_Comment__c</fullName>
     <externalId>false</externalId>
+    <inlineHelpText>With additional information stating “Additional Documents or Comments can be submitted via Email</inlineHelpText>
     <label>Comments (maximum 3950 characters)</label>
     <length>3950</length>
     <trackFeedHistory>false</trackFeedHistory>
