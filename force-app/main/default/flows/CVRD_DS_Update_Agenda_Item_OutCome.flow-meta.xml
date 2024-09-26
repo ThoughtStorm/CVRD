@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>61.0</apiVersion>
+    <apiVersion>58.0</apiVersion>
     <decisions>
         <name>Check_Board_Meeting_Outcome</name>
         <label>Check Board Meeting Outcome</label>
@@ -94,28 +94,25 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Document_Uploaded</name>
-        <label>Document Uploaded</label>
-        <locationX>182</locationX>
-        <locationY>458</locationY>
+        <name>evaluate_null_record</name>
+        <label>evaluate null record</label>
+        <locationX>402</locationX>
+        <locationY>566</locationY>
         <defaultConnector>
-            <targetReference>Update_Outcome</targetReference>
+            <targetReference>Loop_on_content_version_Ids</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Yes</name>
+            <name>Record_is_Not_null</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>ContentVersionIds</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
+                <leftValueReference>Loop_on_content_version_Ids</leftValueReference>
+                <operator>NotEqualTo</operator>
             </conditions>
             <connector>
-                <targetReference>Loop_on_content_version_Ids</targetReference>
+                <targetReference>Content_Distribution_Link</targetReference>
             </connector>
-            <label>Yes</label>
+            <label>Record is Not null</label>
         </rules>
     </decisions>
     <dynamicChoiceSets>
@@ -146,12 +143,12 @@
     <loops>
         <name>Loop_on_content_version_Ids</name>
         <label>Loop on content version Ids</label>
-        <locationX>50</locationX>
-        <locationY>566</locationY>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
         <collectionReference>ContentVersionIds</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Content_Distribution_Link</targetReference>
+            <targetReference>evaluate_null_record</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
             <targetReference>Get_Content_DestributionLink</targetReference>
@@ -179,7 +176,7 @@
     <recordCreates>
         <name>Content_Distribution_Link</name>
         <label>Only One Content Distribution Link</label>
-        <locationX>138</locationX>
+        <locationX>270</locationX>
         <locationY>674</locationY>
         <connector>
             <targetReference>Loop_on_content_version_Ids</targetReference>
@@ -226,8 +223,8 @@
     <recordLookups>
         <name>Get_Content_DestributionLink</name>
         <label>Get Content DestributionLink</label>
-        <locationX>50</locationX>
-        <locationY>866</locationY>
+        <locationX>182</locationX>
+        <locationY>950</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Update_Outcome</targetReference>
@@ -370,7 +367,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Document_Uploaded</targetReference>
+            <targetReference>Loop_on_content_version_Ids</targetReference>
         </connector>
         <fields>
             <name>OutCome_Screen_Section1</name>
@@ -440,11 +437,6 @@
                         </conditions>
                     </visibilityRule>
                 </fields>
-                <fields>
-                    <name>test</name>
-                    <fieldText>&lt;p&gt;{!ContentVersionIds}&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -469,7 +461,7 @@
         <allowPause>false</allowPause>
         <fields>
             <name>SuccessDisplay</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(36, 128, 29);&quot;&gt;Outcome Added Successfully!&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(36, 128, 29);&quot;&gt;Record updated Successfully!&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -503,6 +495,14 @@
         <isCollection>true</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>IdCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
     </variables>
     <variables>
         <name>recordId</name>

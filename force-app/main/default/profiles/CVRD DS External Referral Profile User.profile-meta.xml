@@ -390,6 +390,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>Task-Referral External Agency Task Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>MUSW__Application2__c-Board of Variance Application Layout</layout>
         <recordType>MUSW__Application2__c.CVRD_DS_Board_of_Variance</recordType>
     </layoutAssignments>
