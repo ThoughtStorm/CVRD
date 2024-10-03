@@ -49,6 +49,11 @@
     </customMetadataTypeAccesses>
     <fieldPermissions>
         <editable>true</editable>
+        <field>MUSW__Application2__c.CVRD_RCRS_classification__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>MUSW__Milestone__c.EPR_Integration__c</field>
         <readable>true</readable>
         </fieldPermissions>
