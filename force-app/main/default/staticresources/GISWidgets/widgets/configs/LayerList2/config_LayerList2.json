@@ -137,19 +137,9 @@
       "iconPath": "images/Favourite.png"
     },
     {
-      "url": "MUSW__Address__c",
-      "label": "BG Address",
-      "type": "basicgov"
-    },
-    {
       "url": "MUSW__Application2__c",
       "label": "BG Application",
       "type": "basicgov"
-    },
-    {
-      "url": "MUSW__Application_Location__c",
-      "label": "Property Information",
-      "type": "basicgov"
-    }   
+    }
   ]
 }

@@ -9,7 +9,6 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <controllingField>MUSW__Type2__c</controllingField>
         <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
@@ -63,30 +62,41 @@
                 <default>false</default>
                 <label>3040-20</label>
             </value>
+            <value>
+                <fullName>3020-40</fullName>
+                <default>false</default>
+                <label>3020-40</label>
+            </value>
+            <value>
+                <fullName>3100-20</fullName>
+                <default>false</default>
+                <label>3100-20</label>
+            </value>
+            <value>
+                <fullName>3740-20</fullName>
+                <default>false</default>
+                <label>3740-20</label>
+            </value>
+            <value>
+                <fullName>3020-20</fullName>
+                <default>false</default>
+                <label>3020-20</label>
+            </value>
+            <value>
+                <fullName>3150-20</fullName>
+                <default>false</default>
+                <label>3150-20</label>
+            </value>
+            <value>
+                <fullName>3020-25</fullName>
+                <default>false</default>
+                <label>3020-25</label>
+            </value>
+            <value>
+                <fullName>3365-20</fullName>
+                <default>false</default>
+                <label>3365-20</label>
+            </value>
         </valueSetDefinition>
-        <valueSettings>
-            <controllingFieldValue>Development_Permit</controllingFieldValue>
-            <valueName>3060-20</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
-            <valueName>3320-20</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
-            <valueName>3090-20</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
-            <valueName>3360-20</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
-            <valueName>2450-20</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
-            <valueName>3015-30</valueName>
-        </valueSettings>
     </valueSet>
 </CustomField>

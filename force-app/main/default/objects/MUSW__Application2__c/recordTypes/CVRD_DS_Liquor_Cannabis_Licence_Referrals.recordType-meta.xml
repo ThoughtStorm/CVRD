@@ -234,44 +234,8 @@
     <picklistValues>
         <picklist>CVRD_RCRS_classification__c</picklist>
         <values>
-            <fullName>2450-20</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3015-30</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3040-20</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3045-20</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3045-40</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3060-20</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3090-20</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3300-20</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3320-20</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3360-20</fullName>
-            <default>false</default>
+            <fullName>3020-25</fullName>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>
