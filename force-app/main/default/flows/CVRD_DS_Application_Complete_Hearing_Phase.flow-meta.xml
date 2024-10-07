@@ -81,6 +81,12 @@
             </value>
         </filters>
         <inputAssignments>
+            <field>MUSW__Completion_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
                 <stringValue>Close Out</stringValue>

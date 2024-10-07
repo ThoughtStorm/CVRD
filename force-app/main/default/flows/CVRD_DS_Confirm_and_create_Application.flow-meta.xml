@@ -137,6 +137,12 @@
             </value>
         </filters>
         <inputAssignments>
+            <field>CVRD_Application_Created_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>MUSW__Phase__c</field>
             <value>
                 <stringValue>Review</stringValue>
