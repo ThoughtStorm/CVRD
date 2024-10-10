@@ -5,7 +5,7 @@
         <name>AddressCount</name>
         <label>AddressCount</label>
         <locationX>182</locationX>
-        <locationY>431</locationY>
+        <locationY>731</locationY>
         <assignmentItems>
             <assignToReference>countofAddress</assignToReference>
             <operator>AssignCount</operator>
@@ -18,10 +18,63 @@
         </connector>
     </assignments>
     <decisions>
+        <name>Check_Internal_Application_Type</name>
+        <label>Check Internal Application Type</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>getAddress</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Internal_Applications</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Review</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Subdivision_Referral</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Agricultural_Land_Reserve</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Liquor Licence Referrals</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Crown_Land_Referrals</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Application_Created_date</targetReference>
+            </connector>
+            <label>Internal Applications</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_Logged_User_License</name>
         <label>Check Logged User</label>
         <locationX>182</locationX>
-        <locationY>1031</locationY>
+        <locationY>1331</locationY>
         <defaultConnectorLabel>Community</defaultConnectorLabel>
         <rules>
             <name>Internal_License</name>
@@ -43,7 +96,7 @@
         <name>checkAddressCount</name>
         <label>checkAddressCount</label>
         <locationX>182</locationX>
-        <locationY>539</locationY>
+        <locationY>839</locationY>
         <defaultConnector>
             <targetReference>Check_Logged_User_License</targetReference>
         </defaultConnector>
@@ -71,7 +124,7 @@
         <name>AddressLoop</name>
         <label>AddressLoop</label>
         <locationX>74</locationX>
-        <locationY>647</locationY>
+        <locationY>947</locationY>
         <collectionReference>getAddress</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -104,7 +157,7 @@
         <name>Create_Application_Location_Record</name>
         <label>Create Application Location Record</label>
         <locationX>50</locationX>
-        <locationY>1139</locationY>
+        <locationY>1439</locationY>
         <inputAssignments>
             <field>MUSW__Address__c</field>
             <value>
@@ -130,7 +183,7 @@
         <name>getAddress</name>
         <label>getAddress</label>
         <locationX>182</locationX>
-        <locationY>323</locationY>
+        <locationY>623</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>AddressCount</targetReference>
@@ -148,10 +201,26 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <name>Update_Application_Created_date</name>
+        <label>Update Application Created date</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>getAddress</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CVRD_Application_Created_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>updateApplication</name>
         <label>updateApplication</label>
         <locationX>162</locationX>
-        <locationY>755</locationY>
+        <locationY>1055</locationY>
         <connector>
             <targetReference>AddressLoop</targetReference>
         </connector>
@@ -179,7 +248,7 @@
         <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>getAddress</targetReference>
+            <targetReference>Check_Internal_Application_Type</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
