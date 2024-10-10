@@ -292,7 +292,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
+                    <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.CVRD_Application_Created_Date__c</fieldItem>
                 <identifier>RecordCVRD_Application_Created_Date_cField</identifier>
@@ -763,6 +763,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.CVRD_DS_MOTI_File_Number__c</fieldItem>
                 <identifier>RecordCVRD_DS_MOTI_File_Number_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Subdivision_Referral</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-0fec5505-4394-44b9-b45a-d8e4c3cd8719</name>
@@ -1331,6 +1338,19 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection10</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 OR 2</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Phased_Development_Agreement</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <itemInstances>
