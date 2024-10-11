@@ -1,8 +1,11 @@
 import { LightningElement, api, wire } from 'lwc';
 import getFileId from '@salesforce/apex/cvrd_DS_Submission_FileController.getFileId';
+import getFileId2 from '@salesforce/apex/cvrd_DS_Submission_FileController.getFileId2';
 
 export default class CVRD_DS_DocumentAvailablePublicly extends LightningElement {
     @api recordId;
+    publicLinkDoc;
+    showPublicLink=false;
     documents;
     error;
     bracketValue;
@@ -16,8 +19,21 @@ export default class CVRD_DS_DocumentAvailablePublicly extends LightningElement 
             }
             else{
                 this.documents = undefined;
-            this.errorMessage = 'The documents are not publicly accessible.';
+            this.errorMessage = 'No submission documents are available';
             }
+        } else if (error) {
+            this.error = error.body.message;
+            this.documents = undefined;
+        }
+    }
+    @wire(getFileId2, { ApplicationId: '$recordId' })
+    wiredDocuments({ error, data }) {
+        if (data) {
+            if (data != null && data != '') {
+            this.publicLinkDoc=data[0];
+            this.showPublicLink=data[1];
+            }
+
         } else if (error) {
             this.error = error.body.message;
             this.documents = undefined;

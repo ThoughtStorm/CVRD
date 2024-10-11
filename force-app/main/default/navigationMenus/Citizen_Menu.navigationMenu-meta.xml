@@ -33,7 +33,7 @@
                 <label>Submit a Development Enquiry</label>
                 <position>3</position>
                 <publiclyAvailable>false</publiclyAvailable>
-                <target>/my-inspections</target>
+                <target>/open-applications</target>
                 <type>InternalLink</type>
             </navigationMenuItem>
         </subMenu>
@@ -43,35 +43,30 @@
         <label>Building Permits</label>
         <position>2</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <target>/error</target>
-        <type>InternalLink</type>
+        <type>MenuLabel</type>
     </navigationMenuItem>
     <navigationMenuItem>
         <label>Bylaw Complaints</label>
         <position>3</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <target>/error</target>
-        <type>InternalLink</type>
+        <type>MenuLabel</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <label>Dog Licences</label>
+        <label>Dog Licenses</label>
         <position>4</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <target>/error</target>
-        <type>InternalLink</type>
+        <type>MenuLabel</type>
     </navigationMenuItem>
     <navigationMenuItem>
         <label>Invoices and Receipts</label>
         <position>5</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <target>/error</target>
-        <type>InternalLink</type>
+        <type>MenuLabel</type>
     </navigationMenuItem>
     <navigationMenuItem>
         <label>Search for a Development Application</label>
         <position>6</position>
         <publiclyAvailable>true</publiclyAvailable>
-        <target>/open-applications</target>
-        <type>InternalLink</type>
+        <type>MenuLabel</type>
     </navigationMenuItem>
 </NavigationMenu>
