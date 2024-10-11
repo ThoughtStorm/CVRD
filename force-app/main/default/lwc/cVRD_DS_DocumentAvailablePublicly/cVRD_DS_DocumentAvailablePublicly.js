@@ -19,7 +19,7 @@ export default class CVRD_DS_DocumentAvailablePublicly extends LightningElement 
             }
             else{
                 this.documents = undefined;
-            this.errorMessage = 'No submission documents are available';
+                this.errorMessage = 'No submission documents are available';
             }
         } else if (error) {
             this.error = error.body.message;
@@ -30,8 +30,12 @@ export default class CVRD_DS_DocumentAvailablePublicly extends LightningElement 
     wiredDocuments({ error, data }) {
         if (data) {
             if (data != null && data != '') {
-            this.publicLinkDoc=data[0];
-            this.showPublicLink=data[1];
+                this.publicLinkDoc=data[0];
+                this.showPublicLink=data[1];
+                this.error = undefined;
+            }
+            else{
+                this.errorMessage = 'No documents are available';
             }
 
         } else if (error) {

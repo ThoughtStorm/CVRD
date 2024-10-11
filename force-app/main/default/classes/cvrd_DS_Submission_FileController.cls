@@ -18,23 +18,21 @@ public without sharing class cvrd_DS_Submission_FileController {
                 List<String> str=sub.MUSW__View_Links__c.split(',');
                 SubmissionLinkMap.put(sub.name,new List<string>(str));
             }
-            //submissionLinkMap.get(sub.name).add(str);
         }
-        system.debug('check!!::'+SubmissionLinkMap);
         return SubmissionLinkMap;
     }
     
     @AuraEnabled(cacheable=true)
     public static List<String> getFileId2(Id ApplicationId) {
-        MUSW__Application2__c appRecord=[SELECT Id,MUSW__Description__c,CVRD_DS_Available_for_Public_Notice__c FROM MUSW__Application2__c where Id=:ApplicationId AND CVRD_DS_Available_for_Public_Notice__c=true];
-        if(appRecord!=null){
-            List<String> publicLinkList=new List<String>();
-            publicLinkList.add(appRecord.MUSW__Description__c);
+                List<String> publicLinkList=new List<String>();
+        List<MUSW__Application2__c> appRecord=[SELECT Id,MUSW__Description__c,CVRD_DS_Available_for_Public_Notice__c FROM MUSW__Application2__c where Id=:ApplicationId AND CVRD_DS_Available_for_Public_Notice__c=true];
+        if(!appRecord.isempty()){      
+            publicLinkList.add(appRecord[0].MUSW__Description__c);
             publicLinkList.add('true');
             return publicLinkList;
         }
 
-        return null;
+        return publicLinkList;
     }
 
 }
