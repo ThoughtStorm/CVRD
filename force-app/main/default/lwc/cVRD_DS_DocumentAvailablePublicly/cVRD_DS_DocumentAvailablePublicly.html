@@ -1,6 +1,15 @@
 <template>
 	<div class="slds-section slds-is-open">
 		<lightning-card title="Documents">
+			<template if:true={showPublicLink}>
+				<div class="slds-m-around_medium">
+						<h3 class="slds-section__title slds-theme_shade">
+							<span class="slds-truncate slds-p-horizontal_small">Public Notice</span>
+						</h3>
+				<lightning-button class="slds-m-left_medium slds-m-bottom_medium" variant="base"
+									label="Public Notice Letter" onclick={handleDownload} data-url={publicLinkDoc}>
+								</lightning-button></div>
+			</template>
 			<template if:true={documents}>
 				<template for:each={documents} for:item="key">
 					<div key={key.submissionName} class="slds-m-around_medium">

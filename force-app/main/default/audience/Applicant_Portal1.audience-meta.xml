@@ -22,4 +22,12 @@
     </criteria>
     <formulaFilterType>AllCriteriaMatch</formulaFilterType>
     <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>3c15b126-641a-4916-b8e3-4c6e4c29cb14$#$9d00327a-db74-4134-9980-ddffbe07ea3d</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Rich_Content_Editor_Component</targetValue>
+        </target>
+    </targets>
 </Audience>
