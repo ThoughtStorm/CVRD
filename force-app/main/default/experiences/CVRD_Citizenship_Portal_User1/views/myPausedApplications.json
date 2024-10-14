@@ -27,7 +27,7 @@
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : {
-            "richTextValue" : "<h1>My Paused Applications</h1><p>To continue a paused application, click the \"Resume\" button. To delete a paused application, click the \"Delete\" button. Once a paused application is deleted, it cannot be restarted. The application will need to be restarted by using the buttons below. Please note that the Paused Application list below only shows up to ten (10) paused applications. If there are more then ten (10) pending applications, please complete a pause application or delete any that will not be completed.</p>"
+            "richTextValue" : "<h1>My Paused Applications</h1><p>To continue a paused application, select \"Resume\" from the dropdown menu to the right of the application. To delete a paused application, select \"Delete\" from the same dropdown menu.</p><p>Please note that once a paused application is deleted, it cannot be restarted.</p><p>&nbsp;</p>"
           },
           "componentName" : "forceCommunity:richTextInline",
           "id" : "67ceead1-90f9-4ecd-9f9e-0ed721c4caf4",

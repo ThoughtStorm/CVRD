@@ -1412,6 +1412,16 @@
     </pageAccesses>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Case.CVRD_DS_Development_Enquiry</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Case.CVRD_DS_Public_Notice</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -1674,6 +1684,10 @@
         <tab>MUSW__Review__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
+    <flowAccesses>
+        <enabled>true</enabled>
+        <flow>CVRD_DS_Ask_a_question</flow>
+    </flowAccesses>
     <flowAccesses>
         <enabled>true</enabled>
         <flow>User_Registration</flow>

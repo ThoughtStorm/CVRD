@@ -804,6 +804,10 @@
     </fieldPermissions>
     <flowAccesses>
         <enabled>true</enabled>
+        <flow>CVRD_DS_Ask_a_question</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>true</enabled>
         <flow>CVRD_DS_Application_Create_Deposit</flow>
     </flowAccesses>
     <flowAccesses>
@@ -957,6 +961,16 @@
         <apexPage>CVRD_DS_AppSitePage</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Case.CVRD_DS_Development_Enquiry</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Case.CVRD_DS_Public_Notice</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>MUSW__Application2__c.CVRD_DS_Agricultural_Land_Reserve</recordType>
