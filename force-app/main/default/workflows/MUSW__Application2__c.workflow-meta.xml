@@ -51,6 +51,16 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>General_Manager_DM_Approved</fullName>
+        <field>CVRD_DS_Completed_Approval__c</field>
+        <literalValue>DM Approval</literalValue>
+        <name>General Manager - DM Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Update_General_Manager_GM_Approved</fullName>
         <field>CVRD_DS_Completed_Approval__c</field>
         <literalValue>General Manager - GM Approved</literalValue>

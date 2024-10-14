@@ -11,9 +11,15 @@
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>General_Manager_DM_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
         <assignedApprover>
             <approver>
-                <name>sahana.ky+cvrd@thoughtstorm.ca</name>
+                <name>ramavath.nayak+dmuser@thoughtstorm.ca</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
@@ -41,11 +47,18 @@
         </approvalActions>
         <assignedApprover>
             <approver>
-                <name>sahana.ky+cvrd@thoughtstorm.ca</name>
+                <name>ramavath.nayak+gmuser@thoughtstorm.ca</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>MUSW__Application2__c.MUSW__Type2__c</field>
+                <operation>notEqual</operation>
+                <value>Crown_Land_Referrals</value>
+            </criteriaItems>
+        </entryCriteria>
         <label>GM Approval</label>
         <name>GM_Approval</name>
         <rejectBehavior>
@@ -65,16 +78,11 @@
     <description>Application Approval for General Manager. V2</description>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
-        <booleanFilter>1 AND 2 AND 3 AND ( ( 4 OR 5 ) OR 6) AND 7</booleanFilter>
+        <booleanFilter>1 AND 2 AND ( (3 OR 4) OR 5) AND 6</booleanFilter>
         <criteriaItems>
             <field>MUSW__Application2__c.MUSW__Phase__c</field>
             <operation>equals</operation>
             <value>Appeal,Report Approval</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>MUSW__Application2__c.RecordType</field>
-            <operation>notEqual</operation>
-            <value>Crown Land Referrals</value>
         </criteriaItems>
         <criteriaItems>
             <field>MUSW__Application2__c.RecordType</field>
@@ -94,7 +102,7 @@
         <criteriaItems>
             <field>MUSW__Application2__c.MUSW__Type2__c</field>
             <operation>equals</operation>
-            <value>Development_Permit,Board_of_Variance</value>
+            <value>Development_Permit,Board_of_Variance,Crown_Land_Referrals</value>
         </criteriaItems>
         <criteriaItems>
             <field>MUSW__Application2__c.CVRD_DS_Sub_Type__c</field>
