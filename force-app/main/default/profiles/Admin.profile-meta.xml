@@ -962,7 +962,7 @@
         <enabled>true</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
-        <default>false</default>
+        <default>true</default>
         <recordType>Case.CVRD_DS_Development_Enquiry</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
