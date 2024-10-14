@@ -93,20 +93,6 @@
       }, {
         "components" : [ {
           "componentAttributes" : {
-            "inlineRelatedListSetting" : "",
-            "maxVisibleRecords" : 10,
-            "objectApiName" : "MUSW__Submission__c",
-            "parentObjectApiName" : "MUSW__Application2__r",
-            "recordId" : "{!recordId}",
-            "sortOrder" : "Ascending"
-          },
-          "componentName" : "clariti:inlineRelatedList",
-          "id" : "fc60596a-caf5-4f41-a6b4-f17781770c14",
-          "renderPriority" : "NEUTRAL",
-          "renditionMap" : { },
-          "type" : "component"
-        }, {
-          "componentAttributes" : {
             "relatedListApiName" : "MUSW__Submissions__r",
             "relatedListComponentOverride" : "GRID",
             "width" : "MEDIUM"
