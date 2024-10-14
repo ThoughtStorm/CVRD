@@ -19,7 +19,7 @@
         </approvalActions>
         <assignedApprover>
             <approver>
-                <name>ramavath.nayak+dmuser@thoughtstorm.ca</name>
+                <name>ramavath.nayak+cvrd.dmuser@thoughtstorm.ca</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
@@ -47,7 +47,7 @@
         </approvalActions>
         <assignedApprover>
             <approver>
-                <name>ramavath.nayak+gmuser@thoughtstorm.ca</name>
+                <name>ramavath.nayak+cvrdgmuser@thoughtstorm.ca.dstraining</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
