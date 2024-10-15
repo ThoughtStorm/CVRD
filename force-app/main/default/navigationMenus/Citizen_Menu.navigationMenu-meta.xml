@@ -6,7 +6,7 @@
     <navigationMenuItem>
         <label>Development Applications</label>
         <position>1</position>
-        <publiclyAvailable>false</publiclyAvailable>
+        <publiclyAvailable>true</publiclyAvailable>
         <subMenu>
             <navigationMenuItem>
                 <label>New Development Application</label>
@@ -32,7 +32,14 @@
             <navigationMenuItem>
                 <label>Submit a Development Enquiry</label>
                 <position>3</position>
-                <publiclyAvailable>false</publiclyAvailable>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/enquiry-page</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Search for a Development Application</label>
+                <position>4</position>
+                <publiclyAvailable>true</publiclyAvailable>
                 <target>/open-applications</target>
                 <type>InternalLink</type>
             </navigationMenuItem>
@@ -61,12 +68,6 @@
         <label>Invoices and Receipts</label>
         <position>5</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <type>MenuLabel</type>
-    </navigationMenuItem>
-    <navigationMenuItem>
-        <label>Search for a Development Application</label>
-        <position>6</position>
-        <publiclyAvailable>true</publiclyAvailable>
         <type>MenuLabel</type>
     </navigationMenuItem>
 </NavigationMenu>
