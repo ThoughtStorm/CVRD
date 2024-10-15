@@ -33,7 +33,7 @@
                 <label>Submit a Development Enquiry</label>
                 <position>3</position>
                 <publiclyAvailable>true</publiclyAvailable>
-                <target>/enquiry-page</target>
+                <target>/ask-a-question</target>
                 <type>InternalLink</type>
             </navigationMenuItem>
             <navigationMenuItem>
