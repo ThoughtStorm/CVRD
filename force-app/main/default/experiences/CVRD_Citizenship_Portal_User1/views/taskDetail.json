@@ -47,10 +47,19 @@
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"color: rgb(0, 0, 0); font-size: 16px; background-color: rgb(255, 255, 0);\"><em><u>Please upload all relevant documents in the files section of the referral report tab, provide your comments in the comment field, and change the status to 'Completed' to submit your referral.</u></em></strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e289922e-0c7a-4c7b-b8ac-2120d91465ba",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
             "recordId" : "{!recordId}"
           },
           "componentName" : "forceCommunity:recordDetail",
-          "id" : "f7dd2275-b052-407a-a28d-91e45cb27d56",
+          "id" : "023b2d31-4ec8-4b95-8eb7-6b0001b7bfa6",
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },
           "type" : "component"

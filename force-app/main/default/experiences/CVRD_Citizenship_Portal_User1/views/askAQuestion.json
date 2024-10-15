@@ -1,0 +1,71 @@
+{
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "e01a6db6-b246-4975-94b0-b4e942143026",
+  "label" : "Ask A Question",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4810724b-854a-460d-8372-5ffed202f759",
+          "columns" : [ {
+            "UUID" : "53cd1b70-caa0-47b0-a26e-17417f0149c5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4810724b-854a-460d-8372-5ffed202f759",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "",
+            "flowName" : "CVRD_DS_Ask_a_question"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "e2affed7-a7ce-4abf-9f65-45a131694039",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "53cd1b70-caa0-47b0-a26e-17417f0149c5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "becdc2a5-c791-4a32-8acb-e63d7e1595a8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Ask A Question"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "58af7489-d60f-4cf5-9e99-4aa294662595",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "15583d39-7502-43a1-bfd6-a74be0739812",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-ask-a-question"
+}

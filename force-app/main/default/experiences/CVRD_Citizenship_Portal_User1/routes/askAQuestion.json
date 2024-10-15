@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "e01a6db6-b246-4975-94b0-b4e942143026",
+  "appPageId" : "90f10055-85b8-4ee0-9947-04e716c16964",
+  "configurationTags" : [ ],
+  "devName" : "Ask_A_Question__c",
+  "id" : "8c0deb97-f27a-4f8a-bb3a-e03006c2eff5",
+  "label" : "Ask A Question",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-ask-a-question",
+  "type" : "route",
+  "urlPrefix" : "ask-a-question"
+}
