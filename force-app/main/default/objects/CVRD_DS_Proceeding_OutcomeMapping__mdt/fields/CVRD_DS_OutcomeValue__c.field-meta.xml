@@ -250,11 +250,6 @@
                 <label>Recommends parkland dedication</label>
             </value>
             <value>
-                <fullName>Referall to staff for additional information recommended</fullName>
-                <default>false</default>
-                <label>Referall to staff for additional information recommended</label>
-            </value>
-            <value>
                 <fullName>Referral to staff recommended</fullName>
                 <default>false</default>
                 <label>Referral to staff recommended</label>
@@ -313,6 +308,11 @@
                 <fullName>Un-conditional Statement of Concurrence Recommended</fullName>
                 <default>false</default>
                 <label>Un-conditional Statement of Concurrence Recommended</label>
+            </value>
+            <value>
+                <fullName>Referral to staff for additional information recommended</fullName>
+                <default>false</default>
+                <label>Referral to staff for additional information recommended</label>
             </value>
             <value>
                 <fullName>Board Opts not to provide comments</fullName>
