@@ -441,6 +441,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Letter of Compliance Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>On Hold</fullName>
             <default>false</default>
         </values>

@@ -4,7 +4,7 @@
     <assignments>
         <name>Assign_File_Count</name>
         <label>Assign File Count</label>
-        <locationX>182</locationX>
+        <locationX>336</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>FIleCount</assignToReference>
@@ -20,7 +20,7 @@
     <decisions>
         <name>Check_Files_are_Uploaded</name>
         <label>Check Files are Uploaded</label>
-        <locationX>182</locationX>
+        <locationX>336</locationX>
         <locationY>350</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_Error_Screen</targetReference>
@@ -40,6 +40,35 @@
                 <targetReference>SuccessScreen</targetReference>
             </connector>
             <label>Uploaded</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Subdivision_Type</name>
+        <label>Check Subdivision Type</label>
+        <locationX>182</locationX>
+        <locationY>566</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Subdivision</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.MUSW__Phase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Issue</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordId.MUSW__Type2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Subdivision_Referral</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_subdivision_status</targetReference>
+            </connector>
+            <label>Subdivision</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -64,10 +93,31 @@
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_subdivision_status</name>
+        <label>Update subdivision status</label>
+        <locationX>50</locationX>
+        <locationY>674</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MUSW__Status__c</field>
+            <value>
+                <stringValue>Letter of Compliance Sent</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MUSW__Application2__c</object>
+    </recordUpdates>
     <screens>
         <name>Copy_1_of_Error_Screen</name>
         <label>Copy 1 of Error Screen</label>
-        <locationX>314</locationX>
+        <locationX>490</locationX>
         <locationY>458</locationY>
         <allowBack>true</allowBack>
         <allowFinish>false</allowFinish>
@@ -83,11 +133,14 @@
     <screens>
         <name>SuccessScreen</name>
         <label>SuccessScreen</label>
-        <locationX>50</locationX>
+        <locationX>182</locationX>
         <locationY>458</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Check_Subdivision_Type</targetReference>
+        </connector>
         <fields>
             <name>SuccessDisplay</name>
             <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(48, 150, 35); background-color: rgb(255, 255, 255);&quot;&gt;You  have successfully uploaded the Files!&lt;/strong&gt;&lt;/p&gt;</fieldText>
@@ -99,7 +152,7 @@
     <screens>
         <name>Upload_Decision_File</name>
         <label>Upload Decision File</label>
-        <locationX>182</locationX>
+        <locationX>336</locationX>
         <locationY>134</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -140,7 +193,7 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>56</locationX>
+        <locationX>210</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Upload_Decision_File</targetReference>
