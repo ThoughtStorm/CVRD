@@ -144,6 +144,11 @@
             <targetReference>Get_Case_record_type</targetReference>
         </connector>
         <fields>
+            <name>Askaquestion</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Ask a Question&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
             <name>Full_Name</name>
             <dataType>String</dataType>
             <fieldText>Full Name</fieldText>

@@ -12,6 +12,7 @@ const columns = [
     { label: 'Application Type', fieldName: 'MUSW__Type2__c', sortable: true },
     { label: 'Applicant', fieldName: 'ApplicantName', type: 'string', sortable: true },
     { label: 'Civic Address', fieldName: 'AddressName', type: 'string', sortable: true },
+    { label: 'Open for Commenting', fieldName: 'CVRD_DS_Available_for_Public_Notice__c', type: 'boolean',sortable: true },
 ];
 
 export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
@@ -67,6 +68,12 @@ export default class CVRD_DS_PublicApplicationSearch extends LightningElement {
                         }
                         if (data.MUSW__Address__c != undefined) {
                             data.AddressName = data.MUSW__Address__r.Name;
+                        }
+                        if(data.CVRD_DS_Available_for_Public_Notice__c){
+                            data.PublicNotice='Commenting Available for Public Notice';
+                        }
+                        if(!data.CVRD_DS_Available_for_Public_Notice__c){
+                            data.PublicNotice='Commenting Not Available for Public Notice';
                         }
 
                     });
