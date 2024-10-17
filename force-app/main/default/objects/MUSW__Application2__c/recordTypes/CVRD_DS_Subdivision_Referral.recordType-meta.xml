@@ -89,61 +89,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>CVRD_DS_Non_Exempted_DPAs__c</picklist>
-        <values>
-            <fullName>DPA 1%3A Riparian Protection</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 10%3A Multi-family Residential Development</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 11%3A Commercial and Mixed Use Development</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 12%3A Industrial Development</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 13%3A Energy %26 Water Conservation%2C GHG Emissions Reduction</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 2%3A Sensitive Ecosystems</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 3%3A Marine Uplands %26 Foreshore Protection</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 4%3A Aquifer Protection</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 5%3A Wildfire Protection</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 6%3A Floodplain Hazard</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 7%3A Landslide Hazard</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 8%3A Protection of Farming</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DPA 9%3A Intensive Residential</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>CVRD_DS_Selected_DPAs__c</picklist>
         <values>
             <fullName>DPA 1%3A Riparian Protection</fullName>
