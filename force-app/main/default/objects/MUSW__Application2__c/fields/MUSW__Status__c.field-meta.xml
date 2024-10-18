@@ -88,6 +88,11 @@
                 <default>false</default>
                 <label>Updated CVRD Referral Response Sent to MOTI</label>
             </value>
+            <value>
+                <fullName>Letter of Compliance Sent</fullName>
+                <default>false</default>
+                <label>Letter of Compliance Sent</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Application</controllingFieldValue>
@@ -157,6 +162,10 @@
         <valueSettings>
             <controllingFieldValue>Close Out</controllingFieldValue>
             <valueName>Denied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Issue</controllingFieldValue>
+            <valueName>Letter of Compliance Sent</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

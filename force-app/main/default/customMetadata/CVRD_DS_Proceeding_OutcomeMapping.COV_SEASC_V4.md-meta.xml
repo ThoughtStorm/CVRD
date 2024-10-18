@@ -8,7 +8,7 @@
     </values>
     <values>
         <field>CVRD_DS_OutcomeValue__c</field>
-        <value xsi:type="xsd:string">Referall to staff for additional information recommended</value>
+        <value xsi:type="xsd:string">Referral to staff for additional information recommended</value>
     </values>
     <values>
         <field>CVRD_DS_ProceedingType__c</field>

@@ -70,7 +70,7 @@
                 <leftValueReference>Outcome_1</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Referall to staff for additional information recommended</stringValue>
+                    <stringValue>Referral to staff for additional information recommended</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
