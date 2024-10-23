@@ -5,6 +5,125 @@
     <compactLayoutAssignment>MUSW__Application_Default</compactLayoutAssignment>
     <label>Development Variance Permit</label>
     <picklistValues>
+        <picklist>CVRD_DS_Application_Status__c</picklist>
+        <values>
+            <fullName>1st and 2nd reading - No Public Hearing Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1st and 2nd reading - Public Hearing Held</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1st and 2nd reading - Public Hearing Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1st reading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1st%2C 2nd and 3rd reading - No Public Hearing Held</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1st%2C 2nd and 3rd reading - Public Hearing Held</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adopted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board to Provide Comments - Public Notice Underway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comments Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forwarded to the ALC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forwarded to the ALC with comments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forwarded to the ALC with recommendation of approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letter of Compliance sent to MOTI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Comments Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not forwarded to the ALC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLR Extension Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLR Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLRS Issued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Report sent to MOTI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revised Layout Under Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Statement of Concurrence Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Statement of Non-concurrence Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Updated Referral Report sent to MOTI</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>CVRD_DSCommercialOrIndustrial_Purposes__c</picklist>
         <values>
             <fullName>No</fullName>

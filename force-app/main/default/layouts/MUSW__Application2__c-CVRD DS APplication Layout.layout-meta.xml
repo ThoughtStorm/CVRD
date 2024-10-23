@@ -109,6 +109,10 @@
                 <behavior>Edit</behavior>
                 <field>CVRD_DS_Available_for_Public_Notice__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CVRD_DS_Application_Status__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
