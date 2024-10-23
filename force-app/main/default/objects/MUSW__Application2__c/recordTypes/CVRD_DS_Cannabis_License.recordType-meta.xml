@@ -208,6 +208,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>CVRD_DS_SiteDisclosureStatement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>CVRD_DS_Sub_Type__c</picklist>
         <values>
             <fullName>Cannabis Retail Licence %28Board%29</fullName>
