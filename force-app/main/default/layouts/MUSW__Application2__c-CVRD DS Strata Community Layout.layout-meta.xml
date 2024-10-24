@@ -39,11 +39,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>MUSW__Status__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>MUSW__Phase__c</field>
+                <field>CVRD_DS_Application_Status__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
