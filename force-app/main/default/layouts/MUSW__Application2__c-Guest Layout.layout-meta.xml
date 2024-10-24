@@ -34,12 +34,8 @@
                 <field>MUSW__Type2__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>MUSW__Phase__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>MUSW__Status__c</field>
+                <behavior>Readonly</behavior>
+                <field>CVRD_DS_Application_Status__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
