@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CVRD_DS_Application_Status__c</fullName>
+    <description>Application Status for public view.</description>
+    <externalId>false</externalId>
+    <label>Application Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>MUSW__Type2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Under Review</fullName>
+                <default>false</default>
+                <label>Under Review</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Issued</fullName>
+                <default>false</default>
+                <label>Issued</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>1st, 2nd and 3rd reading - No Public Hearing Held</fullName>
+                <default>false</default>
+                <label>1st, 2nd and 3rd reading - No Public Hearing Held</label>
+            </value>
+            <value>
+                <fullName>1st, 2nd and 3rd reading - Public Hearing Held</fullName>
+                <default>false</default>
+                <label>1st, 2nd and 3rd reading - Public Hearing Held</label>
+            </value>
+            <value>
+                <fullName>1st and 2nd reading - No Public Hearing Required</fullName>
+                <default>false</default>
+                <label>1st and 2nd reading - No Public Hearing Required</label>
+            </value>
+            <value>
+                <fullName>1st and 2nd reading - Public Hearing Held</fullName>
+                <default>false</default>
+                <label>1st and 2nd reading - Public Hearing Held</label>
+            </value>
+            <value>
+                <fullName>1st and 2nd reading - Public Hearing Pending</fullName>
+                <default>false</default>
+                <label>1st and 2nd reading - Public Hearing Pending</label>
+            </value>
+            <value>
+                <fullName>1st reading</fullName>
+                <default>false</default>
+                <label>1st reading</label>
+            </value>
+            <value>
+                <fullName>Adopted</fullName>
+                <default>false</default>
+                <label>Adopted</label>
+            </value>
+            <value>
+                <fullName>Board to Provide Comments - Public Notice Underway</fullName>
+                <default>false</default>
+                <label>Board to Provide Comments - Public Notice Underway</label>
+            </value>
+            <value>
+                <fullName>Comments Provided</fullName>
+                <default>false</default>
+                <label>Comments Provided</label>
+            </value>
+            <value>
+                <fullName>Forwarded to the ALC</fullName>
+                <default>false</default>
+                <label>Forwarded to the ALC</label>
+            </value>
+            <value>
+                <fullName>Forwarded to the ALC with comments</fullName>
+                <default>false</default>
+                <label>Forwarded to the ALC with comments</label>
+            </value>
+            <value>
+                <fullName>Forwarded to the ALC with recommendation of approval</fullName>
+                <default>false</default>
+                <label>Forwarded to the ALC with recommendation of approval</label>
+            </value>
+            <value>
+                <fullName>Letter of Compliance sent to MOTI</fullName>
+                <default>false</default>
+                <label>Letter of Compliance sent to MOTI</label>
+            </value>
+            <value>
+                <fullName>No Comments Provided</fullName>
+                <default>false</default>
+                <label>No Comments Provided</label>
+            </value>
+            <value>
+                <fullName>Not forwarded to the ALC</fullName>
+                <default>false</default>
+                <label>Not forwarded to the ALC</label>
+            </value>
+            <value>
+                <fullName>PLR Extension Issued</fullName>
+                <default>false</default>
+                <label>PLR Extension Issued</label>
+            </value>
+            <value>
+                <fullName>PLR Issued</fullName>
+                <default>false</default>
+                <label>PLR Issued</label>
+            </value>
+            <value>
+                <fullName>PLRS Issued</fullName>
+                <default>false</default>
+                <label>PLRS Issued</label>
+            </value>
+            <value>
+                <fullName>Referral Report sent to MOTI</fullName>
+                <default>false</default>
+                <label>Referral Report sent to MOTI</label>
+            </value>
+            <value>
+                <fullName>Revised Layout Under Review</fullName>
+                <default>false</default>
+                <label>Revised Layout Under Review</label>
+            </value>
+            <value>
+                <fullName>Statement of Concurrence Sent</fullName>
+                <default>false</default>
+                <label>Statement of Concurrence Sent</label>
+            </value>
+            <value>
+                <fullName>Statement of Non-concurrence Sent</fullName>
+                <default>false</default>
+                <label>Statement of Non-concurrence Sent</label>
+            </value>
+            <value>
+                <fullName>Updated Referral Report sent to MOTI</fullName>
+                <default>false</default>
+                <label>Updated Referral Report sent to MOTI</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <controllingFieldValue>Strata_Conversion</controllingFieldValue>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
+            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <controllingFieldValue>Flood_Management_Bylaw_Exemption</controllingFieldValue>
+            <controllingFieldValue>Telecommunication_Antenna_Structure</controllingFieldValue>
+            <controllingFieldValue>Minimum_Frontage_Exception</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
+            <controllingFieldValue>Board_of_Variance</controllingFieldValue>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>Under Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <controllingFieldValue>Strata_Conversion</controllingFieldValue>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
+            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <controllingFieldValue>Flood_Management_Bylaw_Exemption</controllingFieldValue>
+            <controllingFieldValue>Telecommunication_Antenna_Structure</controllingFieldValue>
+            <controllingFieldValue>Minimum_Frontage_Exception</controllingFieldValue>
+            <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
+            <controllingFieldValue>Board_of_Variance</controllingFieldValue>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>On Hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <controllingFieldValue>Strata_Conversion</controllingFieldValue>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
+            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <controllingFieldValue>Flood_Management_Bylaw_Exemption</controllingFieldValue>
+            <controllingFieldValue>Telecommunication_Antenna_Structure</controllingFieldValue>
+            <controllingFieldValue>Minimum_Frontage_Exception</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
+            <controllingFieldValue>Board_of_Variance</controllingFieldValue>
+            <valueName>Closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>Forwarded to the ALC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>Forwarded to the ALC with comments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>Forwarded to the ALC with recommendation of approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural_Land_Reserve</controllingFieldValue>
+            <valueName>Not forwarded to the ALC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strata_Conversion</controllingFieldValue>
+            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
+            <controllingFieldValue>Flood_Management_Bylaw_Exemption</controllingFieldValue>
+            <controllingFieldValue>Minimum_Frontage_Exception</controllingFieldValue>
+            <valueName>Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strata_Conversion</controllingFieldValue>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Covenant_Amendment/Discharge</controllingFieldValue>
+            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <controllingFieldValue>Flood_Management_Bylaw_Exemption</controllingFieldValue>
+            <controllingFieldValue>Minimum_Frontage_Exception</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
+            <controllingFieldValue>Board_of_Variance</controllingFieldValue>
+            <valueName>Denied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Letter of Compliance sent to MOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>PLR Extension Issued</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>PLR Issued</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>PLRS Issued</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Referral Report sent to MOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Revised Layout Under Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subdivision_Referral</controllingFieldValue>
+            <valueName>Updated Referral Report sent to MOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Development_Permit</controllingFieldValue>
+            <controllingFieldValue>Development_Variance_Permit</controllingFieldValue>
+            <controllingFieldValue>Temporary_Use_Permit</controllingFieldValue>
+            <controllingFieldValue>Cannabis Retail Licence</controllingFieldValue>
+            <controllingFieldValue>Board_of_Variance</controllingFieldValue>
+            <valueName>Issued</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <valueName>1st, 2nd and 3rd reading - No Public Hearing Held</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <valueName>1st, 2nd and 3rd reading - Public Hearing Held</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <valueName>1st and 2nd reading - No Public Hearing Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <valueName>1st and 2nd reading - Public Hearing Held</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <valueName>1st and 2nd reading - Public Hearing Pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <valueName>1st reading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OCP_Zoning_or_Land_Use_Bylaw_Amendment</controllingFieldValue>
+            <controllingFieldValue>Phased_Development_Agreement</controllingFieldValue>
+            <valueName>Adopted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication_Antenna_Structure</controllingFieldValue>
+            <valueName>Statement of Concurrence Sent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunication_Antenna_Structure</controllingFieldValue>
+            <valueName>Statement of Non-concurrence Sent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>Board to Provide Comments - Public Notice Underway</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>Comments Provided</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liquor Licence Referrals</controllingFieldValue>
+            <valueName>No Comments Provided</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
