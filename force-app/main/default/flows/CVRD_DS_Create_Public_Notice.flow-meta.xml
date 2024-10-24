@@ -19,57 +19,6 @@
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>62.0</apiVersion>
-    <assignments>
-        <name>Assign_Values</name>
-        <label>Assign Values</label>
-        <locationX>176</locationX>
-        <locationY>242</locationY>
-        <assignmentItems>
-            <assignToReference>CaseRecord.SuppliedName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Name</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>CaseRecord.SuppliedEmail</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Email</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>CaseRecord.SuppliedPhone</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Phone</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>CaseRecord.Description</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Description</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>CaseRecord.CVRD_DS_Application__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>CaseRecord.CVRD_DS_Address__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Address</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Create_public_notice_record</targetReference>
-        </connector>
-    </assignments>
     <environments>Default</environments>
     <formulas>
         <name>Name</name>
@@ -111,8 +60,79 @@
         <connector>
             <targetReference>Success</targetReference>
         </connector>
-        <inputReference>CaseRecord</inputReference>
+        <inputAssignments>
+            <field>CVRD_DS_Address__c</field>
+            <value>
+                <elementReference>Address</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Application__c</field>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Comments__c</field>
+            <value>
+                <elementReference>Description</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Email__c</field>
+            <value>
+                <elementReference>Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Full_Name__c</field>
+            <value>
+                <elementReference>Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CVRD_DS_Phone__c</field>
+            <value>
+                <elementReference>Phone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Get_Public_Input_record_type.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CVRD_DS_Public_Input__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordLookups>
+        <name>Get_Public_Input_record_type</name>
+        <label>Get Public Input record type</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_public_notice_record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CVRD_DS_Public_Notice_Response</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CVRD_DS_Public_Input__c</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <screens>
         <name>Create_public_notice_component</name>
         <label>Create public notice component</label>
@@ -122,7 +142,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Assign_Values</targetReference>
+            <targetReference>Get_Public_Input_record_type</targetReference>
         </connector>
         <fields>
             <name>ApplicationName</name>

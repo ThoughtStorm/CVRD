@@ -138,10 +138,16 @@
                         <valueListItems>
                             <value>MUSW__Application2__c.CVRD_DS_Initiate_Public_Notice</value>
                             <visibilityRule>
+                                <booleanFilter>1 OR 2</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.MUSW__Phase__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Review</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.MUSW__Phase__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Approval</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -240,6 +246,23 @@
                 <identifier>RecordCVRD_DS_Available_for_Public_Notice__cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CVRD_DS_Provincial_Contact_Name__c</fieldItem>
+                <identifier>RecordCVRD_DS_Provincial_Contact_Name__cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Crown_Land_Referrals</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-ae28da3e-8850-4a55-a644-3d732016e464</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -306,6 +329,40 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.CVRD_RCRS_classification__c</fieldItem>
                 <identifier>RecordCVRD_RCRS_classification_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CVRD_DS_Provincial_Contact_Email__c</fieldItem>
+                <identifier>RecordCVRD_DS_Provincial_Contact_Email__cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Crown_Land_Referrals</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CVRD_DS_Provincial_Contact_Phone__c</fieldItem>
+                <identifier>RecordCVRD_DS_Provincial_Contact_Phone__cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.MUSW__Type2__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Crown_Land_Referrals</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-2f58d6a2-58f1-4242-8d21-c2f37ee00441</name>

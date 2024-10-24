@@ -32,7 +32,7 @@
         <inputParameters>
             <name>SObjectRowId</name>
             <value>
-                <elementReference>Create_Case_Record</elementReference>
+                <elementReference>Create_Public_Input_Record</elementReference>
             </value>
         </inputParameters>
         <nameSegment>Case.Ask_a_question_Email_notification</nameSegment>
@@ -63,68 +63,68 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordCreates>
-        <name>Create_Case_Record</name>
-        <label>Create Case Record</label>
+        <name>Create_Public_Input_Record</name>
+        <label>Create Public Input Record</label>
         <locationX>176</locationX>
         <locationY>350</locationY>
         <connector>
             <targetReference>Send_Email_notification_for_Case</targetReference>
         </connector>
         <inputAssignments>
-            <field>CVRD_DS_Public_Comment__c</field>
+            <field>CVRD_DS_Comments__c</field>
             <value>
                 <elementReference>Comments_and_Question</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>RecordTypeId</field>
-            <value>
-                <elementReference>Get_Case_record_type.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>SuppliedEmail</field>
+            <field>CVRD_DS_Email__c</field>
             <value>
                 <elementReference>Email</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>SuppliedName</field>
+            <field>CVRD_DS_Full_Name__c</field>
             <value>
                 <elementReference>Full_Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>SuppliedPhone</field>
+            <field>CVRD_DS_Phone__c</field>
             <value>
                 <elementReference>Phone</elementReference>
             </value>
         </inputAssignments>
-        <object>Case</object>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Get_Public_Input_record_type.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CVRD_DS_Public_Input__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
-        <name>Get_Case_record_type</name>
-        <label>Get Case record type</label>
+        <name>Get_Public_Input_record_type</name>
+        <label>Get Public Input record type</label>
         <locationX>176</locationX>
         <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Create_Case_Record</targetReference>
+            <targetReference>Create_Public_Input_Record</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>SobjectType</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>Case</stringValue>
+                <stringValue>CVRD_DS_Public_Input__c</stringValue>
             </value>
         </filters>
         <filters>
             <field>DeveloperName</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>CVRD_DS_Development_Enquiry</stringValue>
+                <stringValue>CVRD_DS_Public_Enquiry</stringValue>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -141,7 +141,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Get_Case_record_type</targetReference>
+            <targetReference>Get_Public_Input_record_type</targetReference>
         </connector>
         <fields>
             <name>Askaquestion</name>
